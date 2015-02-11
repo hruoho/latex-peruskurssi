@@ -152,7 +152,7 @@ Tallenna työkansioosi jokin kuva (tarkkana formaatin kanssa) ja tuo se työhösi s
 \frametitle{Kelluva figure-ympäristö}
 Käyttämällä pelkästään komentoa \verb-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
 \vaihto
-On parempi antaa \(\LaTeX\)in päättää itse mihin kuva sijoitetaan eli tehdä kuvasta \emph{kelluva}. Tämä onnistuu käyttämällä \verb-figure--ympäristöä. 
+On parempi antaa \LaTeX in päättää itse mihin kuva sijoitetaan eli tehdä kuvasta \emph{kelluva}. Tämä onnistuu käyttämällä \verb-figure--ympäristöä. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kelluva kuva}
@@ -187,7 +187,7 @@ p && omalle sivulleen\\
 
 \end{tabular}
 \end{table}
-\(\LaTeX\) ei lupaa noudattaa toivetta, mutta tekee parhaansa. 
+\LaTeX\ ei lupaa noudattaa toivetta, mutta tekee parhaansa. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Figure-ympäristön argumentit}
@@ -198,7 +198,7 @@ Tuo työhösi jokin kuva käyttäen figure-ympäristöä ja anna valinnaisena argumentt
 \subsubsection{Piirtäminen (TikZ)}
 \begin{frame}[fragile]
 \frametitle{Kuvien piirtäminen}
-Kuvien liittämisen lisäksi niitä voi myös piirtää suoraan \(\LaTeX\)illa. Yksinkertaisimmissa tapauksissa tämä onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
+Kuvien liittämisen lisäksi niitä voi myös piirtää suoraan \LaTeX illa. Yksinkertaisimmissa tapauksissa tämä onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
 \vaihto
 Kuvien piirtäminen vie aikaa, mutta jälki on sen mukaista eikä erillisiä kuvatiedostoja tarvitse säilyttää.
 \vaihto Kuvien piirtämistä varten on tarjolla muutamia paketteja, joista erityisesti \verb-TikZ- on syytä mainita. 
@@ -218,7 +218,7 @@ Kopioi edellisessä harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muu
 \subsection{Taulukot}
 \begin{frame}[fragile]
 \frametitle{Taulukot}
-Taulukoiden rakentaminen \(\LaTeX\)issa on oma taiteenlajinsa. Mahdollisuudet ovat rajattomat, mutta perusteiden opettelu vaatii hieman energiaa. 
+Taulukoiden rakentaminen \LaTeX issa on oma taiteenlajinsa. Mahdollisuudet ovat rajattomat, mutta perusteiden opettelu vaatii hieman energiaa. 
 \vaihto
 Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon sisältö kirjoitetaan komentojen \verb-\begin{tabular}[]{}- ja \verb-\end{tabular}- väliin.
 \vaihto
@@ -325,7 +325,7 @@ Vihreäsilmäiset & 8 & 8\\
 %Yhteensä: & 15 & 15\\
 \end{tabular}
 \end{framed}
-Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \(\LaTeX\)ille.
+Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
 
 \end{frame}
 
@@ -423,7 +423,7 @@ Nuolihaukka & Falco & subbuteo\\ \hline
 Rivien yhdistämistä varten tarvitaan paketti \verb-multirow-. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \verb-\multirow{}{}{}-. Pakollisista argumenteista
 \begin{itemize}
 \item ensimmäinen on yhdistettävien solujen lukumäärä
-\item toinen on yhdistämällä saadun rivin leveys (\verb-*- jättää asian \(\LaTeX\)in huoleksi)
+\item toinen on yhdistämällä saadun rivin leveys (\verb-*- jättää asian \LaTeX in huoleksi)
 \item kolmas on yhdistämällä saadun rivin sisältö
 \end{itemize}
 Rivin leveyttä ei useinkaan kannata itse valita, ellei ole varma siitä mitä haluaa tehdä. 
@@ -512,7 +512,7 @@ Taulukoiden rakentamisessa lähes mikä tahansa on mahdollista. Kirjasta \url{http
 \end{frame}
 %\begin{frame}[fragile]
 %\frametitle{Kelluvat taulukot}
-%Yleensä taulukot kannattaa esittää kelluvina ympäristöinä. Tämä tarkoittaa sitä, että \(\LaTeX\) päättää itse, mihin taulukko kannattaa ulkonäöllisesti sijoittaa. Tällöin \verb-tabular--ympäristö sijoitetaan \verb-table--ympäristöön:
+%Yleensä taulukot kannattaa esittää kelluvina ympäristöinä. Tämä tarkoittaa sitä, että \LaTeX\ päättää itse, mihin taulukko kannattaa ulkonäöllisesti sijoittaa. Tällöin \verb-tabular--ympäristö sijoitetaan \verb-table--ympäristöön:
 %
 %\end{frame}
 %\begin{frame}[fragile]
@@ -530,7 +530,7 @@ Taulukoiden rakentamisessa lähes mikä tahansa on mahdollista. Kirjasta \url{http
 \frametitle{Kelluva table-ympäristö}
 Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
 \vaihto
-On parempi antaa \(\LaTeX\)in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \verb-table--ympäristöön.
+On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \verb-table--ympäristöön.
 \begin{table}
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
@@ -561,7 +561,7 @@ p && omalle sivulleen\\
 
 \end{tabular}
 \end{table}
-Toive ei ole \(\LaTeX\)in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
+Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}\label{kelluvaTaulukko}
@@ -572,7 +572,7 @@ Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin 
 \subsection{Matriisit}
 \begin{frame}[fragile]
 \frametitle{Matematiikkatilan taulukot}
-\(\LaTeX\) olettaa \verb-tabular--ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \verb-array-. Sitä käytetään kuten \verb-tabular--ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
+\LaTeX\ olettaa \verb-tabular--ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \verb-array-. Sitä käytetään kuten \verb-tabular--ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
 
 \begin{minipage}{5cm}
 \begin{scriptsize}
@@ -880,7 +880,7 @@ Lisää työhösi alaviite komennolla \verb-\footnote{}-.
 \subsubsection{BibTeX-järjestelmä}
 \begin{frame}[fragile]
 \frametitle{Kirjallisuusviitteet}
-\(\LaTeX\)issa kirjallisuusviittaukset kannattaa hoitaa \(\BibTeX\)-järjestelmän avulla. 
+\LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \(\BibTeX\)-järjestelmän avulla. 
 \vaihto
 Tällöin jokaista lähdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sisältää teoksen tiedot. 
 \vaihto
@@ -1008,7 +1008,7 @@ Jotta viitteet tulisivat näkyviin, toimi seuraavasti:
 Jos viittaukset eivät tule näkyviin etkä tiedä mistä se johtuu, tarkista seuraavat kohdat:
 \begin{itemize}
 \item oletko käyttänyt viitatessa oikeita tunnuksia?
-\item oletko tuonut tiedostot \(\LaTeX\)iin oikein ja oikeilla nimillä?
+\item oletko tuonut tiedostot \LaTeX iin oikein ja oikeilla nimillä?
 \item ovatko tiedostot todella muotoa \verb-.bib-?
 \item ovatko tiedostot oikeassa kansiossa?
 \end{itemize}

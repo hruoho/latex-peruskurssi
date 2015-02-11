@@ -64,7 +64,7 @@
 %\begin{itemize}
 %\item 1. kerta
 %\begin{itemize}
-%\item Mikä \(\LaTeX\) on?
+%\item Mikä \LaTeX\ on?
 %\item Dokumentin rakenne ja luominen
 %\item Syntaksi eli ''kielioppi''
 %\item Virheilmoitukset
@@ -99,7 +99,7 @@
 
 \subsection{Intro}
 \begin{frame}
-\frametitle{Mikä \(\LaTeX\)  on?}
+\frametitle{Mikä \LaTeX\  on?}
 \begin{itemize}[<+->]
 \item Tekstin ladontajärjestelmä
 \item Matemaattisen tekstin tuottamista varten
@@ -115,7 +115,7 @@
 \LaTeX-dokumentit tuotetaan tällä kurssilla helppokäyttöisellä Texmaker-ohjelmalla.
 \pause
 \vaihto
-Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \textit{käännetään} eli \textit{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. Kääntämisen hoitaa \(\LaTeX\) käyttäjältä piilossa.
+Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \textit{käännetään} eli \textit{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. Kääntämisen hoitaa \LaTeX\ käyttäjältä piilossa.
 \pause
 \vaihto
 Tarvittavat ohjelmat omalle koneelleen löytää esimerkiksi Matematiikan laitoksen sivujen kautta osoitteesta
@@ -176,7 +176,7 @@ Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-Edellä mainitut paketit ovat esimerkkejä \textit{makropaketeista}, joilla \(\LaTeX\)in eli latojan toimintaan voi vaikuttaa. 
+Edellä mainitut paketit ovat esimerkkejä \textit{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
 \pause
 Matemaattista tekstiä varten on vielä syytä ottaa käyttöön muutama lisäpaketti. 
 \begin{harj}
@@ -197,7 +197,7 @@ Nämä sisältävät fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamis
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Syntaksi eli ''kielioppi''}
-\(\LaTeX\)in toimintaa ohjataan komennoilla. \pause Niillä tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirretään kuvia, määritellään asetuksia jne.  \pause
+\LaTeX in toimintaa ohjataan komennoilla. \pause Niillä tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirretään kuvia, määritellään asetuksia jne.  \pause
 \begin{framed}
 Komennot alkavat aina kenoviivalla \verb-\-
 \end{framed}
@@ -231,7 +231,7 @@ Komennolla voi olla yksi tai useampi pakollinen argumentti ja lisäksi yksi tai u
 Esimerkiksi 
 \begin{itemize}[<+->]
 \item Komennoilla \verb-\cup- ja \verb-\cap- ei ole yhtään argumenttia (joukkojen yhdiste ja leikkaus)
-\item Komennolla \verb-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \(\LaTeX\) tulkitsee neliöjuureksi)
+\item Komennolla \verb-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \LaTeX\ tulkitsee neliöjuureksi)
 \item Komennolla \verb-\documentclass[]{}- on myös valinnainen argumentti, jolla voi valita mm. kirjain- ja paperikoon
 \item Komennolla \verb-\frac{}{}- on kaksi pakollista argumenttia (murtoluvun osoittaja ja nimittäjä)
 \end{itemize}
@@ -256,7 +256,7 @@ Kurssin aikana opetellaan käyttämään muutamia tarpeellisia ympäristöjä ja luomaa
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Erikoismerkeistä}
-Jotkin erikoismerkit on varattu \(\LaTeX\)in käyttöön:
+Jotkin erikoismerkit on varattu \LaTeX in käyttöön:
 \begin{itemize}[<+->]
 \item \% aloittaa kommenttirivin
 \item \$ aloittaa ja lopettaa tavallisen matematiikkatilan
@@ -793,7 +793,7 @@ Luo jokin numeroimaton lauseympäristö ja käytä sitä työssäsi.
 \subsection{Sisäiset viittaukset}
 \begin{frame}[fragile]
 \frametitle{Sisäiset viittaukset}
-\(\LaTeX\)illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yhtälöihin. Viitattava kohde täytyy ensin nimetä komennolla \verb-\label{nimi}- (nimi ei tulostu työhön). Tämän jälkeen viittaaminen onnistuu komennoilla 
+\LaTeX illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yhtälöihin. Viitattava kohde täytyy ensin nimetä komennolla \verb-\label{nimi}- (nimi ei tulostu työhön). Tämän jälkeen viittaaminen onnistuu komennoilla 
 \begin{itemize}
 \item \verb-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
 \item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sisällä)
@@ -812,7 +812,7 @@ Huomaa, että viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-
 \subsection{Listarakenteet}
 \begin{frame}[fragile]
 \frametitle{Listarakenteet}
-\(\LaTeX\)illa voi luoda listoja mm. ympäristöjen \verb-itemize- ja \verb-enumerate- avulla. Ensimmäinen on ranskalaiset viivat-tyyppinen, jälkimmäinen numeroi listan jäsenet. Näitä käytetään seuraavasti:
+\LaTeX illa voi luoda listoja mm. ympäristöjen \verb-itemize- ja \verb-enumerate- avulla. Ensimmäinen on ranskalaiset viivat-tyyppinen, jälkimmäinen numeroi listan jäsenet. Näitä käytetään seuraavasti:
 \vaihto
 \begin{minipage}{4cm}
 \begin{scriptsize}
@@ -859,7 +859,7 @@ Luo vielä yksi lista, mutta käytä tällä kertaa ympäristöä \verb-description-. Se
 \subsection{Omat komennot}
 \begin{frame}[fragile]
 \frametitle{Omat komennot}
-%\(\LaTeX\)in käyttämistä helpottaa se, että kaikki on koodattavissa komennoiksi. 
+%\LaTeX in käyttämistä helpottaa se, että kaikki on koodattavissa komennoiksi. 
 %Esimerkiksi olisi raskasta kirjoittaa jokainen ristitulon merkki pikseli pikseliltä, joten tälle kannattaa luoda oma komentonsa, jolla asia hoituu automaattisesti.
 Omia komentoja luodaan esittelyosassa komennolla \verb-\newcommand{}{}-. Ensimmäinen argumentti on komennon nimi, toiseksi argumentiksi tulee komennon sisältö. Esimerkiksi
 \begin{Verbatim}[frame=single]
@@ -925,7 +925,7 @@ Jos välttämättä haluaa korvata valmiin komennon omallaan, voi käyttää komentoa \
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-\(\LaTeX\)issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \verb-\abs{}-, jonka argumentti on itseisarvomerkkien sisään tuleva lauseke. Tuota sen avulla seuraavat kolmioepäyhtälöt:
+\LaTeX issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \verb-\abs{}-, jonka argumentti on itseisarvomerkkien sisään tuleva lauseke. Tuota sen avulla seuraavat kolmioepäyhtälöt:
 \begin{framed}
 \[
 \abs{\abs{x}-\abs{y}}\leq \abs{x+y}\leq\abs{x}+\abs{y}
