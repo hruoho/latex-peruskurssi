@@ -1,5 +1,5 @@
 \documentclass[handout]{beamer}
-\usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[finnish]{babel}
 \usepackage{amsmath}
@@ -64,7 +64,7 @@
 %\begin{itemize}
 %\item 1. kerta
 %\begin{itemize}
-%\item Mik‰ \LaTeX\ on?
+%\item Mik√§ \LaTeX\ on?
 %\item Dokumentin rakenne ja luominen
 %\item Syntaksi eli ''kielioppi''
 %\item Virheilmoitukset
@@ -74,24 +74,24 @@
 %\end{itemize}
 %\item 2. kerta
 %\begin{itemize}
-%\item Lauseymp‰ristˆt
+%\item Lauseymp√§rist√∂t
 %\item Otsikot
-%\item Lauseymp‰ristˆjen numerointi
+%\item Lauseymp√§rist√∂jen numerointi
 %\item Listat
 %\item Omat komennot
 %\end{itemize}
 %\item 3. kerta
 %\begin{itemize}
 %\item Taulukot
-%\item Kuvien liitt‰minen
-%\item Kuvien piirt‰minen
+%\item Kuvien liitt√§minen
+%\item Kuvien piirt√§minen
 %\item Pakettien hakeminen
 %\end{itemize}
 %\item 4. kerta
 %\begin{itemize}
-%\item Sis‰iset viittaukset
-%\item L‰hdeluettelo
-%\item Sis‰llysluettelo ja hakemisto
+%\item Sis√§iset viittaukset
+%\item L√§hdeluettelo
+%\item Sis√§llysluettelo ja hakemisto
 %\item Kansilehti
 %\item Tyylittely
 %\end{itemize}
@@ -99,33 +99,33 @@
 
 \subsection{Intro}
 \begin{frame}
-\frametitle{Mik‰ \LaTeX\  on?}
+\frametitle{Mik√§ \LaTeX\  on?}
 \begin{itemize}[<+->]
-\item Tekstin ladontaj‰rjestelm‰
+\item Tekstin ladontaj√§rjestelm√§
 \item Matemaattisen tekstin tuottamista varten
-\item Kehitetty \TeX -kielen p‰‰lle (Leslie Lamport)
-\item Laajalti k‰ytˆss‰ ymp‰ri maailman
-\item Merkitt‰v‰sti erilainen kuin WYSIWYG-j‰rjestelm‰t
-%ESIMERKKINƒ LAITOKSEN TUTKIELMAPOHJA
+\item Kehitetty \TeX -kielen p√§√§lle (Leslie Lamport)
+\item Laajalti k√§yt√∂ss√§ ymp√§ri maailman
+\item Merkitt√§v√§sti erilainen kuin WYSIWYG-j√§rjestelm√§t
+%ESIMERKKIN√Ñ LAITOKSEN TUTKIELMAPOHJA
 \end{itemize}
 \end{frame}
 \subsection{Dokumentin rakenne}
 \begin{frame}[fragile]
 \frametitle{Dokumentin rakenne ja luominen}
-\LaTeX-dokumentit tuotetaan t‰ll‰ kurssilla helppok‰yttˆisell‰ Texmaker-ohjelmalla.
+\LaTeX-dokumentit tuotetaan t√§ll√§ kurssilla helppok√§ytt√∂isell√§ Texmaker-ohjelmalla.
 \pause
 \vaihto
-Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \textit{k‰‰nnet‰‰n} eli \textit{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. K‰‰nt‰misen hoitaa \LaTeX\ k‰ytt‰j‰lt‰ piilossa.
+Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \textit{k√§√§nnet√§√§n} eli \textit{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. K√§√§nt√§misen hoitaa \LaTeX\ k√§ytt√§j√§lt√§ piilossa.
 \pause
 \vaihto
-Tarvittavat ohjelmat omalle koneelleen lˆyt‰‰ esimerkiksi Matematiikan laitoksen sivujen kautta osoitteesta
+Tarvittavat ohjelmat omalle koneelleen l√∂yt√§√§ esimerkiksi Matematiikan laitoksen sivujen kautta osoitteesta
 \url{http://wiki.helsinki.fi/pages/viewpage.action?pageId=62428926}
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
 \begin{itemize}
 \item Avaa Texmaker ja luo uusi tiedosto
-\item Tallenna se muodossa \verb-nimi.tex- johonkin t‰t‰ kurssia varten luomaasi kansioon
+\item Tallenna se muodossa \verb-nimi.tex- johonkin t√§t√§ kurssia varten luomaasi kansioon
 \item Kirjoita tiedostoon seuraavat rivit:
 \begin{verbatim}
 \documentclass{article}
@@ -137,26 +137,26 @@ Huhuu!
 \item Valitse View PDF
 \end{itemize}
 \end{harj}
-Lopputuloksena tulisi olla PDF-tiedosto, jonka yl‰reunassa lukee ''Huhuu!''.
+Lopputuloksena tulisi olla PDF-tiedosto, jonka yl√§reunassa lukee ''Huhuu!''.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Dokumentin rakenne ja luominen}
-\LaTeX-dokumentti koostuu kahdesta osasta: \textit{esittelyosasta}, joka sis‰lt‰‰ tarpeellisia asetuksia ja \textit{sis‰llˆst‰} eli varsinaisesta dokumentista.
+\LaTeX-dokumentti koostuu kahdesta osasta: \textit{esittelyosasta}, joka sis√§lt√§√§ tarpeellisia asetuksia ja \textit{sis√§ll√∂st√§} eli varsinaisesta dokumentista.
 \pause
 \begin{itemize}[<+->]
 \item Tiedosto ja samalla esittelyosa aloitetaan komennolla \verb+\documentclass{...}+ , jolla valitaan dokumenttiluokka (article)
-\item Esittelyosaan lis‰t‰‰n komentoja tarpeen mukaan
+\item Esittelyosaan lis√§t√§√§n komentoja tarpeen mukaan
 \item Komento \verb+\begin{document}+ aloittaa itse dokumentin ja lopettaa esittelyosan
-\item Komento \verb+\end{document}+  lopettaa dokumentin eik‰ sen per‰‰n kirjoitettuja rivej‰ k‰‰nnet‰.
-\item Varsinainen tyˆn sis‰ltˆ kirjoitetaan siis komentojen \verb+\begin{document}+  ja  \verb+\end{document}+  v‰liin.
+\item Komento \verb+\end{document}+  lopettaa dokumentin eik√§ sen per√§√§n kirjoitettuja rivej√§ k√§√§nnet√§.
+\item Varsinainen ty√∂n sis√§lt√∂ kirjoitetaan siis komentojen \verb+\begin{document}+  ja  \verb+\end{document}+  v√§liin.
 \end{itemize}
 (Vrt. edellinen harjoitus!)
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Dokumentin rakenne ja luominen}
-Esittelyosassa eli heti komennon \verb+\documentclass{}+  j‰lkeen valitaan k‰ytett‰v‰t paketit ja asetukset. \pause ƒ‰kkˆsi‰ ja suomalaista tavutusta varten otetaan k‰yttˆˆn tietyt inputenc-, fontenc- ja babel-paketit:\pause
+Esittelyosassa eli heti komennon \verb+\documentclass{}+  j√§lkeen valitaan k√§ytett√§v√§t paketit ja asetukset. \pause √Ñ√§kk√∂si√§ ja suomalaista tavutusta varten otetaan k√§ytt√∂√∂n tietyt inputenc-, fontenc- ja babel-paketit:\pause
 \begin{harj}
-Tee dokumenttiisi seuraavat muutokset (‰l‰ siis luo uutta tiedostoa):
+Tee dokumenttiisi seuraavat muutokset (√§l√§ siis luo uutta tiedostoa):
 %\usepackage[ansinew]{inputenc}
 \begin{Verbatim}[frame=single]
 \documentclass{article}
@@ -164,27 +164,27 @@ Tee dokumenttiisi seuraavat muutokset (‰l‰ siis luo uutta tiedostoa):
 \usepackage[T1]{fontenc}
 \usepackage[finnish]{babel}
 \begin{document}
-÷ˆ h‰h? Her‰tys!
+√ñ√∂ h√§h? Her√§tys!
 \end{document}
 \end{Verbatim}
 \end{harj}
-Onnistuuko tiedoston ajaminen? Toimivatko ‰‰kkˆset?
+Onnistuuko tiedoston ajaminen? Toimivatko √§√§kk√∂set?
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Kopioi tyˆhˆsi pari sivullista suomenkielist‰ teksti‰ esimerkiksi Wikipediasta (v‰lt‰ erikoismerkkej‰). Aja tiedosto. Varmista viel‰ ‰‰kkˆsten ja tavutuksen toimiminen. Miten kappalejaon kanssa k‰y?
+Kopioi ty√∂h√∂si pari sivullista suomenkielist√§ teksti√§ esimerkiksi Wikipediasta (v√§lt√§ erikoismerkkej√§). Aja tiedosto. Varmista viel√§ √§√§kk√∂sten ja tavutuksen toimiminen. Miten kappalejaon kanssa k√§y?
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-Edell‰ mainitut paketit ovat esimerkkej‰ \textit{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
+Edell√§ mainitut paketit ovat esimerkkej√§ \textit{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
 \pause
-Matemaattista teksti‰ varten on viel‰ syyt‰ ottaa k‰yttˆˆn muutama lis‰paketti. 
+Matemaattista teksti√§ varten on viel√§ syyt√§ ottaa k√§ytt√∂√∂n muutama lis√§paketti. 
 \begin{harj}
-Ota k‰yttˆˆn paketit\footnote{ams tulee sanoista American Mathematical Society}
+Ota k√§ytt√∂√∂n paketit\footnote{ams tulee sanoista American Mathematical Society}
 \[
 \verb-amsthm-,\quad \verb-amsfonts-,\quad \verb-amsmath-\quad \text{ja}\quad \verb-amssymb-
 \]
-lis‰‰m‰ll‰ dokumenttisi esittelyosaan seuraavat komennot:
+lis√§√§m√§ll√§ dokumenttisi esittelyosaan seuraavat komennot:
 \begin{verbatim}
 \usepackage{amsthm}
 \usepackage{amsfonts}         
@@ -193,16 +193,16 @@ lis‰‰m‰ll‰ dokumenttisi esittelyosaan seuraavat komennot:
 \end{verbatim}
 \end{harj}
 \pause
-N‰m‰ sis‰lt‰v‰t fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. 
+N√§m√§ sis√§lt√§v√§t fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Syntaksi eli ''kielioppi''}
-\LaTeX in toimintaa ohjataan komennoilla. \pause Niill‰ tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirret‰‰n kuvia, m‰‰ritell‰‰n asetuksia jne.  \pause
+\LaTeX in toimintaa ohjataan komennoilla. \pause Niill√§ tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirret√§√§n kuvia, m√§√§ritell√§√§n asetuksia jne.  \pause
 \begin{framed}
 Komennot alkavat aina kenoviivalla \verb-\-
 \end{framed}
 \pause
-Komentoja voi tarvittaessa etsi‰ esimerkiksi oppaista \begin{scriptsize}
+Komentoja voi tarvittaessa etsi√§ esimerkiksi oppaista \begin{scriptsize}
 \url{http://www.ntg.nl/doc/hellgren/lyhyt2e.pdf}
 \end{scriptsize},
 \begin{scriptsize}
@@ -215,56 +215,56 @@ Komentoja voi tarvittaessa etsi‰ esimerkiksi oppaista \begin{scriptsize}
 \subsection{Syntaksi}
 \begin{frame}[fragile]
 \frametitle{Syntaksi}
-%Edell‰ on jo tutustuttu komentoihin \verb-\documentclass{}-, \verb-\begin{}...\end{}-, \verb-\usepackage[]{}- jne. Ne ovat esimerkkej‰ komennoista, jotka
-Komennot tarvitsevat usein \textit{argumentin} (lis‰m‰‰reen). \pause Se kirjoitetaan komennon per‰‰n
+%Edell√§ on jo tutustuttu komentoihin \verb-\documentclass{}-, \verb-\begin{}...\end{}-, \verb-\usepackage[]{}- jne. Ne ovat esimerkkej√§ komennoista, jotka
+Komennot tarvitsevat usein \textit{argumentin} (lis√§m√§√§reen). \pause Se kirjoitetaan komennon per√§√§n
 \begin{itemize}[<+->]
 \item aaltosulkuihin \verb-{}-, kun argumentti on pakollinen
 \item hakasulkuihin \verb-[]-, kun argumentti on valinnainen
-%\item Pakollinen argumentti on komennon per‰ss‰ aaltosuluissa \verb-{}-
-%\item Valinnainen argumentti on komennon per‰ss‰ hakasuluissa \verb-[]-
+%\item Pakollinen argumentti on komennon per√§ss√§ aaltosuluissa \verb-{}-
+%\item Valinnainen argumentti on komennon per√§ss√§ hakasuluissa \verb-[]-
 \end{itemize}
 \pause
-Komennolla voi olla yksi tai useampi pakollinen argumentti ja lis‰ksi yksi tai useampi valinnainen argumentti. \pause Toisilla komennoilla ei ole ainuttakaan argumenttia.
+Komennolla voi olla yksi tai useampi pakollinen argumentti ja lis√§ksi yksi tai useampi valinnainen argumentti. \pause Toisilla komennoilla ei ole ainuttakaan argumenttia.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Syntaksi}
 Esimerkiksi 
 \begin{itemize}[<+->]
-\item Komennoilla \verb-\cup- ja \verb-\cap- ei ole yht‰‰n argumenttia (joukkojen yhdiste ja leikkaus)
-\item Komennolla \verb-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \LaTeX\ tulkitsee neliˆjuureksi)
-\item Komennolla \verb-\documentclass[]{}- on myˆs valinnainen argumentti, jolla voi valita mm. kirjain- ja paperikoon
-\item Komennolla \verb-\frac{}{}- on kaksi pakollista argumenttia (murtoluvun osoittaja ja nimitt‰j‰)
+\item Komennoilla \verb-\cup- ja \verb-\cap- ei ole yht√§√§n argumenttia (joukkojen yhdiste ja leikkaus)
+\item Komennolla \verb-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \LaTeX\ tulkitsee neli√∂juureksi)
+\item Komennolla \verb-\documentclass[]{}- on my√∂s valinnainen argumentti, jolla voi valita mm. kirjain- ja paperikoon
+\item Komennolla \verb-\frac{}{}- on kaksi pakollista argumenttia (murtoluvun osoittaja ja nimitt√§j√§)
 \end{itemize}
-%Komentoja ja niiden selityksi‰ voi etsi‰ esimerkiksi osoitteista
+%Komentoja ja niiden selityksi√§ voi etsi√§ esimerkiksi osoitteista
 %\begin{itemize}
 %\item \url{http://www.rri.res.in/~sanjib/latex/ltx-2.html}
 %\end{itemize}
 %PAREMPI LINKKI
 \pause
-Argumenttien j‰rjestyksen ja m‰‰r‰n kanssa on oltava tarkka!
+Argumenttien j√§rjestyksen ja m√§√§r√§n kanssa on oltava tarkka!
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Syntaksi}
 Muotoa 
 \[
-\verb-\begin{ymp‰ristˆn nimi}-\ldots \verb-\end{ymp‰ristˆn nimi}-.
+\verb-\begin{ymp√§rist√∂n nimi}-\ldots \verb-\end{ymp√§rist√∂n nimi}-.
 \]
-olevilla komentopareilla k‰ytet‰‰n ns. ymp‰ristˆj‰. \pause N‰it‰ voivat olla esimerkiksi lauseet, m‰‰ritelm‰t, listat ja taulukot. \pause
-\vaihto Ymp‰ristˆll‰kin voi olla nimen lis‰ksi muita pakollisia tai valinnaisia argumentteja, kuten tieto taulukon sarakkeiden lukum‰‰r‰st‰ tai kuvan toivotusta sijainnista. \pause
+olevilla komentopareilla k√§ytet√§√§n ns. ymp√§rist√∂j√§. \pause N√§it√§ voivat olla esimerkiksi lauseet, m√§√§ritelm√§t, listat ja taulukot. \pause
+\vaihto Ymp√§rist√∂ll√§kin voi olla nimen lis√§ksi muita pakollisia tai valinnaisia argumentteja, kuten tieto taulukon sarakkeiden lukum√§√§r√§st√§ tai kuvan toivotusta sijainnista. \pause
 \vaihto
-Kurssin aikana opetellaan k‰ytt‰m‰‰n muutamia tarpeellisia ymp‰ristˆj‰ ja luomaan omia komentoja.
+Kurssin aikana opetellaan k√§ytt√§m√§√§n muutamia tarpeellisia ymp√§rist√∂j√§ ja luomaan omia komentoja.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Erikoismerkeist‰}
-Jotkin erikoismerkit on varattu \LaTeX in k‰yttˆˆn:
+\frametitle{Erikoismerkeist√§}
+Jotkin erikoismerkit on varattu \LaTeX in k√§ytt√∂√∂n:
 \begin{itemize}[<+->]
 \item \% aloittaa kommenttirivin
 \item \$ aloittaa ja lopettaa tavallisen matematiikkatilan
 \item \(\backslash\) aloittaa komennon (komento \verb-\\- katkaisee rivin)
-\item \& on k‰ytˆss‰ kun rivej‰ j‰rjestet‰‰n kohdakkain
-\item \{ ja \} ovat komennon argumentin ymp‰rille tulevat merkit
+\item \& on k√§yt√∂ss√§ kun rivej√§ j√§rjestet√§√§n kohdakkain
+\item \{ ja \} ovat komennon argumentin ymp√§rille tulevat merkit
 \end{itemize}\pause
-Jotta erikoismerkin saisi n‰kyviin lopullisessa tyˆss‰, on k‰ytett‰v‰ komentoa:
+Jotta erikoismerkin saisi n√§kyviin lopullisessa ty√∂ss√§, on k√§ytett√§v√§ komentoa:
 \begin{table}[h!]
 \begin{tabular}{ccc}
 Komento & & Tulostus\\
@@ -280,48 +280,48 @@ Komento & & Tulostus\\
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Kolme per‰kk‰ist‰ pistett‰ saa komennolla \verb-\ldots-. Kokeile, miten lopputulokset eroavat, jos kirjoitat pisteet itse.  Kirjoita sitten seuraava:
+Kolme per√§kk√§ist√§ pistett√§ saa komennolla \verb-\ldots-. Kokeile, miten lopputulokset eroavat, jos kirjoitat pisteet itse.  Kirjoita sitten seuraava:
 \begin{framed}
-Erikoismerkkej‰ ovat mm. \%, \$ ja \&. Merkkijonon \textbackslash textbackslash tuottaminen onnistuu n‰in\ldots
+Erikoismerkkej√§ ovat mm. \%, \$ ja \&. Merkkijonon \textbackslash textbackslash tuottaminen onnistuu n√§in\ldots
 \end{framed}
 \end{harj}
 \begin{harj}
-Kommenttirivin avulla koodin sekaan voi kirjoittaa selkeytt‰vi‰ huomautuksia, jotka eiv‰t tule n‰kyviin lopulliseen tyˆhˆn. Kommenttirivi aloitetaan merkill‰ \verb-%- ja p‰‰tet‰‰n rivinvaihtoon. 
+Kommenttirivin avulla koodin sekaan voi kirjoittaa selkeytt√§vi√§ huomautuksia, jotka eiv√§t tule n√§kyviin lopulliseen ty√∂h√∂n. Kommenttirivi aloitetaan merkill√§ \verb-%- ja p√§√§tet√§√§n rivinvaihtoon. 
 \vaihto
 Kirjoita koodin sekaan esimerkiksi rivi
 \begin{Verbatim}[frame=single]
-%T‰m‰ rivi ei tule n‰kyviin lopullisessa tyˆss‰.
+%T√§m√§ rivi ei tule n√§kyviin lopullisessa ty√∂ss√§.
 \end{Verbatim}
-ja testaa, pit‰‰kˆ v‰ite paikkansa.
+ja testaa, pit√§√§k√∂ v√§ite paikkansa.
 \end{harj}
 \end{frame}
 \begin{frame}
 \frametitle{Virheilmoitukset}
-Tiedoston ajamisen j‰lkeen Texmakerin alareunaan saattaa ilmesty‰ sinisi‰ ja punaisia viestej‰.\pause
+Tiedoston ajamisen j√§lkeen Texmakerin alareunaan saattaa ilmesty√§ sinisi√§ ja punaisia viestej√§.\pause
 \begin{itemize}[<+->]
-\item Siniset viestit ovat varoituksia ulkon‰ˆllisista seikoista
-\item Punaiset viestit ovat k‰‰nt‰misen est‰vi‰ virheit‰
+\item Siniset viestit ovat varoituksia ulkon√§√∂llisista seikoista
+\item Punaiset viestit ovat k√§√§nt√§misen est√§vi√§ virheit√§
 \end{itemize}\pause
 Punaisten virheilmoitusten kanssa on pakko olla tarkka - virheet tulee korjata heti. 
 \vaihto
 \pause
-Virheilmoituksesta on p‰‰telt‰viss‰ jotain sattuneesta virheest‰, mutta t‰m‰ vaatii totuttelua. 
-\pause Yleens‰ kyseess‰ on jonkin komennon v‰‰rinkirjoitus, puuttuva aaltosulku tai muu pieni yksityiskohta.
+Virheilmoituksesta on p√§√§telt√§viss√§ jotain sattuneesta virheest√§, mutta t√§m√§ vaatii totuttelua. 
+\pause Yleens√§ kyseess√§ on jonkin komennon v√§√§rinkirjoitus, puuttuva aaltosulku tai muu pieni yksityiskohta.
 \vaihto
-\pause Virheilmoituksia saattaa tulla valtavasti vaikka kyse olisi yksitt‰isest‰ ongelmasta!
+\pause Virheilmoituksia saattaa tulla valtavasti vaikka kyse olisi yksitt√§isest√§ ongelmasta!
 \end{frame}
 \subsection{Otsikot ja korostukset}
 \begin{frame}[fragile]
 \frametitle{Otsikot}
-Teksti j‰sennet‰‰n ja otsikoidaan komennoilla 
+Teksti j√§sennet√§√§n ja otsikoidaan komennoilla 
 \begin{itemize}[<+->]
 \item \verb-\chapter{otsikko}- (vain luokissa book ja report)
 \item \verb-\section{otsikko}- (article-luokan karkein jako)
 \item \verb-\subsection{otsikko}-
 \item \verb-\subsubsection{otsikko}- jne.
 \end{itemize} \pause
-%Dokumenttiluokissa \verb-report- ja \verb-book- on k‰ytˆss‰ myˆs \verb-\chapter-, alilukunaan \verb-\section- jne.
-Otsikot numeroidaan automaattisesti. \pause Numeroinnin saa pois lis‰‰m‰ll‰ merkin \verb-*- komennon per‰‰n, siis esimerkiksi 
+%Dokumenttiluokissa \verb-report- ja \verb-book- on k√§yt√∂ss√§ my√∂s \verb-\chapter-, alilukunaan \verb-\section- jne.
+Otsikot numeroidaan automaattisesti. \pause Numeroinnin saa pois lis√§√§m√§ll√§ merkin \verb-*- komennon per√§√§n, siis esimerkiksi 
 \[
 \verb-\section*{numeroimaton otsikko}-.
 \]
@@ -329,31 +329,31 @@ Otsikot numeroidaan automaattisesti. \pause Numeroinnin saa pois lis‰‰m‰ll‰ merk
 \begin{frame}
 \begin{harj}
 \begin{itemize}
-\item Jaa tekstisi nelj‰‰n numeroituun osioon
-\item Jaa ensimm‰inen osio lis‰ksi muutamaksi ali- ja alialiosioksi
-\item J‰t‰ ainakin yksi alialiosio numeroimatta
-\item Nime‰ kaikki osiot
+\item Jaa tekstisi nelj√§√§n numeroituun osioon
+\item Jaa ensimm√§inen osio lis√§ksi muutamaksi ali- ja alialiosioksi
+\item J√§t√§ ainakin yksi alialiosio numeroimatta
+\item Nime√§ kaikki osiot
 \end{itemize}
 \end{harj}
-Tee ensimm‰isen kerran harjoitukset ensimm‰iseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
+Tee ensimm√§isen kerran harjoitukset ensimm√§iseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Tekstin muokkaaminen}
-Tekstieditorissa eli Texmaker-ohjelmassa k‰ytetty fontti tai tekstin suuruus eiv‰t vaikuta lopulliseen tyˆhˆn, vaan kaikki ulkoasulliset muutokset on teht‰v‰ komennoilla. (Isot/pienet kirjaimet toimivat kuitenkin sellaisenaan.)
+Tekstieditorissa eli Texmaker-ohjelmassa k√§ytetty fontti tai tekstin suuruus eiv√§t vaikuta lopulliseen ty√∂h√∂n, vaan kaikki ulkoasulliset muutokset on teht√§v√§ komennoilla. (Isot/pienet kirjaimet toimivat kuitenkin sellaisenaan.)
 \vaihto\pause
-Erityisesti kannattaa huomata, ett‰ teksti‰ kirjoittaessa
+Erityisesti kannattaa huomata, ett√§ teksti√§ kirjoittaessa
 \begin{itemize}[<+->]
-\item per‰kk‰iset v‰lilyˆnnit tulostuvat yhdeksi v‰lilyˆnniksi
-\item rivinvaihto ei tee mit‰‰n
-\item tyhj‰ rivi (yksi tai useampi) aloittaa uuden kappaleen
+\item per√§kk√§iset v√§lily√∂nnit tulostuvat yhdeksi v√§lily√∂nniksi
+\item rivinvaihto ei tee mit√§√§n
+\item tyhj√§ rivi (yksi tai useampi) aloittaa uuden kappaleen
 \end{itemize}
 \pause
-Erikokoisia v‰lilyˆntej‰ varten on omia komentojaan, kuten esimerkiksi \verb-\,-, \verb-\;-, \verb-\quad- ja \verb-\qquad-.
-\vaihto\pause Pystysuunnassa tyhj‰‰ tilaa saa komennolla \verb-\vspace{mitta}-, jossa mitta annetaan pikselein‰ (pt) tai senttimetrein‰ (cm). 
+Erikokoisia v√§lily√∂ntej√§ varten on omia komentojaan, kuten esimerkiksi \verb-\,-, \verb-\;-, \verb-\quad- ja \verb-\qquad-.
+\vaihto\pause Pystysuunnassa tyhj√§√§ tilaa saa komennolla \verb-\vspace{mitta}-, jossa mitta annetaan pikselein√§ (pt) tai senttimetrein√§ (cm). 
 \end{frame}
 %\begin{frame}[fragile]
 %\frametitle{Tekstin muokkaaminen}
-%Koodin sekaan voi kirjoittaa ns. kommenttirivej‰, joita ei huomioida k‰‰nnett‰ess‰ eik‰ siis n‰ytet‰ lopullisessa tyˆss‰. Kommentti alkaa merkill‰ \verb-%- ja p‰‰ttyy rivinvaihtoon. Kommentointi kannattaa!
+%Koodin sekaan voi kirjoittaa ns. kommenttirivej√§, joita ei huomioida k√§√§nnett√§ess√§ eik√§ siis n√§ytet√§ lopullisessa ty√∂ss√§. Kommentti alkaa merkill√§ \verb-%- ja p√§√§ttyy rivinvaihtoon. Kommentointi kannattaa!
 %\vaihto
 %Tekstin tasauksen voi valita komennoilla \verb-\centering-, \verb-\flushleft-, \verb-\flushright-. 
 %\vaihto
@@ -365,23 +365,23 @@ Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \verb-\huge
 \vaihto\pause
 Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \verb-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \verb-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \verb-\underline{alleviivattava teksti}-. 
 \vaihto\pause
-Sanojen korostamiseen kannattaa kuitenkin k‰ytt‰‰ komentoa \verb-\emph{korostettava teksti}-, joka kursivoi tai lihavoi tarpeen mukaan!
+Sanojen korostamiseen kannattaa kuitenkin k√§ytt√§√§ komentoa \verb-\emph{korostettava teksti}-, joka kursivoi tai lihavoi tarpeen mukaan!
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Tekstin muokkaaminen}
-Tekstin keskitt‰minen onnistuu ymp‰ristˆn \verb-center- avulla:
+Tekstin keskitt√§minen onnistuu ymp√§rist√∂n \verb-center- avulla:
 \[
 \verb-\begin{center}...keskitetty teksti...\end{center}-
 \]
-T‰ll‰ tavoin keskitetyn tekstin yl‰- ja alapuolelle j‰‰ hieman tyhj‰‰ tilaa. \vaihto\pause
-Oikeaan tai vasempaan laitaan tasattua teksti‰ saa halutessaan ymp‰ristˆill‰ \verb-flushright- ja \verb-flushleft-.
+T√§ll√§ tavoin keskitetyn tekstin yl√§- ja alapuolelle j√§√§ hieman tyhj√§√§ tilaa. \vaihto\pause
+Oikeaan tai vasempaan laitaan tasattua teksti√§ saa halutessaan ymp√§rist√∂ill√§ \verb-flushright- ja \verb-flushleft-.
 \end{frame}
 \begin{frame}
 \begin{harj}
-Valitse dokumentistasi muutama rivi teksti‰ ja keskit‰ se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua teksti‰ k‰ytt‰m‰ll‰ erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
+Valitse dokumentistasi muutama rivi teksti√§ ja keskit√§ se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua teksti√§ k√§ytt√§m√§ll√§ erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
 \begin{framed}
 \begin{flushright}
-T‰m‰ teksti on normaalikokoista, \tiny mutta t‰m‰ pient‰ ja \huge t‰m‰ suurta \normalsize. T‰h‰n laitan suuren v‰lin: \qquad, t‰h‰n v‰h‰n pienemm‰n: \quad ja \emph{t‰t‰ teksti‰ taas haluan korostaa!} Miten saisin tyhj‰n rivin tai kaksi?
+T√§m√§ teksti on normaalikokoista, \tiny mutta t√§m√§ pient√§ ja \huge t√§m√§ suurta \normalsize. T√§h√§n laitan suuren v√§lin: \qquad, t√§h√§n v√§h√§n pienemm√§n: \quad ja \emph{t√§t√§ teksti√§ taas haluan korostaa!} Miten saisin tyhj√§n rivin tai kaksi?
 \end{flushright}
 \end{framed}
 \end{harj}
@@ -390,46 +390,46 @@ T‰m‰ teksti on normaalikokoista, \tiny mutta t‰m‰ pient‰ ja \huge t‰m‰ suurta \n
 \begin{frame}[fragile]
 \frametitle{Matematiikkatila}
 \pause
-Matemaattisia ilmaisuja saa tekstin sekaan k‰ytt‰m‰ll‰ komentoja \verb+\(+  
+Matemaattisia ilmaisuja saa tekstin sekaan k√§ytt√§m√§ll√§ komentoja \verb+\(+  
 ja \verb+\)+. \pause Esimerkiksi rivi
 \begin{Verbatim}[frame=single]
-Yht‰lˆt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat 
-samanaikaisesti tasan kahdessa tason pisteess‰.
+Yht√§l√∂t \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat 
+samanaikaisesti tasan kahdessa tason pisteess√§.
 \end{Verbatim}
 \pause
 tulostuu riviksi 
 \begin{framed}
-Yht‰lˆt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat samanaikaisesti tasan kahdessa tason pisteess‰.
+Yht√§l√∂t \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat samanaikaisesti tasan kahdessa tason pisteess√§.
 \end{framed} 
 \pause
-Huomaa, ett‰ matematiikkatilassa kirjaimet tulostuvat erilailla, kuin muussa tekstiss‰. 
-%Huomaa myˆs, ett‰ 
+Huomaa, ett√§ matematiikkatilassa kirjaimet tulostuvat erilailla, kuin muussa tekstiss√§. 
+%Huomaa my√∂s, ett√§ 
 %\[
-%\verbˆ\(2x+3=4\)ˆ
+%\verb√∂\(2x+3=4\)√∂
 %\]
-%tuottaa yht‰lˆn \(2x+3=4\) \pause ja komento 
+%tuottaa yht√§l√∂n \(2x+3=4\) \pause ja komento 
 %\[
-%\verbˆ\(x^3+\sqrt{2}x^2+1=0\)ˆ
+%\verb√∂\(x^3+\sqrt{2}x^2+1=0\)√∂
 %\]
-%yht‰lˆn \(x^3+\sqrt{2}x^2+1=0\). \pause T‰t‰ kutsutaan matematiikkatilaksi.
+%yht√§l√∂n \(x^3+\sqrt{2}x^2+1=0\). \pause T√§t√§ kutsutaan matematiikkatilaksi.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
 Tuota seuraava lause dokumenttiisi:
 \begin{framed}
-Vaihdannaisessa renkaassa p‰tee \((a+b)^2=a^2+2ab+b^2\). Jos siis \(2ab\neq0\), niin \((a+b)^2\neq a^2+b^2\). 
+Vaihdannaisessa renkaassa p√§tee \((a+b)^2=a^2+2ab+b^2\). Jos siis \(2ab\neq0\), niin \((a+b)^2\neq a^2+b^2\). 
 \end{framed}
 Erisuuruuden saat komennolla \verb-\neq-.
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kaavarivi}
-Kun matemaattinen ilmaisu halutaan yksinkertaisesti omalle kaavarivilleen, se kirjoitetaan merkkien \verb-\[- ja \verb-\]- v‰liin.
+Kun matemaattinen ilmaisu halutaan yksinkertaisesti omalle kaavarivilleen, se kirjoitetaan merkkien \verb-\[- ja \verb-\]- v√§liin.
 \pause
 Esimerkiksi 
 \begin{footnotesize}
 \begin{Verbatim}[frame=single]
-Toisen asteen yht‰lˆn \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
+Toisen asteen yht√§l√∂n \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
 \[
 x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 \]
@@ -438,7 +438,7 @@ x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 tuottaa seuraavanlaisen esityksen:
 \pause
 \begin{framed}
-Toisen asteen yht‰lˆn \(ax^2+bx+c=0\)
+Toisen asteen yht√§l√∂n \(ax^2+bx+c=0\)
 ratkaisu saadaan kaavasta
 \[
 x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
@@ -449,20 +449,20 @@ x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 \begin{harj}\label{rajaArvo}
 Tuota seuraava dokumenttiisi:
 \begin{framed}
-Funktion \(f\colon \R\to \R\) derivaatta pisteess‰ \(x_0\in\R\) on
+Funktion \(f\colon \R\to \R\) derivaatta pisteess√§ \(x_0\in\R\) on
 \[
 f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0},
 \]
-mik‰li raja-arvo on olemassa.
+mik√§li raja-arvo on olemassa.
 \end{framed}
 \end{harj}
 \begin{itemize}
-\item Kaksoispisteen paikalla kannattaa k‰ytt‰‰ komentoa \verb-\colon-
+\item Kaksoispisteen paikalla kannattaa k√§ytt√§√§ komentoa \verb-\colon-
 \item Reaalilukujen joukon symbolin saat komennolla \verb-\mathbb{R}-
-\item T‰h‰n yhteyteen oikeanlaisen nuolen saat komennolla \verb-\to-
+\item T√§h√§n yhteyteen oikeanlaisen nuolen saat komennolla \verb-\to-
 \item Relaatio \(\in\) tulostuu komennolla \verb-\in-
 \item Raja-arvo-operaattorin saat komennolla \verb-\lim_{alaindeksi}-.
-%\item Osam‰‰r‰n saat komennolla \verb-\frac{osoittaja}{nimitt‰j‰}-
+%\item Osam√§√§r√§n saat komennolla \verb-\frac{osoittaja}{nimitt√§j√§}-
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
@@ -474,11 +474,11 @@ Jos \(F\) on \(\sigma\)-algebra ja \(A_i\in F\) kaikilla \(i= 1,2,\ldots\), niin
 \bigcup_{i=1}^{\infty} A_i\in F.
 \]
 \end{framed}
-Tarvitset mm. komentoja \verb-\sigma-, \verb-\in-, \verb-\bigcup- ja \verb-\infty-. Ala- ja yl‰indeksit kirjoitetaan merkkien \verb-_- ja \verb-^- avulla (jos indeksiin halutaan enemm‰n kuin yksi merkki, se t‰ytyy laittaa aaltosulkeisiin kuten edellisess‰ teht‰v‰ss‰). 
+Tarvitset mm. komentoja \verb-\sigma-, \verb-\in-, \verb-\bigcup- ja \verb-\infty-. Ala- ja yl√§indeksit kirjoitetaan merkkien \verb-_- ja \verb-^- avulla (jos indeksiin halutaan enemm√§n kuin yksi merkki, se t√§ytyy laittaa aaltosulkeisiin kuten edellisess√§ teht√§v√§ss√§). 
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-Yleisimpi‰ matemaattisia symboleita lˆyt‰‰ Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niit‰ voi etsi‰ esim. seuraavista osoitteista:
+Yleisimpi√§ matemaattisia symboleita l√∂yt√§√§ Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niit√§ voi etsi√§ esim. seuraavista osoitteista:
 \begin{scriptsize}
 \begin{itemize}
 \item \url{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}
@@ -486,7 +486,7 @@ Yleisimpi‰ matemaattisia symboleita lˆyt‰‰ Texmakerin vasempaan laitaan avautuvi
 \end{itemize}
 \end{scriptsize}
 \begin{harj}
-Selvit‰, miten voit tuottaa vektorimerkinn‰t \(\bar{v}\), \(\bar{w}\) ja \(\overline{AB}\). Kirjoita seuraava:
+Selvit√§, miten voit tuottaa vektorimerkinn√§t \(\bar{v}\), \(\bar{w}\) ja \(\overline{AB}\). Kirjoita seuraava:
 \begin{framed}
 Vektoreiden \(\bar{v}=\overline{AB}\) ja \(\bar{w}=\overline{CD}\) ristitulo \(\bar{v}\times\bar{w}\) on kohtisuorassa kumpaakin vektoria vastaan. Vektoreiden pistetulo \(\bar{v}\cdot\bar{w}\) on sen sijaan reaaliluku.
 \end{framed}
@@ -498,7 +498,7 @@ Vektoreiden \(\bar{v}=\overline{AB}\) ja \(\bar{w}=\overline{CD}\) ristitulo \(\
 \subsection{Matemaattinen teksti}
 \begin{frame}[fragile]
 \frametitle{Sulut}
-Varsinkin kaavariville kirjoitettaessa monet symbolit ovat huomattavan kookkaita. Sulut tulostuvat automaattisesti oikean kokoisina kun niille k‰ytet‰‰n komentoja pelkkien merkkien \verb-(- ja \verb-)- sijaan. \vaihto
+Varsinkin kaavariville kirjoitettaessa monet symbolit ovat huomattavan kookkaita. Sulut tulostuvat automaattisesti oikean kokoisina kun niille k√§ytet√§√§n komentoja pelkkien merkkien \verb-(- ja \verb-)- sijaan. \vaihto
 \begin{tabular}{cc|cc}
 %\multicolumn{2}{c}{Vasen}&\multicolumn{2}{c}{Oikea}\\
 Komento & Tulostus & Komento & Tulostus\\
@@ -510,7 +510,7 @@ Komento & Tulostus & Komento & Tulostus\\
 \verb-\left|- & \(\left|\right.\) & \verb-\right|- & \(\left.\right|\)\\
 \end{tabular}
 \vaihto
-Jokaista \verb-\left--alkuista komentoa t‰ytyy seurata \verb-\right--alkuinen komento, v‰hint‰‰n \verb-\right.- joka ei tulosta mit‰‰n. Samoin \verb-\right--alkuista komentoa on edellett‰v‰ \verb-\left--alkuinen komento, v‰hint‰‰n \verb-\left.-. 
+Jokaista \verb-\left--alkuista komentoa t√§ytyy seurata \verb-\right--alkuinen komento, v√§hint√§√§n \verb-\right.- joka ei tulosta mit√§√§n. Samoin \verb-\right--alkuista komentoa on edellett√§v√§ \verb-\left--alkuinen komento, v√§hint√§√§n \verb-\left.-. 
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
@@ -521,13 +521,13 @@ Tuota seuraava rivi dokumenttiisi:
 \]
 \end{framed}
 \end{harj}
-Komennolla \verb-\middle|- saat pystyviivan automaattisesti oikean kokoisena. Teht‰v‰st‰ \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
+Komennolla \verb-\middle|- saat pystyviivan automaattisesti oikean kokoisena. Teht√§v√§st√§ \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
 Kirjoita seuraava:
 \begin{framed}
-Jos \(F\) on \(\sigma\)-algebra ja \(P\colon F\to\R\) todenn‰kˆisyys, niin tapahtumille \(A_1,A_2,\ldots\in F\) p‰tee
+Jos \(F\) on \(\sigma\)-algebra ja \(P\colon F\to\R\) todenn√§k√∂isyys, niin tapahtumille \(A_1,A_2,\ldots\in F\) p√§tee
 \[
 P\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty P(A_i).
 \]
@@ -535,8 +535,8 @@ P\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty P(A_i).
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Pitk‰t kaavat}
-Toisinaan matemaattiset ilmaisut ovat niin pitki‰, etteiv‰t ne mahdu yhdelle riville. T‰llˆin voidaan k‰ytt‰‰ esimerkiksi ymp‰ristˆ‰ \verb-align*-, jolla rivit saadaan allekkain seuraavasti:
+\frametitle{Pitk√§t kaavat}
+Toisinaan matemaattiset ilmaisut ovat niin pitki√§, etteiv√§t ne mahdu yhdelle riville. T√§ll√∂in voidaan k√§ytt√§√§ esimerkiksi ymp√§rist√∂√§ \verb-align*-, jolla rivit saadaan allekkain seuraavasti:
 
 \begin{minipage}{4cm}
 \begin{scriptsize}
@@ -557,15 +557,15 @@ xyz &= abc\\
 \end{align*}
 \end{minipage}
 
-Huomaa, ettei \verb-align*--ymp‰ristˆ‰ tarvitse erikseen sijoittaa matematiikkatilaan.
+Huomaa, ettei \verb-align*--ymp√§rist√∂√§ tarvitse erikseen sijoittaa matematiikkatilaan.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Pitk‰t kaavat}
-Ymp‰ristˆlle \Verb-align*- rivin katkaisukohta kerrotaan komennolla \verb-\\- ja tasauskohta merkill‰ \verb-&-. Katkaisukohta t‰ytyy lˆyty‰ kaikilta, paitsi viimeiselt‰ rivilt‰. Sen sijaan tasauskohdan t‰ytyy lˆyty‰ jokaiselta rivilt‰!
+\frametitle{Pitk√§t kaavat}
+Ymp√§rist√∂lle \Verb-align*- rivin katkaisukohta kerrotaan komennolla \verb-\\- ja tasauskohta merkill√§ \verb-&-. Katkaisukohta t√§ytyy l√∂yty√§ kaikilta, paitsi viimeiselt√§ rivilt√§. Sen sijaan tasauskohdan t√§ytyy l√∂yty√§ jokaiselta rivilt√§!
 \vaihto
-Pitkille kaavoille voi vaihtoehtoisesti k‰ytt‰‰ ymp‰ristˆ‰ \verb-multline*-, jolle kerrotaan vain rivien katkaisukohdat. Se asettelee rivit automaattisesti (yleens‰ v‰h‰n ep‰m‰‰r‰isesti).
+Pitkille kaavoille voi vaihtoehtoisesti k√§ytt√§√§ ymp√§rist√∂√§ \verb-multline*-, jolle kerrotaan vain rivien katkaisukohdat. Se asettelee rivit automaattisesti (yleens√§ v√§h√§n ep√§m√§√§r√§isesti).
 \vaihto
-Myˆs t‰hdettˆmi‰ ymp‰ristˆj‰ \verb-align- ja \verb-multline- voi k‰ytt‰‰, jolloin jokainen rivi tulee numeroiduksi.
+My√∂s t√§hdett√∂mi√§ ymp√§rist√∂j√§ \verb-align- ja \verb-multline- voi k√§ytt√§√§, jolloin jokainen rivi tulee numeroiduksi.
 %\begin{minipage}{3cm}
 %\begin{scriptsize}
 %\begin{Verbatim}[frame=single]
@@ -606,7 +606,7 @@ Myˆs t‰hdettˆmi‰ ymp‰ristˆj‰ \verb-align- ja \verb-multline- voi k‰ytt‰‰, jolloi
 %\end{align*}
 %\end{Verbatim}
 %\end{scriptsize}
-%saa seuraavan yht‰lˆketjun kirjoitetuksi allekkain, yht‰suuruusmerkit kohdakkain:
+%saa seuraavan yht√§l√∂ketjun kirjoitetuksi allekkain, yht√§suuruusmerkit kohdakkain:
 %\begin{align*}
 %(3\vv-\vw)\cdot(\vv+\vw)&=(3\vv-\vw)\cdot\vv+ (3\vv-\vw)\cdot\vw \\
 %&=3\vv\cdot\vv-\vw\cdot\vv+ 3\vv\cdot\vw - \vw\cdot\vw\\
@@ -616,7 +616,7 @@ Myˆs t‰hdettˆmi‰ ymp‰ristˆj‰ \verb-align- ja \verb-multline- voi k‰ytt‰‰, jolloi
 %
 %\end{frame}
 \begin{frame}[fragile]
-%Seuraavassa pohja \verb-align*--ymp‰ristˆn k‰ytt‰mist‰ varten:
+%Seuraavassa pohja \verb-align*--ymp√§rist√∂n k√§ytt√§mist√§ varten:
 %\vaihto
 %\begin{minipage}{4cm}
 %\begin{scriptsize}
@@ -630,10 +630,10 @@ Myˆs t‰hdettˆmi‰ ymp‰ristˆj‰ \verb-align- ja \verb-multline- voi k‰ytt‰‰, jolloi
 %\end{scriptsize}
 %\end{minipage}
 \begin{harj}
-Kirjoita muutaman yht‰lˆn ketju ja sijoita yht‰lˆt allekkain, tasaten haluamastasi kohdasta. Voit esimerkiksi derivoida vaiheittain funktion \(x^3\sin(\cos(x))\) tai keksi‰ jotkin muut yht‰lˆt. Yht‰lˆiden ei tarvitse olla tosia.
+Kirjoita muutaman yht√§l√∂n ketju ja sijoita yht√§l√∂t allekkain, tasaten haluamastasi kohdasta. Voit esimerkiksi derivoida vaiheittain funktion \(x^3\sin(\cos(x))\) tai keksi√§ jotkin muut yht√§l√∂t. Yht√§l√∂iden ei tarvitse olla tosia.
 \end{harj}
 \begin{harj}
-Kopioi osa edellisen teht‰v‰n yht‰lˆketjua ja kirjoita se numeroituun tai numeroimattomaan \verb-multline--ymp‰ristˆˆn. 
+Kopioi osa edellisen teht√§v√§n yht√§l√∂ketjua ja kirjoita se numeroituun tai numeroimattomaan \verb-multline--ymp√§rist√∂√∂n. 
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
@@ -642,97 +642,97 @@ Komennolla \verb-\begin{equation}...\end{equation}- saa luotua samanlaisen kaava
 
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
-Einsteinin yht‰lˆˆn
+Einsteinin yht√§l√∂√∂n
 \begin{equation}
 E=mc^2
 \end{equation}
-viitataan myˆhemmin.
+viitataan my√∂hemmin.
 \end{Verbatim}
 \end{scriptsize}
 
 tuottaa seuraavan rivin:
 \begin{framed}
-Einsteinin yht‰lˆˆn
+Einsteinin yht√§l√∂√∂n
 \begin{equation}
 E=mc^2
 \end{equation}
-viitataan myˆhemmin.
+viitataan my√∂hemmin.
 \end{framed}
 \pause
 Numeroituihin kaavoihin viittaamiseen palataan tuonnempana.
 \end{frame}
 \begin{frame}[fragile]
-\begin{harj}\label{viittausTeht‰v‰}
+\begin{harj}\label{viittausTeht√§v√§}
 Tuota seuraava dokumenttiisi:
 \begin{framed}
-Eksponenttifunktiolla \(e^x\) on sarjakehitelm‰
+Eksponenttifunktiolla \(e^x\) on sarjakehitelm√§
 \setcounter{equation}{0}
 \begin{equation}
 e^x=\sum_{n=1}^\infty\frac{x^n}{n!}.
 \end{equation}
 \end{framed}
-Summamerkinn‰n saat komennolla \verb-\sum_{}^{}-, osam‰‰r‰n komennolla \verb-\frac{}{}- ja ‰‰rettˆm‰n symbolin komennolla \verb-\infty-. 
+Summamerkinn√§n saat komennolla \verb-\sum_{}^{}-, osam√§√§r√§n komennolla \verb-\frac{}{}- ja √§√§rett√∂m√§n symbolin komennolla \verb-\infty-. 
 \end{harj}
 \end{frame}
 %\section{2. kerta}
-\subsection{Lauseymp‰ristˆ}
+\subsection{Lauseymp√§rist√∂}
 \begin{frame}[fragile]
-\frametitle{Lauseymp‰ristˆ}
-Paketti amsthm tarjoaa mahdollisuuden esitt‰‰ mm. lauseet, lemmat ja m‰‰ritelm‰t tyylikk‰‰sti. 
+\frametitle{Lauseymp√§rist√∂}
+Paketti amsthm tarjoaa mahdollisuuden esitt√§√§ mm. lauseet, lemmat ja m√§√§ritelm√§t tyylikk√§√§sti. 
 \vaihto
-Tarvittavat ymp‰ristˆt m‰‰ritell‰‰n esittelyosassa komennolla \verb-\newtheorem{}{}-. Ensimm‰isiin aaltosulkeisiin tulee nimi, jolla ymp‰ristˆ‰ k‰ytet‰‰n ja j‰lkimm‰isiin ymp‰ristˆn otsikko, joka halutaan n‰kyv‰ksi lopullisessa tyˆss‰.
+Tarvittavat ymp√§rist√∂t m√§√§ritell√§√§n esittelyosassa komennolla \verb-\newtheorem{}{}-. Ensimm√§isiin aaltosulkeisiin tulee nimi, jolla ymp√§rist√∂√§ k√§ytet√§√§n ja j√§lkimm√§isiin ymp√§rist√∂n otsikko, joka halutaan n√§kyv√§ksi lopullisessa ty√∂ss√§.
 \vaihto
-Komento \verb-\newtheorem{esim}{Esimerkki}- loisi ymp‰ristˆn, jota k‰ytett‰isiin komennolla \verb-\begin{esim}...\end{esim}- ja jonka otsikko valmiissa tyˆss‰ olisi Esimerkki. 
+Komento \verb-\newtheorem{esim}{Esimerkki}- loisi ymp√§rist√∂n, jota k√§ytett√§isiin komennolla \verb-\begin{esim}...\end{esim}- ja jonka otsikko valmiissa ty√∂ss√§ olisi Esimerkki. 
 %\begin{Verbatim}[frame=single]
 %\newtheorem{esim}{Esimerkki}
 %\newtheorem{lause}{Lause}
-%\newtheorem{maar}{M‰‰ritelm‰}
+%\newtheorem{maar}{M√§√§ritelm√§}
 %\end{Verbatim}
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}\label{harjYmparistot}
-Luo esittelyosassa ainakin ymp‰ristˆt Lause, M‰‰ritelm‰ ja Esimerkki. K‰yt‰ luomiasi ymp‰ristˆj‰ ainakin kerran. 
+Luo esittelyosassa ainakin ymp√§rist√∂t Lause, M√§√§ritelm√§ ja Esimerkki. K√§yt√§ luomiasi ymp√§rist√∂j√§ ainakin kerran. 
 \end{harj}
-Lauseiden todistuksia varten on oma ymp‰ristˆns‰, jota k‰ytet‰‰n komennoilla \verb-\begin{proof}...\end{proof}-
+Lauseiden todistuksia varten on oma ymp√§rist√∂ns√§, jota k√§ytet√§√§n komennoilla \verb-\begin{proof}...\end{proof}-
 \begin{harj}
-Kirjoita edellisess‰ harjoituksessa luomallesi lauseelle jokin todistus. Todistukseksi kelpaa muutama rivi valitsemaasi teksti‰.
+Kirjoita edellisess√§ harjoituksessa luomallesi lauseelle jokin todistus. Todistukseksi kelpaa muutama rivi valitsemaasi teksti√§.
 \end{harj}
 %Esimerkiksi rivi
 %\begin{Verbatim}[frame=single]
 %\begin{esim}
-%T‰m‰ on esimerkki\ldots
+%T√§m√§ on esimerkki\ldots
 %\end{esim}
 %\end{Verbatim}
 %\pause
-%tuottaisi nyt ymp‰ristˆn
+%tuottaisi nyt ymp√§rist√∂n
 %\begin{framed}
 %\begin{esim}
-%T‰m‰ on esimerkki\ldots
+%T√§m√§ on esimerkki\ldots
 %\end{esim}
 %\end{framed}
-%Jos ymp‰ristˆ‰ \verb-esim- ei ole m‰‰ritelty esittelyosassa, t‰m‰ aiheuttaa virheen!
+%Jos ymp√§rist√∂√§ \verb-esim- ei ole m√§√§ritelty esittelyosassa, t√§m√§ aiheuttaa virheen!
 \end{frame}
 %\begin{frame}[fragile]
 %\pause
 %Vastaavasti esimerkiksi komento
 %\begin{Verbatim}[frame=single]
 %\begin{lause}
-%T‰m‰ on lause\ldots
+%T√§m√§ on lause\ldots
 %\end{lause}
 %\end{Verbatim}
-%tuottaa ymp‰ristˆn
+%tuottaa ymp√§rist√∂n
 %\pause
 %\begin{framed}
 %\begin{lause}
-%T‰m‰ on lause\ldots
+%T√§m√§ on lause\ldots
 %\end{lause}
 %\end{framed}
 %\pause
-%Kokeile, milt‰ n‰m‰ n‰ytt‰v‰t omassa tyˆss‰si.
+%Kokeile, milt√§ n√§m√§ n√§ytt√§v√§t omassa ty√∂ss√§si.
 %\end{frame}
 \begin{frame}[fragile]
-\frametitle{Lauseymp‰ristˆn tyyli}
-Lauseymp‰ristˆn tyyli valitaan esittelyosassa komennolla \verb-\theoremstyle{...}-. Valittavissa on tyylit \verb-plain-, \verb-definition- ja \verb-remark-. Tyylin valinta vaikuttaa sit‰ seuraaviin komennolla \verb-\newtheorem{}{}- luotuihin ymp‰ristˆihin.
+\frametitle{Lauseymp√§rist√∂n tyyli}
+Lauseymp√§rist√∂n tyyli valitaan esittelyosassa komennolla \verb-\theoremstyle{...}-. Valittavissa on tyylit \verb-plain-, \verb-definition- ja \verb-remark-. Tyylin valinta vaikuttaa sit√§ seuraaviin komennolla \verb-\newtheorem{}{}- luotuihin ymp√§rist√∂ihin.
 \vaihto
 Esimerkiksi kirjoittamalla
 \pause
@@ -741,34 +741,34 @@ Esimerkiksi kirjoittamalla
 \newtheorem{lemma}{Lemma}
 \newtheorem{lause}{Lause}
 \theoremstyle{definition}
-\newtheorem{maar}{M‰‰ritelm‰}
+\newtheorem{maar}{M√§√§ritelm√§}
 \end{Verbatim}
 \pause
-ymp‰ristˆt \verb-lemma- ja \verb-lause- tulostuvat plain-tyylin mukaisesti ja ymp‰ristˆ \verb-maar- definition-tyylin mukaisesti.
+ymp√§rist√∂t \verb-lemma- ja \verb-lause- tulostuvat plain-tyylin mukaisesti ja ymp√§rist√∂ \verb-maar- definition-tyylin mukaisesti.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Valitse harjoituksessa \ref{harjYmparistot} luomillesi lauseymp‰ristˆille jotkin tyylit. Kokeile, milt‰ erilaiset tyylit n‰ytt‰v‰t ja valitse mieleisesi!
+Valitse harjoituksessa \ref{harjYmparistot} luomillesi lauseymp√§rist√∂ille jotkin tyylit. Kokeile, milt√§ erilaiset tyylit n√§ytt√§v√§t ja valitse mieleisesi!
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Lauseymp‰ristˆjen numerointi}
-Komennolla \verb-\newtheorem{}{}- luotu ymp‰ristˆ luo samalla uuden \emph{laskurin}, jonka mukaan ymp‰ristˆn toteutumat numeroidaan. 
+\frametitle{Lauseymp√§rist√∂jen numerointi}
+Komennolla \verb-\newtheorem{}{}- luotu ymp√§rist√∂ luo samalla uuden \emph{laskurin}, jonka mukaan ymp√§rist√∂n toteutumat numeroidaan. 
 \vaihto
-Laskuri voidaan myˆs asettaa toiselle laskurille \emph{alisteiseksi} tai valita mielivaltaisesti. Erityisesti eri ymp‰ristˆt voivat k‰ytt‰‰ samaa laskuria, jos niin halutaan.
+Laskuri voidaan my√∂s asettaa toiselle laskurille \emph{alisteiseksi} tai valita mielivaltaisesti. Erityisesti eri ymp√§rist√∂t voivat k√§ytt√§√§ samaa laskuria, jos niin halutaan.
 \vaihto
-Komennolla \verb-\newtheorem{}{}[]- on valinnaisena argumenttina laskuri, jolle ymp‰ristˆn numerointi halutaan alisteiseksi. T‰m‰ voisi olla esim. laskuri \verb-section-, jolloin ymp‰ristˆ numeroitaisiin muodossa ''osionNumero.ymp‰ristˆnNumero''.
+Komennolla \verb-\newtheorem{}{}[]- on valinnaisena argumenttina laskuri, jolle ymp√§rist√∂n numerointi halutaan alisteiseksi. T√§m√§ voisi olla esim. laskuri \verb-section-, jolloin ymp√§rist√∂ numeroitaisiin muodossa ''osionNumero.ymp√§rist√∂nNumero''.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Lauseymp‰ristˆjen numerointi}
-Jos ymp‰ristˆn halutaan k‰ytt‰v‰n jotain tietty‰ laskuria, k‰ytet‰‰n komentoa \verb-\newtheorem{}[laskurin nimi]{}-. Huomaa, ett‰ t‰ss‰ valinnainen argumentti sijoittuu pakollisten v‰liin. 
+\frametitle{Lauseymp√§rist√∂jen numerointi}
+Jos ymp√§rist√∂n halutaan k√§ytt√§v√§n jotain tietty√§ laskuria, k√§ytet√§√§n komentoa \verb-\newtheorem{}[laskurin nimi]{}-. Huomaa, ett√§ t√§ss√§ valinnainen argumentti sijoittuu pakollisten v√§liin. 
 \vaihto
 Esimerkiksi koodilla
 \begin{Verbatim}[frame=single]
 \newtheorem{teor}{Teoreema}[section]
 \newtheorem{lemma}[teor]{Lemma}
 \end{Verbatim}
-luodut Lemma- ja Teoreema-ymp‰ristˆt noudattavat samaa, laskurille \verb-section- alisteista numerointia.
+luodut Lemma- ja Teoreema-ymp√§rist√∂t noudattavat samaa, laskurille \verb-section- alisteista numerointia.
 %\begin{framed}
 %\setcounter{laskuri}{0}
 %\begin{trma}
@@ -780,44 +780,44 @@ luodut Lemma- ja Teoreema-ymp‰ristˆt noudattavat samaa, laskurille \verb-section
 %\end{framed}
 \end{frame}
 \begin{frame}[fragile]
-Kokonaan numeroimattoman lauseymp‰ristˆn voi luoda komennolla \verb-\newtheorem*{}{}-.
+Kokonaan numeroimattoman lauseymp√§rist√∂n voi luoda komennolla \verb-\newtheorem*{}{}-.
 \begin{harj}
-Aseta yksi lauseymp‰ristˆist‰si (esim. Lause) laskurille \verb-section- alisteiseksi.
-%Anna yhdelle lauseymp‰ristˆist‰isi numeroinniksi \verb-\section- tai \verb-\subsection-.
-Anna sitten toisen lauseymp‰ristˆn (esim. Lemma) laskuriksi edellinen lauseymp‰ristˆ. 
+Aseta yksi lauseymp√§rist√∂ist√§si (esim. Lause) laskurille \verb-section- alisteiseksi.
+%Anna yhdelle lauseymp√§rist√∂ist√§isi numeroinniksi \verb-\section- tai \verb-\subsection-.
+Anna sitten toisen lauseymp√§rist√∂n (esim. Lemma) laskuriksi edellinen lauseymp√§rist√∂. 
 \end{harj}
 \begin{harj}
-Luo jokin numeroimaton lauseymp‰ristˆ ja k‰yt‰ sit‰ tyˆss‰si.
+Luo jokin numeroimaton lauseymp√§rist√∂ ja k√§yt√§ sit√§ ty√∂ss√§si.
 \end{harj}
 \end{frame}
-\subsection{Sis‰iset viittaukset}
+\subsection{Sis√§iset viittaukset}
 \begin{frame}[fragile]
-\frametitle{Sis‰iset viittaukset}
-\LaTeX illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yht‰lˆihin. Viitattava kohde t‰ytyy ensin nimet‰ komennolla \verb-\label{nimi}- (nimi ei tulostu tyˆhˆn). T‰m‰n j‰lkeen viittaaminen onnistuu komennoilla 
+\frametitle{Sis√§iset viittaukset}
+\LaTeX illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yht√§l√∂ihin. Viitattava kohde t√§ytyy ensin nimet√§ komennolla \verb-\label{nimi}- (nimi ei tulostu ty√∂h√∂n). T√§m√§n j√§lkeen viittaaminen onnistuu komennoilla 
 \begin{itemize}
 \item \verb-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
-\item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sis‰ll‰)
+\item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sis√§ll√§)
 \item \verb-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
 \end{itemize}
-Sis‰isten viittausten kanssa tulee aina k‰ytt‰‰ komentoja. T‰llˆin viittaukset pysyv‰t kohdallaan vaikka numeroinnit muuttuisivat tyˆn edetess‰.
+Sis√§isten viittausten kanssa tulee aina k√§ytt√§√§ komentoja. T√§ll√∂in viittaukset pysyv√§t kohdallaan vaikka numeroinnit muuttuisivat ty√∂n edetess√§.
 \end{frame}
 \begin{frame}[fragile]
-Huom! Uuden viittauksen j‰lkeen tyˆn joutuu ajamaan kahdesti, jotta numeroinnit tulevat n‰kyviin (kahden kysymysmerkin sijaan).
+Huom! Uuden viittauksen j√§lkeen ty√∂n joutuu ajamaan kahdesti, jotta numeroinnit tulevat n√§kyviin (kahden kysymysmerkin sijaan).
 \begin{harj}
-Viittaa harjoituksessa \ref{viittausTeht‰v‰} kirjoittamaasi numeroituun yht‰lˆˆn. K‰yt‰ komentoja \verb-\eqref{}- ja \verb-\pageref{}-.
+Viittaa harjoituksessa \ref{viittausTeht√§v√§} kirjoittamaasi numeroituun yht√§l√∂√∂n. K√§yt√§ komentoja \verb-\eqref{}- ja \verb-\pageref{}-.
 \vaihto
-Huomaa, ett‰ viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. T‰m‰ kirjoitetaan ymp‰ristˆn aloittavan komennon \verb-\begin{}- j‰lkeen. 
+Huomaa, ett√§ viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. T√§m√§ kirjoitetaan ymp√§rist√∂n aloittavan komennon \verb-\begin{}- j√§lkeen. 
 \end{harj}
 \end{frame}
 \subsection{Listarakenteet}
 \begin{frame}[fragile]
 \frametitle{Listarakenteet}
-\LaTeX illa voi luoda listoja mm. ymp‰ristˆjen \verb-itemize- ja \verb-enumerate- avulla. Ensimm‰inen on ranskalaiset viivat-tyyppinen, j‰lkimm‰inen numeroi listan j‰senet. N‰it‰ k‰ytet‰‰n seuraavasti:
+\LaTeX illa voi luoda listoja mm. ymp√§rist√∂jen \verb-itemize- ja \verb-enumerate- avulla. Ensimm√§inen on ranskalaiset viivat-tyyppinen, j√§lkimm√§inen numeroi listan j√§senet. N√§it√§ k√§ytet√§√§n seuraavasti:
 \vaihto
 \begin{minipage}{4cm}
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
-T‰ss‰ listani:
+T√§ss√§ listani:
 \begin{itemize}
 \item asia
 \item toinen asia
@@ -827,7 +827,7 @@ T‰ss‰ listani:
 \end{scriptsize}
 \end{minipage}
 \begin{minipage}{4cm}
-T‰ss‰ listani:
+T√§ss√§ listani:
 \begin{itemize}
 \item asia
 \item toinen asia
@@ -835,16 +835,16 @@ T‰ss‰ listani:
 \end{itemize}
 \end{minipage}
 \vaihto
-Luettelointiin k‰ytetyt symbolit voi tarvittaessa valita vapaasti. 
+Luettelointiin k√§ytetyt symbolit voi tarvittaessa valita vapaasti. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Listat}
-Seuraavassa teht‰v‰ss‰ harjoitellaan sis‰kk‰isten listojen k‰yttˆ‰.
+Seuraavassa teht√§v√§ss√§ harjoitellaan sis√§kk√§isten listojen k√§ytt√∂√§.
 \begin{harj}
-Luo ainakin kolmen kohdan numeroitu lista haluamistasi asioista. Luo yhdeksi listan j‰seneksi toinen lista ja yhdeksi t‰m‰n listan j‰seneksi kolmas lista. K‰yt‰ (ainakin) viimeiseen listaan numeroimatonta \verb-itemize--ymp‰ristˆ‰.
+Luo ainakin kolmen kohdan numeroitu lista haluamistasi asioista. Luo yhdeksi listan j√§seneksi toinen lista ja yhdeksi t√§m√§n listan j√§seneksi kolmas lista. K√§yt√§ (ainakin) viimeiseen listaan numeroimatonta \verb-itemize--ymp√§rist√∂√§.
 \end{harj}
 \begin{harj}
-Luo viel‰ yksi lista, mutta k‰yt‰ t‰ll‰ kertaa ymp‰ristˆ‰ \verb-description-. Se toimii kuten \verb-itemize-, mutta pelk‰n komennon \verb-\item- sijaan k‰ytet‰‰n komentoa \verb-\item[nimi]-, jossa \verb-nimi- on vapaasti valitsemasi merkkijono.
+Luo viel√§ yksi lista, mutta k√§yt√§ t√§ll√§ kertaa ymp√§rist√∂√§ \verb-description-. Se toimii kuten \verb-itemize-, mutta pelk√§n komennon \verb-\item- sijaan k√§ytet√§√§n komentoa \verb-\item[nimi]-, jossa \verb-nimi- on vapaasti valitsemasi merkkijono.
 %\begin{scriptsize}
 %\begin{Verbatim}[frame=single]
 %\begin{description}
@@ -854,24 +854,24 @@ Luo viel‰ yksi lista, mutta k‰yt‰ t‰ll‰ kertaa ymp‰ristˆ‰ \verb-description-. Se
 %\end{description}
 %\end{scriptsize}
 \end{harj}
-%Listaukseen k‰ytett‰viin symboleihin voi itse vaikuttaa. Opetellaan myˆhemmin laskareissa usein k‰ytett‰v‰ aakkostettu lista.
+%Listaukseen k√§ytett√§viin symboleihin voi itse vaikuttaa. Opetellaan my√∂hemmin laskareissa usein k√§ytett√§v√§ aakkostettu lista.
 \end{frame}
 \subsection{Omat komennot}
 \begin{frame}[fragile]
 \frametitle{Omat komennot}
-%\LaTeX in k‰ytt‰mist‰ helpottaa se, ett‰ kaikki on koodattavissa komennoiksi. 
-%Esimerkiksi olisi raskasta kirjoittaa jokainen ristitulon merkki pikseli pikselilt‰, joten t‰lle kannattaa luoda oma komentonsa, jolla asia hoituu automaattisesti.
-Omia komentoja luodaan esittelyosassa komennolla \verb-\newcommand{}{}-. Ensimm‰inen argumentti on komennon nimi, toiseksi argumentiksi tulee komennon sis‰ltˆ. Esimerkiksi
+%\LaTeX in k√§ytt√§mist√§ helpottaa se, ett√§ kaikki on koodattavissa komennoiksi. 
+%Esimerkiksi olisi raskasta kirjoittaa jokainen ristitulon merkki pikseli pikselilt√§, joten t√§lle kannattaa luoda oma komentonsa, jolla asia hoituu automaattisesti.
+Omia komentoja luodaan esittelyosassa komennolla \verb-\newcommand{}{}-. Ensimm√§inen argumentti on komennon nimi, toiseksi argumentiksi tulee komennon sis√§lt√∂. Esimerkiksi
 \begin{Verbatim}[frame=single]
 \newcommand{\R}{\ensuremath{\mathbb{R}}}
 \end{Verbatim}
-luo komennon \verb-\R-, joka tulostaa symbolin \(\R\). Komennon luomisen j‰lkeen kyseisen symbolin tuottaminen onnistuu helposti.
+luo komennon \verb-\R-, joka tulostaa symbolin \(\R\). Komennon luomisen j√§lkeen kyseisen symbolin tuottaminen onnistuu helposti.
 \vaihto
-Omia komentoja luomalla voit yksinkertaistaa ja helpottaa omaa tyˆt‰si. Jo parikin kertaa toistuva komentojen ketju kannattaa m‰‰ritell‰ esittelyosassa yhdeksi yksinkertaiseksi komennoksi.
+Omia komentoja luomalla voit yksinkertaistaa ja helpottaa omaa ty√∂t√§si. Jo parikin kertaa toistuva komentojen ketju kannattaa m√§√§ritell√§ esittelyosassa yhdeksi yksinkertaiseksi komennoksi.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Luo komennot merkinnˆille \(\N\), \(\Z\), \(\Q\), \(\R\) ja \(\C\). Kirjoita seuraava:
+Luo komennot merkinn√∂ille \(\N\), \(\Z\), \(\Q\), \(\R\) ja \(\C\). Kirjoita seuraava:
 \begin{framed}
 Lukujoukot muodostavat tornin
 \[
@@ -879,13 +879,13 @@ Lukujoukot muodostavat tornin
 \]
 \end{framed}
 \end{harj}
-Osajoukkorelaation saat komennolla \verb-\subset-. Kokeile myˆs, mit‰ komennot \verb-\subseteq-, \verb-\subsetneq- ja  \verb-\supset- tuottavat. Miten saisit symbolit \(\supsetneq\) ja  \(\supseteq\)? Ent‰ symbolin \(\not\subset\)? Kirjoita tyˆhˆsi viel‰ seuraava: \(\Z\not\subset\N\).
+Osajoukkorelaation saat komennolla \verb-\subset-. Kokeile my√∂s, mit√§ komennot \verb-\subseteq-, \verb-\subsetneq- ja  \verb-\supset- tuottavat. Miten saisit symbolit \(\supsetneq\) ja  \(\supseteq\)? Ent√§ symbolin \(\not\subset\)? Kirjoita ty√∂h√∂si viel√§ seuraava: \(\Z\not\subset\N\).
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Omat komennot}
-Komennolla \verb-\newcommand{}[]{}- on valinnaisena argumenttina luotavan komennon argumenttien lukum‰‰r‰. Esimerkiksi
-\verb-\newcommand{\set}[1]{ \left\lbrace #1 \right\rbrace }- loisi komennon \verb-\set{}-, jolla voisi tuottaa joukkomerkinn‰n. 
+Komennolla \verb-\newcommand{}[]{}- on valinnaisena argumenttina luotavan komennon argumenttien lukum√§√§r√§. Esimerkiksi
+\verb-\newcommand{\set}[1]{ \left\lbrace #1 \right\rbrace }- loisi komennon \verb-\set{}-, jolla voisi tuottaa joukkomerkinn√§n. 
 \vaihto
 \begin{minipage}{4cm}
 \begin{scriptsize}
@@ -904,7 +904,7 @@ Toisinaan
 \)
 \end{minipage}
 %
-%\verb-\newcommand{\komento}[2]{...}- loisi komennon, jota k‰ytett‰isiin muodossa \verb-\komento{}{}-. 
+%\verb-\newcommand{\komento}[2]{...}- loisi komennon, jota k√§ytett√§isiin muodossa \verb-\komento{}{}-. 
 %
 %
 %
@@ -915,17 +915,17 @@ Toisinaan
 %\end{Verbatim}
 %
 %\end{scriptsize}
-%luo komennon \verb-\bino-, jolla on kolme argumenttia: komento \verb-\bino{n}{p}{k}- tuottaa binomitodenn‰kˆisyyden kaavan \[\bino{n}{p}{k}.\]
+%luo komennon \verb-\bino-, jolla on kolme argumenttia: komento \verb-\bino{n}{p}{k}- tuottaa binomitodenn√§k√∂isyyden kaavan \[\bino{n}{p}{k}.\]
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Omat komennot}
-Komennon \verb-\newcommand{}{}- k‰ytt‰minen aiheuttaa konfliktin, jos samanniminen komento on jo k‰ytˆss‰. T‰llˆin kannattaa nimet‰ oma komentonsa toisin. 
+Komennon \verb-\newcommand{}{}- k√§ytt√§minen aiheuttaa konfliktin, jos samanniminen komento on jo k√§yt√∂ss√§. T√§ll√∂in kannattaa nimet√§ oma komentonsa toisin. 
 \vaihto
-Jos v‰ltt‰m‰tt‰ haluaa korvata valmiin komennon omallaan, voi k‰ytt‰‰ komentoa \verb-\renewcommand{}{}-. T‰m‰ on joskus tarpeen, mutta saattaa sotkea pahasti asioita!
+Jos v√§ltt√§m√§tt√§ haluaa korvata valmiin komennon omallaan, voi k√§ytt√§√§ komentoa \verb-\renewcommand{}{}-. T√§m√§ on joskus tarpeen, mutta saattaa sotkea pahasti asioita!
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-\LaTeX issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \verb-\abs{}-, jonka argumentti on itseisarvomerkkien sis‰‰n tuleva lauseke. Tuota sen avulla seuraavat kolmioep‰yht‰lˆt:
+\LaTeX issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \verb-\abs{}-, jonka argumentti on itseisarvomerkkien sis√§√§n tuleva lauseke. Tuota sen avulla seuraavat kolmioep√§yht√§l√∂t:
 \begin{framed}
 \[
 \abs{\abs{x}-\abs{y}}\leq \abs{x+y}\leq\abs{x}+\abs{y}
@@ -935,7 +935,7 @@ ja
 \abs{\int_a^b f(x)\,dx} \leq\int_a^b\abs{f(x)}\, dx.
 \]
 \end{framed}
-Huomaa, ett‰ itseisarvomerkkien koon on syyt‰ muuttua niiden sis‰lt‰m‰n lausekkeen koon mukaan.\vaihto M‰‰r‰tyn integraalin saat komennolla \verb-\int_{}^{}- ja pienen v‰lin komennolla \verb-\,- (ennen merkki‰ \(dx\)).
+Huomaa, ett√§ itseisarvomerkkien koon on syyt√§ muuttua niiden sis√§lt√§m√§n lausekkeen koon mukaan.\vaihto M√§√§r√§tyn integraalin saat komennolla \verb-\int_{}^{}- ja pienen v√§lin komennolla \verb-\,- (ennen merkki√§ \(dx\)).
 \end{harj}
 \end{frame}
 

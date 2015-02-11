@@ -1,5 +1,5 @@
 \documentclass[handout]{beamer}
-\usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[finnish]{babel}
 \usepackage{amsmath}
@@ -48,7 +48,7 @@
 \newcommand{\bino}[3]{\binom{#1}{#3}{#2}^{#3}(1-#2)^{#1-#3}}
     \setbeamertemplate{theorems}[numbered]
 \title{\LaTeX}
-%Matriisien s‰‰tˆ:
+%Matriisien s√§√§t√∂:
 
 \makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
@@ -66,25 +66,25 @@
 \end{frame}
 \section{3. kerta}
 \subsection{Kuvat}
-\subsubsection{Kuvien liitt‰minen}
+\subsubsection{Kuvien liitt√§minen}
 \begin{frame}[fragile]
-\frametitle{Kuvien liitt‰minen}
-Kuvien liitt‰mist‰ varten t‰ytyy ottaa k‰yttˆˆn \verb-graphicx--paketti. 
+\frametitle{Kuvien liitt√§minen}
+Kuvien liitt√§mist√§ varten t√§ytyy ottaa k√§ytt√∂√∂n \verb-graphicx--paketti. 
 \vaihto
-PDFLaTeXia k‰ytett‰ess‰ sallitut kuvaformaatit ovat \verb-.pdf-, \verb-.jpg- ja \verb-.png-. 
+PDFLaTeXia k√§ytett√§ess√§ sallitut kuvaformaatit ovat \verb-.pdf-, \verb-.jpg- ja \verb-.png-. 
 \vaihto
-Jos liitett‰v‰ kuva on samassa kansiossa muiden tiedostojen kanssa, kuvan liitt‰minen tapahtuu komennolla
+Jos liitett√§v√§ kuva on samassa kansiossa muiden tiedostojen kanssa, kuvan liitt√§minen tapahtuu komennolla
 \begin{framed}
 \centering
 \verb-\includegraphics[asetukset]{kuvatiedoston_nimi}-. 
 \end{framed}
-Tiedostop‰‰tett‰ ei ole tarpeen kirjoittaa, jos tiedoston nimi ei sis‰ll‰ v‰lej‰.
+Tiedostop√§√§tett√§ ei ole tarpeen kirjoittaa, jos tiedoston nimi ei sis√§ll√§ v√§lej√§.
 \vaihto
-Valinnaisella argumentilla voidaan skaalata, kiert‰‰ ja rajata liitett‰v‰‰ kuvaa. 
+Valinnaisella argumentilla voidaan skaalata, kiert√§√§ ja rajata liitett√§v√§√§ kuvaa. 
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Kuvien liitt‰minen}
-Tyˆkansioon tallennetun kuvan \verb-smile.jpeg- saisi n‰kyviin koodilla
+\frametitle{Kuvien liitt√§minen}
+Ty√∂kansioon tallennetun kuvan \verb-smile.jpeg- saisi n√§kyviin koodilla
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 \includegraphics{smile}
@@ -94,7 +94,7 @@ Tyˆkansioon tallennetun kuvan \verb-smile.jpeg- saisi n‰kyviin koodilla
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kuvan skaalaus}
-Kuva on aivan liian suuri, joten sit‰ on syyt‰ skaalata:
+Kuva on aivan liian suuri, joten sit√§ on syyt√§ skaalata:
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 \includegraphics[scale=0.4]{smile}
@@ -105,7 +105,7 @@ Kuva on aivan liian suuri, joten sit‰ on syyt‰ skaalata:
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kuvan skaalaus}
-Skaalaus onnistuu myˆs m‰‰rittelem‰ll‰ kuvan leveys tai korkeus:
+Skaalaus onnistuu my√∂s m√§√§rittelem√§ll√§ kuvan leveys tai korkeus:
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 \includegraphics[width = 4cm]{smile}
@@ -123,7 +123,7 @@ Skaalaus onnistuu myˆs m‰‰rittelem‰ll‰ kuvan leveys tai korkeus:
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kuvan kierto}
-Kuvaa voi kiert‰‰ antamalla valinnaiseksi argumentiksi kiertokulman asteina.
+Kuvaa voi kiert√§√§ antamalla valinnaiseksi argumentiksi kiertokulman asteina.
 
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
@@ -140,19 +140,19 @@ Kuvaa voi kiert‰‰ antamalla valinnaiseksi argumentiksi kiertokulman asteina.
 \includegraphics[height=4cm,angle=180]{smile}
 \end{minipage}
 
-Huomaa, ett‰ useammat m‰‰ritteet erotetaan toisistaan pilkuilla!
+Huomaa, ett√§ useammat m√§√§ritteet erotetaan toisistaan pilkuilla!
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Tallenna tyˆkansioosi jokin kuva (tarkkana formaatin kanssa) ja tuo se tyˆhˆsi sopivasti skaalattuna. Muista ottaa ensin k‰yttˆˆn paketti \verb-graphicx-! 
+Tallenna ty√∂kansioosi jokin kuva (tarkkana formaatin kanssa) ja tuo se ty√∂h√∂si sopivasti skaalattuna. Muista ottaa ensin k√§ytt√∂√∂n paketti \verb-graphicx-! 
 \end{harj}
 \end{frame}
-\subsubsection{Figure-ymp‰ristˆ}
+\subsubsection{Figure-ymp√§rist√∂}
 \begin{frame}[fragile]
-\frametitle{Kelluva figure-ymp‰ristˆ}
-K‰ytt‰m‰ll‰ pelk‰st‰‰n komentoa \verb-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi teksti‰. T‰m‰ n‰ytt‰‰ k‰yt‰nnˆss‰ aina pahalta. 
+\frametitle{Kelluva figure-ymp√§rist√∂}
+K√§ytt√§m√§ll√§ pelk√§st√§√§n komentoa \verb-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi teksti√§. T√§m√§ n√§ytt√§√§ k√§yt√§nn√∂ss√§ aina pahalta. 
 \vaihto
-On parempi antaa \LaTeX in p‰‰tt‰‰ itse mihin kuva sijoitetaan eli tehd‰ kuvasta \emph{kelluva}. T‰m‰ onnistuu k‰ytt‰m‰ll‰ \verb-figure--ymp‰ristˆ‰. 
+On parempi antaa \LaTeX in p√§√§tt√§√§ itse mihin kuva sijoitetaan eli tehd√§ kuvasta \emph{kelluva}. T√§m√§ onnistuu k√§ytt√§m√§ll√§ \verb-figure--ymp√§rist√∂√§. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kelluva kuva}
@@ -160,28 +160,28 @@ On parempi antaa \LaTeX in p‰‰tt‰‰ itse mihin kuva sijoitetaan eli tehd‰ kuvasta
 \begin{Verbatim}[frame=single]
 \begin{figure}[h!]
 \includegraphics[height=4cm]{smile}
-\caption{Helppo hymyill‰}
+\caption{Helppo hymyill√§}
 \end{figure}
 \end{Verbatim}
 \end{scriptsize}
 \begin{figure}[h!]
 \includegraphics[height=4cm]{smile}
-\caption{Helppo hymyill‰}
+\caption{Helppo hymyill√§}
 \end{figure}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Figure-ymp‰ristˆn argumentit}
-Kelluvalle ymp‰ristˆlle (yll‰ \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esitt‰‰ seuraavilla m‰‰ritteill‰:
+\frametitle{Figure-ymp√§rist√∂n argumentit}
+Kelluvalle ymp√§rist√∂lle (yll√§ \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esitt√§√§ seuraavilla m√§√§ritteill√§:
 \begin{table}
 \begin{tabular}{lcl}
 
-h! && t‰h‰n\\
+h! && t√§h√§n\\
 \hline
-h && suunnilleen t‰h‰n\\
+h && suunnilleen t√§h√§n\\
 \hline
 b && sivun alareunaan\\
 \hline
-t && sivun yl‰reunaan\\
+t && sivun yl√§reunaan\\
 \hline
 p && omalle sivulleen\\
 
@@ -190,28 +190,28 @@ p && omalle sivulleen\\
 \LaTeX\ ei lupaa noudattaa toivetta, mutta tekee parhaansa. 
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Figure-ymp‰ristˆn argumentit}
+\frametitle{Figure-ymp√§rist√∂n argumentit}
 \begin{harj}
-Tuo tyˆhˆsi jokin kuva k‰ytt‰en figure-ymp‰ristˆ‰ ja anna valinnaisena argumenttina toiveesi kuvan sijoittamisesta. Lis‰‰ viel‰ kuvateksti.
+Tuo ty√∂h√∂si jokin kuva k√§ytt√§en figure-ymp√§rist√∂√§ ja anna valinnaisena argumenttina toiveesi kuvan sijoittamisesta. Lis√§√§ viel√§ kuvateksti.
 \end{harj}
 \end{frame}
-\subsubsection{Piirt‰minen (TikZ)}
+\subsubsection{Piirt√§minen (TikZ)}
 \begin{frame}[fragile]
-\frametitle{Kuvien piirt‰minen}
-Kuvien liitt‰misen lis‰ksi niit‰ voi myˆs piirt‰‰ suoraan \LaTeX illa. Yksinkertaisimmissa tapauksissa t‰m‰ onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
+\frametitle{Kuvien piirt√§minen}
+Kuvien liitt√§misen lis√§ksi niit√§ voi my√∂s piirt√§√§ suoraan \LaTeX illa. Yksinkertaisimmissa tapauksissa t√§m√§ onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
 \vaihto
-Kuvien piirt‰minen vie aikaa, mutta j‰lki on sen mukaista eik‰ erillisi‰ kuvatiedostoja tarvitse s‰ilytt‰‰.
-\vaihto Kuvien piirt‰mist‰ varten on tarjolla muutamia paketteja, joista erityisesti \verb-TikZ- on syyt‰ mainita. 
-\verb-TikZ-ill‰ kuvien piirt‰minen tapahtuu ik‰‰n kuin pikseli kerrallaan, joten tarkkuus on verraton. 
-\vaihto Geogebra osaa k‰‰nt‰‰ sill‰ luodut kuvat \verb-tikz--koodiksi, mik‰ helpottaa tyˆt‰ valtavasti.
+Kuvien piirt√§minen vie aikaa, mutta j√§lki on sen mukaista eik√§ erillisi√§ kuvatiedostoja tarvitse s√§ilytt√§√§.
+\vaihto Kuvien piirt√§mist√§ varten on tarjolla muutamia paketteja, joista erityisesti \verb-TikZ- on syyt√§ mainita. 
+\verb-TikZ-ill√§ kuvien piirt√§minen tapahtuu ik√§√§n kuin pikseli kerrallaan, joten tarkkuus on verraton. 
+\vaihto Geogebra osaa k√§√§nt√§√§ sill√§ luodut kuvat \verb-tikz--koodiksi, mik√§ helpottaa ty√∂t√§ valtavasti.
 \vaihto Muita kuvien tuottamiseen tarkoitettuja paketteja ovat picture, xy-Pic ja Asymptote.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Piirr‰ Geogebralla jokin yksinkertainen kuva (v‰lt‰ funktioita). Rajaa kuva sopivasti ja valitse File > Export > Graphics View as PGF/TikZ. Luo koodi ja kopioi siit‰ tarvittavat osat tiedostoosi. Tarvittavia osia ovat esittelyosan komennot \verb-\usepackage...-, \verb-\usetikzlibrary...-, mahdolliset v‰rien m‰‰rittelyt \verb-\definecolor...- ja varsinainen kuva, eli \verb-\begin{tikzpicture}...\end{tikzpicture}-. 
+Piirr√§ Geogebralla jokin yksinkertainen kuva (v√§lt√§ funktioita). Rajaa kuva sopivasti ja valitse File > Export > Graphics View as PGF/TikZ. Luo koodi ja kopioi siit√§ tarvittavat osat tiedostoosi. Tarvittavia osia ovat esittelyosan komennot \verb-\usepackage...-, \verb-\usetikzlibrary...-, mahdolliset v√§rien m√§√§rittelyt \verb-\definecolor...- ja varsinainen kuva, eli \verb-\begin{tikzpicture}...\end{tikzpicture}-. 
 \end{harj}
 \begin{harj}\label{kelluvaTikz}
-Kopioi edellisess‰ harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muutoksia pelk‰st‰‰n koodia muuttamalla. Voit esimerkiksi vaihtaa jonkin pisteen paikkaa tai piirt‰‰ kokonaan uutta. Tee uudesta kuvasta kelluva ja keksi jokin kuvateksi. 
+Kopioi edellisess√§ harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muutoksia pelk√§st√§√§n koodia muuttamalla. Voit esimerkiksi vaihtaa jonkin pisteen paikkaa tai piirt√§√§ kokonaan uutta. Tee uudesta kuvasta kelluva ja keksi jokin kuvateksi. 
 \end{harj}
 
 \end{frame}
@@ -220,9 +220,9 @@ Kopioi edellisess‰ harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muu
 \frametitle{Taulukot}
 Taulukoiden rakentaminen \LaTeX issa on oma taiteenlajinsa. Mahdollisuudet ovat rajattomat, mutta perusteiden opettelu vaatii hieman energiaa. 
 \vaihto
-Perinteisin tapa on k‰ytt‰‰ \verb-tabular--ymp‰ristˆ‰. T‰llˆin taulukon sis‰ltˆ kirjoitetaan komentojen \verb-\begin{tabular}[]{}- ja \verb-\end{tabular}- v‰liin.
+Perinteisin tapa on k√§ytt√§√§ \verb-tabular--ymp√§rist√∂√§. T√§ll√∂in taulukon sis√§lt√∂ kirjoitetaan komentojen \verb-\begin{tabular}[]{}- ja \verb-\end{tabular}- v√§liin.
 \vaihto
-Ymp‰ristˆll‰ on pakollinen argumentti, jolla m‰‰ritell‰‰n taulukon asetukset, eli miten kunkin sarakkeen sis‰ltˆ tasataan ja millaisia pystyviivoja k‰ytet‰‰n.
+Ymp√§rist√∂ll√§ on pakollinen argumentti, jolla m√§√§ritell√§√§n taulukon asetukset, eli miten kunkin sarakkeen sis√§lt√∂ tasataan ja millaisia pystyviivoja k√§ytet√§√§n.
 \end{frame}
 %\begin{frame}[fragile]
 
@@ -235,7 +235,7 @@ Ymp‰ristˆll‰ on pakollinen argumentti, jolla m‰‰ritell‰‰n taulukon asetukset, el
 %0 & 0 & 0
 %\end{tabular}
 %\end{Verbatim}
-%luo taulukon, jossa on yksi pystyviiva ja jonka jokaisen sarakkeen sis‰ltˆ on keskitetty:
+%luo taulukon, jossa on yksi pystyviiva ja jonka jokaisen sarakkeen sis√§lt√∂ on keskitetty:
 %\begin{framed} 
 %\begin{tabular}{cc|c}
 %-1 & 2 & 3,142\\
@@ -243,40 +243,40 @@ Ymp‰ristˆll‰ on pakollinen argumentti, jolla m‰‰ritell‰‰n taulukon asetukset, el
 %0 & 0 & 0
 %\end{tabular}
 %\end{framed}
-%Huomaa, ettei asetuksissa oteta kantaa rivien m‰‰r‰‰n.
+%Huomaa, ettei asetuksissa oteta kantaa rivien m√§√§r√§√§n.
 %\end{frame}
-\subsubsection{Tabular-ymp‰ristˆ}
+\subsubsection{Tabular-ymp√§rist√∂}
 \begin{frame}[fragile]
-\frametitle{Tabular-ymp‰ristˆ}
-Tabular-ymp‰ristˆn pakollinen argumentti on jono seuraavia merkkej‰:
+\frametitle{Tabular-ymp√§rist√∂}
+Tabular-ymp√§rist√∂n pakollinen argumentti on jono seuraavia merkkej√§:
 \begin{table}[h!]
 \begin{scriptsize}
 \begin{tabular}{ccp{5cm}}
 Merkki && Toiminto\\
 \hline
-\verb-r- && sarakkeen sis‰llˆn tasaus oikealle\\
+\verb-r- && sarakkeen sis√§ll√∂n tasaus oikealle\\
 \hline
-\verb-l- && sarakkeen sis‰llˆn tasaus vasemmalle\\
+\verb-l- && sarakkeen sis√§ll√∂n tasaus vasemmalle\\
 \hline
-\verb-c- && sarakkeen sis‰llˆn keskitys\\
+\verb-c- && sarakkeen sis√§ll√∂n keskitys\\
 \hline
 \verb-|- && pystyviivan paikka\\
 \hline
 \verb-||- && kaksi pystyviivaa\\
 \hline
-\verb-p{'pituus'}- && pituus, jonka j‰lkeen rivi katkaistaan\\
+\verb-p{'pituus'}- && pituus, jonka j√§lkeen rivi katkaistaan\\
 \hline
 \end{tabular}
 \end{scriptsize}
 \end{table}
-Esimerkiksi komento \verb-\begin{tabular}{r|cc}- aloittaisi 3-sarakkeisen taulukon, jolla olisi pystyviiva 1. ja 2. sarakkeen v‰lill‰. Sarakkeen 1 sis‰ltˆ tasattaisiin oikealle, kahden muun sis‰ltˆ keskitett‰isiin.
+Esimerkiksi komento \verb-\begin{tabular}{r|cc}- aloittaisi 3-sarakkeisen taulukon, jolla olisi pystyviiva 1. ja 2. sarakkeen v√§lill√§. Sarakkeen 1 sis√§lt√∂ tasattaisiin oikealle, kahden muun sis√§lt√∂ keskitett√§isiin.
 %\vaihto
-%Lis‰tietoja ymp‰ristˆn k‰ytˆst‰ saa kirjasta  \begin{scriptsize}\url{http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular.2A_environment}\end{scriptsize}
+%Lis√§tietoja ymp√§rist√∂n k√§yt√∂st√§ saa kirjasta  \begin{scriptsize}\url{http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular.2A_environment}\end{scriptsize}
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Tabular-ymp‰ristˆ}
-Taulukon sis‰ltˆ kirjoitetaan rivi kerrallaan. Jokaisella rivill‰ merkki \verb-&- erottaa sarakkeet toisistaan, komennolla \verb-\\- siirryt‰‰n seuraavalle riville.  N‰m‰ ja muut taulukon sis‰iset komennot ovat seuraavassa:
+\frametitle{Tabular-ymp√§rist√∂}
+Taulukon sis√§lt√∂ kirjoitetaan rivi kerrallaan. Jokaisella rivill√§ merkki \verb-&- erottaa sarakkeet toisistaan, komennolla \verb-\\- siirryt√§√§n seuraavalle riville.  N√§m√§ ja muut taulukon sis√§iset komennot ovat seuraavassa:
 \vaihto
 \begin{table}[h!]
 \begin{scriptsize}
@@ -289,9 +289,9 @@ Komento & Toiminto\\
 \hline
 \verb-\hline- & vaakaviiva \\
 \hline
-\verb-\newline- & rivinvaihto sarakkeen sis‰ll‰\\
+\verb-\newline- & rivinvaihto sarakkeen sis√§ll√§\\
 \hline
-\verb+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j v‰lill‰\\
+\verb+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j v√§lill√§\\
 \hline
 \end{tabular}
 \end{scriptsize}
@@ -300,80 +300,80 @@ Komento & Toiminto\\
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Tabular-ymp‰ristˆ}
+\frametitle{Tabular-ymp√§rist√∂}
 Esimerkiksi rivi
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 \begin{tabular}{r|cc}
- & Tytˆt & Pojat\\
+ & Tyt√∂t & Pojat\\
 \hline
-Sinisilm‰iset & 4 & 2 \\
-Ruskeasilm‰iset & 3 & 5 \\
-Vihre‰silm‰iset & 8 & 8\\
+Sinisilm√§iset & 4 & 2 \\
+Ruskeasilm√§iset & 3 & 5 \\
+Vihre√§silm√§iset & 8 & 8\\
 \end{tabular}
 \end{Verbatim}
 \end{scriptsize}
 luo seuraavan taulukon:
 \begin{framed} 
 \begin{tabular}{r|cc}
- & Tytˆt & Pojat\\
+ & Tyt√∂t & Pojat\\
 \hline
-Sinisilm‰iset & 4 & 2 \\
-Ruskeasilm‰iset & 3 & 5 \\
-Vihre‰silm‰iset & 8 & 8\\
+Sinisilm√§iset & 4 & 2 \\
+Ruskeasilm√§iset & 3 & 5 \\
+Vihre√§silm√§iset & 8 & 8\\
 %\hline
-%Yhteens‰: & 15 & 15\\
+%Yhteens√§: & 15 & 15\\
 \end{tabular}
 \end{framed}
-Huomaa, ettei rivien lukum‰‰r‰‰ tarvitse erikseen kertoa \LaTeX ille.
+Huomaa, ettei rivien lukum√§√§r√§√§ tarvitse erikseen kertoa \LaTeX ille.
 
 \end{frame}
 
 
 
 \begin{frame}[fragile]
-\frametitle{Tabular-ymp‰ristˆ}
+\frametitle{Tabular-ymp√§rist√∂}
 \begin{harj}
-Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi rivi‰.  
-%ja joka sis‰lt‰‰
+Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi rivi√§.  
+%ja joka sis√§lt√§√§
 %\begin{itemize}
 %\item pystyviivan
 %\item kaksinkertaisen pystyviivan
 %\item vaakaviivan
-%\item osittaisen vaakaviivan sarakkeiden 1 ja 2 v‰lill‰
+%\item osittaisen vaakaviivan sarakkeiden 1 ja 2 v√§lill√§
 %\end{itemize}
 \end{harj}
 \begin{harj}
-Luo toinen 3-sarakkeinen taulukko (esim. kopio edellisest‰), joka sis‰lt‰‰ 
+Luo toinen 3-sarakkeinen taulukko (esim. kopio edellisest√§), joka sis√§lt√§√§ 
 \begin{itemize}
 \item pystyviivan
 \item kaksinkertaisen pystyviivan
 \item vaakaviivan
-\item osittaisen vaakaviivan kahden sarakkeen v‰lill‰
+\item osittaisen vaakaviivan kahden sarakkeen v√§lill√§
 \end{itemize}
 \end{harj}
 \end{frame}
-\subsubsection{Sarakkeiden yhdist‰minen}
+\subsubsection{Sarakkeiden yhdist√§minen}
 \begin{frame}[fragile]
-\frametitle{Sarakkeiden yhdist‰minen}
-Sarakkeiden yhdist‰minen onnistuu komennolla \verb-\multicolumn{}{}{}-. Pakollisista argumenteista
+\frametitle{Sarakkeiden yhdist√§minen}
+Sarakkeiden yhdist√§minen onnistuu komennolla \verb-\multicolumn{}{}{}-. Pakollisista argumenteista
 \begin{itemize}
-\item ensimm‰inen on yhdistett‰vien solujen lukum‰‰r‰
-\item toinen on yhdist‰m‰ll‰ saadun sarakkeen tasaus
-\item kolmas on yhdist‰m‰ll‰ saadun sarakkeen sis‰ltˆ
+\item ensimm√§inen on yhdistett√§vien solujen lukum√§√§r√§
+\item toinen on yhdist√§m√§ll√§ saadun sarakkeen tasaus
+\item kolmas on yhdist√§m√§ll√§ saadun sarakkeen sis√§lt√∂
 \end{itemize}
-Komento \verb-\multicolumn- toimii sellaisenaan eik‰ tarvitse lis‰paketteja.
+Komento \verb-\multicolumn- toimii sellaisenaan eik√§ tarvitse lis√§paketteja.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Sarakkeiden yhdist‰minen}
+\frametitle{Sarakkeiden yhdist√§minen}
 %\begin{minipage}{5cm}
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 \begin{tabular}{|c|c|c|}
 \hline
-\multicolumn{3}{|c|}{3 yhdistetty‰ saraketta}\\
+\multicolumn{3}{|c|}{3 yhdistetty√§ saraketta}\\
 \hline
-Sarake & \multicolumn{2}{c|}{2 yhdistetty‰ saraketta}\\
+Sarake & \multicolumn{2}{c|}{2 yhdistetty√§ saraketta}\\
 \hline
 Sarake1 & Sarake2 & Sarake3\\
 \hline
@@ -385,9 +385,9 @@ Sarake1 & Sarake2 & Sarake3\\
 \begin{scriptsize}
 \begin{tabular}{|c|c|c|}
 \hline
-\multicolumn{3}{|c|}{3 yhdistetty‰ saraketta}\\
+\multicolumn{3}{|c|}{3 yhdistetty√§ saraketta}\\
 \hline
-Sarake & \multicolumn{2}{c|}{2 yhdistetty‰ saraketta}\\
+Sarake & \multicolumn{2}{c|}{2 yhdistetty√§ saraketta}\\
 \hline
  Sarake1 & Sarake2 & Sarake3\\
  \hline
@@ -397,14 +397,14 @@ Sarake & \multicolumn{2}{c|}{2 yhdistetty‰ saraketta}\\
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Sarakkeiden yhdist‰minen}
+\frametitle{Sarakkeiden yhdist√§minen}
 
 \begin{harj}
 Luo seuraava taulukko:
 \begin{table}
 \begin{tabular}{|l|l|l|}
 \hline
-\multicolumn{3}{|c|}{\Large P‰iv‰petolintuja}\\
+\multicolumn{3}{|c|}{\Large P√§iv√§petolintuja}\\
 \hline
 \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
 Kanahaukka & Accipiter &  gentilis\\ \hline
@@ -417,28 +417,28 @@ Nuolihaukka & Falco & subbuteo\\ \hline
 \end{harj}
 
 \end{frame}
-\subsubsection{Rivien yhdist‰minen}
+\subsubsection{Rivien yhdist√§minen}
 \begin{frame}[fragile]
-\frametitle{Rivien yhdist‰minen}
-Rivien yhdist‰mist‰ varten tarvitaan paketti \verb-multirow-. T‰m‰n k‰yttˆˆnottamisen j‰lkeen rivien yhdist‰minen (sarakkeen sis‰ll‰) onnistuu komennolla \verb-\multirow{}{}{}-. Pakollisista argumenteista
+\frametitle{Rivien yhdist√§minen}
+Rivien yhdist√§mist√§ varten tarvitaan paketti \verb-multirow-. T√§m√§n k√§ytt√∂√∂nottamisen j√§lkeen rivien yhdist√§minen (sarakkeen sis√§ll√§) onnistuu komennolla \verb-\multirow{}{}{}-. Pakollisista argumenteista
 \begin{itemize}
-\item ensimm‰inen on yhdistett‰vien solujen lukum‰‰r‰
-\item toinen on yhdist‰m‰ll‰ saadun rivin leveys (\verb-*- j‰tt‰‰ asian \LaTeX in huoleksi)
-\item kolmas on yhdist‰m‰ll‰ saadun rivin sis‰ltˆ
+\item ensimm√§inen on yhdistett√§vien solujen lukum√§√§r√§
+\item toinen on yhdist√§m√§ll√§ saadun rivin leveys (\verb-*- j√§tt√§√§ asian \LaTeX in huoleksi)
+\item kolmas on yhdist√§m√§ll√§ saadun rivin sis√§lt√∂
 \end{itemize}
-Rivin leveytt‰ ei useinkaan kannata itse valita, ellei ole varma siit‰ mit‰ haluaa tehd‰. 
+Rivin leveytt√§ ei useinkaan kannata itse valita, ellei ole varma siit√§ mit√§ haluaa tehd√§. 
 \vaihto
-Huomaa, ett‰ \verb-\multirow- toimii kuten \verb-\multicolumn-, mutta keskimm‰inen argumentti on eri tarkoitusta varten.
+Huomaa, ett√§ \verb-\multirow- toimii kuten \verb-\multicolumn-, mutta keskimm√§inen argumentti on eri tarkoitusta varten.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Rivien yhdist‰minen} 
+\frametitle{Rivien yhdist√§minen} 
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 \begin{tabular}{|c|c|c|}
 \hline
-\multirow{3}{*}{Kolme rivi‰} & Solu1 & Solu 2\\
+\multirow{3}{*}{Kolme rivi√§} & Solu1 & Solu 2\\
 \cline{2-3}
-	& \multirow{2}{*}{Kaksi rivi‰} & Solu 3\\
+	& \multirow{2}{*}{Kaksi rivi√§} & Solu 3\\
 \cline{3-3}
 	& & Solu 4\\
 \hline
@@ -447,14 +447,14 @@ Huomaa, ett‰ \verb-\multirow- toimii kuten \verb-\multicolumn-, mutta keskimm‰in
 \end{scriptsize}
 \begin{tabular}{|c|c|c|}
 \hline
-\multirow{3}{*}{Kolme rivi‰} & Solu1	& Solu 2\\\cline{2-3}
-	& \multirow{2}{*}{Kaksi rivi‰}	& Solu 3\\\cline{3-3}
+\multirow{3}{*}{Kolme rivi√§} & Solu1	& Solu 2\\\cline{2-3}
+	& \multirow{2}{*}{Kaksi rivi√§}	& Solu 3\\\cline{3-3}
 	& & Solu 4\\
 	\hline
 \end{tabular}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Rivien yhdist‰minen} 
+\frametitle{Rivien yhdist√§minen} 
 \begin{harj}
 Luo seuraava taulukko: 
 \begin{table}\label{taulukko}
@@ -475,14 +475,14 @@ Luo seuraava taulukko:
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Sarakkeiden ja rivien yhdist‰minen} 
-Sarakkeita ja rivej‰ voi yhdist‰‰ samassa taulukossa:\vaihto
+\frametitle{Sarakkeiden ja rivien yhdist√§minen} 
+Sarakkeita ja rivej√§ voi yhdist√§√§ samassa taulukossa:\vaihto
 \begin{minipage}{8cm}
 \begin{scriptsize}
 \begin{verbatim}
 \begin{tabular}{|l|l|l|l|}
 \hline
-\multicolumn{4}{|c|}{\Large P‰iv‰petolintuja}\\
+\multicolumn{4}{|c|}{\Large P√§iv√§petolintuja}\\
 \hline
 \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
 \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
@@ -496,7 +496,7 @@ Sarakkeita ja rivej‰ voi yhdist‰‰ samassa taulukossa:\vaihto
 \begin{table}[h!]
 \begin{tabular}{|l|l|l|l|}
 \hline
-\multicolumn{4}{|c|}{\Large P‰iv‰petolintuja}\\
+\multicolumn{4}{|c|}{\Large P√§iv√§petolintuja}\\
 \hline
 \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
 \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
@@ -508,29 +508,29 @@ Sarakkeita ja rivej‰ voi yhdist‰‰ samassa taulukossa:\vaihto
 
 \end{frame}
 \begin{frame}
-Taulukoiden rakentamisessa l‰hes mik‰ tahansa on mahdollista. Kirjasta \url{http://en.wikibooks.org/wiki/LaTeX/Tables} voi etsi‰ apua monimutkaisempia toteutuksia varten.
+Taulukoiden rakentamisessa l√§hes mik√§ tahansa on mahdollista. Kirjasta \url{http://en.wikibooks.org/wiki/LaTeX/Tables} voi etsi√§ apua monimutkaisempia toteutuksia varten.
 \end{frame}
 %\begin{frame}[fragile]
 %\frametitle{Kelluvat taulukot}
-%Yleens‰ taulukot kannattaa esitt‰‰ kelluvina ymp‰ristˆin‰. T‰m‰ tarkoittaa sit‰, ett‰ \LaTeX\ p‰‰tt‰‰ itse, mihin taulukko kannattaa ulkon‰ˆllisesti sijoittaa. T‰llˆin \verb-tabular--ymp‰ristˆ sijoitetaan \verb-table--ymp‰ristˆˆn:
+%Yleens√§ taulukot kannattaa esitt√§√§ kelluvina ymp√§rist√∂in√§. T√§m√§ tarkoittaa sit√§, ett√§ \LaTeX\ p√§√§tt√§√§ itse, mihin taulukko kannattaa ulkon√§√∂llisesti sijoittaa. T√§ll√∂in \verb-tabular--ymp√§rist√∂ sijoitetaan \verb-table--ymp√§rist√∂√∂n:
 %
 %\end{frame}
 %\begin{frame}[fragile]
 %\frametitle{Kelluvat taulukot}
-%\verb-table--ymp‰ristˆlle voidaan antaa valinnaisena argumenttina toive taulukon sijoittumisesta seuraavilla m‰‰ritteill‰:
+%\verb-table--ymp√§rist√∂lle voidaan antaa valinnaisena argumenttina toive taulukon sijoittumisesta seuraavilla m√§√§ritteill√§:
 %\begin{tabular}{cc}
-%h! & t‰h‰n\\
-%h & suunnilleen t‰h‰n\\
+%h! & t√§h√§n\\
+%h & suunnilleen t√§h√§n\\
 %b & sivun alareunaan\\
-%p & sivun yl‰reunaan
+%p & sivun yl√§reunaan
 %\end{tabular}
 %\end{frame}
-\subsubsection{Kelluva table-ymp‰ristˆ}
+\subsubsection{Kelluva table-ymp√§rist√∂}
 \begin{frame}[fragile]
-\frametitle{Kelluva table-ymp‰ristˆ}
-Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoittamaan paikkaan, kuin osaksi teksti‰. T‰m‰ n‰ytt‰‰ k‰yt‰nnˆss‰ aina pahalta. 
+\frametitle{Kelluva table-ymp√§rist√∂}
+Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoittamaan paikkaan, kuin osaksi teksti√§. T√§m√§ n√§ytt√§√§ k√§yt√§nn√∂ss√§ aina pahalta. 
 \vaihto
-On parempi antaa \LaTeX in p‰‰tt‰‰ itse mihin taulukko sijoitetaan eli tehd‰ siit‰ \emph{kelluva}. T‰m‰ onnistuu sijoittamalla taulukko \verb-table--ymp‰ristˆˆn.
+On parempi antaa \LaTeX in p√§√§tt√§√§ itse mihin taulukko sijoitetaan eli tehd√§ siit√§ \emph{kelluva}. T√§m√§ onnistuu sijoittamalla taulukko \verb-table--ymp√§rist√∂√∂n.
 \begin{table}
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
@@ -544,35 +544,35 @@ On parempi antaa \LaTeX in p‰‰tt‰‰ itse mihin taulukko sijoitetaan eli tehd‰ sii
 \end{table}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Table-ymp‰ristˆn argumentit}
-Kelluvalle ymp‰ristˆlle (yll‰ \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esitt‰‰ seuraavilla m‰‰ritteill‰:
+\frametitle{Table-ymp√§rist√∂n argumentit}
+Kelluvalle ymp√§rist√∂lle (yll√§ \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esitt√§√§ seuraavilla m√§√§ritteill√§:
 \begin{table}
 \begin{tabular}{lcl}
 
-h! && t‰h‰n\\
+h! && t√§h√§n\\
 \hline
-h && suunnilleen t‰h‰n\\
+h && suunnilleen t√§h√§n\\
 \hline
 b && sivun alareunaan\\
 \hline
-t && sivun yl‰reunaan\\
+t && sivun yl√§reunaan\\
 \hline
 p && omalle sivulleen\\
 
 \end{tabular}
 \end{table}
-Toive ei ole \LaTeX in t‰rkeysj‰rjestyksess‰ korkeimmalla, joten se ei aina toteudu.
+Toive ei ole \LaTeX in t√§rkeysj√§rjestyksess√§ korkeimmalla, joten se ei aina toteudu.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}\label{kelluvaTaulukko}
-Tee teht‰v‰ss‰ \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lis‰‰ koodiisi kommenttirivi, jossa kerrot valintasi. 
+Tee teht√§v√§ss√§ \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lis√§√§ koodiisi kommenttirivi, jossa kerrot valintasi. 
 \end{harj}
 
 \end{frame}
 \subsection{Matriisit}
 \begin{frame}[fragile]
 \frametitle{Matematiikkatilan taulukot}
-\LaTeX\ olettaa \verb-tabular--ymp‰ristˆn sis‰lt‰v‰n tavallista teksti‰. Taulukoituja matemaattisia ilmaisuja varten on oma ymp‰ristˆns‰ \verb-array-. Sit‰ k‰ytet‰‰n kuten \verb-tabular--ymp‰ristˆ‰, mutta se t‰ytyy sijoittaa matematiikkatilaan.\vaihto
+\LaTeX\ olettaa \verb-tabular--ymp√§rist√∂n sis√§lt√§v√§n tavallista teksti√§. Taulukoituja matemaattisia ilmaisuja varten on oma ymp√§rist√∂ns√§ \verb-array-. Sit√§ k√§ytet√§√§n kuten \verb-tabular--ymp√§rist√∂√§, mutta se t√§ytyy sijoittaa matematiikkatilaan.\vaihto
 
 \begin{minipage}{5cm}
 \begin{scriptsize}
@@ -602,8 +602,8 @@ x & x^2+1\\
 \end{minipage}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Array-ymp‰ristˆ}
-Array-ymp‰ristˆll‰ voi kirjoittaa esimerkiksi paloittain m‰‰ritellyn funktion lausekkeen. T‰m‰n voi toteuttaa lyhyemminkin k‰ytt‰en ymp‰ristˆ‰ \verb-cases-. 
+\frametitle{Array-ymp√§rist√∂}
+Array-ymp√§rist√∂ll√§ voi kirjoittaa esimerkiksi paloittain m√§√§ritellyn funktion lausekkeen. T√§m√§n voi toteuttaa lyhyemminkin k√§ytt√§en ymp√§rist√∂√§ \verb-cases-. 
 \begin{Verbatim}[frame=single]
 \[
 f(x) =
@@ -623,10 +623,10 @@ x,\text{ kun } x>0,\\
 \]
 \end{framed}
 \end{frame}
-\subsubsection{Matriisiymp‰ristˆt}
+\subsubsection{Matriisiymp√§rist√∂t}
 \begin{frame}[fragile]
 \frametitle{Matriisit}
-Matriisit voitaisiin luoda k‰sin k‰ytt‰en \verb-array--ymp‰ristˆ‰, mutta hieman helpompiakin tapoja on. Esimerkiksi ymp‰ristˆll‰ \verb-pmatrix- matriiseja luotaisiin seuraavasti:
+Matriisit voitaisiin luoda k√§sin k√§ytt√§en \verb-array--ymp√§rist√∂√§, mutta hieman helpompiakin tapoja on. Esimerkiksi ymp√§rist√∂ll√§ \verb-pmatrix- matriiseja luotaisiin seuraavasti:
 
 \begin{minipage}{4cm}
 \begin{scriptsize}
@@ -649,7 +649,7 @@ a & b & c\\
 \]
 \end{minipage}
 
-Syntaksi on siis samanhenkinen kuin ymp‰ristˆll‰ \verb-array-, mutta sarakkeiden m‰‰r‰‰ ei tarvitse kertoa erikseen. Virheiden varalta muista, ett‰
+Syntaksi on siis samanhenkinen kuin ymp√§rist√∂ll√§ \verb-array-, mutta sarakkeiden m√§√§r√§√§ ei tarvitse kertoa erikseen. Virheiden varalta muista, ett√§
 \begin{itemize}
 \item sarakkeet erotetaan toisistaan komennolla \verb-&-
 \item rivi vaihdetaan komennolla \verb-\\-
@@ -660,16 +660,16 @@ Syntaksi on siis samanhenkinen kuin ymp‰ristˆll‰ \verb-array-, mutta sarakkeiden
 %
 %\end{frame}
 %loisi matriisin
-%Saman voi kuitenkin tehd‰ helpommin k‰ytt‰m‰ll‰ matriiseja varten luotuja ymp‰ristˆj‰, kuten \verb-bmatrix*- tai \verb-pmatrix*-. N‰it‰ varten tarvitset paketin \verb-mathtools-.
+%Saman voi kuitenkin tehd√§ helpommin k√§ytt√§m√§ll√§ matriiseja varten luotuja ymp√§rist√∂j√§, kuten \verb-bmatrix*- tai \verb-pmatrix*-. N√§it√§ varten tarvitset paketin \verb-mathtools-.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Luo jokin v‰hint‰‰n \(2\times 3\)-matriisi k‰ytt‰en ymp‰ristˆ‰ \verb-pmatrix-, kuten yll‰. Tee sitten matriisistasi muutama kopio ja kokeile ymp‰ristˆj‰ \verb-matrix-, \verb-bmatrix- ja \verb-vmatrix-. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylist‰.)
+Luo jokin v√§hint√§√§n \(2\times 3\)-matriisi k√§ytt√§en ymp√§rist√∂√§ \verb-pmatrix-, kuten yll√§. Tee sitten matriisistasi muutama kopio ja kokeile ymp√§rist√∂j√§ \verb-matrix-, \verb-bmatrix- ja \verb-vmatrix-. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylist√§.)
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Matriisit}
-Vaikka ymp‰ristˆt \verb-pmatrix- (\verb-matrix-, \verb-bmatrix-, \verb-vmatrix-) pohjautuvat \verb-array--ymp‰ristˆˆn, ei sarakkeiden tasaukseen voi l‰htˆkohtaisesti vaikuttaa. \vaihto Paketti \verb-mathtools- tarjoaa vastaavat ymp‰ristˆt \verb-pmatrix*-, \verb-bmatrix*- jne., joilla on valinnaisena argumenttina sarakkeissa k‰ytetty tasaus:\vaihto
+Vaikka ymp√§rist√∂t \verb-pmatrix- (\verb-matrix-, \verb-bmatrix-, \verb-vmatrix-) pohjautuvat \verb-array--ymp√§rist√∂√∂n, ei sarakkeiden tasaukseen voi l√§ht√∂kohtaisesti vaikuttaa. \vaihto Paketti \verb-mathtools- tarjoaa vastaavat ymp√§rist√∂t \verb-pmatrix*-, \verb-bmatrix*- jne., joilla on valinnaisena argumenttina sarakkeissa k√§ytetty tasaus:\vaihto
 
 \begin{minipage}{4cm}
 \begin{scriptsize}
@@ -691,11 +691,11 @@ a & b & c\\
 \end{pmatrix*}
 \]
 \end{minipage}
-%Seuraavaan taulukkoon on koottu yleisimmin tarvittavat matriisiymp‰ristˆt:
+%Seuraavaan taulukkoon on koottu yleisimmin tarvittavat matriisiymp√§rist√∂t:
 %\vaihto
 %\begin{tabular}{|c|c|}
 %\hline
-%Ymp‰ristˆn nimi & Matriisin tyyli\\[0.3em]
+%Ymp√§rist√∂n nimi & Matriisin tyyli\\[0.3em]
 %\hline
 %\verb-matrix*- & $\begin{smallmatrix}a&b\\ c&d\end{smallmatrix}$\\[0.3em]
 %\verb-pmatrix*- & $\bigl(\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \bigr)$\\[0.3em]
@@ -704,7 +704,7 @@ a & b & c\\
 %\hline
 %\end{tabular}
 %\vaihto
-%Ymp‰ristˆll‰ on valinnainen argumentti, jolla valitaan tekstin tasaus (r, l tai c). Jos ymp‰ristˆn nimest‰ j‰tet‰‰n * pois, sarakkeiden sis‰ltˆ keskitet‰‰n (t‰llˆin pakettia \verb-mathtools- ei tarvita). 
+%Ymp√§rist√∂ll√§ on valinnainen argumentti, jolla valitaan tekstin tasaus (r, l tai c). Jos ymp√§rist√∂n nimest√§ j√§tet√§√§n * pois, sarakkeiden sis√§lt√∂ keskitet√§√§n (t√§ll√∂in pakettia \verb-mathtools- ei tarvita). 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Matriisit}
@@ -772,7 +772,7 @@ Kirjoita seuraavanlainen matriisitoimitus:
 %0 & 0 & 1 & a_1
 %\end{bmatrix*}
 \end{align*}
-Matriisien sis‰llˆn saat p‰‰tt‰‰ vapaasti eik‰ rivitoimituksen tarvitse menn‰ oikein. Matriisien v‰lisen merkinn‰n saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yll‰ on k‰ytetty komentoa
+Matriisien sis√§ll√∂n saat p√§√§tt√§√§ vapaasti eik√§ rivitoimituksen tarvitse menn√§ oikein. Matriisien v√§lisen merkinn√§n saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yll√§ on k√§ytetty komentoa
 \begin{verbatim}
 \stackrel{
 	\begin{scriptsize} 
@@ -781,15 +781,15 @@ Matriisien sis‰llˆn saat p‰‰tt‰‰ vapaasti eik‰ rivitoimituksen tarvitse menn‰ oi
 }{\longrightarrow} 
 \end{verbatim}
 
-% Kannattaa kopioida alkuper‰isen matriisin koodi ja muokata sit‰ kunkin uuden matriisin kohdalla. Matriisit viev‰t paljon tilaa, joten ymp‰ristˆ \verb-align*- on hyˆdyksi!
+% Kannattaa kopioida alkuper√§isen matriisin koodi ja muokata sit√§ kunkin uuden matriisin kohdalla. Matriisit viev√§t paljon tilaa, joten ymp√§rist√∂ \verb-align*- on hy√∂dyksi!
 \end{harj}
 \end{frame}
-\subsubsection{Lis‰tietoa}
+\subsubsection{Lis√§tietoa}
 \begin{frame}[fragile]
-\frametitle{Lis‰tietoa matriiseista}
-Tavalliset matriisiymp‰ristˆt \verb-pmatrix- jne. voidaan s‰‰t‰‰ noudattamaan paremmin \verb-array--ymp‰ristˆn syntaksia.
+\frametitle{Lis√§tietoa matriiseista}
+Tavalliset matriisiymp√§rist√∂t \verb-pmatrix- jne. voidaan s√§√§t√§√§ noudattamaan paremmin \verb-array--ymp√§rist√∂n syntaksia.
 \vaihto
-T‰m‰ on tarpeen, jos halutaan valita eri sarakkeisiin erilainen tasaus tai luoda pystyviiva matriisin sis‰lle. 
+T√§m√§ on tarpeen, jos halutaan valita eri sarakkeisiin erilainen tasaus tai luoda pystyviiva matriisin sis√§lle. 
 \vaihto
 Syntaksin muuttaminen onnistuu kopioimalla esittelyosaan komennot\vaihto
 \begin{Verbatim}[frame=single]
@@ -802,8 +802,8 @@ Syntaksin muuttaminen onnistuu kopioimalla esittelyosaan komennot\vaihto
 \end{Verbatim}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Lis‰tietoa matriiseista}
-Edell‰ tehtyjen muutosten j‰lkeen matriisiymp‰ristˆt toimivat kuten ennenkin, mutta lis‰ksi valinnainen argumentti on k‰ytˆss‰ kuten \verb-array--ymp‰ristˆll‰:
+\frametitle{Lis√§tietoa matriiseista}
+Edell√§ tehtyjen muutosten j√§lkeen matriisiymp√§rist√∂t toimivat kuten ennenkin, mutta lis√§ksi valinnainen argumentti on k√§yt√∂ss√§ kuten \verb-array--ymp√§rist√∂ll√§:
 \vaihto
 \begin{minipage}{4cm}
 \begin{scriptsize}
@@ -837,17 +837,17 @@ Edell‰ tehtyjen muutosten j‰lkeen matriisiymp‰ristˆt toimivat kuten ennenkin, mu
 Kelluviksi kirjoitetut kuvat ja taulukot tulevat numeroiduiksi, jolloin niihin viittaaminen onnistuu helposti komennoilla \verb-\label{}- ja \verb-\ref{}-. 
 %\begin{itemize}
 %\item \verb-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
-%\item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sis‰ll‰)
+%\item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sis√§ll√§)
 %\item \verb-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
 %\end{itemize}
-%Sis‰isten viittausten kanssa tulee aina k‰ytt‰‰ komentoja. T‰llˆin viittaukset pysyv‰t kohdallaan vaikka numeroinnit muuttuisivat tyˆn edetess‰.
+%Sis√§isten viittausten kanssa tulee aina k√§ytt√§√§ komentoja. T√§ll√∂in viittaukset pysyv√§t kohdallaan vaikka numeroinnit muuttuisivat ty√∂n edetess√§.
 %\end{frame}
 %\begin{frame}[fragile]
-%Huom! Uuden viittauksen j‰lkeen tyˆn joutuu ajamaan kahdesti, jotta numeroinnit tulevat n‰kyviin (kahden kysymysmerkin sijaan).
+%Huom! Uuden viittauksen j√§lkeen ty√∂n joutuu ajamaan kahdesti, jotta numeroinnit tulevat n√§kyviin (kahden kysymysmerkin sijaan).
 \begin{harj}
-Viittaa harjoituksessa \ref{kelluvaTaulukko} luomaasi kelluvaan taulukkoon. K‰yt‰ komentoja \verb-\ref{}- ja \verb-\pageref{}-.
+Viittaa harjoituksessa \ref{kelluvaTaulukko} luomaasi kelluvaan taulukkoon. K√§yt√§ komentoja \verb-\ref{}- ja \verb-\pageref{}-.
 \vaihto
-%Muista, ett‰ viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. Komento sijoitetaan ymp‰ristˆn aloittavan komennon \verb-\begin{}- per‰‰n.
+%Muista, ett√§ viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. Komento sijoitetaan ymp√§rist√∂n aloittavan komennon \verb-\begin{}- per√§√§n.
 \end{harj}
 \begin{harj}
 Sama kuin edellinen harjoitus, mutta viittaa harjoituksessa \ref{kelluvaTikz} luomaasi kelluvaan kuvaan.
@@ -857,7 +857,7 @@ Sama kuin edellinen harjoitus, mutta viittaa harjoituksessa \ref{kelluvaTikz} lu
 \subsubsection{Lainaukset ja alaviitteet}
 \begin{frame}[fragile]
 \frametitle{Lainaukset ja alaviitteet}
-Suomalaisittain k‰ytett‰v‰t lainausmerkit saa kahdella per‰kk‰isell‰ \verb-'- merkill‰:
+Suomalaisittain k√§ytett√§v√§t lainausmerkit saa kahdella per√§kk√§isell√§ \verb-'- merkill√§:
 \begin{Verbatim}[frame=single]
 Matti sanoi: ''Onpa outoa!''
 \end{Verbatim}
@@ -865,41 +865,41 @@ tulostaa
 \begin{framed}
 Matti sanoi: ''Onpa outoa!''
 \end{framed}
-Lainauksia varten on olemassa myˆs omia ymp‰ristˆj‰‰n, kuten \verb-verse-, \verb-quote- ja \verb-quotation-.
+Lainauksia varten on olemassa my√∂s omia ymp√§rist√∂j√§√§n, kuten \verb-verse-, \verb-quote- ja \verb-quotation-.
 \vaihto
 Alaviitteen voi luoda komennolla \verb-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Lis‰‰ dokumenttiisi jokin lainaus k‰ytt‰en \verb-quote--, \verb-\quotation-- tai \verb-verse--ymp‰ristˆ‰. 
+Lis√§√§ dokumenttiisi jokin lainaus k√§ytt√§en \verb-quote--, \verb-\quotation-- tai \verb-verse--ymp√§rist√∂√§. 
 \end{harj}
 \begin{harj}
-Lis‰‰ tyˆhˆsi alaviite komennolla \verb-\footnote{}-. 
+Lis√§√§ ty√∂h√∂si alaviite komennolla \verb-\footnote{}-. 
 \end{harj}
 \end{frame}
-\subsubsection{BibTeX-j‰rjestelm‰}
+\subsubsection{BibTeX-j√§rjestelm√§}
 \begin{frame}[fragile]
 \frametitle{Kirjallisuusviitteet}
-\LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \(\BibTeX\)-j‰rjestelm‰n avulla. 
+\LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \(\BibTeX\)-j√§rjestelm√§n avulla. 
 \vaihto
-T‰llˆin jokaista l‰hdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sis‰lt‰‰ teoksen tiedot. 
+T√§ll√∂in jokaista l√§hdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sis√§lt√§√§ teoksen tiedot. 
 \vaihto
 Tiedostot on yksinkertaisinta tallentaa samaan kansioon \verb-.tex--tiedoston kanssa.
 \vaihto
-Viittaaminen tapahtuu komennolla \verb-\cite{tunnus}-, jossa \verb-tunnus- on er‰s teoksen \verb-.bib--tiedostosta lˆytyv‰ merkkijono.
+Viittaaminen tapahtuu komennolla \verb-\cite{tunnus}-, jossa \verb-tunnus- on er√§s teoksen \verb-.bib--tiedostosta l√∂ytyv√§ merkkijono.
 %\vaihto
-%Aivan tyˆn loppuun luodaan kirjallisuusluettelo komennoilla
+%Aivan ty√∂n loppuun luodaan kirjallisuusluettelo komennoilla
 %\begin{Verbatim}[frame=single]
 %\bibliographystyle{luettelon tyyli}
 %\bibliography{teos1.bib, teos2.bib, teos3.bib,...}
 %\end{Verbatim}
-%Edellytyksen‰ on, ett‰ tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa.
+%Edellytyksen√§ on, ett√§ tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa.
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{.bib-tiedostot}
-\verb-.bib--tiedoston voi luoda mill‰ tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
+\verb-.bib--tiedoston voi luoda mill√§ tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
 \vaihto
-Tiedoston sis‰ltˆ voisi olla esimerkiksi seuraava:\vaihto
+Tiedoston sis√§lt√∂ voisi olla esimerkiksi seuraava:\vaihto
 \begin{scriptsize}
 \begin{Verbatim}[frame=single]
 @book{kemper,
@@ -918,97 +918,97 @@ publisher={Springer Berlin Heidelberg}
 \begin{frame}[fragile]
 \frametitle{.bib-tiedostot}
 \begin{harj}
-Kopioi edellisen esimerkin sis‰ltˆ uuteen tiedostoon ja tallenna se nimell‰ \verb-Kemper.bib- tyˆkansioosi. 
+Kopioi edellisen esimerkin sis√§lt√∂ uuteen tiedostoon ja tallenna se nimell√§ \verb-Kemper.bib- ty√∂kansioosi. 
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{.bib-tiedoston sis‰ltˆ}
+\frametitle{.bib-tiedoston sis√§lt√∂}
 \begin{itemize}
-\item Ensimm‰isell‰ komennolla (\verb-@book-, \verb-@article-, \verb-@unpublished- jne) kerrotaan, mink‰ tyyppisest‰ teoksesta on kyse. 
-\item Aaltosulkeisiin ennen ensimm‰ist‰ pilkkua tuleva merkkijono on se tunnus, jolla teokseen viitataan komennolla \verb-\cite{tunnus}-. 
-\item Tunnuksen voi valita vapaasti (ilman ‰‰kkˆsi‰ ja erikoismerkkej‰) eik‰ se tule n‰kyviin mihink‰‰n.  Esimerkiksi yll‰ tunnus on \verb-kemper-, joten teokseen viitattaisiin komennolla \verb-\cite{kemper}-.
-\item Muut kent‰t (ja niiden pakollisuus/valinnaisuus) m‰‰r‰ytyv‰t teoksen tyypin mukaan.
+\item Ensimm√§isell√§ komennolla (\verb-@book-, \verb-@article-, \verb-@unpublished- jne) kerrotaan, mink√§ tyyppisest√§ teoksesta on kyse. 
+\item Aaltosulkeisiin ennen ensimm√§ist√§ pilkkua tuleva merkkijono on se tunnus, jolla teokseen viitataan komennolla \verb-\cite{tunnus}-. 
+\item Tunnuksen voi valita vapaasti (ilman √§√§kk√∂si√§ ja erikoismerkkej√§) eik√§ se tule n√§kyviin mihink√§√§n.  Esimerkiksi yll√§ tunnus on \verb-kemper-, joten teokseen viitattaisiin komennolla \verb-\cite{kemper}-.
+\item Muut kent√§t (ja niiden pakollisuus/valinnaisuus) m√§√§r√§ytyv√§t teoksen tyypin mukaan.
 \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{Luokat ja .bib-tiedoston sis‰ltˆ}
-Kun tiedostoja luodaan k‰sin, t‰ytyy selvitt‰‰ mitk‰ kent‰t ovat pakollisia ja mitk‰ valinnaisia. 
+\frametitle{Luokat ja .bib-tiedoston sis√§lt√∂}
+Kun tiedostoja luodaan k√§sin, t√§ytyy selvitt√§√§ mitk√§ kent√§t ovat pakollisia ja mitk√§ valinnaisia. 
 \vaihto
 Esimerkiksi taulukosta 
 \begin{scriptsize}
 \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Entry_and_field_types_in_.bib_files}
 \end{scriptsize}
-selvi‰‰, ett‰ kirjalle (\verb-@book-) pakollisia kentti‰ ovat \verb-title- ja \verb-author-, muut valinnaisia.
+selvi√§√§, ett√§ kirjalle (\verb-@book-) pakollisia kentti√§ ovat \verb-title- ja \verb-author-, muut valinnaisia.
 \vaihto
-Lis‰tietoa k‰ytett‰vist‰ teosluokista lˆytyy esimerkiksi sivulta
+Lis√§tietoa k√§ytett√§vist√§ teosluokista l√∂ytyy esimerkiksi sivulta
 \begin{scriptsize}
 \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates}.
 \end{scriptsize}
 \vaihto
-K‰yt‰nnˆss‰ jokaista kuviteltavissa olevaa l‰hdeteosta varten lˆytyy jokin sopiva luokka (ja tarpeen tullen sellaisen voi luoda itsekin).
+K√§yt√§nn√∂ss√§ jokaista kuviteltavissa olevaa l√§hdeteosta varten l√∂ytyy jokin sopiva luokka (ja tarpeen tullen sellaisen voi luoda itsekin).
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Luo \BibTeX-tiedosto kirjalle, jonka nimi on Topologia I, kirjoittaja Jussi V‰is‰l‰, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \verb-topo1- ja tallenna tiedosto tyˆkansioosi nimell‰ \verb-Vaisala.bib-.
+Luo \BibTeX-tiedosto kirjalle, jonka nimi on Topologia I, kirjoittaja Jussi V√§is√§l√§, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \verb-topo1- ja tallenna tiedosto ty√∂kansioosi nimell√§ \verb-Vaisala.bib-.
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{.bib-tiedostot Internetist‰}
-Kirjojen teostietoja lˆyt‰‰ \BibTeX -muodossa varsin suurella todenn‰kˆisyydell‰ Google Books-palvelusta. 
+\frametitle{.bib-tiedostot Internetist√§}
+Kirjojen teostietoja l√∂yt√§√§ \BibTeX -muodossa varsin suurella todenn√§k√∂isyydell√§ Google Books-palvelusta. 
 \vaihto
-Kuhunkin teokseen liittyv‰n Tietoja teoksesta-sivun alalaidassa on kohta Vie sitaatti ja sen vieress‰ painike \BibTeX, josta tiedoston voi ladata.
+Kuhunkin teokseen liittyv√§n Tietoja teoksesta-sivun alalaidassa on kohta Vie sitaatti ja sen vieress√§ painike \BibTeX, josta tiedoston voi ladata.
 \vaihto
-Tiedosto kannattaa avata Texmakerill‰, tehd‰ mahdolliset muutokset ja tallentaa haluttuun kansioon. 
+Tiedosto kannattaa avata Texmakerill√§, tehd√§ mahdolliset muutokset ja tallentaa haluttuun kansioon. 
 \vaihto
-K‰yt‰nnˆss‰ ainakin viittaustunnus on syyt‰ vaihtaa helpommaksi.
+K√§yt√§nn√∂ss√§ ainakin viittaustunnus on syyt√§ vaihtaa helpommaksi.
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{.bib-tiedostot Internetist‰}
+\frametitle{.bib-tiedostot Internetist√§}
 \begin{harj}
-Etsi Google Books-palvelusta Walter Rudinin kirjan Complex Analysis (kirjan versiolla ei v‰li‰) tiedot \BibTeX -muodossa. Avaa tiedosto Texmakerilla ja valitse viittaustunnus haluamaksesi. Tallenna tiedosto nimell‰ \verb-Rudin.bib- tyˆkansioosi. (Huomaa, ett‰ palvelu tarjoaa tiedostot muodossa .bibtex.)
+Etsi Google Books-palvelusta Walter Rudinin kirjan Complex Analysis (kirjan versiolla ei v√§li√§) tiedot \BibTeX -muodossa. Avaa tiedosto Texmakerilla ja valitse viittaustunnus haluamaksesi. Tallenna tiedosto nimell√§ \verb-Rudin.bib- ty√∂kansioosi. (Huomaa, ett√§ palvelu tarjoaa tiedostot muodossa .bibtex.)
 \end{harj}
 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kirjallisuusluettelon luominen}
-Kun tarvittavat \verb-.bib--tiedostot on tallennettu koneelle, on syyt‰ luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee n‰kyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran.
+Kun tarvittavat \verb-.bib--tiedostot on tallennettu koneelle, on syyt√§ luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee n√§kyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran.
 \vaihto
-Luettelo luodaan tyˆn loppuosaan komennolla
+Luettelo luodaan ty√∂n loppuosaan komennolla
 \begin{Verbatim}[frame=single]
 \bibliographystyle{luettelon tyyli}
 \bibliography{teos1,teos2,teos3,...}
 \end{Verbatim}
-Koodissa teos1 on tiedoston teos1.bib nimi ilman tiedostop‰‰tett‰. Huomaa myˆs, ettei pilkun j‰lkeen sallita v‰lilyˆnti‰.
+Koodissa teos1 on tiedoston teos1.bib nimi ilman tiedostop√§√§tett√§. Huomaa my√∂s, ettei pilkun j√§lkeen sallita v√§lily√∂nti√§.
 \vaihto
-Edellisen koodin toimimisen edellytyksen‰ on, ett‰ tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa. 
+Edellisen koodin toimimisen edellytyksen√§ on, ett√§ tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa. 
 \end{frame}
 \begin{frame}[fragile]
 \frametitle{Kirjallisuusluettelon luominen}
 \begin{harj}
-Edell‰ loit BibTeX-tiedostot Kemper.bib, Rudin.bib ja Vaisala.bib. Tuo teokset kirjallisuusluetteloon koodilla 
+Edell√§ loit BibTeX-tiedostot Kemper.bib, Rudin.bib ja Vaisala.bib. Tuo teokset kirjallisuusluetteloon koodilla 
 \begin{Verbatim}[frame=single]
 \bibliographystyle{plain}
 \bibliography{Kemper,Rudin,Vaisala}
 \end{Verbatim}
-Sijoita koodi tyˆsi loppuosaan, esimerkiksi juuri ennen komentoa \verb-\end{document}-.
+Sijoita koodi ty√∂si loppuosaan, esimerkiksi juuri ennen komentoa \verb-\end{document}-.
 \end{harj}
 \begin{harj}
-Viittaa kuhunkin teokseen tyˆss‰si komennolla \verb-\cite{viittaustunnus}-. Muista, ett‰ viittaustunnus poikkeaa useimmiten tiedoston nimest‰. 
+Viittaa kuhunkin teokseen ty√∂ss√§si komennolla \verb-\cite{viittaustunnus}-. Muista, ett√§ viittaustunnus poikkeaa useimmiten tiedoston nimest√§. 
 \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-\frametitle{K‰yt‰ntˆ}
+\frametitle{K√§yt√§nt√∂}
 %Kun tiedostot on luotu ja tallennettu, niihin voidaan viitata tuloksellisesti jo mainitulla komennolla \verb-\cite{tunnus}-. 
-Jotta viitteet tulisivat n‰kyviin, toimi seuraavasti:
+Jotta viitteet tulisivat n√§kyviin, toimi seuraavasti:
 \begin{itemize}
 \item aja tiedosto PDFLaTeXilla
-\item aja tiedosto BibTeXilla (ja tarkista alapalkkiin ilmestyv‰t viestit!)
+\item aja tiedosto BibTeXilla (ja tarkista alapalkkiin ilmestyv√§t viestit!)
 \item aja tiedosto PDFLaTeXilla kahdesti
 \end{itemize} 
-Jos viittaukset eiv‰t tule n‰kyviin etk‰ tied‰ mist‰ se johtuu, tarkista seuraavat kohdat:
+Jos viittaukset eiv√§t tule n√§kyviin etk√§ tied√§ mist√§ se johtuu, tarkista seuraavat kohdat:
 \begin{itemize}
-\item oletko k‰ytt‰nyt viitatessa oikeita tunnuksia?
-\item oletko tuonut tiedostot \LaTeX iin oikein ja oikeilla nimill‰?
+\item oletko k√§ytt√§nyt viitatessa oikeita tunnuksia?
+\item oletko tuonut tiedostot \LaTeX iin oikein ja oikeilla nimill√§?
 \item ovatko tiedostot todella muotoa \verb-.bib-?
 \item ovatko tiedostot oikeassa kansiossa?
 \end{itemize}
@@ -1016,47 +1016,47 @@ Jos viittaukset eiv‰t tule n‰kyviin etk‰ tied‰ mist‰ se johtuu, tarkista seuraav
 %\begin{frame}[fragile]
 %\frametitle{Viittaustyyli}
 %\begin{harj}
-%Luo tai etsi Internetist‰ kolmelle eri teokselle \BibTeX-tiedostot ja viittaa teoksiin onnistuuneesti. Valitse teoksille eri luokat, esim \verb-@book-, \verb-@misc- ja \verb-@unpublished-.
+%Luo tai etsi Internetist√§ kolmelle eri teokselle \BibTeX-tiedostot ja viittaa teoksiin onnistuuneesti. Valitse teoksille eri luokat, esim \verb-@book-, \verb-@misc- ja \verb-@unpublished-.
 %\end{harj}
 %\end{frame}
 \subsubsection{Viittaustyyli}
 \begin{frame}[fragile]
 \frametitle{Viittaustyyli}
-Viittaukset tulevat n‰kyviin hakasuluissa olevina numeroina. Esimerkiksi l‰hdeteoksen kirjoittajaa varten lukija joutuu siis tarkistamaan l‰hdeluettelon. T‰m‰ on tyypillist‰ varsinkin matemaattisessa kirjallisuudessa. 
+Viittaukset tulevat n√§kyviin hakasuluissa olevina numeroina. Esimerkiksi l√§hdeteoksen kirjoittajaa varten lukija joutuu siis tarkistamaan l√§hdeluettelon. T√§m√§ on tyypillist√§ varsinkin matemaattisessa kirjallisuudessa. 
 \vaihto
-Toisenlaista viittaustekniikkaa varten voi k‰ytt‰‰ esimerkiksi \verb-natbib--j‰rjestelm‰‰, jota ei kuitenkaan t‰ll‰ kurssill‰ k‰sitell‰. Lis‰tietoa saa vaikkapa osoitteesta
+Toisenlaista viittaustekniikkaa varten voi k√§ytt√§√§ esimerkiksi \verb-natbib--j√§rjestelm√§√§, jota ei kuitenkaan t√§ll√§ kurssill√§ k√§sitell√§. Lis√§tietoa saa vaikkapa osoitteesta
 \begin{scriptsize}
 \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Natbib}
 \end{scriptsize}
 \end{frame}
 \subsection{Dokumentin viimeistely}
-\subsubsection{Sis‰llysluettelo ja kansilehti}
+\subsubsection{Sis√§llysluettelo ja kansilehti}
 \begin{frame}[fragile]
-\frametitle{Sis‰llysluettelo ja kansilehti}
-Sis‰llysluettelon saa haluamaansa kohtaan tyˆt‰ komennolla \verb-\tableofcontents-. Tiedoston joutuu yleens‰ ajamaan useaan kertaan, ennen kuin numeroinnit tulevat n‰kyviin oikein.
+\frametitle{Sis√§llysluettelo ja kansilehti}
+Sis√§llysluettelon saa haluamaansa kohtaan ty√∂t√§ komennolla \verb-\tableofcontents-. Tiedoston joutuu yleens√§ ajamaan useaan kertaan, ennen kuin numeroinnit tulevat n√§kyviin oikein.
 \vaihto
-Kansilehti luodaan komennolla \verb-\maketitle-. T‰t‰ varten esittelyosaan lis‰t‰‰n komennot \verb-\title{otsikko}-, \verb-\author{nimi}- ja \verb-\date{pvm}-.
+Kansilehti luodaan komennolla \verb-\maketitle-. T√§t√§ varten esittelyosaan lis√§t√§√§n komennot \verb-\title{otsikko}-, \verb-\author{nimi}- ja \verb-\date{pvm}-.
 \vaihto
-Kansilehti tulostuu joissain luokissa (esim. \verb-book- ja \verb-report-) omaksi sivukseen, \verb-article--luokassa osaksi ensimm‰ist‰ sivua.
+Kansilehti tulostuu joissain luokissa (esim. \verb-book- ja \verb-report-) omaksi sivukseen, \verb-article--luokassa osaksi ensimm√§ist√§ sivua.
 \end{frame}
 \begin{frame}[fragile]
 \begin{harj}
-Luo tyˆllesi kansilehti ja sis‰llysluettelo. Kokeile milt‰ tyˆsi n‰ytt‰‰, jos vaihdat luokaksi \verb-report- tai \verb-book-. Millaisia eroja huomaat? 
+Luo ty√∂llesi kansilehti ja sis√§llysluettelo. Kokeile milt√§ ty√∂si n√§ytt√§√§, jos vaihdat luokaksi \verb-report- tai \verb-book-. Millaisia eroja huomaat? 
 \end{harj}
 \end{frame}
 \subsubsection{Dokumenttiluokan asetukset}
 \begin{frame}[fragile]
 \frametitle{Dokumenttiluokan asetukset}
-Tiedoston aloittavalle komennolle \verb-\documentclass[]{}- voi antaa valinnaisena argumenttina er‰it‰ dokumentin ulkoasua koskevia asetuksia:
+Tiedoston aloittavalle komennolle \verb-\documentclass[]{}- voi antaa valinnaisena argumenttina er√§it√§ dokumentin ulkoasua koskevia asetuksia:
 \begin{itemize}
 \item Kirjainkoon vaihtoehdot ovat 10pt, 11pt ja 12pt. 
-\item Luonnostilan saa valinnalla \verb-draft-. T‰llˆin k‰‰nt‰minen on nopeaa ja liian pitk‰t rivit tulevat merkityiksi.
+\item Luonnostilan saa valinnalla \verb-draft-. T√§ll√∂in k√§√§nt√§minen on nopeaa ja liian pitk√§t rivit tulevat merkityiksi.
 \item Tekstin saa jaettua kahteen kolumniin valinnalla \verb-twocolumn-. 
-\item article-luokassa tulostus on oletusarvoisesti yksipuoleinen - t‰m‰n voi vaihtaa valinnalla \verb-twoside- (vast. \verb-oneside-).
+\item article-luokassa tulostus on oletusarvoisesti yksipuoleinen - t√§m√§n voi vaihtaa valinnalla \verb-twoside- (vast. \verb-oneside-).
 \end{itemize}
-Useammat m‰‰ritteet erotetaan toisistaan pilkuilla, kuten tavallista.
+Useammat m√§√§ritteet erotetaan toisistaan pilkuilla, kuten tavallista.
 \vaihto
-Hieman lis‰tietoa lˆytyy esimerkiksi osoitteesta \begin{scriptsize}
+Hieman lis√§tietoa l√∂ytyy esimerkiksi osoitteesta \begin{scriptsize}
 \url{http://texblog.org/2013/02/13/latex-documentclass-options-illustrated}.
 \end{scriptsize}
 \end{frame}
@@ -1071,7 +1071,7 @@ Hieman lis‰tietoa lˆytyy esimerkiksi osoitteesta \begin{scriptsize}
 %\frametitle{Alaviitteet}
 %\end{frame}
 %\begin{frame}
-%\frametitle{V‰rillinen teksti}
+%\frametitle{V√§rillinen teksti}
 %\end{frame}
 
 \end{document}
@@ -1079,20 +1079,20 @@ Kaikki hoidetaan komennoilla
 Jokainen komento alkaa symbolilla \verb+\+
 Erityisesti jokaiselle (matemaattiselle) symbolille on oma komentonsa
 Symbolilistoja on olemassa lukuisia
-Myˆs omien komentojen m‰‰ritteleminen on mahdollista ja suotavaa
-Omien symbolienkin luominen on mahdollista mutta jo varsin edistynytt‰
-Usein k‰ytett‰vien symbolien komennot kannattaa oppia ulkoa
-Usein k‰ytett‰v‰lle komentojen yhdistelm‰lle kannattaa luoda heti oma komentonsa
+My√∂s omien komentojen m√§√§ritteleminen on mahdollista ja suotavaa
+Omien symbolienkin luominen on mahdollista mutta jo varsin edistynytt√§
+Usein k√§ytett√§vien symbolien komennot kannattaa oppia ulkoa
+Usein k√§ytett√§v√§lle komentojen yhdistelm√§lle kannattaa luoda heti oma komentonsa
 
 Syntaksista-osuus! \verb-\-, \verb-\begin{}...\end{}-, aaltosulkeet vs. hakasulkeet
 Lista jossa esitellyt komennot, esittelyosa/dokumentti, muita huomioita
 Aakkostettu lista\verb-\begin{aakkosta}-
 
-V‰ritekstit? Muut eksoottiset korostukset? Laatikot? Minipage? Matikkatilassa oikeankokoiset sulut! Joukkoerotus? Oman komennon nimeen ei tule kenoviivaa, mutta sit‰ k‰ytett‰ess‰ kyll‰! Array ja align-ymp‰ristˆt! Flushleft, \center yms! footnote! 
+V√§ritekstit? Muut eksoottiset korostukset? Laatikot? Minipage? Matikkatilassa oikeankokoiset sulut! Joukkoerotus? Oman komennon nimeen ei tule kenoviivaa, mutta sit√§ k√§ytett√§ess√§ kyll√§! Array ja align-ymp√§rist√∂t! Flushleft, \center yms! footnote! 
 
 
 
-Linkkej‰
+Linkkej√§
 http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf
 www.ctan.org
 http://en.wikibooks.org/wiki/LaTeX
