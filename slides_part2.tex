@@ -270,216 +270,216 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
         \end{scriptsize}
     \end{table}
     Esimerkiksi komento \verb-\begin{tabular}{r|cc}- aloittaisi 3-sarakkeisen taulukon, jolla olisi pystyviiva 1. ja 2. sarakkeen välillä. Sarakkeen 1 sisältö tasattaisiin oikealle, kahden muun sisältö keskitettäisiin.
-        %\vaihto
-        %Lisätietoja ympäristön käytöstä saa kirjasta  \begin{scriptsize}\url{http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular.2A_environment}\end{scriptsize}
-    \end{frame}
+    %\vaihto
+    %Lisätietoja ympäristön käytöstä saa kirjasta  \begin{scriptsize}\url{http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular.2A_environment}\end{scriptsize}
+\end{frame}
 
-    \begin{frame}[fragile]
-        \frametitle{Tabular-ympäristö}
-        Taulukon sisältö kirjoitetaan rivi kerrallaan. Jokaisella rivillä merkki \verb-&- erottaa sarakkeet toisistaan, komennolla \verb-\\- siirrytään seuraavalle riville.  Nämä ja muut taulukon sisäiset komennot ovat seuraavassa:
-        \vaihto
-        \begin{table}[h!]
-            \begin{scriptsize}
-                \begin{tabular}{cp{4cm}}
-                    Komento & Toiminto\\
-                    \hline
-                    \verb-&- & sarakkeenvaihto\\
-                    \hline
-                    \verb-\\- & rivinvaihto\\
-                    \hline
-                    \verb-\hline- & vaakaviiva \\
-                    \hline
-                    \verb-\newline- & rivinvaihto sarakkeen sisällä\\
-                    \hline
-                    \verb+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j välillä\\
-                    \hline
-                \end{tabular}
-            \end{scriptsize}
-        \end{table}
-
-    \end{frame}
-
-    \begin{frame}[fragile]
-        \frametitle{Tabular-ympäristö}
-        Esimerkiksi rivi
+\begin{frame}[fragile]
+    \frametitle{Tabular-ympäristö}
+    Taulukon sisältö kirjoitetaan rivi kerrallaan. Jokaisella rivillä merkki \verb-&- erottaa sarakkeet toisistaan, komennolla \verb-\\- siirrytään seuraavalle riville.  Nämä ja muut taulukon sisäiset komennot ovat seuraavassa:
+    \vaihto
+    \begin{table}[h!]
         \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+            \begin{tabular}{cp{4cm}}
+                Komento & Toiminto\\
+                \hline
+                \verb-&- & sarakkeenvaihto\\
+                \hline
+                \verb-\\- & rivinvaihto\\
+                \hline
+                \verb-\hline- & vaakaviiva \\
+                \hline
+                \verb-\newline- & rivinvaihto sarakkeen sisällä\\
+                \hline
+                \verb+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j välillä\\
+                \hline
+            \end{tabular}
+        \end{scriptsize}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Tabular-ympäristö}
+    Esimerkiksi rivi
+    \begin{scriptsize}
+        \begin{Verbatim}[frame=single]
                 \begin{tabular}{r|cc}
  & Tytöt & Pojat\\
-                    \hline
-                    Sinisilmäiset & 4 & 2 \\
-                    Ruskeasilmäiset & 3 & 5 \\
-                    Vihreäsilmäiset & 8 & 8\\
-                \end{tabular}
-            \end{Verbatim}
-        \end{scriptsize}
-        luo seuraavan taulukon:
-        \begin{framed} 
-            \begin{tabular}{r|cc}
-                & Tytöt & Pojat\\
                 \hline
                 Sinisilmäiset & 4 & 2 \\
                 Ruskeasilmäiset & 3 & 5 \\
                 Vihreäsilmäiset & 8 & 8\\
-                %\hline
-                %Yhteensä: & 15 & 15\\
             \end{tabular}
-        \end{framed}
-        Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
-
-    \end{frame}
-
-
-
-    \begin{frame}[fragile]
-        \frametitle{Tabular-ympäristö}
-        \begin{harj}
-            Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi riviä.  
-            %ja joka sisältää
-            %\begin{itemize}
-            %\item pystyviivan
-            %\item kaksinkertaisen pystyviivan
-            %\item vaakaviivan
-            %\item osittaisen vaakaviivan sarakkeiden 1 ja 2 välillä
-            %\end{itemize}
-        \end{harj}
-        \begin{harj}
-            Luo toinen 3-sarakkeinen taulukko (esim. kopio edellisestä), joka sisältää 
-            \begin{itemize}
-                \item pystyviivan
-                \item kaksinkertaisen pystyviivan
-                \item vaakaviivan
-                \item osittaisen vaakaviivan kahden sarakkeen välillä
-            \end{itemize}
-        \end{harj}
-    \end{frame}
-    \subsubsection{Sarakkeiden yhdistäminen}
-    \begin{frame}[fragile]
-        \frametitle{Sarakkeiden yhdistäminen}
-        Sarakkeiden yhdistäminen onnistuu komennolla \verb-\multicolumn{}{}{}-. Pakollisista argumenteista
-        \begin{itemize}
-            \item ensimmäinen on yhdistettävien solujen lukumäärä
-            \item toinen on yhdistämällä saadun sarakkeen tasaus
-            \item kolmas on yhdistämällä saadun sarakkeen sisältö
-        \end{itemize}
-        Komento \verb-\multicolumn- toimii sellaisenaan eikä tarvitse lisäpaketteja.
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Sarakkeiden yhdistäminen}
-        %\begin{minipage}{5cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
-                \begin{tabular}{|c|c|c|}
-                    \hline
-                    \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
-                    \hline
-                    Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
-                    \hline
-                    Sarake1 & Sarake2 & Sarake3\\
-                    \hline
-                \end{tabular}
-            \end{Verbatim}
-        \end{scriptsize}
-        %\end{minipage}
-        \begin{minipage}{5cm}
-            \begin{scriptsize}
-                \begin{tabular}{|c|c|c|}
-                    \hline
-                    \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
-                    \hline
-                    Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
-                    \hline
-                    Sarake1 & Sarake2 & Sarake3\\
-                    \hline
-                \end{tabular}
-            \end{scriptsize}
-        \end{minipage}
-    \end{frame}
-
-    \begin{frame}[fragile]
-        \frametitle{Sarakkeiden yhdistäminen}
-
-        \begin{harj}
-            Luo seuraava taulukko:
-            \begin{table}
-                \begin{tabular}{|l|l|l|}
-                    \hline
-                    \multicolumn{3}{|c|}{\Large Päiväpetolintuja}\\
-                    \hline
-                    \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
-                    Kanahaukka & Accipiter &  gentilis\\ \hline
-                    Hiirihaukka & Buteo & buteo\\ \hline
-                    %\multicolumn{3}{|c|}{Jalohaukkoja}\\ \hline
-                    Tuulihaukka & Falco & columbarius\\\hline
-                    Nuolihaukka & Falco & subbuteo\\ \hline
-                \end{tabular}
-            \end{table}
-        \end{harj}
-
-    \end{frame}
-    \subsubsection{Rivien yhdistäminen}
-    \begin{frame}[fragile]
-        \frametitle{Rivien yhdistäminen}
-        Rivien yhdistämistä varten tarvitaan paketti \verb-multirow-. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \verb-\multirow{}{}{}-. Pakollisista argumenteista
-        \begin{itemize}
-            \item ensimmäinen on yhdistettävien solujen lukumäärä
-            \item toinen on yhdistämällä saadun rivin leveys (\verb-*- jättää asian \LaTeX in huoleksi)
-            \item kolmas on yhdistämällä saadun rivin sisältö
-        \end{itemize}
-        Rivin leveyttä ei useinkaan kannata itse valita, ellei ole varma siitä mitä haluaa tehdä. 
-        \vaihto
-        Huomaa, että \verb-\multirow- toimii kuten \verb-\multicolumn-, mutta keskimmäinen argumentti on eri tarkoitusta varten.
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Rivien yhdistäminen} 
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
-                \begin{tabular}{|c|c|c|}
-                    \hline
-                    \multirow{3}{*}{Kolme riviä} & Solu1 & Solu 2\\
-                    \cline{2-3}
-        & \multirow{2}{*}{Kaksi riviä} & Solu 3\\
-                    \cline{3-3}
-        & & Solu 4\\
-                    \hline
-                \end{tabular}
-            \end{Verbatim}
-        \end{scriptsize}
-        \begin{tabular}{|c|c|c|}
+        \end{Verbatim}
+    \end{scriptsize}
+    luo seuraavan taulukon:
+    \begin{framed} 
+        \begin{tabular}{r|cc}
+            & Tytöt & Pojat\\
             \hline
-            \multirow{3}{*}{Kolme riviä} & Solu1	& Solu 2\\\cline{2-3}
-                                                 & \multirow{2}{*}{Kaksi riviä}	& Solu 3\\\cline{3-3}
-                                                        & & Solu 4\\
-            \hline
+            Sinisilmäiset & 4 & 2 \\
+            Ruskeasilmäiset & 3 & 5 \\
+            Vihreäsilmäiset & 8 & 8\\
+            %\hline
+            %Yhteensä: & 15 & 15\\
         \end{tabular}
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Rivien yhdistäminen} 
-        \begin{harj}
-            Luo seuraava taulukko: 
-            \begin{table}\label{taulukko}
-                \begin{tabular}{|c|c|c|c|}
-                    \hline
-                    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
-                    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                            & Hiirihaukka & Buteo & buteo\\ \hline
-                    %\hline
-                    %Analyysi I \& II & \multirow{3}{*}{Matikan perusopinnot}\\
-                    %\cline{1-1}
-                    %Linis I & \\
-                    %\cline{1-1}
-                    %JYM & \\
-                    %\hline
-                \end{tabular}
-            \end{table}
-        \end{harj}
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Sarakkeiden ja rivien yhdistäminen} 
-        Sarakkeita ja rivejä voi yhdistää samassa taulukossa:\vaihto
-        \begin{minipage}{8cm}
-            \begin{scriptsize}
-                \begin{verbatim}
+    \end{framed}
+    Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+    \frametitle{Tabular-ympäristö}
+    \begin{harj}
+        Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi riviä.  
+        %ja joka sisältää
+        %\begin{itemize}
+        %\item pystyviivan
+        %\item kaksinkertaisen pystyviivan
+        %\item vaakaviivan
+        %\item osittaisen vaakaviivan sarakkeiden 1 ja 2 välillä
+        %\end{itemize}
+    \end{harj}
+    \begin{harj}
+        Luo toinen 3-sarakkeinen taulukko (esim. kopio edellisestä), joka sisältää 
+        \begin{itemize}
+            \item pystyviivan
+            \item kaksinkertaisen pystyviivan
+            \item vaakaviivan
+            \item osittaisen vaakaviivan kahden sarakkeen välillä
+        \end{itemize}
+    \end{harj}
+\end{frame}
+\subsubsection{Sarakkeiden yhdistäminen}
+\begin{frame}[fragile]
+    \frametitle{Sarakkeiden yhdistäminen}
+    Sarakkeiden yhdistäminen onnistuu komennolla \verb-\multicolumn{}{}{}-. Pakollisista argumenteista
+    \begin{itemize}
+        \item ensimmäinen on yhdistettävien solujen lukumäärä
+        \item toinen on yhdistämällä saadun sarakkeen tasaus
+        \item kolmas on yhdistämällä saadun sarakkeen sisältö
+    \end{itemize}
+    Komento \verb-\multicolumn- toimii sellaisenaan eikä tarvitse lisäpaketteja.
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Sarakkeiden yhdistäminen}
+    %\begin{minipage}{5cm}
+    \begin{scriptsize}
+        \begin{Verbatim}[frame=single]
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
+                \hline
+                Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
+                \hline
+                Sarake1 & Sarake2 & Sarake3\\
+                \hline
+            \end{tabular}
+        \end{Verbatim}
+    \end{scriptsize}
+    %\end{minipage}
+    \begin{minipage}{5cm}
+        \begin{scriptsize}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
+                \hline
+                Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
+                \hline
+                Sarake1 & Sarake2 & Sarake3\\
+                \hline
+            \end{tabular}
+        \end{scriptsize}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Sarakkeiden yhdistäminen}
+
+    \begin{harj}
+        Luo seuraava taulukko:
+        \begin{table}
+            \begin{tabular}{|l|l|l|}
+                \hline
+                \multicolumn{3}{|c|}{\Large Päiväpetolintuja}\\
+                \hline
+                \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
+                Kanahaukka & Accipiter &  gentilis\\ \hline
+                Hiirihaukka & Buteo & buteo\\ \hline
+                %\multicolumn{3}{|c|}{Jalohaukkoja}\\ \hline
+                Tuulihaukka & Falco & columbarius\\\hline
+                Nuolihaukka & Falco & subbuteo\\ \hline
+            \end{tabular}
+        \end{table}
+    \end{harj}
+
+\end{frame}
+\subsubsection{Rivien yhdistäminen}
+\begin{frame}[fragile]
+    \frametitle{Rivien yhdistäminen}
+    Rivien yhdistämistä varten tarvitaan paketti \verb-multirow-. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \verb-\multirow{}{}{}-. Pakollisista argumenteista
+    \begin{itemize}
+        \item ensimmäinen on yhdistettävien solujen lukumäärä
+        \item toinen on yhdistämällä saadun rivin leveys (\verb-*- jättää asian \LaTeX in huoleksi)
+        \item kolmas on yhdistämällä saadun rivin sisältö
+    \end{itemize}
+    Rivin leveyttä ei useinkaan kannata itse valita, ellei ole varma siitä mitä haluaa tehdä. 
+    \vaihto
+    Huomaa, että \verb-\multirow- toimii kuten \verb-\multicolumn-, mutta keskimmäinen argumentti on eri tarkoitusta varten.
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Rivien yhdistäminen} 
+    \begin{scriptsize}
+        \begin{Verbatim}[frame=single]
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \multirow{3}{*}{Kolme riviä} & Solu1 & Solu 2\\
+                \cline{2-3}
+    & \multirow{2}{*}{Kaksi riviä} & Solu 3\\
+                \cline{3-3}
+    & & Solu 4\\
+                \hline
+            \end{tabular}
+        \end{Verbatim}
+    \end{scriptsize}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multirow{3}{*}{Kolme riviä} & Solu1	& Solu 2\\\cline{2-3}
+                                      & \multirow{2}{*}{Kaksi riviä}	& Solu 3\\\cline{3-3}
+                                      & & Solu 4\\
+        \hline
+    \end{tabular}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Rivien yhdistäminen} 
+    \begin{harj}
+        Luo seuraava taulukko: 
+        \begin{table}\label{taulukko}
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
+                \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
+                                        & Hiirihaukka & Buteo & buteo\\ \hline
+                %\hline
+                %Analyysi I \& II & \multirow{3}{*}{Matikan perusopinnot}\\
+                %\cline{1-1}
+                %Linis I & \\
+                %\cline{1-1}
+                %JYM & \\
+                %\hline
+            \end{tabular}
+        \end{table}
+    \end{harj}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Sarakkeiden ja rivien yhdistäminen} 
+    Sarakkeita ja rivejä voi yhdistää samassa taulukossa:\vaihto
+    \begin{minipage}{8cm}
+        \begin{scriptsize}
+            \begin{verbatim}
                 \begin{tabular}{|l|l|l|l|}
                     \hline
                     \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
@@ -490,299 +490,299 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
                     \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
                                                 &Nuolihaukka & Falco & subbuteo\\ \hline
                 \end{tabular}
-                \end{verbatim}
-            \end{scriptsize}
-        \end{minipage}
-        \begin{table}[h!]
-            \begin{tabular}{|l|l|l|l|}
-                \hline
-                \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
-                \hline
-                \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
-                \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                        & Hiirihaukka & Buteo & buteo\\ \hline
-                \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
-                                            &Nuolihaukka & Falco & subbuteo\\ \hline
-            \end{tabular}
-        \end{table}
+            \end{verbatim}
+        \end{scriptsize}
+    \end{minipage}
+    \begin{table}[h!]
+        \begin{tabular}{|l|l|l|l|}
+            \hline
+            \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
+            \hline
+            \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
+            \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
+                                    & Hiirihaukka & Buteo & buteo\\ \hline
+            \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
+                                        &Nuolihaukka & Falco & subbuteo\\ \hline
+        \end{tabular}
+    \end{table}
 
-    \end{frame}
-    \begin{frame}
-        Taulukoiden rakentamisessa lähes mikä tahansa on mahdollista. Kirjasta \url{http://en.wikibooks.org/wiki/LaTeX/Tables} voi etsiä apua monimutkaisempia toteutuksia varten.
-    \end{frame}
+\end{frame}
+\begin{frame}
+    Taulukoiden rakentamisessa lähes mikä tahansa on mahdollista. Kirjasta \url{http://en.wikibooks.org/wiki/LaTeX/Tables} voi etsiä apua monimutkaisempia toteutuksia varten.
+\end{frame}
+%\begin{frame}[fragile]
+%\frametitle{Kelluvat taulukot}
+%Yleensä taulukot kannattaa esittää kelluvina ympäristöinä. Tämä tarkoittaa sitä, että \LaTeX\ päättää itse, mihin taulukko kannattaa ulkonäöllisesti sijoittaa. Tällöin \verb-tabular--ympäristö sijoitetaan \verb-table--ympäristöön:
+%
+%\end{frame}
+%\begin{frame}[fragile]
+%\frametitle{Kelluvat taulukot}
+%\verb-table--ympäristölle voidaan antaa valinnaisena argumenttina toive taulukon sijoittumisesta seuraavilla määritteillä:
+%\begin{tabular}{cc}
+%h! & tähän\\
+%h & suunnilleen tähän\\
+%b & sivun alareunaan\\
+%p & sivun yläreunaan
+%\end{tabular}
+%\end{frame}
+\subsubsection{Kelluva table-ympäristö}
+\begin{frame}[fragile]
+    \frametitle{Kelluva table-ympäristö}
+Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
+    \vaihto
+    On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \verb-table--ympäristöön.
+    \begin{table}
+        \begin{scriptsize}
+            \begin{Verbatim}[frame=single]
+                \begin{table}
+                    \begin{tabular}{...}
+                        ...
+                    \end{tabular}
+                \end{table}
+            \end{Verbatim}
+        \end{scriptsize} 
+    \end{table}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Table-ympäristön argumentit}
+    Kelluvalle ympäristölle (yllä \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
+    \begin{table}
+        \begin{tabular}{lcl}
+
+            h! && tähän\\
+            \hline
+            h && suunnilleen tähän\\
+            \hline
+            b && sivun alareunaan\\
+            \hline
+            t && sivun yläreunaan\\
+            \hline
+            p && omalle sivulleen\\
+
+        \end{tabular}
+    \end{table}
+    Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
+\end{frame}
+\begin{frame}[fragile]
+    \begin{harj}\label{kelluvaTaulukko}
+        Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
+    \end{harj}
+
+\end{frame}
+\subsection{Matriisit}
+\begin{frame}[fragile]
+    \frametitle{Matematiikkatilan taulukot}
+    \LaTeX\ olettaa \verb-tabular--ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \verb-array-. Sitä käytetään kuten \verb-tabular--ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
+
+    \begin{minipage}{5cm}
+        \begin{scriptsize}
+            \begin{Verbatim}[frame=single]
+                \(
+                \begin{array}{r|c}
+                    x & x^2+1\\
+                    \hline
+                    -1 & 2\\
+                    0 & 1\\
+                    1 & 2\\
+                \end{array}
+                \)
+            \end{Verbatim}
+        \end{scriptsize}
+    \end{minipage}
+    \begin{minipage}{3cm}
+        \(
+        \begin{array}{r|c}
+            x & x^2+1\\
+            \hline
+            -1 & 2\\
+            0 & 1\\
+            1 & 2\\
+        \end{array}
+        \)
+    \end{minipage}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Array-ympäristö}
+    Array-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \verb-cases-. 
+    \begin{Verbatim}[frame=single]
+        \[
+            f(x) =
+            \begin{cases}
+                x,\text{ kun } x>0,\\
+                -x,\text{ kun }x\leq0.
+            \end{cases}
+        \]
+    \end{Verbatim}
+    \begin{framed}
+        \[
+            f(x) =
+            \begin{cases}
+                x,\text{ kun } x>0,\\
+                -x,\text{ kun }x\leq0.
+            \end{cases}
+        \]
+    \end{framed}
+\end{frame}
+\subsubsection{Matriisiympäristöt}
+\begin{frame}[fragile]
+    \frametitle{Matriisit}
+    Matriisit voitaisiin luoda käsin käyttäen \verb-array--ympäristöä, mutta hieman helpompiakin tapoja on. Esimerkiksi ympäristöllä \verb-pmatrix- matriiseja luotaisiin seuraavasti:
+
+    \begin{minipage}{4cm}
+        \begin{scriptsize}
+            \begin{Verbatim}[frame=single]
+                \[
+                    \begin{pmatrix}
+                        a & b & c\\
+                        1 & 2 & 3\\
+                    \end{pmatrix}
+                \]
+            \end{Verbatim}
+        \end{scriptsize}
+    \end{minipage}
+    \begin{minipage}{4cm}
+        \[
+            \begin{pmatrix}
+                a & b & c\\
+                1 & 2 & 3\\
+            \end{pmatrix}
+        \]
+    \end{minipage}
+
+Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkeiden määrää ei tarvitse kertoa erikseen. Virheiden varalta muista, että
+    \begin{itemize}
+        \item sarakkeet erotetaan toisistaan komennolla \verb-&-
+        \item rivi vaihdetaan komennolla \verb-\\-
+    \end{itemize}
+
+    %\end{frame}
     %\begin{frame}[fragile]
-    %\frametitle{Kelluvat taulukot}
-    %Yleensä taulukot kannattaa esittää kelluvina ympäristöinä. Tämä tarkoittaa sitä, että \LaTeX\ päättää itse, mihin taulukko kannattaa ulkonäöllisesti sijoittaa. Tällöin \verb-tabular--ympäristö sijoitetaan \verb-table--ympäristöön:
     %
     %\end{frame}
-    %\begin{frame}[fragile]
-    %\frametitle{Kelluvat taulukot}
-    %\verb-table--ympäristölle voidaan antaa valinnaisena argumenttina toive taulukon sijoittumisesta seuraavilla määritteillä:
-    %\begin{tabular}{cc}
-    %h! & tähän\\
-    %h & suunnilleen tähän\\
-    %b & sivun alareunaan\\
-    %p & sivun yläreunaan
-    %\end{tabular}
-    %\end{frame}
-    \subsubsection{Kelluva table-ympäristö}
-    \begin{frame}[fragile]
-        \frametitle{Kelluva table-ympäristö}
-    Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
-        \vaihto
-        On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \verb-table--ympäristöön.
-        \begin{table}
-            \begin{scriptsize}
-                \begin{Verbatim}[frame=single]
-                    \begin{table}
-                        \begin{tabular}{...}
-                            ...
-                        \end{tabular}
-                    \end{table}
-                \end{Verbatim}
-            \end{scriptsize} 
-        \end{table}
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Table-ympäristön argumentit}
-        Kelluvalle ympäristölle (yllä \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
-        \begin{table}
-            \begin{tabular}{lcl}
+    %loisi matriisin
+%Saman voi kuitenkin tehdä helpommin käyttämällä matriiseja varten luotuja ympäristöjä, kuten \verb-bmatrix*- tai \verb-pmatrix*-. Näitä varten tarvitset paketin \verb-mathtools-.
+\end{frame}
+\begin{frame}[fragile]
+    \begin{harj}
+        Luo jokin vähintään \(2\times 3\)-matriisi käyttäen ympäristöä \verb-pmatrix-, kuten yllä. Tee sitten matriisistasi muutama kopio ja kokeile ympäristöjä \verb-matrix-, \verb-bmatrix- ja \verb-vmatrix-. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylistä.)
+    \end{harj}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Matriisit}
+    Vaikka ympäristöt \verb-pmatrix- (\verb-matrix-, \verb-bmatrix-, \verb-vmatrix-) pohjautuvat \verb-array--ympäristöön, ei sarakkeiden tasaukseen voi lähtökohtaisesti vaikuttaa. \vaihto Paketti \verb-mathtools- tarjoaa vastaavat ympäristöt \verb-pmatrix*-, \verb-bmatrix*- jne., joilla on valinnaisena argumenttina sarakkeissa käytetty tasaus:\vaihto
 
-                h! && tähän\\
-                \hline
-                h && suunnilleen tähän\\
-                \hline
-                b && sivun alareunaan\\
-                \hline
-                t && sivun yläreunaan\\
-                \hline
-                p && omalle sivulleen\\
-
-            \end{tabular}
-        \end{table}
-        Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
-    \end{frame}
-    \begin{frame}[fragile]
-        \begin{harj}\label{kelluvaTaulukko}
-            Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
-        \end{harj}
-
-    \end{frame}
-    \subsection{Matriisit}
-    \begin{frame}[fragile]
-        \frametitle{Matematiikkatilan taulukot}
-        \LaTeX\ olettaa \verb-tabular--ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \verb-array-. Sitä käytetään kuten \verb-tabular--ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
-
-        \begin{minipage}{5cm}
-            \begin{scriptsize}
-                \begin{Verbatim}[frame=single]
-                    \(
-                    \begin{array}{r|c}
-                        x & x^2+1\\
-                        \hline
-                        -1 & 2\\
-                        0 & 1\\
-                        1 & 2\\
-                    \end{array}
-                    \)
-                \end{Verbatim}
-            \end{scriptsize}
-        \end{minipage}
-        \begin{minipage}{3cm}
-            \(
-            \begin{array}{r|c}
-                x & x^2+1\\
-                \hline
-                -1 & 2\\
-                0 & 1\\
-                1 & 2\\
-            \end{array}
-            \)
-        \end{minipage}
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Array-ympäristö}
-        Array-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \verb-cases-. 
-        \begin{Verbatim}[frame=single]
-            \[
-                f(x) =
-                \begin{cases}
-                    x,\text{ kun } x>0,\\
-                    -x,\text{ kun }x\leq0.
-                \end{cases}
-            \]
-        \end{Verbatim}
-        \begin{framed}
-            \[
-                f(x) =
-                \begin{cases}
-                    x,\text{ kun } x>0,\\
-                    -x,\text{ kun }x\leq0.
-                \end{cases}
-            \]
-        \end{framed}
-    \end{frame}
-    \subsubsection{Matriisiympäristöt}
-    \begin{frame}[fragile]
-        \frametitle{Matriisit}
-        Matriisit voitaisiin luoda käsin käyttäen \verb-array--ympäristöä, mutta hieman helpompiakin tapoja on. Esimerkiksi ympäristöllä \verb-pmatrix- matriiseja luotaisiin seuraavasti:
-
-        \begin{minipage}{4cm}
-            \begin{scriptsize}
-                \begin{Verbatim}[frame=single]
-                    \[
-                        \begin{pmatrix}
-                            a & b & c\\
-                            1 & 2 & 3\\
-                        \end{pmatrix}
-                    \]
-                \end{Verbatim}
-            \end{scriptsize}
-        \end{minipage}
-        \begin{minipage}{4cm}
-            \[
-                \begin{pmatrix}
-                    a & b & c\\
-                    1 & 2 & 3\\
-                \end{pmatrix}
-            \]
-        \end{minipage}
-
-        Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkeiden määrää ei tarvitse kertoa erikseen. Virheiden varalta muista, että
-        \begin{itemize}
-            \item sarakkeet erotetaan toisistaan komennolla \verb-&-
-            \item rivi vaihdetaan komennolla \verb-\\-
-        \end{itemize}
-
-        %\end{frame}
-        %\begin{frame}[fragile]
-        %
-        %\end{frame}
-        %loisi matriisin
-        %Saman voi kuitenkin tehdä helpommin käyttämällä matriiseja varten luotuja ympäristöjä, kuten \verb-bmatrix*- tai \verb-pmatrix*-. Näitä varten tarvitset paketin \verb-mathtools-.
-    \end{frame}
-    \begin{frame}[fragile]
-        \begin{harj}
-            Luo jokin vähintään \(2\times 3\)-matriisi käyttäen ympäristöä \verb-pmatrix-, kuten yllä. Tee sitten matriisistasi muutama kopio ja kokeile ympäristöjä \verb-matrix-, \verb-bmatrix- ja \verb-vmatrix-. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylistä.)
-        \end{harj}
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Matriisit}
-        Vaikka ympäristöt \verb-pmatrix- (\verb-matrix-, \verb-bmatrix-, \verb-vmatrix-) pohjautuvat \verb-array--ympäristöön, ei sarakkeiden tasaukseen voi lähtökohtaisesti vaikuttaa. \vaihto Paketti \verb-mathtools- tarjoaa vastaavat ympäristöt \verb-pmatrix*-, \verb-bmatrix*- jne., joilla on valinnaisena argumenttina sarakkeissa käytetty tasaus:\vaihto
-
-        \begin{minipage}{4cm}
-            \begin{scriptsize}
-                \begin{Verbatim}[frame=single]
-                    \[
-                        \begin{pmatrix*}[r]
-                            a & b & c\\
-                            -1 & -2 & -3\\
-                        \end{pmatrix*}
-                    \]
-                \end{Verbatim}
-            \end{scriptsize}
-        \end{minipage}
-        \begin{minipage}{4cm}
-            \[
-                \begin{pmatrix*}[r]
-                    a & b & c\\
-                    -1 & -2 & -3\\
-                \end{pmatrix*}
-            \]
-        \end{minipage}
-        %Seuraavaan taulukkoon on koottu yleisimmin tarvittavat matriisiympäristöt:
-        %\vaihto
-        %\begin{tabular}{|c|c|}
-        %\hline
-        %Ympäristön nimi & Matriisin tyyli\\[0.3em]
-        %\hline
-        %\verb-matrix*- & $\begin{smallmatrix}a&b\\ c&d\end{smallmatrix}$\\[0.3em]
-        %\verb-pmatrix*- & $\bigl(\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \bigr)$\\[0.3em]
-        %\verb-bmatrix*- & $\bigl[\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \bigr]$\\[0.3em]
-        %\verb-vmatrix*- & $\left|\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \right|$\\[0.3em]
-        %\hline
-        %\end{tabular}
-        %\vaihto
-        %Ympäristöllä on valinnainen argumentti, jolla valitaan tekstin tasaus (r, l tai c). Jos ympäristön nimestä jätetään * pois, sarakkeiden sisältö keskitetään (tällöin pakettia \verb-mathtools- ei tarvita). 
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Matriisit}
-
-        Esimerkki:\vaihto
-        \begin{minipage}{5cm}
-            \begin{scriptsize}
-                \begin{Verbatim}[frame=single]
-                    \(
-                    \begin{bmatrix*}[r]
-                        -1 & 2\\
-                        0 & 1\\
-                        1 & -2\\
-                    \end{bmatrix*}^T = 
-                    \begin{bmatrix*}[r]
-                        -1 & 0 & 1\\
-                        2 & 1 & -2
-                    \end{bmatrix*}
-                    \)
-                \end{Verbatim}
-            \end{scriptsize}
-        \end{minipage}
-        \begin{minipage}{5cm}
-            \(
-            \begin{bmatrix*}[r]
-                -1 & 2\\
-                0 & 1\\
-                1 & -2\\
-            \end{bmatrix*}^T = 
-            \begin{bmatrix*}[r]
-                -1 & 0 & 1\\
-                2 & 1 & -2
-            \end{bmatrix*}
-            \)
-        \end{minipage}
-    \end{frame}
-    \begin{frame}[fragile]
-        \frametitle{Matriisit}
-        \begin{harj}
-            Kirjoita seuraavanlainen matriisitoimitus: 
-            \begin{align*}
-                &
-                \begin{bmatrix*}[r]
-                    0 & 0 & 1 & a_1\\
-                    0 & 1 & 1 & a_2\\
-                    1 & 1 & 1 & a_3
-                \end{bmatrix*}
-            \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
-                \begin{bmatrix*}[r]
-                    1 & 1 & 1 & a_3\\
-                    0 & 1 & 1 & a_2\\
-                    0 & 0 & 1 & a_1
-                \end{bmatrix*}
-                %\\
-                %\stackrel{\begin{scriptsize} R_1-R_2 \end{scriptsize} }{\longrightarrow}
-                %&\begin{bmatrix*}[r]
-                %1 & 0 & 0 & a_3-a_2\\
-                %0 & 1 & 1 & a_2\\
-                %0 & 0 & 1 & a_1
-                %\end{bmatrix*}
-                %\stackrel{\begin{scriptsize} R_2-R_3 \end{scriptsize} }{\longrightarrow}
-                %\begin{bmatrix*}[r]
-                %1 & 0 & 0 & a_3-a_2\\
-                %0 & 1 & 0 & a_2-a_1\\
-                %0 & 0 & 1 & a_1
-                %\end{bmatrix*}
-            \end{align*}
-            Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
-            \begin{verbatim}
-            \stackrel{
-        \begin{scriptsize} 
-                R_1\leftrightarrow R_3 
+    \begin{minipage}{4cm}
+        \begin{scriptsize}
+            \begin{Verbatim}[frame=single]
+                \[
+                    \begin{pmatrix*}[r]
+                        a & b & c\\
+                        -1 & -2 & -3\\
+                    \end{pmatrix*}
+                \]
+            \end{Verbatim}
         \end{scriptsize}
-    }{\longrightarrow} 
-    \end{verbatim}
+    \end{minipage}
+    \begin{minipage}{4cm}
+        \[
+            \begin{pmatrix*}[r]
+                a & b & c\\
+                -1 & -2 & -3\\
+            \end{pmatrix*}
+        \]
+    \end{minipage}
+    %Seuraavaan taulukkoon on koottu yleisimmin tarvittavat matriisiympäristöt:
+    %\vaihto
+    %\begin{tabular}{|c|c|}
+    %\hline
+    %Ympäristön nimi & Matriisin tyyli\\[0.3em]
+    %\hline
+    %\verb-matrix*- & $\begin{smallmatrix}a&b\\ c&d\end{smallmatrix}$\\[0.3em]
+    %\verb-pmatrix*- & $\bigl(\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \bigr)$\\[0.3em]
+    %\verb-bmatrix*- & $\bigl[\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \bigr]$\\[0.3em]
+    %\verb-vmatrix*- & $\left|\begin{smallmatrix}a&b\\ c&d\end{smallmatrix} \right|$\\[0.3em]
+    %\hline
+    %\end{tabular}
+    %\vaihto
+    %Ympäristöllä on valinnainen argumentti, jolla valitaan tekstin tasaus (r, l tai c). Jos ympäristön nimestä jätetään * pois, sarakkeiden sisältö keskitetään (tällöin pakettia \verb-mathtools- ei tarvita). 
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Matriisit}
 
-    % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
-\end{harj}
+    Esimerkki:\vaihto
+    \begin{minipage}{5cm}
+        \begin{scriptsize}
+            \begin{Verbatim}[frame=single]
+                \(
+                \begin{bmatrix*}[r]
+                    -1 & 2\\
+                    0 & 1\\
+                    1 & -2\\
+                \end{bmatrix*}^T = 
+                \begin{bmatrix*}[r]
+                    -1 & 0 & 1\\
+                    2 & 1 & -2
+                \end{bmatrix*}
+                \)
+            \end{Verbatim}
+        \end{scriptsize}
+    \end{minipage}
+    \begin{minipage}{5cm}
+        \(
+        \begin{bmatrix*}[r]
+            -1 & 2\\
+            0 & 1\\
+            1 & -2\\
+        \end{bmatrix*}^T = 
+        \begin{bmatrix*}[r]
+            -1 & 0 & 1\\
+            2 & 1 & -2
+        \end{bmatrix*}
+        \)
+    \end{minipage}
+\end{frame}
+\begin{frame}[fragile]
+    \frametitle{Matriisit}
+    \begin{harj}
+        Kirjoita seuraavanlainen matriisitoimitus: 
+        \begin{align*}
+            &
+            \begin{bmatrix*}[r]
+                0 & 0 & 1 & a_1\\
+                0 & 1 & 1 & a_2\\
+                1 & 1 & 1 & a_3
+            \end{bmatrix*}
+        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
+            \begin{bmatrix*}[r]
+                1 & 1 & 1 & a_3\\
+                0 & 1 & 1 & a_2\\
+                0 & 0 & 1 & a_1
+            \end{bmatrix*}
+            %\\
+            %\stackrel{\begin{scriptsize} R_1-R_2 \end{scriptsize} }{\longrightarrow}
+            %&\begin{bmatrix*}[r]
+            %1 & 0 & 0 & a_3-a_2\\
+            %0 & 1 & 1 & a_2\\
+            %0 & 0 & 1 & a_1
+            %\end{bmatrix*}
+            %\stackrel{\begin{scriptsize} R_2-R_3 \end{scriptsize} }{\longrightarrow}
+            %\begin{bmatrix*}[r]
+            %1 & 0 & 0 & a_3-a_2\\
+            %0 & 1 & 0 & a_2-a_1\\
+            %0 & 0 & 1 & a_1
+            %\end{bmatrix*}
+        \end{align*}
+        Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
+        \begin{verbatim}
+        \stackrel{
+            \begin{scriptsize} 
+                R_1\leftrightarrow R_3 
+            \end{scriptsize}
+        }{\longrightarrow} 
+        \end{verbatim}
+
+        % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
+    \end{harj}
 \end{frame}
 \subsubsection{Lisätietoa}
 \begin{frame}[fragile]
@@ -795,11 +795,11 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     \begin{Verbatim}[frame=single]
         \makeatletter
         \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-  \hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
-  \array{#1}}
-  \makeatother
-\end{Verbatim}
+            \hskip -\arraycolsep
+            \let\@ifnextchar\new@ifnextchar
+        \array{#1}}
+        \makeatother
+    \end{Verbatim}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Lisätietoa matriiseista}
