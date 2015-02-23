@@ -759,7 +759,8 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
                 0 & 1 & 1 & a_2\\
                 1 & 1 & 1 & a_3
             \end{bmatrix*}
-        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
+%        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
+        \xrightarrow{R_1\leftrightarrow R_3}
             \begin{bmatrix*}[r]
                 1 & 1 & 1 & a_3\\
                 0 & 1 & 1 & a_2\\
@@ -779,14 +780,15 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
             %0 & 0 & 1 & a_1
             %\end{bmatrix*}
         \end{align*}
-        Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
-        \begin{verbatim}
-        \stackrel{
-            \begin{scriptsize} 
-                R_1\leftrightarrow R_3 
-            \end{scriptsize}
-        }{\longrightarrow} 
-        \end{verbatim}
+        Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. % Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
+        Kaavan mukana automaattisesti venyvän nuolen saa komennolla \verb-\xrightarrow{kaava}-.
+%        \begin{verbatim}
+%        \stackrel{
+%            \begin{scriptsize} 
+%                R_1\leftrightarrow R_3 
+%            \end{scriptsize}
+%        }{\longrightarrow} 
+%        \end{verbatim}
 
         % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
     \end{harj}
