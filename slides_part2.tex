@@ -87,7 +87,7 @@
     Työkansioon tallennetun kuvan \verb-smile.jpeg- saisi näkyviin koodilla
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \includegraphics{smile}
+\includegraphics{smile}
         \end{Verbatim}
     \end{scriptsize}
     \includegraphics{smile}
@@ -97,7 +97,7 @@
     Kuva on aivan liian suuri, joten sitä on syytä skaalata:
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \includegraphics[scale=0.4]{smile}
+\includegraphics[scale=0.4]{smile}
         \end{Verbatim}
     \end{scriptsize}
     \includegraphics[scale=0.4]{smile}
@@ -108,10 +108,10 @@
     Skaalaus onnistuu myös määrittelemällä kuvan leveys tai korkeus:
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \includegraphics[width = 4cm]{smile}
+\includegraphics[width = 4cm]{smile}
         \end{Verbatim}
         \begin{Verbatim}[frame=single]
-            \includegraphics[height=4cm]{smile}
+\includegraphics[height=4cm]{smile}
         \end{Verbatim}
     \end{scriptsize}
     \begin{minipage}{5cm}
@@ -127,10 +127,10 @@
 
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \includegraphics[width=4cm,angle=90]{smile}
+\includegraphics[width=4cm,angle=90]{smile}
         \end{Verbatim}
         \begin{Verbatim}[frame=single]
-            \includegraphics[height=4cm,angle=180]{smile}
+\includegraphics[height=4cm,angle=180]{smile}
         \end{Verbatim}
     \end{scriptsize}
     \begin{minipage}{3cm}
@@ -158,10 +158,10 @@
     \frametitle{Kelluva kuva}
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \begin{figure}[h!]
-                \includegraphics[height=4cm]{smile}
-                \caption{Helppo hymyillä}
-            \end{figure}
+\begin{figure}[h!]
+    \includegraphics[height=4cm]{smile}
+    \caption{Helppo hymyillä}
+\end{figure}
         \end{Verbatim}
     \end{scriptsize}
     \begin{figure}[h!]
@@ -304,13 +304,13 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     Esimerkiksi rivi
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-                \begin{tabular}{r|cc}
- & Tytöt & Pojat\\
-                \hline
-                Sinisilmäiset & 4 & 2 \\
-                Ruskeasilmäiset & 3 & 5 \\
-                Vihreäsilmäiset & 8 & 8\\
-            \end{tabular}
+\begin{tabular}{r|cc}
+    & Tytöt & Pojat\\
+    \hline
+    Sinisilmäiset & 4 & 2 \\
+    Ruskeasilmäiset & 3 & 5 \\
+    Vihreäsilmäiset & 8 & 8\\
+\end{tabular}
         \end{Verbatim}
     \end{scriptsize}
     luo seuraavan taulukon:
@@ -369,15 +369,15 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     %\begin{minipage}{5cm}
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \begin{tabular}{|c|c|c|}
-                \hline
-                \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
-                \hline
-                Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
-                \hline
-                Sarake1 & Sarake2 & Sarake3\\
-                \hline
-            \end{tabular}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
+    \hline
+    Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
+    \hline
+    Sarake1 & Sarake2 & Sarake3\\
+    \hline
+\end{tabular}
         \end{Verbatim}
     \end{scriptsize}
     %\end{minipage}
@@ -434,15 +434,15 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     \frametitle{Rivien yhdistäminen} 
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            \begin{tabular}{|c|c|c|}
-                \hline
-                \multirow{3}{*}{Kolme riviä} & Solu1 & Solu 2\\
-                \cline{2-3}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{3}{*}{Kolme riviä} & Solu1 & Solu 2\\
+    \cline{2-3}
     & \multirow{2}{*}{Kaksi riviä} & Solu 3\\
-                \cline{3-3}
+    \cline{3-3}
     & & Solu 4\\
-                \hline
-            \end{tabular}
+    \hline
+\end{tabular}
         \end{Verbatim}
     \end{scriptsize}
     \begin{tabular}{|c|c|c|}
@@ -534,11 +534,11 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoitta
     \begin{table}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \begin{table}
-                    \begin{tabular}{...}
-                        ...
-                    \end{tabular}
-                \end{table}
+\begin{table}
+    \begin{tabular}{...}
+        ...
+    \end{tabular}
+\end{table}
             \end{Verbatim}
         \end{scriptsize} 
     \end{table}
@@ -577,15 +577,15 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoitta
     \begin{minipage}{5cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \(
-                \begin{array}{r|c}
-                    x & x^2+1\\
-                    \hline
-                    -1 & 2\\
-                    0 & 1\\
-                    1 & 2\\
-                \end{array}
-                \)
+\(
+    \begin{array}{r|c}
+        x & x^2+1\\
+        \hline
+        -1 & 2\\
+        0 & 1\\
+        1 & 2\\
+    \end{array}
+\)
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -605,13 +605,13 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoitta
     \frametitle{Array-ympäristö}
     Array-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \verb-cases-. 
     \begin{Verbatim}[frame=single]
-        \[
-            f(x) =
-            \begin{cases}
-                x,\text{ kun } x>0,\\
-                -x,\text{ kun }x\leq0.
-            \end{cases}
-        \]
+\[
+    f(x) =
+    \begin{cases}
+        x,\text{ kun } x>0,\\
+        -x,\text{ kun }x\leq0.
+    \end{cases}
+\]
     \end{Verbatim}
     \begin{framed}
         \[
@@ -631,12 +631,12 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo talukon komennon osoitta
     \begin{minipage}{4cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \[
-                    \begin{pmatrix}
-                        a & b & c\\
-                        1 & 2 & 3\\
-                    \end{pmatrix}
-                \]
+\[
+    \begin{pmatrix}
+        a & b & c\\
+        1 & 2 & 3\\
+    \end{pmatrix}
+\]
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -674,12 +674,12 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \begin{minipage}{4cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \[
-                    \begin{pmatrix*}[r]
-                        a & b & c\\
-                        -1 & -2 & -3\\
-                    \end{pmatrix*}
-                \]
+\[
+    \begin{pmatrix*}[r]
+        a & b & c\\
+        -1 & -2 & -3\\
+    \end{pmatrix*}
+\]
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -713,17 +713,17 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \begin{minipage}{5cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \(
-                \begin{bmatrix*}[r]
-                    -1 & 2\\
-                    0 & 1\\
-                    1 & -2\\
-                \end{bmatrix*}^T = 
-                \begin{bmatrix*}[r]
-                    -1 & 0 & 1\\
-                    2 & 1 & -2
-                \end{bmatrix*}
-                \)
+\(
+    \begin{bmatrix*}[r]
+        -1 & 2\\
+        0 & 1\\
+        1 & -2\\
+    \end{bmatrix*}^T = 
+    \begin{bmatrix*}[r]
+        -1 & 0 & 1\\
+        2 & 1 & -2
+    \end{bmatrix*}
+\)
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -793,12 +793,12 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \vaihto
     Syntaksin muuttaminen onnistuu kopioimalla esittelyosaan komennot\vaihto
     \begin{Verbatim}[frame=single]
-        \makeatletter
-        \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-            \hskip -\arraycolsep
-            \let\@ifnextchar\new@ifnextchar
-        \array{#1}}
-        \makeatother
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+    \hskip -\arraycolsep
+    \let\@ifnextchar\new@ifnextchar
+\array{#1}}
+\makeatother
     \end{Verbatim}
 \end{frame}
 \begin{frame}[fragile]
@@ -808,13 +808,13 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \begin{minipage}{4cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \[
-                    \begin{bmatrix}[rrr|r]
-                        0 & 0 & 1 & -a_1\\
-                        0 & 1 & -1 & a_2\\
-                        1 & 1 & 1 & a_3
-                    \end{bmatrix}
-                \]
+\[
+    \begin{bmatrix}[rrr|r]
+        0 & 0 & 1 & -a_1\\
+        0 & 1 & -1 & a_2\\
+        1 & 1 & 1 & a_3
+    \end{bmatrix}
+\]
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -859,7 +859,7 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \frametitle{Lainaukset ja alaviitteet}
     Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \verb-'- merkillä:
     \begin{Verbatim}[frame=single]
-        Matti sanoi: ''Onpa outoa!''
+Matti sanoi: ''Onpa outoa!''
     \end{Verbatim}
     tulostaa
     \begin{framed}
@@ -902,15 +902,15 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     Tiedoston sisältö voisi olla esimerkiksi seuraava:\vaihto
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            @book{kemper,
-                title={A Course in Commutative Algebra},
-                author={Kemper, G.},
-                isbn={9783642035456},
-                series={Graduate Texts in Mathematics},
-                url={http://books.google.fi/books?id=8kxlj48DWM4C},
-                year={2010},
-                publisher={Springer Berlin Heidelberg}
-            }
+@book{kemper,
+    title={A Course in Commutative Algebra},
+    author={Kemper, G.},
+    isbn={9783642035456},
+    series={Graduate Texts in Mathematics},
+    url={http://books.google.fi/books?id=8kxlj48DWM4C},
+    year={2010},
+    publisher={Springer Berlin Heidelberg}
+}
         \end{Verbatim}
     \end{scriptsize}
     %Tiedosto tallennetaan muodossa \verb-jokinNimi.bib- samaan kansioon \verb-.tex--tiedoston kanssa (ei pakollista, mutta yksinkertaisinta).
@@ -975,8 +975,8 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \vaihto
     Luettelo luodaan työn loppuosaan komennolla
     \begin{Verbatim}[frame=single]
-        \bibliographystyle{luettelon tyyli}
-        \bibliography{teos1,teos2,teos3,...}
+\bibliographystyle{luettelon tyyli}
+\bibliography{teos1,teos2,teos3,...}
     \end{Verbatim}
     Koodissa teos1 on tiedoston teos1.bib nimi ilman tiedostopäätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
     \vaihto
@@ -987,8 +987,8 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \begin{harj}
         Edellä loit BibTeX-tiedostot Kemper.bib, Rudin.bib ja Vaisala.bib. Tuo teokset kirjallisuusluetteloon koodilla 
         \begin{Verbatim}[frame=single]
-            \bibliographystyle{plain}
-            \bibliography{Kemper,Rudin,Vaisala}
+\bibliographystyle{plain}
+\bibliography{Kemper,Rudin,Vaisala}
         \end{Verbatim}
         Sijoita koodi työsi loppuosaan, esimerkiksi juuri ennen komentoa \verb-\end{document}-.
     \end{harj}

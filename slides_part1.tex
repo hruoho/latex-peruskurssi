@@ -159,13 +159,13 @@
         Tee dokumenttiisi seuraavat muutokset (älä siis luo uutta tiedostoa):
         %\usepackage[ansinew]{inputenc}
         \begin{Verbatim}[frame=single]
-            \documentclass{article}
-            \usepackage[utf8]{inputenc}
-            \usepackage[T1]{fontenc}
-            \usepackage[finnish]{babel}
-            \begin{document}
-            Öö häh? Herätys!
-            \end{document}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[finnish]{babel}
+\begin{document}
+Öö häh? Herätys!
+\end{document}
         \end{Verbatim}
     \end{harj}
     Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
@@ -290,7 +290,7 @@
         \vaihto
         Kirjoita koodin sekaan esimerkiksi rivi
         \begin{Verbatim}[frame=single]
-            %Tämä rivi ei tule näkyviin lopullisessa työssä.
+%Tämä rivi ei tule näkyviin lopullisessa työssä.
         \end{Verbatim}
         ja testaa, pitääkö väite paikkansa.
     \end{harj}
@@ -393,8 +393,8 @@
     Matemaattisia ilmaisuja saa tekstin sekaan käyttämällä komentoja \verb+\(+  
     ja \verb+\)+. \pause Esimerkiksi rivi
     \begin{Verbatim}[frame=single]
-        Yhtälöt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat 
-        samanaikaisesti tasan kahdessa tason pisteessä.
+Yhtälöt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat 
+samanaikaisesti tasan kahdessa tason pisteessä.
     \end{Verbatim}
     \pause
     tulostuu riviksi 
@@ -429,10 +429,10 @@
     Esimerkiksi 
     \begin{footnotesize}
         \begin{Verbatim}[frame=single]
-            Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
-            \[
-                x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
-            \]
+Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
+\[
+    x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+\]
         \end{Verbatim} 
     \end{footnotesize}
     tuottaa seuraavanlaisen esityksen:
@@ -541,11 +541,11 @@
     \begin{minipage}{4cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                \begin{align*}
-                    xyz &= abc\\
+\begin{align*}
+    xyz &= abc\\
         &= bca\\
         &= cab\\
-                \end{align*}
+\end{align*}
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -642,11 +642,11 @@ Komennolla \verb-\begin{equation}...\end{equation}- saa luotua samanlaisen kaava
 
     \begin{scriptsize}
         \begin{Verbatim}[frame=single]
-            Einsteinin yhtälöön
-            \begin{equation}
-                E=mc^2
-            \end{equation}
-            viitataan myöhemmin.
+Einsteinin yhtälöön
+\begin{equation}
+    E=mc^2
+\end{equation}
+viitataan myöhemmin.
         \end{Verbatim}
     \end{scriptsize}
 
@@ -737,11 +737,11 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     Esimerkiksi kirjoittamalla
     \pause
     \begin{Verbatim}[frame=single]
-        \theoremstyle{plain}
-        \newtheorem{lemma}{Lemma}
-        \newtheorem{lause}{Lause}
-        \theoremstyle{definition}
-        \newtheorem{maar}{Määritelmä}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}
+\newtheorem{lause}{Lause}
+\theoremstyle{definition}
+\newtheorem{maar}{Määritelmä}
     \end{Verbatim}
     \pause
     ympäristöt \verb-lemma- ja \verb-lause- tulostuvat plain-tyylin mukaisesti ja ympäristö \verb-maar- definition-tyylin mukaisesti.
@@ -765,8 +765,8 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     \vaihto
     Esimerkiksi koodilla
     \begin{Verbatim}[frame=single]
-        \newtheorem{teor}{Teoreema}[section]
-        \newtheorem{lemma}[teor]{Lemma}
+\newtheorem{teor}{Teoreema}[section]
+\newtheorem{lemma}[teor]{Lemma}
     \end{Verbatim}
     luodut Lemma- ja Teoreema-ympäristöt noudattavat samaa, laskurille \verb-section- alisteista numerointia.
     %\begin{framed}
@@ -817,12 +817,12 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     \begin{minipage}{4cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                Tässä listani:
-                \begin{itemize}
-                    \item asia
-                    \item toinen asia
-                    \item kolmas asia
-                \end{itemize}
+Tässä listani:
+\begin{itemize}
+    \item asia
+    \item toinen asia
+    \item kolmas asia
+\end{itemize}
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
@@ -863,7 +863,7 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     %Esimerkiksi olisi raskasta kirjoittaa jokainen ristitulon merkki pikseli pikseliltä, joten tälle kannattaa luoda oma komentonsa, jolla asia hoituu automaattisesti.
     Omia komentoja luodaan esittelyosassa komennolla \verb-\newcommand{}{}-. Ensimmäinen argumentti on komennon nimi, toiseksi argumentiksi tulee komennon sisältö. Esimerkiksi
     \begin{Verbatim}[frame=single]
-        \newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
     \end{Verbatim}
     luo komennon \verb-\R-, joka tulostaa symbolin \(\R\). Komennon luomisen jälkeen kyseisen symbolin tuottaminen onnistuu helposti.
     \vaihto
@@ -890,10 +890,10 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     \begin{minipage}{4cm}
         \begin{scriptsize}
             \begin{Verbatim}[frame=single]
-                Toisinaan 
-                \(
-                \N=\set{0,1,2,3,\ldots}
-                \)
+Toisinaan 
+\(
+    \N=\set{0,1,2,3,\ldots}
+\)
             \end{Verbatim}
         \end{scriptsize}
     \end{minipage}
