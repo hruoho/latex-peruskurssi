@@ -480,30 +480,37 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     \begin{minipage}{8cm}
         \begin{scriptsize}
             \begin{verbatim}
-                \begin{tabular}{|l|l|l|l|}
-                    \hline
-                    \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
-                    \hline
-                    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
-                    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                            & Hiirihaukka & Buteo & buteo\\ \hline
-                    \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
-                                                &Nuolihaukka & Falco & subbuteo\\ \hline
-                \end{tabular}
+\begin{tabular}{|l|l|l|l|}
+    \hline
+    \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
+    \hline
+    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\
+    \hline
+    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\
+                              \cline{2-4}
+                            & Hiirihaukka & Buteo & buteo\\
+    \hline
+    \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\
+                                  \cline{2-4}
+                                & Nuolihaukka & Falco & subbuteo\\
+    \hline
+\end{tabular}
             \end{verbatim}
         \end{scriptsize}
     \end{minipage}
     \begin{table}[h!]
-        \begin{tabular}{|l|l|l|l|}
-            \hline
-            \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
-            \hline
-            \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
-            \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                    & Hiirihaukka & Buteo & buteo\\ \hline
-            \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
-                                        &Nuolihaukka & Falco & subbuteo\\ \hline
-        \end{tabular}
+        \begin{scriptsize}
+            \begin{tabular}{|l|l|l|l|}
+                \hline
+                \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
+                \hline
+                \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
+                \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
+                                        & Hiirihaukka & Buteo & buteo\\ \hline
+                \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
+                                            &Nuolihaukka & Falco & subbuteo\\ \hline
+            \end{tabular}
+        \end{scriptsize}
     \end{table}
 
 \end{frame}
