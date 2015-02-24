@@ -28,6 +28,8 @@
 \newtheorem{harj}{Harjoitus}[section]
 \newtheorem*{esim}{Esimerkki}
 \newtheorem*{ratk}{Ratkaisuehdotus}
+\newtheorem*{extra}{Lisätieto}
+
 
 \newcommand{\numeroi}{\stepcounter{harkka}\arabic{harkka}}
 \newcommand{\vaihto}{\\ \vspace{10pt}}
@@ -169,6 +171,15 @@ Huhuu!
         \end{Verbatim}
     \end{harj}
     Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
+\end{frame}
+\begin{frame}[fragile]
+    \begin{extra}
+        \begin{itemize}
+            \item Käyttämällä \verb-inputenc--pakettia \LaTeX{} lukee \verb-tex--tiedoston \verb-utf8--koodattuna, jolloin esim. ä voidaan kirjoittaa tiedostoon sellaisenaan eikä muodossa \verb-\"a-. Tämä vaatii, että käyttämäsi editori tallentaa tiedoston \verb-utf8--koodattuna. Esim. TeXmaker ja TeXstudio tekevät niin oletuksena. Jos ääkköset eivät toimi oikein, niin ongelma on todennäköisesti siinä, että tiedosto on koodattu eri tavalla kuin sitä yritetään lukea. Jos ääkköset eivät toimi, voit yrittää kirjoittaa \verb-[utf8]- sijaan esim. \verb-[latin1]-, \verb-[ansinew]- tai \verb-[applemac]-. Paras olisi kuitenkin käyttää \verb-[utf8]-:aa ja yrittää saada editori tallentamaan tässä muodossa.
+            \item Paketti \verb-fontenc- ottaa käyttöön laajemmat fontit, jolloin esim. ä tulostetaan yhtenä merkkinä eikä niin, että merkit a ja \"{} kirjoitetaan päällekkäin. Tällöin vaikkapa tavutus ja pdf-haku saadaan toimimaan oikein.
+            \item Lopuksi \verb-babel- asettaa dokumentin kielen suomeksi ottamalla käyttöön suomalaiset tavutussäännöt ym.
+        \end{itemize}
+    \end{extra}
 \end{frame}
 \begin{frame}[fragile]
     \begin{harj}
