@@ -171,23 +171,25 @@
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Figure-ympäristön argumentit}
-    Kelluvalle ympäristölle (yllä \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
+%    Kelluvalle ympäristölle (yllä \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
+    Oletuksena \LaTeX\ yrittää sijoittaa kelluvan ympäristön (yllä \verb-figure-) tekstisivun ylä- tai alareunaan tai sivulle, jolla on vain kelluvia olioita. Valinnaisella argumentilla voi kertoa tarkemmin, mihin kohtaan sijoittaminen sallitaan:
     \begin{table}
         \begin{tabular}{lcl}
 
-            h! && tähän\\
+            %h! && tähän\\
+            %\hline
+            h && salli sijoittaminen tähän (mahdollisesti keskelle sivua)\\
             \hline
-            h && suunnilleen tähän\\
+            b && salli sijoittaminen sivun alareunaan\\
             \hline
-            b && sivun alareunaan\\
+            t && salli sijoittaminen sivun yläreunaan\\
             \hline
-            t && sivun yläreunaan\\
-            \hline
-            p && omalle sivulleen\\
+            p && salli sijoittaminen omalle sivulleen
 
         \end{tabular}
     \end{table}
-    \LaTeX\ ei lupaa noudattaa toivetta, mutta tekee parhaansa. 
+    Oletuksena on siis \verb-[btp]-. Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. Esimerkiksi \verb-[!hb]- sallii sijoittamisen tähän tai tekstisivun alareunaan ja tuloksen ei tarvitse näyttää yhtä hyvältä kuin jos argumenttina olisi vain \verb-[hb]-. Tarkempi kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}
+
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Figure-ympäristön argumentit}
