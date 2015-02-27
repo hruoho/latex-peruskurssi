@@ -540,17 +540,13 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
     \vaihto
     On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \verb-table--ympäristöön.
-    \begin{table}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+    \begin{Verbatim}[frame=single]
 \begin{table}
     \begin{tabular}{...}
         ...
     \end{tabular}
 \end{table}
-            \end{Verbatim}
-        \end{scriptsize} 
-    \end{table}
+    \end{Verbatim}
     Kuten \verb-figure--ympäristöllä, \verb-table- yritetään oletuksena sijoittaa tekstisivun ylä- ja alareunaan tai kelluvien olioiden sivulle. Sijoitteluun voi vaikuttaa antamalla \verb-table--ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \verb-!htbp-.
 \end{frame}
 %\begin{frame}[fragile]
