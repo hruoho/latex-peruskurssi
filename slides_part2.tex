@@ -180,15 +180,15 @@
             %\hline
             h && salli sijoittaminen tähän (mahdollisesti keskelle sivua)\\
             \hline
-            b && salli sijoittaminen sivun alareunaan\\
-            \hline
             t && salli sijoittaminen sivun yläreunaan\\
+            \hline
+            b && salli sijoittaminen sivun alareunaan\\
             \hline
             p && salli sijoittaminen omalle sivulleen
 
         \end{tabular}
     \end{table}
-    Oletuksena on siis \verb-[btp]-. Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. Esimerkiksi \verb-[!hb]- sallii sijoittamisen tähän tai tekstisivun alareunaan ja tuloksen ei tarvitse näyttää yhtä hyvältä kuin jos argumenttina olisi vain \verb-[hb]-. Tarkempi kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}
+    Oletuksena on siis \verb-[btp]-. Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. Esimerkiksi \verb-[!hb]- sallii sijoittamisen tähän tai tekstisivun alareunaan ja tuloksen ei tarvitse näyttää yhtä hyvältä kuin jos argumenttina olisi vain \verb-[hb]-. Sijoittamista yritetään \emph{aina} järjestyksessä \verb-htbp-. Tarkempi kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}
 
 \end{frame}
 \begin{frame}[fragile]
