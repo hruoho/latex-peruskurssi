@@ -821,6 +821,9 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
 \end{frame}
 \begin{frame}[fragile]
     Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
+    \begin{extra}
+        Jos \LaTeX-tiedoston nimi on \verb-nimi.tex-, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \verb-nimi.aux-, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
+    \end{extra}
     \begin{harj}
         Viittaa harjoituksessa \ref{viittausTehtava} kirjoittamaasi numeroituun yhtälöön. Käytä komentoja \verb-\eqref{}- ja \verb-\pageref{}-.
         \vaihto
