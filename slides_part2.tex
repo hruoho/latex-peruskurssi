@@ -551,27 +551,28 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
             \end{Verbatim}
         \end{scriptsize} 
     \end{table}
+    Kuten \verb-figure--ympäristöllä, \verb-table- yritetään oletuksena sijoittaa tekstisivun ylä- ja alareunaan tai kelluvien olioiden sivulle. Sijoitteluun voi vaikuttaa antamalla \verb-table--ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \verb-!htbp-.
 \end{frame}
-\begin{frame}[fragile]
-    \frametitle{Table-ympäristön argumentit}
-    Kelluvalle ympäristölle (yllä \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
-    \begin{table}
-        \begin{tabular}{lcl}
-
-            h! && tähän\\
-            \hline
-            h && suunnilleen tähän\\
-            \hline
-            b && sivun alareunaan\\
-            \hline
-            t && sivun yläreunaan\\
-            \hline
-            p && omalle sivulleen\\
-
-        \end{tabular}
-    \end{table}
-    Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
-\end{frame}
+%\begin{frame}[fragile]
+%    \frametitle{Table-ympäristön argumentit}
+%    Kelluvalle ympäristölle (yllä \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
+%    \begin{table}
+%        \begin{tabular}{lcl}
+%
+%            h! && tähän\\
+%            \hline
+%            h && suunnilleen tähän\\
+%            \hline
+%            b && sivun alareunaan\\
+%            \hline
+%            t && sivun yläreunaan\\
+%            \hline
+%            p && omalle sivulleen\\
+%
+%        \end{tabular}
+%    \end{table}
+%    Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
+%\end{frame}
 \begin{frame}[fragile]
     \begin{harj}\label{kelluvaTaulukko}
         Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
