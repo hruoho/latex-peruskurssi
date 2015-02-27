@@ -28,6 +28,7 @@
 \newtheorem{harj}{Harjoitus}[section]
 \newtheorem*{esim}{Esimerkki}
 \newtheorem*{ratk}{Ratkaisuehdotus}
+\newtheorem*{extra}{Lisätieto}
 
 \newcommand{\numeroi}{\stepcounter{harkka}\arabic{harkka}}
 \newcommand{\vaihto}{\\ \vspace{10pt}}
@@ -1021,6 +1022,16 @@ Matti sanoi: ''Onpa outoa!''
         \item ovatko tiedostot todella muotoa \verb-.bib-?
         \item ovatko tiedostot oikeassa kansiossa?
     \end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+    \begin{extra}
+        \begin{itemize}
+            \item Viittauksen lisäämisen/poistamisen/muuttamisen jälkeen ensimmäinen \LaTeX-ajo merkitsee löytyneet viittaukset \verb-.aux--tiedostoon.
+            \item Tämän jälkeen \BibTeX-ajo kirjoittaa \verb-.aux--tiedoston perusteella lähdeluettelon tuottavan \LaTeX-koodin \verb-.bbl--tiedostoon.
+            \item Seuraava \LaTeX-ajo lukee myös \verb-.bbl--tiedoston koodin, jolloin lähdeluettelo tulee näkyviin (jos sitä ei vielä ole) ja viittaustiedot lisätään/päivitetään \verb-.aux--tiedostoon.
+            \item Viimeinen \LaTeX-ajo osaa nyt \verb-.aux--tiedoston perusteella korvata kysymysmerkit oikeilla viittauksilla.
+        \end{itemize}
+    \end{extra}
 \end{frame}
 %\begin{frame}[fragile]
 %\frametitle{Viittaustyyli}
