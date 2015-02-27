@@ -890,11 +890,12 @@ Matti sanoi: ''Onpa outoa!''
     \frametitle{Kirjallisuusviitteet}
     \LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \(\BibTeX\)-järjestelmän avulla. 
     \vaihto
-    Tällöin jokaista lähdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sisältää teoksen tiedot. 
+%    Tällöin jokaista lähdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sisältää teoksen tiedot. 
+    Tällöin lähdeteokset kirjataan erilliseen \verb-.bib--tiedostoon (tai -tiedostoihin).
     \vaihto
     Tiedostot on yksinkertaisinta tallentaa samaan kansioon \verb-.tex--tiedoston kanssa.
     \vaihto
-    Viittaaminen tapahtuu komennolla \verb-\cite{tunnus}-, jossa \verb-tunnus- on eräs teoksen \verb-.bib--tiedostosta löytyvä merkkijono.
+    Viittaaminen tapahtuu komennolla \verb-\cite{tunnus}-, jossa \verb-tunnus- on eräs \verb-.bib--tiedostosta löytyvä merkkijono.
     %\vaihto
     %Aivan työn loppuun luodaan kirjallisuusluettelo komennoilla
     %\begin{Verbatim}[frame=single]
@@ -926,7 +927,7 @@ Matti sanoi: ''Onpa outoa!''
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot}
     \begin{harj}
-        Kopioi edellisen esimerkin sisältö uuteen tiedostoon ja tallenna se nimellä \verb-Kemper.bib- työkansioosi. 
+        Kopioi edellisen esimerkin sisältö uuteen tiedostoon ja tallenna se nimellä \verb-lahteet.bib- työkansioosi. 
     \end{harj}
 \end{frame}
 \begin{frame}[fragile]
@@ -957,7 +958,7 @@ Matti sanoi: ''Onpa outoa!''
 \end{frame}
 \begin{frame}[fragile]
     \begin{harj}
-        Luo \BibTeX-tiedosto kirjalle, jonka nimi on Topologia I, kirjoittaja Jussi Väisälä, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \verb-topo1- ja tallenna tiedosto työkansioosi nimellä \verb-Vaisala.bib-.
+        Lisää tiedostoon \verb-lahteet.bib- kirja, jonka nimi on Topologia I, kirjoittaja Jussi Väisälä, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \verb-topo1-.
     \end{harj}
 \end{frame}
 \begin{frame}[fragile]
@@ -979,29 +980,29 @@ Matti sanoi: ''Onpa outoa!''
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusluettelon luominen}
-    Kun tarvittavat \verb-.bib--tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran.
+    Kun tarvittavat \verb-.bib--tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran. Ei-viitatun teoksen saa lisättyä lähdeluetteloon \verb-\nocite{tunnus}--komennolla.
     \vaihto
     Luettelo luodaan työn loppuosaan komennolla
     \begin{Verbatim}[frame=single]
 \bibliographystyle{luettelon tyyli}
-\bibliography{teos1,teos2,teos3,...}
+\bibliography{lista1,lista2,lista3,...}
     \end{Verbatim}
-    Koodissa teos1 on tiedoston teos1.bib nimi ilman tiedostopäätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
+    Koodissa \verb-listax- ovat \verb-.bib--tiedostojen nimet ilman \verb-bib--päätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
     \vaihto
-    Edellisen koodin toimimisen edellytyksenä on, että tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa. 
+    Edellisen koodin toimimisen edellytyksenä on, että tiedostot \verb-lista1.bib- jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa. 
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusluettelon luominen}
     \begin{harj}
-        Edellä loit BibTeX-tiedostot Kemper.bib, Rudin.bib ja Vaisala.bib. Tuo teokset kirjallisuusluetteloon koodilla 
+        Edellä loit BibTeX-tiedostot \verb-lahteet.bib- ja \verb-Rudin.bib-. Tuo teokset kirjallisuusluetteloon koodilla 
         \begin{Verbatim}[frame=single]
 \bibliographystyle{plain}
-\bibliography{Kemper,Rudin,Vaisala}
+\bibliography{lahteet,Rudin}
         \end{Verbatim}
         Sijoita koodi työsi loppuosaan, esimerkiksi juuri ennen komentoa \verb-\end{document}-.
     \end{harj}
     \begin{harj}
-        Viittaa kuhunkin teokseen työssäsi komennolla \verb-\cite{viittaustunnus}-. Muista, että viittaustunnus poikkeaa useimmiten tiedoston nimestä. 
+        Viittaa kuhunkin teokseen työssäsi komennolla \verb-\cite{viittaustunnus}-.
     \end{harj}
 \end{frame}
 \begin{frame}[fragile]
