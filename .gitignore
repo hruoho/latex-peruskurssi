@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io
 
 ### Vim ###
-.*.swp
+*.swp
 
 ### LaTeX ###
 *.acn
