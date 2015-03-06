@@ -260,7 +260,7 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
         \end{Verbatim}
     \end{scriptsize}
     luo seuraavan taulukon:
-    \begin{framed} 
+    \begin{sample} 
         \begin{tabular}{r|cc}
             & Tytöt & Pojat\\
             \hline
@@ -270,7 +270,7 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
             %\hline
             %Yhteensä: & 15 & 15\\
         \end{tabular}
-    \end{framed}
+    \end{sample}
     Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
 
 \end{frame}
@@ -328,17 +328,19 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     \end{scriptsize}
     %\end{minipage}
     \begin{minipage}{5cm}
-        \begin{scriptsize}
-            \begin{tabular}{|c|c|c|}
-                \hline
-                \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
-                \hline
-                Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
-                \hline
-                Sarake1 & Sarake2 & Sarake3\\
-                \hline
-            \end{tabular}
-        \end{scriptsize}
+        \begin{serif}
+            \begin{scriptsize}
+                \begin{tabular}{|c|c|c|}
+                    \hline
+                    \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
+                    \hline
+                    Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
+                    \hline
+                    Sarake1 & Sarake2 & Sarake3\\
+                    \hline
+                \end{tabular}
+            \end{scriptsize}
+        \end{serif}
     \end{minipage}
 \end{frame}
 
@@ -348,17 +350,19 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     \begin{harj}
         Luo seuraava taulukko:
         \begin{table}
-            \begin{tabular}{|l|l|l|}
-                \hline
-                \multicolumn{3}{|c|}{\Large Päiväpetolintuja}\\
-                \hline
-                \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
-                Kanahaukka & Accipiter &  gentilis\\ \hline
-                Hiirihaukka & Buteo & buteo\\ \hline
-                %\multicolumn{3}{|c|}{Jalohaukkoja}\\ \hline
-                Tuulihaukka & Falco & columbarius\\\hline
-                Nuolihaukka & Falco & subbuteo\\ \hline
-            \end{tabular}
+            \begin{serif}
+                \begin{tabular}{|l|l|l|}
+                    \hline
+                    \multicolumn{3}{|c|}{\Large Päiväpetolintuja}\\
+                    \hline
+                    \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
+                    Kanahaukka & Accipiter &  gentilis\\ \hline
+                    Hiirihaukka & Buteo & buteo\\ \hline
+                    %\multicolumn{3}{|c|}{Jalohaukkoja}\\ \hline
+                    Tuulihaukka & Falco & columbarius\\\hline
+                    Nuolihaukka & Falco & subbuteo\\ \hline
+                \end{tabular}
+            \end{serif}
         \end{table}
     \end{harj}
 
@@ -391,32 +395,36 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 \end{tabular}
         \end{Verbatim}
     \end{scriptsize}
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \multirow{3}{*}{Kolme riviä} & Solu1	& Solu 2\\\cline{2-3}
-                                      & \multirow{2}{*}{Kaksi riviä}	& Solu 3\\\cline{3-3}
-                                      & & Solu 4\\
-        \hline
-    \end{tabular}
+    \begin{serif}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \multirow{3}{*}{Kolme riviä} & Solu1	& Solu 2\\\cline{2-3}
+                                          & \multirow{2}{*}{Kaksi riviä}	& Solu 3\\\cline{3-3}
+                                          & & Solu 4\\
+            \hline
+        \end{tabular}
+    \end{serif}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Rivien yhdistäminen} 
     \begin{harj}
         Luo seuraava taulukko: 
         \begin{table}\label{taulukko}
-            \begin{tabular}{|c|c|c|c|}
-                \hline
-                \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
-                \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                        & Hiirihaukka & Buteo & buteo\\ \hline
-                %\hline
-                %Analyysi I \& II & \multirow{3}{*}{Matikan perusopinnot}\\
-                %\cline{1-1}
-                %Linis I & \\
-                %\cline{1-1}
-                %JYM & \\
-                %\hline
-            \end{tabular}
+            \begin{serif}
+                \begin{tabular}{|c|c|c|c|}
+                    \hline
+                    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
+                    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
+                                            & Hiirihaukka & Buteo & buteo\\ \hline
+                    %\hline
+                    %Analyysi I \& II & \multirow{3}{*}{Matikan perusopinnot}\\
+                    %\cline{1-1}
+                    %Linis I & \\
+                    %\cline{1-1}
+                    %JYM & \\
+                    %\hline
+                \end{tabular}
+            \end{serif}
         \end{table}
     \end{harj}
 \end{frame}
@@ -445,18 +453,20 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
         \end{scriptsize}
     \end{minipage}
     \begin{table}[h!]
-        \begin{scriptsize}
-            \begin{tabular}{|l|l|l|l|}
-                \hline
-                \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
-                \hline
-                \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
-                \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                        & Hiirihaukka & Buteo & buteo\\ \hline
-                \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
-                                            &Nuolihaukka & Falco & subbuteo\\ \hline
-            \end{tabular}
-        \end{scriptsize}
+        \begin{serif}
+            \begin{scriptsize}
+                \begin{tabular}{|l|l|l|l|}
+                    \hline
+                    \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
+                    \hline
+                    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
+                    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
+                                            & Hiirihaukka & Buteo & buteo\\ \hline
+                    \multirow{2}{*}{Jalohaukat} & Tuulihaukka & Falco & columbarius\\ \cline{2-4}
+                                                &Nuolihaukka & Falco & subbuteo\\ \hline
+                \end{tabular}
+            \end{scriptsize}
+        \end{serif}
     \end{table}
 
 \end{frame}
@@ -563,7 +573,7 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
     \end{cases}
 \]
     \end{Verbatim}
-    \begin{framed}
+    \begin{sample}
         \[
             f(x) =
             \begin{cases}
@@ -571,7 +581,7 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
                 -x, & \text{kun } x\leq0.
             \end{cases}
         \]
-    \end{framed}
+    \end{sample}
 \end{frame}
 \subsubsection{Matriisiympäristöt}
 \begin{frame}[fragile]
@@ -814,9 +824,9 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
 Matti sanoi: ''Onpa outoa!''
     \end{Verbatim}
     tulostaa
-    \begin{framed}
+    \begin{sample}
         Matti sanoi: ''Onpa outoa!''
-    \end{framed}
+    \end{sample}
     Lainauksia varten on olemassa myös omia ympäristöjään, kuten \verb-verse-, \verb-quote- ja \verb-quotation-.
     \vaihto
     Alaviitteen voi luoda komennolla \verb-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 

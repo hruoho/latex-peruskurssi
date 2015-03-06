@@ -1,6 +1,6 @@
 \documentclass[handout,hyperref={colorlinks=true}]{beamer}
-\usefonttheme{serif}
-%\usefonttheme[onlymath]{serif}     % serif vain matikkamoodiin
+%\usefonttheme{serif}
+\usefonttheme[onlymath]{serif}     % serif vain matikkamoodiin
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[finnish]{babel}
@@ -32,6 +32,9 @@
 \newtheorem*{ratk}{Ratkaisuehdotus}
 \newtheorem*{thmextra}{Lisätieto}
 \newenvironment{extra}{\begin{thmextra}\footnotesize}{\end{thmextra}}
+\newenvironment{serif}{\fontfamily{lmr}\selectfont}{}
+\newenvironment{sample}{\begin{framed}\begin{serif}}{\end{serif}\end{framed}}
+
 
 
 %Matriisien säätö:
