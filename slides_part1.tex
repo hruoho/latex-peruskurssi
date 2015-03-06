@@ -77,21 +77,7 @@
     Kaikkein helpoimmin kuitenkin pääsee alkuun käyttämällä jotain online-ympäristöä kuten esimerkiksi Overleaf (\url{https://www.overleaf.com/}). Tällöin mitään ohjelmia ei tarvitse asentaa eikä tiedostoja siirrellä koneiden välillä.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        \begin{itemize}
-            \item Avaa Texmaker ja luo uusi tiedosto
-            \item Tallenna se muodossa \verb-nimi.tex- johonkin tätä kurssia varten luomaasi kansioon
-            \item Kirjoita tiedostoon seuraavat rivit:
-                \begin{verbatim}
-\documentclass{article}
-\begin{document}
-Huhuu!
-\end{document}
-                \end{verbatim}
-            \item Aja tiedosto PDFLaTeX:illa
-            \item Valitse View PDF
-        \end{itemize}
-    \end{harj}
+    \input{harj1_1}
     Lopputuloksena tulisi olla PDF-tiedosto, jonka yläreunassa lukee ''Huhuu!''.
 \end{frame}
 \begin{frame}[fragile]
@@ -110,20 +96,7 @@ Huhuu!
 \begin{frame}[fragile]
     \frametitle{Dokumentin rakenne ja luominen}
     Esittelyosassa eli heti komennon \verb+\documentclass{}+  jälkeen valitaan käytettävät paketit ja asetukset. \pause Ääkkösiä ja suomalaista tavutusta varten otetaan käyttöön tietyt inputenc-, fontenc- ja babel-paketit:\pause
-    \begin{harj}
-        Tee dokumenttiisi seuraavat muutokset (älä siis luo uutta tiedostoa):
-        %\usepackage[ansinew]{inputenc}
-        \begin{Verbatim}[frame=single]
-\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[finnish]{babel}
-\usepackage{geometry}
-\begin{document}
-Öö häh? Herätys!
-\end{document}
-        \end{Verbatim}
-    \end{harj}
+    \input{harj1_2}
     Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
 \end{frame}
 \begin{frame}[fragile]
@@ -136,26 +109,13 @@ Huhuu!
     \end{extra}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (vältä erikoismerkkejä). Aja tiedosto. Varmista vielä ääkkösten ja tavutuksen toimiminen. Miten kappalejaon kanssa käy?
-    \end{harj}
+    \input{harj1_3}
 \end{frame}
 \begin{frame}[fragile]
     Edellä mainitut paketit ovat esimerkkejä \textit{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
     \pause
     Matemaattista tekstiä varten on vielä syytä ottaa käyttöön muutama lisäpaketti. 
-    \begin{harj}
-        Ota käyttöön paketit\footnote{ams tulee sanoista American Mathematical Society}
-        \[
-            \verb-amsmath-,\quad \verb-amsthm-\quad \text{ja}\quad \verb-amssymb-
-        \]
-        lisäämällä dokumenttisi esittelyosaan seuraavat komennot:
-        \begin{verbatim}
-        \usepackage{amsmath}
-        \usepackage{amsthm}
-        \usepackage{amssymb}
-        \end{verbatim}
-    \end{harj}
+    \input{harj1_4}
     \pause
     Nämä sisältävät fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. Paketti \verb-amsmath- on ladattava ennen \verb-amsthm--pakettia.
 \end{frame}
@@ -243,21 +203,8 @@ Huhuu!
     \end{table}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Kolme peräkkäistä pistettä saa komennolla \verb-\dots-. Kokeile, miten lopputulokset eroavat, jos kirjoitat pisteet itse.  Kirjoita sitten seuraava:
-        \begin{sample}
-            Erikoismerkkejä ovat mm. \%, \$ ja \&. Merkkijonon \textbackslash textbackslash tuottaminen onnistuu näin\dots
-        \end{sample}
-    \end{harj}
-    \begin{harj}
-        Kommenttirivin avulla koodin sekaan voi kirjoittaa selkeyttäviä huomautuksia, jotka eivät tule näkyviin lopulliseen työhön. Kommenttirivi aloitetaan merkillä \verb-%- ja päätetään rivinvaihtoon. 
-        \vaihto
-        Kirjoita koodin sekaan esimerkiksi rivi
-        \begin{Verbatim}[frame=single]
-%Tämä rivi ei tule näkyviin lopullisessa työssä.
-        \end{Verbatim}
-        ja testaa, pitääkö väite paikkansa.
-    \end{harj}
+    \input{harj1_5}
+    \input{harj1_6}
 \end{frame}
 \begin{frame}
     \frametitle{Virheilmoitukset}
@@ -291,14 +238,7 @@ Huhuu!
     \]
 \end{frame}
 \begin{frame}
-    \begin{harj}
-        \begin{itemize}
-            \item Jaa tekstisi neljään numeroituun osioon
-            \item Jaa ensimmäinen osio lisäksi muutamaksi ali- ja alialiosioksi
-            \item Jätä ainakin yksi alialiosio numeroimatta
-            \item Nimeä kaikki osiot
-        \end{itemize}
-    \end{harj}
+    \input{harj1_7}
     Tee ensimmäisen kerran harjoitukset ensimmäiseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
 \end{frame}
 \begin{frame}[fragile]
@@ -341,14 +281,7 @@ Huhuu!
     Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \verb-flushright- ja \verb-flushleft-.
 \end{frame}
 \begin{frame}
-    \begin{harj}
-        Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
-        \begin{sample}
-            \begin{flushright}
-                Tämä teksti on normaalikokoista, \tiny mutta tämä pientä ja \huge tämä suurta \normalsize. Tähän laitan suuren välin: \qquad, tähän vähän pienemmän: \quad ja \emph{tätä tekstiä taas haluan korostaa!} Miten saisin tyhjän rivin tai kaksi?
-            \end{flushright}
-        \end{sample}
-    \end{harj}
+    \input{harj1_8}
 \end{frame}
 \subsection{Matemaattinen teksti}
 \begin{frame}[fragile]
@@ -378,13 +311,7 @@ samanaikaisesti tasan kahdessa tason pisteessä.
     %yhtälön \(x^3+\sqrt{2}x^2+1=0\). \pause Tätä kutsutaan matematiikkatilaksi.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Tuota seuraava lause dokumenttiisi:
-        \begin{sample}
-            Vaihdannaisessa renkaassa pätee \((a+b)^2=a^2+2ab+b^2\). Jos siis \(2ab\neq0\), niin \((a+b)^2\neq a^2+b^2\). 
-        \end{sample}
-        Erisuuruuden saat komennolla \verb-\neq-.
-    \end{harj}
+    \input{harj1_9}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Kaavarivi}
@@ -410,16 +337,7 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
     \end{sample}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}\label{rajaArvo}
-        Tuota seuraava dokumenttiisi:
-        \begin{sample}
-            Funktion \(f\colon \R\to \R\) derivaatta pisteessä \(x_0\in\R\) on
-            \[
-                f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0},
-            \]
-            mikäli raja-arvo on olemassa.
-        \end{sample}
-    \end{harj}
+    \input{harj1_10}
     \begin{itemize}
         \item Kaksoispisteen paikalla kannattaa käyttää komentoa \verb-\colon-
         \item Reaalilukujen joukon symbolin saat komennolla \verb-\mathbb{R}-
@@ -430,16 +348,7 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
     \end{itemize}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Tuota seuraava dokumenttiisi:
-        \begin{sample}
-            Jos \(F\) on \(\sigma\)-algebra ja \(A_i\in F\) kaikilla \(i= 1,2,\dots\), niin 
-            \[
-                \bigcup_{i=1}^{\infty} A_i\in F.
-            \]
-        \end{sample}
-        Tarvitset mm. komentoja \verb-\sigma-, \verb-\in-, \verb-\bigcup- ja \verb-\infty-. Ala- ja yläindeksit kirjoitetaan merkkien \verb-_- ja \verb-^- avulla (jos indeksiin halutaan enemmän kuin yksi merkki, se täytyy laittaa aaltosulkeisiin kuten edellisessä tehtävässä). 
-    \end{harj}
+    \input{harj1_11}
 \end{frame}
 \begin{frame}[fragile]
     Yleisimpiä matemaattisia symboleita löytää Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niitä voi etsiä esim. seuraavista osoitteista:
@@ -449,12 +358,7 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
             \item \url{http://detexify.kirelabs.org/classify.html}
         \end{itemize}
     \end{scriptsize}
-    \begin{harj}
-        Selvitä, miten voit tuottaa vektorimerkinnät \(\bar{v}\), \(\bar{w}\) ja \(\overline{AB}\). Kirjoita seuraava:
-        \begin{sample}
-            Vektoreiden \(\bar{v}=\overline{AB}\) ja \(\bar{w}=\overline{CD}\) ristitulo \(\bar{v}\times\bar{w}\) on kohtisuorassa kumpaakin vektoria vastaan. Vektoreiden pistetulo \(\bar{v}\cdot\bar{w}\) on sen sijaan reaaliluku.
-        \end{sample}
-    \end{harj}
+    \input{harj1_12}
 
 \end{frame}
 
@@ -477,31 +381,11 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
     Jokaista \verb-\left--alkuista komentoa täytyy seurata \verb-\right--alkuinen komento, vähintään \verb-\right.-, joka ei tulosta mitään. Samoin \verb-\right--alkuista komentoa on edellettävä \verb-\left--alkuinen komento, vähintään \verb-\left.-. 
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Tuota seuraava rivi dokumenttiisi:
-        \begin{sample}
-            \[
-                \left\lbrace 2^n \,\middle|\, n\in\Z\right\rbrace=\left\lbrace \left(\frac{1}{2}\right)^{-n}\,\middle|\, n\in\Z\right\rbrace
-            \]
-        \end{sample}
-    \end{harj}
+    \input{harj1_13}
     Komennolla \verb-\middle|- saat pystyviivan automaattisesti oikean kokoisena ja komennolla \verb-\,- hieman ylimääräistä väliä niiden ympärille. Tehtävästä \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Kirjoita seuraava:
-        \begin{sample}
-            Jos \(F\) on \(\sigma\)-algebra ja \(P\colon F\to\R\) todennäköisyys, niin tapahtumille \(A_1,A_2,\dotsc\in F\) pätee
-            \[
-                P\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty P(A_i).
-            \]
-        \end{sample}
-        \begin{extra}
-            \begin{scriptsize}
-                Tulet todennäköisesti joskus törmäämään myös seuraaviin tapoihin kirjoittaa kaavoja: \verb-$kaava$- ja \verb-$$kaava$$-. Ensimmäinen on käytännössä sama kuin \verb-\(kaava\)-, mutta jos toinen \verb-$- unohtuu, niin syntyvät virheilmoitukset voivat olla vaikeaselkoisia. Toinen taas on \TeX -tapa kirjoittaa kaavarivejä. Se toimii usein samalla tavalla kuin \verb-\[kaava\]-, mutta ei aina, eikä sitä pitäisi \LaTeX issa käyttää.
-            \end{scriptsize}
-        \end{extra}
-    \end{harj}
+    \input{harj1_14}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Pitkät kaavat}
@@ -598,12 +482,8 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
     %\end{Verbatim}
     %\end{scriptsize}
     %\end{minipage}
-    \begin{harj}
-        Kirjoita muutaman yhtälön ketju ja sijoita yhtälöt allekkain, tasaten haluamastasi kohdasta. Voit esimerkiksi derivoida vaiheittain funktion \(x^3\sin(\cos(x))\) tai keksiä jotkin muut yhtälöt. Yhtälöiden ei tarvitse olla tosia. Komennolla \verb-\sin- saa sinifunktion tulostettua pystyfontilla.
-    \end{harj}
-    \begin{harj}
-        Kopioi osa edellisen tehtävän yhtälöketjua ja kirjoita se numeroituun tai numeroimattomaan \verb-multline--ympäristöön. 
-    \end{harj}
+    \input{harj1_15}
+    \input{harj1_16}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Numeroidut kaavat}
@@ -631,17 +511,7 @@ viitataan myöhemmin.
     Numeroituihin kaavoihin viittaamiseen palataan tuonnempana.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}\label{viittausTehtava}
-        Tuota seuraava dokumenttiisi:
-        \begin{sample}
-            Eksponenttifunktiolla \(e^x\) on sarjakehitelmä
-            \setcounter{equation}{0}
-            \begin{equation}
-                e^x=\sum_{n=1}^\infty\frac{x^n}{n!}.
-            \end{equation}
-        \end{sample}
-        Summamerkinnän saat komennolla \verb-\sum_{}^{}-, osamäärän komennolla \verb-\frac{}{}- ja äärettömän symbolin komennolla \verb-\infty-. 
-    \end{harj}
+    \input{harj1_17}
 \end{frame}
 %\section{2. kerta}
 \subsection{Lauseympäristö}
@@ -659,13 +529,9 @@ Komento \verb-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käytettäi
     %\end{Verbatim}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}\label{harjYmparistot}
-        Luo esittelyosassa ainakin ympäristöt Lause, Määritelmä ja Esimerkki. Käytä luomiasi ympäristöjä ainakin kerran. 
-    \end{harj}
+    \input{harj1_18}
 Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoilla \verb-\begin{proof}...\end{proof}-
-    \begin{harj}
-        Kirjoita edellisessä harjoituksessa luomallesi lauseelle jokin todistus. Todistukseksi kelpaa muutama rivi valitsemaasi tekstiä.
-    \end{harj}
+    \input{harj1_19}
     %Esimerkiksi rivi
     %\begin{Verbatim}[frame=single]
     %\begin{esim}
@@ -716,9 +582,7 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     ympäristöt \verb-lemma- ja \verb-lause- tulostuvat plain-tyylin mukaisesti ja ympäristö \verb-maar- definition-tyylin mukaisesti.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Valitse harjoituksessa \ref{harjYmparistot} luomillesi lauseympäristöille jotkin tyylit. Kokeile, miltä erilaiset tyylit näyttävät ja valitse mieleisesi!
-    \end{harj}
+    \input{harj1_20}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Lauseympäristöjen numerointi}
@@ -750,14 +614,8 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
 \end{frame}
 \begin{frame}[fragile]
     Kokonaan numeroimattoman lauseympäristön voi luoda komennolla \verb-\newtheorem*{}{}-.
-    \begin{harj}
-        Aseta yksi lauseympäristöistäsi (esim. Lause) laskurille \verb-section- alisteiseksi.
-        %Anna yhdelle lauseympäristöistäisi numeroinniksi \verb-\section- tai \verb-\subsection-.
-        Anna sitten toisen lauseympäristön (esim. Lemma) laskuriksi edellinen lauseympäristö. 
-    \end{harj}
-    \begin{harj}
-        Luo jokin numeroimaton lauseympäristö ja käytä sitä työssäsi.
-    \end{harj}
+    \input{harj1_21}
+    \input{harj1_22}
 \end{frame}
 \subsection{Sisäiset viittaukset}
 \begin{frame}[fragile]
@@ -775,11 +633,7 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     \begin{extra}
         Jos \LaTeX-tiedoston nimi on \verb-nimi.tex-, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \verb-nimi.aux-, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
     \end{extra}
-    \begin{harj}
-        Viittaa harjoituksessa \ref{viittausTehtava} kirjoittamaasi numeroituun yhtälöön. Käytä komentoja \verb-\eqref{}- ja \verb-\pageref{}-.
-        \vaihto
-        Huomaa, että viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. Tämä kirjoitetaan ympäristön aloittavan komennon \verb-\begin{}- jälkeen. 
-    \end{harj}
+    \input{harj1_23}
 \end{frame}
 \subsection{Listarakenteet}
 \begin{frame}[fragile]
@@ -812,20 +666,8 @@ Tässä listani:
 \begin{frame}[fragile]
     \frametitle{Listat}
     Seuraavassa tehtävässä harjoitellaan sisäkkäisten listojen käyttöä.
-    \begin{harj}
-        Luo ainakin kolmen kohdan numeroitu lista haluamistasi asioista. Luo yhdeksi listan jäseneksi toinen lista ja yhdeksi tämän listan jäseneksi kolmas lista. Käytä (ainakin) viimeiseen listaan numeroimatonta \verb-itemize--ympäristöä.
-    \end{harj}
-    \begin{harj}
-    Luo vielä yksi lista, mutta käytä tällä kertaa ympäristöä \verb-description-. Se toimii kuten \verb-itemize-, mutta pelkän komennon \verb-\item- sijaan käytetään komentoa \verb-\item[nimi]-, jossa \verb-nimi- on vapaasti valitsemasi merkkijono.
-        %\begin{scriptsize}
-        %\begin{Verbatim}[frame=single]
-        %\begin{description}
-        %  \item[T1] The first item
-        %  \item[T2] The second item
-        %  \item[T3] The third etc \ldots
-        %\end{description}
-        %\end{scriptsize}
-    \end{harj}
+    \input{harj1_24}
+    \input{harj1_25}
     %Listaukseen käytettäviin symboleihin voi itse vaikuttaa. Opetellaan myöhemmin laskareissa usein käytettävä aakkostettu lista.
 \end{frame}
 \subsection{Omat komennot}
@@ -842,15 +684,7 @@ Tässä listani:
     Omia komentoja luomalla voit yksinkertaistaa ja helpottaa omaa työtäsi. Jo parikin kertaa toistuva komentojen ketju kannattaa määritellä esittelyosassa yhdeksi yksinkertaiseksi komennoksi.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Luo komennot merkinnöille \(\N\), \(\Z\), \(\Q\), \(\R\) ja \(\C\). Kirjoita seuraava:
-        \begin{sample}
-            Lukujoukot muodostavat tornin
-            \[
-                \N\subset \Z\subset \Q\subset \R\subset \C.
-            \]
-        \end{sample}
-    \end{harj}
+    \input{harj1_26}
     Osajoukkorelaation saat komennolla \verb-\subset-. Kokeile myös, mitä komennot \verb-\subseteq-, \verb-\subsetneq- ja  \verb-\supset- tuottavat. Miten saisit symbolit \(\supsetneq\) ja  \(\supseteq\)? Entä symbolin \(\not\subset\)? Kirjoita työhösi vielä seuraava: \(\Z\not\subset\N\).
 \end{frame}
 
@@ -898,19 +732,7 @@ Toisinaan
     \end{extra}
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        \LaTeX issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \verb-\abs{}-, jonka argumentti on itseisarvomerkkien sisään tuleva lauseke. Tuota sen avulla seuraavat kolmioepäyhtälöt:
-        \begin{sample}
-            \[
-                \abs{\abs{x}-\abs{y}}\leq \abs{x+y}\leq\abs{x}+\abs{y}
-            \]
-            ja
-            \[
-                \abs{\int_a^b f(x)\,dx} \leq\int_a^b\abs{f(x)}\, dx.
-            \]
-        \end{sample}
-        Huomaa, että itseisarvomerkkien koon on syytä muuttua niiden sisältämän lausekkeen koon mukaan.\vaihto Määrätyn integraalin saat komennolla \verb-\int_{}^{}- ja pienen välin komennolla \verb-\,- (ennen merkkiä \(dx\)).
-    \end{harj}
+    \input{harj1_27}
 \end{frame}
 
 \end{document}

@@ -87,9 +87,7 @@
     Huomaa, että useammat määritteet erotetaan toisistaan pilkuilla!
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Tallenna työkansioosi jokin kuva (tarkkana formaatin kanssa) ja tuo se työhösi sopivasti skaalattuna. Muista ottaa ensin käyttöön paketti \verb-graphicx-! 
-    \end{harj}
+    \input{harj2_1}
 \end{frame}
 \subsubsection{Figure-ympäristö}
 \begin{frame}[fragile]
@@ -137,9 +135,7 @@
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Figure-ympäristön argumentit}
-    \begin{harj}
-        Tuo työhösi jokin kuva käyttäen figure-ympäristöä ja anna valinnaisena argumenttina toiveesi kuvan sijoittamisesta. Lisää vielä kuvateksti.
-    \end{harj}
+    \input{harj2_2}
 \end{frame}
 \subsubsection{Piirtäminen (TikZ)}
 \begin{frame}[fragile]
@@ -153,12 +149,8 @@
     \vaihto Muita kuvien tuottamiseen tarkoitettuja paketteja ovat picture, xy-Pic ja Asymptote.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-    Piirrä Geogebralla jokin yksinkertainen kuva (vältä funktioita). Rajaa kuva sopivasti ja valitse File > Export > Graphics View as PGF/TikZ. Luo koodi ja kopioi siitä tarvittavat osat tiedostoosi. Tarvittavia osia ovat esittelyosan komennot \verb-\usepackage...-, \verb-\usetikzlibrary...-, mahdolliset värien määrittelyt \verb-\definecolor...- ja varsinainen kuva, eli \verb-\begin{tikzpicture}...\end{tikzpicture}-. 
-    \end{harj}
-    \begin{harj}\label{kelluvaTikz}
-        Kopioi edellisessä harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muutoksia pelkästään koodia muuttamalla. Voit esimerkiksi vaihtaa jonkin pisteen paikkaa tai piirtää kokonaan uutta. Tee uudesta kuvasta kelluva ja keksi jokin kuvateksi. 
-    \end{harj}
+    \input{harj2_3}
+    \input{harj2_4}
 
 \end{frame}
 \subsection{Taulukot}
@@ -279,25 +271,8 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 
 \begin{frame}[fragile]
     \frametitle{Tabular-ympäristö}
-    \begin{harj}
-        Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi riviä.  
-        %ja joka sisältää
-        %\begin{itemize}
-        %\item pystyviivan
-        %\item kaksinkertaisen pystyviivan
-        %\item vaakaviivan
-        %\item osittaisen vaakaviivan sarakkeiden 1 ja 2 välillä
-        %\end{itemize}
-    \end{harj}
-    \begin{harj}
-        Luo toinen 3-sarakkeinen taulukko (esim. kopio edellisestä), joka sisältää 
-        \begin{itemize}
-            \item pystyviivan
-            \item kaksinkertaisen pystyviivan
-            \item vaakaviivan
-            \item osittaisen vaakaviivan kahden sarakkeen välillä
-        \end{itemize}
-    \end{harj}
+    \input{harj2_5}
+    \input{harj2_6}
 \end{frame}
 \subsubsection{Sarakkeiden yhdistäminen}
 \begin{frame}[fragile]
@@ -347,24 +322,7 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden yhdistäminen}
 
-    \begin{harj}
-        Luo seuraava taulukko:
-        \begin{table}
-            \begin{serif}
-                \begin{tabular}{|l|l|l|}
-                    \hline
-                    \multicolumn{3}{|c|}{\Large Päiväpetolintuja}\\
-                    \hline
-                    \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
-                    Kanahaukka & Accipiter &  gentilis\\ \hline
-                    Hiirihaukka & Buteo & buteo\\ \hline
-                    %\multicolumn{3}{|c|}{Jalohaukkoja}\\ \hline
-                    Tuulihaukka & Falco & columbarius\\\hline
-                    Nuolihaukka & Falco & subbuteo\\ \hline
-                \end{tabular}
-            \end{serif}
-        \end{table}
-    \end{harj}
+    \input{harj2_7}
 
 \end{frame}
 \subsubsection{Rivien yhdistäminen}
@@ -407,26 +365,7 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Rivien yhdistäminen} 
-    \begin{harj}\label{taulukko}
-        Luo seuraava taulukko: 
-        \begin{table}
-            \begin{serif}
-                \begin{tabular}{|c|c|c|c|}
-                    \hline
-                    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
-                    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
-                                            & Hiirihaukka & Buteo & buteo\\ \hline
-                    %\hline
-                    %Analyysi I \& II & \multirow{3}{*}{Matikan perusopinnot}\\
-                    %\cline{1-1}
-                    %Linis I & \\
-                    %\cline{1-1}
-                    %JYM & \\
-                    %\hline
-                \end{tabular}
-            \end{serif}
-        \end{table}
-    \end{harj}
+    \input{harj2_8}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden ja rivien yhdistäminen} 
@@ -524,9 +463,7 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
 %    Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
 %\end{frame}
 \begin{frame}[fragile]
-    \begin{harj}\label{kelluvaTaulukko}
-        Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
-    \end{harj}
+    \input{harj2_9}
 
 \end{frame}
 \subsection{Matriisit}
@@ -623,9 +560,7 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
 %Saman voi kuitenkin tehdä helpommin käyttämällä matriiseja varten luotuja ympäristöjä, kuten \verb-bmatrix*- tai \verb-pmatrix*-. Näitä varten tarvitset paketin \verb-mathtools-.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Luo jokin vähintään \(2\times 3\)-matriisi käyttäen ympäristöä \verb-pmatrix-, kuten yllä. Tee sitten matriisistasi muutama kopio ja kokeile ympäristöjä \verb-matrix-, \verb-bmatrix- ja \verb-vmatrix-. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylistä.)
-    \end{harj}
+    \input{harj2_10}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Matriisit}
@@ -703,48 +638,7 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Matriisit}
-    \begin{harj}
-        Kirjoita seuraavanlainen matriisitoimitus: 
-        \begin{align*}
-            &
-            \begin{bmatrix*}[r]
-                0 & 0 & 1 & a_1\\
-                0 & 1 & 1 & a_2\\
-                1 & 1 & 1 & a_3
-            \end{bmatrix*}
-%        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
-        \xrightarrow{R_1\leftrightarrow R_3}
-            \begin{bmatrix*}[r]
-                1 & 1 & 1 & a_3\\
-                0 & 1 & 1 & a_2\\
-                0 & 0 & 1 & a_1
-            \end{bmatrix*}
-            %\\
-            %\stackrel{\begin{scriptsize} R_1-R_2 \end{scriptsize} }{\longrightarrow}
-            %&\begin{bmatrix*}[r]
-            %1 & 0 & 0 & a_3-a_2\\
-            %0 & 1 & 1 & a_2\\
-            %0 & 0 & 1 & a_1
-            %\end{bmatrix*}
-            %\stackrel{\begin{scriptsize} R_2-R_3 \end{scriptsize} }{\longrightarrow}
-            %\begin{bmatrix*}[r]
-            %1 & 0 & 0 & a_3-a_2\\
-            %0 & 1 & 0 & a_2-a_1\\
-            %0 & 0 & 1 & a_1
-            %\end{bmatrix*}
-        \end{align*}
-        Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. % Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
-        Kaavan mukana automaattisesti venyvän nuolen saa komennolla \verb-\xrightarrow{kaava}-.
-%        \begin{verbatim}
-%        \stackrel{
-%            \begin{scriptsize} 
-%                R_1\leftrightarrow R_3 
-%            \end{scriptsize}
-%        }{\longrightarrow} 
-%        \end{verbatim}
-
-        % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
-    \end{harj}
+    \input{harj2_11}
 \end{frame}
 \subsubsection{Lisätietoa}
 \begin{frame}[fragile]
@@ -806,14 +700,8 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     %\end{frame}
     %\begin{frame}[fragile]
     %Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
-    \begin{harj}
-        Viittaa harjoituksessa \ref{kelluvaTaulukko} luomaasi kelluvaan taulukkoon. Käytä komentoja \verb-\ref{}- ja \verb-\pageref{}-. Komento \verb-\label- tulee taulukkoon liittyvän \verb-\caption{..}--komennon jälkeen.
-        \vaihto
-        %Muista, että viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. Komento sijoitetaan ympäristön aloittavan komennon \verb-\begin{}- perään.
-    \end{harj}
-    \begin{harj}
-        Sama kuin edellinen harjoitus, mutta viittaa harjoituksessa \ref{kelluvaTikz} luomaasi kelluvaan kuvaan.
-    \end{harj}
+    \input{harj2_12}
+    \input{harj2_13}
 \end{frame}
 \subsection{Kirjallisuusviitteet}
 \subsubsection{Lainaukset ja alaviitteet}
@@ -832,12 +720,8 @@ Matti sanoi: ''Onpa outoa!''
     Alaviitteen voi luoda komennolla \verb-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Lisää dokumenttiisi jokin lainaus käyttäen \verb-quote--, \verb-\quotation-- tai \verb-verse--ympäristöä. 
-    \end{harj}
-    \begin{harj}
-        Lisää työhösi alaviite komennolla \verb-\footnote{}-. 
-    \end{harj}
+    \input{harj2_14}
+    \input{harj2_15}
 \end{frame}
 \subsubsection{\BibTeX-järjestelmä}
 \begin{frame}[fragile]
@@ -880,9 +764,7 @@ Matti sanoi: ''Onpa outoa!''
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot}
-    \begin{harj}
-        Kopioi edellisen esimerkin sisältö uuteen tiedostoon ja tallenna se nimellä \verb-lahteet.bib- työkansioosi. 
-    \end{harj}
+    \input{harj2_16}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{.bib-tiedoston sisältö}
@@ -911,9 +793,7 @@ Matti sanoi: ''Onpa outoa!''
     Käytännössä jokaista kuviteltavissa olevaa lähdeteosta varten löytyy jokin sopiva luokka (ja tarpeen tullen sellaisen voi luoda itsekin).
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Lisää tiedostoon \verb-lahteet.bib- kirja, jonka nimi on Topologia I, kirjoittaja Jussi Väisälä, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \verb-topo1-.
-    \end{harj}
+    \input{harj2_17}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot Internetistä}
@@ -927,9 +807,7 @@ Matti sanoi: ''Onpa outoa!''
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot Internetistä}
-    \begin{harj}
-        Etsi Google Books-palvelusta Walter Rudinin kirjan Complex Analysis (kirjan versiolla ei väliä) tiedot \BibTeX -muodossa. Avaa tiedosto Texmakerilla ja valitse viittaustunnus haluamaksesi. Tallenna tiedosto nimellä \verb-Rudin.bib- työkansioosi. (Huomaa, että palvelu tarjoaa tiedostot muodossa .bibtex.)
-    \end{harj}
+    \input{harj2_18}
 
 \end{frame}
 \begin{frame}[fragile]
@@ -947,17 +825,8 @@ Matti sanoi: ''Onpa outoa!''
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusluettelon luominen}
-    \begin{harj}
-        Edellä loit \BibTeX-tiedostot \verb-lahteet.bib- ja \verb-Rudin.bib-. Tuo teokset kirjallisuusluetteloon koodilla 
-        \begin{Verbatim}[frame=single]
-\bibliographystyle{plain}
-\bibliography{lahteet,Rudin}
-        \end{Verbatim}
-        Sijoita koodi työsi loppuosaan, esimerkiksi juuri ennen komentoa \verb-\end{document}-.
-    \end{harj}
-    \begin{harj}
-        Viittaa kuhunkin teokseen työssäsi komennolla \verb-\cite{viittaustunnus}-.
-    \end{harj}
+    \input{harj2_19}
+    \input{harj2_20}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Käytäntö}
@@ -988,9 +857,7 @@ Matti sanoi: ''Onpa outoa!''
 \end{frame}
 %\begin{frame}[fragile]
 %\frametitle{Viittaustyyli}
-%\begin{harj}
-%Luo tai etsi Internetistä kolmelle eri teokselle \BibTeX-tiedostot ja viittaa teoksiin onnistuuneesti. Valitse teoksille eri luokat, esim \verb-@book-, \verb-@misc- ja \verb-@unpublished-.
-%\end{harj}
+\input{harj2_21}
 %\end{frame}
 \subsubsection{Viittaustyyli}
 \begin{frame}[fragile]
@@ -1013,12 +880,8 @@ Matti sanoi: ''Onpa outoa!''
     Kansilehti tulostuu joissain luokissa (esim. \verb-book- ja \verb-report-) omaksi sivukseen, \verb-article--luokassa osaksi ensimmäistä sivua.
 \end{frame}
 \begin{frame}[fragile]
-    \begin{harj}
-        Luo työllesi kansilehti ja sisällysluettelo. Kokeile miltä työsi näyttää, jos vaihdat luokaksi \verb-report- tai \verb-book-. Millaisia eroja huomaat? 
-    \end{harj}
-    \begin{harj}
-        Dokumenttia on helpompi navigoida elektronisesti, kun viitteet toimivat linkkeinä. Ota tätä varten käyttöön paketti \verb-hyperref-. Kokeile kääntää dokumentti---linkkien ympärillä on nyt ruma laatikko. Paranna tilannetta antamalla \verb-hyperref--paketille argumentti \verb-colorlinks=true- (ota mallia esim. \verb-inputenc--paketin lataavasta rivistä).
-    \end{harj}
+    \input{harj2_22}
+    \input{harj2_23}
 \end{frame}
 \subsubsection{Dokumenttiluokan asetukset}
 \begin{frame}[fragile]
@@ -1039,8 +902,7 @@ Matti sanoi: ''Onpa outoa!''
 %
 %
 %\begin{frame}[fragile]
-%\begin{harj}
-%\end{harj}
+\input{harj2_24}
 %
 %\end{frame}
 %\begin{frame}

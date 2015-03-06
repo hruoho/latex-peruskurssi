@@ -1,0 +1,42 @@
+    \begin{harj}
+        Kirjoita seuraavanlainen matriisitoimitus: 
+        \begin{align*}
+            &
+            \begin{bmatrix*}[r]
+                0 & 0 & 1 & a_1\\
+                0 & 1 & 1 & a_2\\
+                1 & 1 & 1 & a_3
+            \end{bmatrix*}
+%        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
+        \xrightarrow{R_1\leftrightarrow R_3}
+            \begin{bmatrix*}[r]
+                1 & 1 & 1 & a_3\\
+                0 & 1 & 1 & a_2\\
+                0 & 0 & 1 & a_1
+            \end{bmatrix*}
+            %\\
+            %\stackrel{\begin{scriptsize} R_1-R_2 \end{scriptsize} }{\longrightarrow}
+            %&\begin{bmatrix*}[r]
+            %1 & 0 & 0 & a_3-a_2\\
+            %0 & 1 & 1 & a_2\\
+            %0 & 0 & 1 & a_1
+            %\end{bmatrix*}
+            %\stackrel{\begin{scriptsize} R_2-R_3 \end{scriptsize} }{\longrightarrow}
+            %\begin{bmatrix*}[r]
+            %1 & 0 & 0 & a_3-a_2\\
+            %0 & 1 & 0 & a_2-a_1\\
+            %0 & 0 & 1 & a_1
+            %\end{bmatrix*}
+        \end{align*}
+        Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. % Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
+        Kaavan mukana automaattisesti venyvän nuolen saa komennolla \verb-\xrightarrow{kaava}-.
+%        \begin{verbatim}
+%        \stackrel{
+%            \begin{scriptsize} 
+%                R_1\leftrightarrow R_3 
+%            \end{scriptsize}
+%        }{\longrightarrow} 
+%        \end{verbatim}
+
+        % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
+    \end{harj}
