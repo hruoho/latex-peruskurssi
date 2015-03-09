@@ -885,6 +885,12 @@ Toisinaan
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Figure-ympäristön argumentit}
+    Usein haluttaisiin sijoittaa kelluva ympäristö \underline{tähän} kohtaan tekstiä \textit{no matter what}. Tämä \emph{ei} välttämättä onnistu argumentilla \verb-[h]- tai edes \verb-[!h]-. Itse asiassa \LaTeX{} korvaa argumentin \verb-h- automaattisesti argumentilla \verb-ht-, joten se siitä.
+    \pause
+    \vaihto
+    \underline{Tähän} sijoittaminen onnistuu kuitenkin \verb-float--paketilla. Tällöin esittelyosaan on lisättävä rivi \verb-\usepackage{float}-, jonka jälkeen kelluvalle ympäristölle voi antaa argumentin \verb-[H]-, joka toteuttaa toiveesi, oli jälki miten rumaa tahansa\dots Argumentin \verb-H- kanssa ei voi käyttää muita; esim. \verb-[Hp]- on laiton yhdistelmä.
+    \pause
+    \vaihto
     \input{harj3_2}
 \end{frame}
 \subsubsection{Piirtäminen (TikZ)}
