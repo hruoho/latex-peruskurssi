@@ -404,12 +404,25 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
 \end{frame}
 \begin{frame}[fragile]
     \input{harj2_14}
-    \begin{extra}
-        \begin{scriptsize}
-            Tulet todennäköisesti joskus törmäämään myös seuraaviin tapoihin kirjoittaa kaavoja: \verb-$kaava$- ja \verb-$$kaava$$-. Ensimmäinen on käytännössä sama kuin \verb-\(kaava\)-, mutta jos toinen \verb-$- unohtuu, niin syntyvät virheilmoitukset voivat olla vaikeaselkoisia. Toinen taas on \TeX -tapa kirjoittaa kaavarivejä. Se toimii usein samalla tavalla kuin \verb-\[kaava\]-, mutta ei aina, eikä sitä pitäisi \LaTeX issa käyttää.
-        \end{scriptsize}
-    \end{extra}
 \end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Vanhoja tapoja}
+
+    \begin{itemize}[<+->]
+        \item \emph{Vanha \TeX-tapa} kirjoittaa kaava tekstin sekaan on \verb-$kaava$-, esim.
+            \begin{Verbatim}[frame=single]
+Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.
+            \end{Verbatim}
+        \item Tätä käytetään paljon myös \LaTeX{}issa, mutta se rikkoo joitain paketteja ja voi tehdä virheilmoituksista entistä kryptisempiä.
+        \item Käännöksissä tuleva virheilmoitus ''\texttt{Missing \$ inserted.}'' tulee tästä:
+        \item Se tarkoittaa, että kirjoitit matematiikkaa ei-matematiikkatilassa tai ei-matematiikkaa matematiikkatilassa. \LaTeX{} (tarkemmin sanottuna \TeX{}) huomasi tämän ja yritti (sisäisesti) korjata asian.
+        \item Korjaa virhe esim. lisäämällä puuttuva \verb-\)-; älä lisää \verb-$--merkkejä.
+        \item \TeX-tapa kaavarivin tuottamiseen taas on \verb-$$kaava$$-, joka rikkoo vielä enemmän asioita. {\color{red}Sitä ei pitäisi \LaTeX{}issa käyttää ollenkaan!}
+    \end{itemize}
+
+\end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Pitkät kaavat}
     Toisinaan matemaattiset ilmaisut ovat niin pitkiä, etteivät ne mahdu yhdelle riville. Tällöin voidaan käyttää esimerkiksi ympäristöä \verb-align*-, jolla rivit saadaan allekkain seuraavasti:
