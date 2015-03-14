@@ -79,13 +79,15 @@
             %ESIMERKKINÄ LAITOKSEN TUTKIELMAPOHJA
     \end{itemize}
 \end{frame}
+
+
 \subsection{Dokumentin rakenne}
 \begin{frame}[fragile]
     \frametitle{Dokumentin rakenne ja luominen}
     \LaTeX-dokumentit tuotetaan tällä kurssilla helppokäyttöisellä Texmaker-ohjelmalla.
     \pause
     \vaihto
-    Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \textit{käännetään} eli \textit{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. Kääntämisen hoitaa \LaTeX\ käyttäjältä piilossa.
+    Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \newterm{käännetään} eli \newterm{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. Kääntämisen hoitaa \LaTeX\ käyttäjältä piilossa.
     \pause
     \vaihto
     Tarvittavat ohjelmat omalle koneelleen löytää esimerkiksi Matematiikan laitoksen sivujen kautta osoitteesta
@@ -94,54 +96,57 @@
     \vaihto
     Kaikkein helpoimmin kuitenkin pääsee alkuun käyttämällä jotain online-ympäristöä kuten esimerkiksi Overleaf (\url{https://www.overleaf.com/}). Tällöin mitään ohjelmia ei tarvitse asentaa eikä tiedostoja siirrellä koneiden välillä.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj1_1}
-    Lopputuloksena tulisi olla PDF-tiedosto, jonka yläreunassa lukee ''Huhuu!''.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Dokumentin rakenne ja luominen}
-    \LaTeX-dokumentti koostuu kahdesta osasta: \textit{esittelyosasta}, joka sisältää tarpeellisia asetuksia ja \textit{sisällöstä} eli varsinaisesta dokumentista.
+    \LaTeX-dokumentti koostuu kahdesta osasta: \newterm{esittelyosasta}, joka sisältää tarpeellisia asetuksia ja \newterm{sisällöstä} eli varsinaisesta dokumentista.
     \pause
     \begin{itemize}[<+->]
-        \item Tiedosto ja samalla esittelyosa aloitetaan komennolla \verb+\documentclass{...}+, jolla valitaan dokumenttiluokka (article)
+        \item Tiedosto ja samalla esittelyosa aloitetaan komennolla \lstinline+\documentclass{...}+, jolla valitaan dokumenttiluokka (\cns{article})
         \item Esittelyosaan lisätään komentoja tarpeen mukaan
-        \item Komento \verb+\begin{document}+ aloittaa itse dokumentin ja lopettaa esittelyosan
-        \item Komento \verb+\end{document}+  lopettaa dokumentin eikä sen perään kirjoitettuja rivejä käännetä.
-        \item Varsinainen työn sisältö kirjoitetaan siis komentojen \verb+\begin{document}+  ja  \verb+\end{document}+  väliin.
+        \item Komento \lstinline+\begin{document}+ aloittaa itse dokumentin ja lopettaa esittelyosan
+        \item Komento \lstinline+\end{document}+  lopettaa dokumentin eikä sen perään kirjoitettuja rivejä käännetä.
+        \item Varsinainen työn sisältö kirjoitetaan siis komentojen \lstinline+\begin{document}+  ja  \lstinline+\end{document}+  väliin.
     \end{itemize}
     (Vrt. edellinen harjoitus!)
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Dokumentin rakenne ja luominen}
-    Esittelyosassa eli heti komennon \verb+\documentclass{}+  jälkeen valitaan käytettävät paketit ja asetukset. \pause Ääkkösiä ja suomalaista tavutusta varten otetaan käyttöön tietyt inputenc-, fontenc- ja babel-paketit:\pause
+    Esittelyosassa eli heti komennon \lstinline+\documentclass{}+  jälkeen valitaan käytettävät paketit ja asetukset. \pause Ääkkösiä ja suomalaista tavutusta varten otetaan käyttöön tietyt \cns{inputenc}-, \cns{fontenc}- ja \cns{babel}-paketit:\pause
     \input{harj1_2}
-    Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
 \end{frame}
+
 \begin{frame}[fragile]
     \begin{extra}
         \begin{itemize}
-            \item Käyttämällä \verb-inputenc--pakettia \LaTeX{} lukee \verb-tex--tiedoston \verb-utf8--koodattuna, jolloin esim. ä voidaan kirjoittaa tiedostoon sellaisenaan eikä muodossa \verb-\"a-. Tämä vaatii, että käyttämäsi editori tallentaa tiedoston \verb-utf8--koodattuna. Esim. Texmaker ja Overleaf tekevät niin oletuksena. Jos ääkköset eivät toimi oikein, niin ongelma on todennäköisesti siinä, että tiedosto on koodattu eri tavalla kuin sitä yritetään lukea. Jos ääkköset eivät toimi, voit yrittää kirjoittaa \verb-[utf8]- sijaan esim. \verb-[latin1]-, \verb-[ansinew]- tai \verb-[applemac]-. Paras olisi kuitenkin käyttää \verb-[utf8]-:aa ja yrittää saada editori tallentamaan tässä muodossa.
-            \item Paketti \verb-fontenc- ottaa käyttöön laajemmat fontit, jolloin esim. ä tulostetaan yhtenä merkkinä eikä niin, että merkit a ja \"{} kirjoitetaan päällekkäin. Tällöin vaikkapa tavutus ja pdf-haku saadaan toimimaan oikein.
-            \item Lopuksi \verb-babel- asettaa dokumentin kielen suomeksi ottamalla käyttöön suomalaiset tavutussäännöt ym.
+            \item Käyttämällä \cns{inputenc}-pakettia \LaTeX{} lukee \cns{.tex}-tiedoston \cns{utf8}-koodattuna, jolloin esim. ä voidaan kirjoittaa tiedostoon sellaisenaan eikä muodossa \lstinline-\"a-. Tämä vaatii, että käyttämäsi editori tallentaa tiedoston \cns{utf8}-koodattuna. Esim. Texmaker ja Overleaf tekevät niin oletuksena. Jos ääkköset eivät toimi oikein, niin ongelma on todennäköisesti siinä, että tiedosto on koodattu eri tavalla kuin sitä yritetään lukea. Jos ääkköset eivät toimi, voit yrittää kirjoittaa \cns{[utf8]} sijaan esim. \cns{[latin1]}, \cns{[ansinew]} tai \cns{[applemac]}. Paras olisi kuitenkin käyttää \cns{[utf8]}:aa ja yrittää saada editori tallentamaan tässä muodossa.
+            \item Paketti \cns{fontenc} ottaa käyttöön laajemmat fontit, jolloin esim. ä tulostetaan yhtenä merkkinä eikä niin, että merkit a ja \"{} kirjoitetaan päällekkäin. Tällöin vaikkapa tavutus ja pdf-haku saadaan toimimaan oikein.
+            \item Lopuksi \cns{babel} asettaa dokumentin kielen suomeksi ottamalla käyttöön suomalaiset tavutussäännöt ym.
         \end{itemize}
     \end{extra}
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj1_3}
 \end{frame}
+
 \begin{frame}[fragile]
-    Edellä mainitut paketit ovat esimerkkejä \textit{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
+    Edellä mainitut paketit ovat esimerkkejä \newterm{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
     \pause
     Matemaattista tekstiä varten on vielä syytä ottaa käyttöön muutama lisäpaketti. 
     \input{harj1_4}
-    \pause
-    Nämä sisältävät fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. Paketti \verb-amsmath- on ladattava ennen \verb-amsthm--pakettia.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Syntaksi eli ''kielioppi''}
     \LaTeX in toimintaa ohjataan komennoilla. \pause Niillä tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirretään kuvia, määritellään asetuksia jne.  \pause
     \begin{framed}
-        Komennot alkavat aina kenoviivalla \verb-\-
+        Komennot alkavat aina kenoviivalla \lstinline-\-
     \end{framed}
     \pause
     Komentoja voi tarvittaessa etsiä esimerkiksi oppaista \begin{scriptsize}
@@ -154,28 +159,31 @@
         \url{http://www.rri.res.in/~sanjib/latex/ltx-2.html}
     \end{scriptsize}
 \end{frame}
+
+
 \subsection{Syntaksi}
 \begin{frame}[fragile]
     \frametitle{Syntaksi}
     %Edellä on jo tutustuttu komentoihin \verb-\documentclass{}-, \verb-\begin{}...\end{}-, \verb-\usepackage[]{}- jne. Ne ovat esimerkkejä komennoista, jotka
-    Komennot tarvitsevat usein \textit{argumentin} (lisämääreen). \pause Se kirjoitetaan komennon perään
+    Komennot tarvitsevat usein \newterm{argumentin} (lisämääreen). \pause Se kirjoitetaan komennon perään
     \begin{itemize}[<+->]
-        \item aaltosulkuihin \verb-{}-, kun argumentti on pakollinen
-        \item hakasulkuihin \verb-[]-, kun argumentti on valinnainen
+        \item aaltosulkuihin \lstinline-{}-, kun argumentti on pakollinen
+        \item hakasulkuihin \lstinline-[]-, kun argumentti on valinnainen
             %\item Pakollinen argumentti on komennon perässä aaltosuluissa \verb-{}-
             %\item Valinnainen argumentti on komennon perässä hakasuluissa \verb-[]-
     \end{itemize}
     \pause
     Komennolla voi olla yksi tai useampi pakollinen argumentti ja lisäksi yksi tai useampi valinnainen argumentti. \pause Toisilla komennoilla ei ole ainuttakaan argumenttia.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Syntaksi}
     Esimerkiksi 
     \begin{itemize}[<+->]
-        \item Komennoilla \verb-\cup- ja \verb-\cap- ei ole yhtään argumenttia (joukkojen yhdiste ja leikkaus)
-        \item Komennolla \verb-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \LaTeX\ tulkitsee neliöjuureksi)
-        \item Komennolla \verb-\documentclass[]{}- on myös valinnainen argumentti, jolla voi valita mm. kirjain- ja paperikoon
-        \item Komennolla \verb-\frac{}{}- on kaksi pakollista argumenttia (murtoluvun osoittaja ja nimittäjä)
+        \item Komennoilla \lstinline-\cup- ja \lstinline-\cap- ei ole yhtään argumenttia (joukkojen yhdiste ja leikkaus)
+        \item Komennolla \lstinline-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \LaTeX\ tulkitsee neliöjuureksi)
+        \item Komennolla \lstinline-\documentclass[]{}- on myös valinnainen argumentti, jolla voi valita mm. kirjain- ja paperikoon
+        \item Komennolla \lstinline-\frac{}{}- on kaksi pakollista argumenttia (murtoluvun osoittaja ja nimittäjä)
     \end{itemize}
     %Komentoja ja niiden selityksiä voi etsiä esimerkiksi osoitteista
     %\begin{itemize}
@@ -185,29 +193,33 @@
     \pause
     Argumenttien järjestyksen ja määrän kanssa on oltava tarkka!
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Syntaksi}
     Muotoa 
-    \[
-    \verb-\begin{ympäristön nimi}-\dots \verb-\end{ympäristön nimi}-.
-    \]
-    olevilla komentopareilla käytetään ns. ympäristöjä. \pause Näitä voivat olla esimerkiksi lauseet, määritelmät, listat ja taulukot. \pause
+    \begin{lstlisting}
+\begin{ympäristön nimi}
+    ...
+\end{ympäristön nimi}<>
+    \end{lstlisting}
+    olevilla komentopareilla käytetään ns. \newterm{ympäristöjä}. \pause Näitä voivat olla esimerkiksi lauseet, määritelmät, listat ja taulukot. \pause
     \vaihto Ympäristölläkin voi olla nimen lisäksi muita pakollisia tai valinnaisia argumentteja, kuten tieto taulukon sarakkeiden lukumäärästä tai kuvan toivotusta sijainnista. \pause
     \vaihto
     Kurssin aikana opetellaan käyttämään muutamia tarpeellisia ympäristöjä ja luomaan omia komentoja.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Erikoismerkeistä}
     Jotkin erikoismerkit on varattu \LaTeX in käyttöön:
     \begin{itemize}[<+->]
-        \item \verb-%- aloittaa kommenttirivin
-        \item \verb-$- aloittaa ja lopettaa tavallisen matematiikkatilan
-        \item \verb-\- aloittaa komennon (komento \verb-\\- katkaisee rivin)
-        \item \verb-&- on käytössä kun rivejä järjestetään kohdakkain
-        \item \verb-{- ja \verb-}- ovat komennon argumentin ympärille tulevat merkit
+        \item \lstinline-%- aloittaa kommenttirivin
+        \item \lstinline-$- aloittaa ja lopettaa tavallisen matematiikkatilan
+        \item \lstinline-\- aloittaa komennon (komento \lstinline-\\- katkaisee rivin)
+        \item \lstinline-&- on käytössä kun rivejä järjestetään kohdakkain
+        \item \lstinline-{- ja \lstinline-}- ovat komennon argumentin ympärille tulevat merkit
     \end{itemize}\pause
     Jotta erikoismerkin saisi näkyviin lopullisessa työssä, on käytettävä komentoa:
-    \begin{table}[h!]
+    \begin{table}[H]
         \begin{tabular}{ccc}
             Komento & & Tulostus\\
             \hline
@@ -220,18 +232,20 @@
         \end{tabular}
     \end{table}
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj1_5}
     \input{harj1_6}
 \end{frame}
+
 \begin{frame}
     \frametitle{Virheilmoitukset}
     Tiedoston ajamisen jälkeen Texmakerin alareunaan saattaa ilmestyä sinisiä ja punaisia viestejä.\pause
     \begin{itemize}[<+->]
-        \item Siniset viestit ovat varoituksia ulkonäöllisista seikoista
-        \item Punaiset viestit ovat kääntämisen estäviä virheitä
+        \item \textcolor{blue}{Siniset} viestit ovat varoituksia ulkonäöllisista seikoista
+        \item \textcolor{red}{Punaiset} viestit ovat kääntämisen estäviä virheitä
     \end{itemize}\pause
-    Punaisten virheilmoitusten kanssa on pakko olla tarkka - virheet tulee korjata heti. 
+    Punaisten virheilmoitusten kanssa on pakko olla tarkka -- virheet tulee korjata heti!
     \vaihto
     \pause
     Virheilmoituksesta on pääteltävissä jotain sattuneesta virheestä, mutta tämä vaatii totuttelua. 
@@ -239,29 +253,35 @@
     \vaihto
     \pause Virheilmoituksia saattaa tulla valtavasti vaikka kyse olisi yksittäisestä ongelmasta!
 \end{frame}
+
+
 \subsection{Otsikot ja korostukset}
 \begin{frame}[fragile]
     \frametitle{Otsikot}
     Teksti jäsennetään ja otsikoidaan komennoilla 
     \begin{itemize}[<+->]
-        \item \verb-\chapter{otsikko}- (vain luokissa book ja report)
-        \item \verb-\section{otsikko}- (article-luokan karkein jako)
-        \item \verb-\subsection{otsikko}-
-        \item \verb-\subsubsection{otsikko}- jne.
+        \item \lstinline-\part{otsikko}-
+        \item \lstinline-\chapter{otsikko}- (vain luokissa \cns{book} ja \cns{report})
+        \item \lstinline-\section{otsikko}-
+        \item \lstinline-\subsection{otsikko}-
+        \item \lstinline-\subsubsection{otsikko}-
+        \item \lstinline-\paragraph{otsikko}-
+        \item \lstinline-\subparagraph{otsikko}-
     \end{itemize} \pause
     %Dokumenttiluokissa \verb-report- ja \verb-book- on käytössä myös \verb-\chapter-, alilukunaan \verb-\section- jne.
-    Otsikot numeroidaan automaattisesti. \pause Numeroinnin saa pois lisäämällä merkin \verb-*- komennon perään, siis esimerkiksi 
-    \[
-        \verb-\section*{numeroimaton otsikko}-.
-    \]
+    Neljän karkeimman tason otsikot numeroidaan automaattisesti. \pause Numeroinnin saa pois lisäämällä merkin \lstinline-*- komennon perään, siis esimerkiksi 
+    \begin{lstlisting}
+\section*{numeroimaton otsikko}<>
+    \end{lstlisting}
 \end{frame}
+
 \begin{frame}
     \input{harj1_7}
-    Tee ensimmäisen kerran harjoitukset ensimmäiseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Tekstin muokkaaminen}
-    Tekstieditorissa eli Texmaker-ohjelmassa käytetty fontti tai tekstin suuruus eivät vaikuta lopulliseen työhön, vaan kaikki ulkoasulliset muutokset on tehtävä komennoilla. (Isot/pienet kirjaimet toimivat kuitenkin sellaisenaan.)
+    Tekstieditorissa eli Texmaker-ohjelmassa käytetty fontti tai tekstin suuruus eivät vaikuta lopulliseen työhön, vaan kaikki ulkoasulliset muutokset on tehtävä komennoilla.% (Isot/pienet kirjaimet toimivat kuitenkin sellaisenaan.)
     \vaihto\pause
     Erityisesti kannattaa huomata, että tekstiä kirjoittaessa
     \begin{itemize}[<+->]
@@ -270,9 +290,10 @@
         \item tyhjä rivi (yksi tai useampi) aloittaa uuden kappaleen
     \end{itemize}
     \pause
-    Erikokoisia välilyöntejä varten on omia komentojaan, kuten esimerkiksi \verb-\,-, \verb-\quad- ja \verb-\qquad-.
-    \vaihto\pause Pystysuunnassa tyhjää tilaa saa komennolla \verb-\vspace{mitta}-, jossa mitta annetaan esim. pisteinä (pt, n. 0{,}35 mm) tai senttimetreinä (cm). 
+    Erikokoisia välilyöntejä varten on omia komentojaan, kuten esimerkiksi \lstinline-\,- , \lstinline-\quad- ja \lstinline-\qquad-.
+    \vaihto\pause Pystysuunnassa tyhjää tilaa saa sanomalla esim. \lstinline-\vspace{2.5cm}-. Yhden tyhjän rivin saa komennolla \lstinline-\vspace{\baselineskip}-.
 \end{frame}
+
 %\begin{frame}[fragile]
 %\frametitle{Tekstin muokkaaminen}
 %Koodin sekaan voi kirjoittaa ns. kommenttirivejä, joita ei huomioida käännettäessä eikä siis näytetä lopullisessa työssä. Kommentti alkaa merkillä \verb-%- ja päättyy rivinvaihtoon. Kommentointi kannattaa!
@@ -281,36 +302,42 @@
 %\vaihto
 %
 %\end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Tekstin muokkaaminen}
-    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \verb-\huge-, \verb-\tiny-, ja \verb-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
+    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
     \vaihto\pause
-    Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \verb-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \verb-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \verb-\underline{alleviivattava teksti}-. Alleviivaus rikkoo tavutuksen ym., joten ahkeran alleviivaajan kannattaa tutustua esim. \verb-ulem--pakettiin.
+    Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \lstinline-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \lstinline-\underline{alleviivattava teksti}-. Alleviivaus rikkoo tavutuksen ym., joten ahkeran alleviivaajan kannattaa tutustua esim. \cns{ulem}-pakettiin.
     \vaihto\pause
-    Sanojen korostamiseen kannattaa kuitenkin käyttää komentoa \verb-\emph{korostettava teksti}-, joka kursivoi tai lihavoi tarpeen mukaan!
+    Sanojen korostamiseen kannattaa kuitenkin käyttää komentoa \verb-\emph{korostettava teksti}-, joka muuttaa fontin sopivaksi kontekstin perusteella!
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Tekstin muokkaaminen}
     Tekstin keskittäminen onnistuu ympäristön \verb-center- avulla:
-    \[
-    \verb-\begin{center}...keskitetty teksti...\end{center}-
-    \]
+    \begin{lstlisting}
+\begin{center}
+    ...keskitetty teksti...
+\end{center}<>
+    \end{lstlisting}
     Tällä tavoin keskitetyn tekstin ylä- ja alapuolelle jää hieman tyhjää tilaa. \vaihto\pause
-    Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \verb-flushright- ja \verb-flushleft-.
+    Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \cns{flushright} ja \cns{flushleft}.
+
 \end{frame}
 \begin{frame}
     \input{harj1_8}
 \end{frame}
+
+
 \subsection{Matemaattinen teksti}
 \begin{frame}[fragile]
     \frametitle{Matematiikkatila}
-    \pause
-    Matemaattisia ilmaisuja saa tekstin sekaan käyttämällä komentoja \verb+\(+  
-    ja \verb+\)+. \pause Esimerkiksi rivi
-    \begin{Verbatim}[frame=single]
+    Matemaattisia ilmaisuja saa tekstin sekaan käyttämällä komentoja \lstinline+\(+  
+    ja \lstinline+\)+. \pause Esimerkiksi rivi
+    \begin{lstlisting}
 Yhtälöt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat 
-samanaikaisesti tasan kahdessa tason pisteessä.
-    \end{Verbatim}
+samanaikaisesti tasan kahdessa tason pisteessä.<>
+    \end{lstlisting}
     \pause
     tulostuu riviksi 
     \begin{sample}
@@ -328,46 +355,42 @@ samanaikaisesti tasan kahdessa tason pisteessä.
     %\]
     %yhtälön \(x^3+\sqrt{2}x^2+1=0\). \pause Tätä kutsutaan matematiikkatilaksi.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj1_9}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kaavarivi}
-    Kun matemaattinen ilmaisu halutaan yksinkertaisesti omalle kaavarivilleen, se kirjoitetaan merkkien \verb-\[- ja \verb-\]- väliin.
+    Kun matemaattinen ilmaisu halutaan yksinkertaisesti omalle kaavarivilleen, se kirjoitetaan komentojen \lstinline-\[- ja \lstinline-\]- väliin.
     \pause
     Esimerkiksi 
-    \begin{footnotesize}
-        \begin{Verbatim}[frame=single]
-Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
+    \begin{lstlisting}
+Toisen asteen yhtälön \(ax^2 + bx + c = 0\) ratkaisu
+saadaan kaavasta
 \[
-    x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
-\]
-        \end{Verbatim} 
-    \end{footnotesize}
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+\]<>
+    \end{lstlisting}
     tuottaa seuraavanlaisen esityksen:
     \pause
     \begin{sample}
-        Toisen asteen yhtälön \(ax^2+bx+c=0\)
+        Toisen asteen yhtälön \(ax^2 + bx + c = 0\)
         ratkaisu saadaan kaavasta
         \[
-            x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+            x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
         \]
     \end{sample}
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj1_10}
-    \begin{itemize}
-        \item Kaksoispisteen paikalla kannattaa käyttää komentoa \verb-\colon-
-        \item Reaalilukujen joukon symbolin saat komennolla \verb-\mathbb{R}-
-        \item Tähän yhteyteen oikeanlaisen nuolen saat komennolla \verb-\to-
-        \item Relaatio \(\in\) tulostuu komennolla \verb-\in-
-        \item Raja-arvo-operaattorin saat komennolla \verb-\lim_{alaindeksi}-.
-            %\item Osamäärän saat komennolla \verb-\frac{osoittaja}{nimittäjä}-
-    \end{itemize}
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj1_11}
 \end{frame}
+
 \begin{frame}[fragile]
     Yleisimpiä matemaattisia symboleita löytää Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niitä voi etsiä esim. seuraavista osoitteista:
     \begin{scriptsize}
@@ -380,27 +403,31 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
 
 \end{frame}
 
+
+
 \section{2. kerta}
+
+
 \subsection{Matemaattinen teksti}
 \begin{frame}[fragile]
     \frametitle{Sulut}
-    Varsinkin kaavariville kirjoitettaessa monet symbolit ovat huomattavan kookkaita. Sulut tulostuvat automaattisesti oikean kokoisina kun niille käytetään komentoja pelkkien merkkien \verb-(- ja \verb-)- sijaan. \vaihto
+    Varsinkin kaavariville kirjoitettaessa monet symbolit ovat huomattavan kookkaita. Sulut tulostuvat automaattisesti oikean kokoisina kun niille käytetään komentoja pelkkien merkkien \lstinline-(- ja \lstinline-)- sijaan. \vaihto
     \begin{tabular}{cc|cc}
         %\multicolumn{2}{c}{Vasen}&\multicolumn{2}{c}{Oikea}\\
         Komento & Tulostus & Komento & Tulostus\\
         \hline
-        \verb-\left(- & \(\left(\right.\) & \verb-\right)-& \(\left.\right)\)\\
-        \verb-\left[- & \(\left[\right.\) & \verb-\right]-& \(\left.\right]\)\\
-        \verb-\left\lbrace- & \(\left\lbrace\right.\) & \verb-\right\rbrace- & \(\left.\right\rbrace\)\\
-        \verb-\left\langle- & \(\left\langle\right.\) & \verb-\right\rangle- & \(\left.\right\rangle\)\\
-        \verb-\left|- & \(\left|\right.\) & \verb-\right|- & \(\left.\right|\)\\
+        \lstinline-\left(- & \(\left(\right.\) & \lstinline-\right)-& \(\left.\right)\)\\
+        \lstinline-\left[- & \(\left[\right.\) & \lstinline-\right]-& \(\left.\right]\)\\
+        \lstinline-\left\lbrace- & \(\left\lbrace\right.\) & \lstinline-\right\rbrace- & \(\left.\right\rbrace\)\\
+        \lstinline-\left\langle- & \(\left\langle\right.\) & \lstinline-\right\rangle- & \(\left.\right\rangle\)\\
+        \lstinline-\left|- & \(\left|\right.\) & \lstinline-\right|- & \(\left.\right|\)\\
     \end{tabular}
     \vaihto
-    Jokaista \verb-\left--alkuista komentoa täytyy seurata \verb-\right--alkuinen komento, vähintään \verb-\right.-, joka ei tulosta mitään. Samoin \verb-\right--alkuista komentoa on edellettävä \verb-\left--alkuinen komento, vähintään \verb-\left.-. 
+    Jokaista \lstinline-\left--alkuista komentoa täytyy seurata \lstinline-\right--alkuinen komento, vähintään \lstinline-\right.- , joka ei tulosta mitään. Samoin \lstinline-\right--alkuista komentoa on edellettävä \lstinline-\left--alkuinen komento, vähintään \lstinline-\left.- . 
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj2_13}
-    Komennolla \verb-\middle|- saat pystyviivan automaattisesti oikean kokoisena ja komennolla \verb-\,- hieman ylimääräistä väliä niiden ympärille. Tehtävästä \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
 \end{frame}
 \begin{frame}[fragile]
     \input{harj2_14}
@@ -410,51 +437,55 @@ Toisen asteen yhtälön \(ax^2+bx+c=0\) ratkaisu saadaan kaavasta
     \frametitle{Vanhoja tapoja}
 
     \begin{itemize}[<+->]
-        \item \emph{Vanha \TeX-tapa} kirjoittaa kaava tekstin sekaan on \verb-$kaava$-, esim.
-            \begin{Verbatim}[frame=single]
-Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.
-            \end{Verbatim}
-        \item Tätä käytetään paljon myös \LaTeX{}issa, mutta se rikkoo joitain paketteja ja voi tehdä virheilmoituksista entistä kryptisempiä.
-        \item Käännöksissä tuleva virheilmoitus ''\texttt{Missing \$ inserted.}'' tulee tästä:
-        \item Se tarkoittaa, että kirjoitit matematiikkaa ei-matematiikkatilassa tai ei-matematiikkaa matematiikkatilassa. \LaTeX{} (tarkemmin sanottuna \TeX{}) huomasi tämän ja yritti (sisäisesti) korjata asian.
-        \item Korjaa virhe esim. lisäämällä puuttuva \verb-\)-; älä lisää \verb-$--merkkejä.
-        \item \TeX-tapa kaavarivin tuottamiseen taas on \verb-$$kaava$$-, joka rikkoo vielä enemmän asioita. {\color{red}Sitä ei pitäisi \LaTeX{}issa käyttää ollenkaan!}
-    \end{itemize}
+        \item \emph{Vanha \TeX-tapa} kirjoittaa kaava tekstin sekaan on \lstinline-$kaava$-:
+            \begin{lstlisting}
+Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
+            \end{lstlisting}
+        \item Käännöksissä tuleva virheilmoitus ''\texttt{Missing \$ inserted.}'' tulee tästä -- se tarkoittaa, että yritit kirjoittaa joko 
+            \begin{itemize}
+                \item matematiikkaa kuten \lstinline-\frac{}{}- olematta matematiikkatilassa tai
+                \item ei-matematiikkaa kuten \lstinline-\section{}- matematiikkatilassa.
+            \end{itemize}
 
+        \item Todennäköisesti joko unohdit aloittaa tai lopettaa matematiikkatilan tai olet tehnyt jomman kumman vahingossa.
+        \item Korjaa virhe esim. lisäämällä puuttuva \verb-\)- -- älä lisää dollareita.
+        \item \TeX-tapa kaavarivin tuottamiseen on \verb-$$kaava$$-. \alert{Sitä ei pitäisi \LaTeX{}issa käyttää ollenkaan}, vaikka jotkut niin tekevätkin\dots
+    \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Pitkät kaavat}
-    Toisinaan matemaattiset ilmaisut ovat niin pitkiä, etteivät ne mahdu yhdelle riville. Tällöin voidaan käyttää esimerkiksi ympäristöä \verb-align*-, jolla rivit saadaan allekkain seuraavasti:
+    Toisinaan matemaattiset ilmaisut ovat niin pitkiä, etteivät ne mahdu yhdelle riville. Tällöin voidaan käyttää esimerkiksi ympäristöä \cns{align*}, jolla rivit saadaan allekkain seuraavasti:
 
     \begin{minipage}{4cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+        \begin{lstlisting} 
 \begin{align*}
     xyz &= abc\\
         &= bca\\
-        &= cab\\
-\end{align*}
-            \end{Verbatim}
-        \end{scriptsize}
+      w &= cab
+\end{align*}<>
+        \end{lstlisting}
     \end{minipage}
     \begin{minipage}{4cm}
-        \begin{align*}
-            xyz &= abc\\
-                       &= bca\\
-                              &= cab\\
-        \end{align*}
+        \begin{serif}
+            \begin{align*}
+                xyz &= abc\\
+                    &= bca\\
+                  w &= cab
+            \end{align*}
+        \end{serif}
     \end{minipage}
 
-    Huomaa, ettei \verb-align*--ympäristöä tarvitse erikseen sijoittaa matematiikkatilaan.
+    Huomaa, ettei \cns{align*}-ympäristöä tarvitse erikseen sijoittaa matematiikkatilaan.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Pitkät kaavat}
-    Ympäristölle \Verb-align*- rivin katkaisukohta kerrotaan komennolla \verb-\\- ja tasauskohta merkillä \verb-&-. Katkaisukohta täytyy löytyä kaikilta, paitsi viimeiseltä riviltä. Sen sijaan tasauskohdan täytyy löytyä jokaiselta riviltä!
+    Ympäristölle \cns{align*} rivin katkaisukohta kerrotaan komennolla \lstinline-\\- ja tasauskohta merkillä \lstinline-&-. Katkaisukohta täytyy löytyä kaikilta, paitsi viimeiseltä riviltä. Sen sijaan tasauskohdan täytyy löytyä jokaiselta riviltä!
     \vaihto
-    Pitkille kaavoille voi vaihtoehtoisesti käyttää ympäristöä \verb-multline*-, jolle kerrotaan vain rivien katkaisukohdat. Se asettelee rivit automaattisesti (yleensä vähän epämääräisesti).
+    Pitkille kaavoille voi vaihtoehtoisesti käyttää ympäristöä \cns{multline*}, jolle kerrotaan vain rivien katkaisukohdat. Se asettelee rivit automaattisesti (yleensä vähän epämääräisesti).
     \vaihto
-    Myös tähdettömiä ympäristöjä \verb-align- ja \verb-multline- voi käyttää, jolloin jokainen rivi tulee numeroiduksi.
+    Myös tähdettömiä ympäristöjä \cns{align} ja \cns{multline} voi käyttää, jolloin jokainen rivi tulee numeroiduksi.
     %\begin{minipage}{3cm}
     %\begin{scriptsize}
     %\begin{Verbatim}[frame=single]
@@ -482,6 +513,7 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.
     %\end{align*}
     %\end{minipage}
 \end{frame}
+
 %\begin{frame}[fragile]
 %Esimerkiksi komennolla
 %\begin{scriptsize}
@@ -504,6 +536,7 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.
 %\end{align*}
 %
 %\end{frame}
+
 \begin{frame}[fragile]
     %Seuraavassa pohja \verb-align*--ympäristön käyttämistä varten:
     %\vaihto
@@ -521,21 +554,19 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.
     \input{harj2_15}
     \input{harj2_16}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Numeroidut kaavat}
-Komennolla \verb-\begin{equation}...\end{equation}- saa luotua samanlaisen kaavarivin kuin komennolla \verb-\[...\]-, mutta numeroinnilla varustettuna. \pause Esimerkiksi
+Komennolla \lstinline-\begin{equation}...\end{equation}- saa luotua samanlaisen kaavarivin kuin komennolla \lstinline-\[...\]-, mutta numeroinnilla varustettuna. \pause Esimerkiksi
 
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
+    \begin{lstlisting}
 Einsteinin yhtälöön
 \begin{equation}
     E=mc^2
 \end{equation}
-viitataan myöhemmin.
-        \end{Verbatim}
-    \end{scriptsize}
-
-    tuottaa seuraavan rivin:
+viitataan myöhemmin.<>
+    \end{lstlisting}
+    tuottaa seuraavan:
     \begin{sample}
         Einsteinin yhtälöön
         \begin{equation*}
@@ -546,27 +577,29 @@ viitataan myöhemmin.
     \pause
     Numeroituihin kaavoihin viittaamiseen palataan tuonnempana.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj2_17}
 \end{frame}
-%\section{2. kerta}
+
+
 \subsection{Lauseympäristö}
 \begin{frame}[fragile]
     \frametitle{Lauseympäristö}
-    Paketti amsthm tarjoaa mahdollisuuden esittää mm. lauseet, lemmat ja määritelmät tyylikkäästi. 
+    Paketti \cns{amsthm} tarjoaa mahdollisuuden esittää mm. lauseet, lemmat ja määritelmät tyylikkäästi. 
     \vaihto
-    Tarvittavat ympäristöt määritellään esittelyosassa komennolla \verb-\newtheorem{}{}-. Ensimmäisiin aaltosulkeisiin tulee nimi, jolla ympäristöä käytetään ja jälkimmäisiin ympäristön otsikko, joka halutaan näkyväksi lopullisessa työssä.
+    Tarvittavat ympäristöt määritellään esittelyosassa komennolla \lstinline-\newtheorem{}{}-. Ensimmäisiin aaltosulkeisiin tulee nimi, jolla ympäristöä käytetään ja jälkimmäisiin ympäristön otsikko, joka halutaan näkyväksi lopullisessa työssä.
     \vaihto
-Komento \verb-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käytettäisiin komennolla \verb-\begin{esim}...\end{esim}- ja jonka otsikko valmiissa työssä olisi Esimerkki. 
+Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käytettäisiin komennolla \lstinline-\begin{esim}...\end{esim}- ja jonka otsikko valmiissa työssä olisi Esimerkki. 
     %\begin{Verbatim}[frame=single]
     %\newtheorem{esim}{Esimerkki}
     %\newtheorem{lause}{Lause}
     %\newtheorem{maar}{Määritelmä}
     %\end{Verbatim}
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj2_18}
-Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoilla \verb-\begin{proof}...\end{proof}-
     \input{harj2_19}
     %Esimerkiksi rivi
     %\begin{Verbatim}[frame=single]
@@ -583,6 +616,7 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     %\end{framed}
     %Jos ympäristöä \verb-esim- ei ole määritelty esittelyosassa, tämä aiheuttaa virheen!
 \end{frame}
+
 %\begin{frame}[fragile]
 %\pause
 %Vastaavasti esimerkiksi komento
@@ -601,43 +635,48 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
 %\pause
 %Kokeile, miltä nämä näyttävät omassa työssäsi.
 %\end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Lauseympäristön tyyli}
-    Lauseympäristön tyyli valitaan esittelyosassa komennolla \verb-\theoremstyle{...}-. Valittavissa on tyylit \verb-plain-, \verb-definition- ja \verb-remark-. Tyylin valinta vaikuttaa sitä seuraaviin komennolla \verb-\newtheorem{}{}- luotuihin ympäristöihin.
+    Lauseympäristön tyyli valitaan esittelyosassa komennolla \lstinline-\theoremstyle{...}-. Valittavissa on tyylit \cns{plain}, \cns{definition} ja \cns{remark}. Tyylin valinta vaikuttaa sitä seuraaviin komennolla \lstinline-\newtheorem{}{}- luotuihin ympäristöihin.
     \vaihto
     Esimerkiksi kirjoittamalla
     \pause
-    \begin{Verbatim}[frame=single]
+    \begin{lstlisting}
 \theoremstyle{plain}
 \newtheorem{lemma}{Lemma}
 \newtheorem{lause}{Lause}
+
 \theoremstyle{definition}
-\newtheorem{maar}{Määritelmä}
-    \end{Verbatim}
+\newtheorem{maar}{Määritelmä}<>
+    \end{lstlisting}
     \pause
-    ympäristöt \verb-lemma- ja \verb-lause- tulostuvat plain-tyylin mukaisesti ja ympäristö \verb-maar- definition-tyylin mukaisesti.
+    ympäristöt \cns{lemma} ja \cns{lause} tulostuvat \cns{plain}-tyylin mukaisesti ja ympäristö \cns{maar} \cns{definition}-tyylin mukaisesti.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj2_20}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Lauseympäristöjen numerointi}
-    Komennolla \verb-\newtheorem{}{}- luotu ympäristö luo samalla uuden \emph{laskurin}, jonka mukaan ympäristön toteutumat numeroidaan. 
+    Komennolla \lstinline-\newtheorem{}{}- luotu ympäristö luo samalla uuden \newterm{laskurin}, jonka mukaan ympäristön toteutumat numeroidaan. 
     \vaihto
-    Laskuri voidaan myös asettaa toiselle laskurille \emph{alisteiseksi} tai valita mielivaltaisesti. Erityisesti eri ympäristöt voivat käyttää samaa laskuria, jos niin halutaan.
+    Laskuri voidaan myös asettaa toiselle laskurille \newterm{alisteiseksi} tai valita mielivaltaisesti. Erityisesti eri ympäristöt voivat käyttää samaa laskuria, jos niin halutaan.
     \vaihto
-    Komennolla \verb-\newtheorem{}{}[]- on valinnaisena argumenttina laskuri, jolle ympäristön numerointi halutaan alisteiseksi. Tämä voisi olla esim. laskuri \verb-section-, jolloin ympäristö numeroitaisiin muodossa ''osionNumero.ympäristönNumero''.
+    Komennolla \lstinline-\newtheorem{}{}[]- on valinnaisena argumenttina laskuri, jolle ympäristön numerointi halutaan alisteiseksi. Tämä voisi olla esim. laskuri \cns{section}, jolloin ympäristö numeroitaisiin muodossa ''osionNumero.ympäristönNumero''.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Lauseympäristöjen numerointi}
-    Jos ympäristön halutaan käyttävän jotain tiettyä laskuria, käytetään komentoa \verb-\newtheorem{}[laskurin nimi]{}-. Huomaa, että tässä valinnainen argumentti sijoittuu pakollisten väliin. 
+    Jos ympäristön halutaan käyttävän jotain tiettyä laskuria, käytetään komentoa \lstinline-\newtheorem{}[laskurin nimi]{}-. Huomaa, että tässä valinnainen argumentti sijoittuu pakollisten väliin. 
     \vaihto
     Esimerkiksi koodilla
-    \begin{Verbatim}[frame=single]
+    \begin{lstlisting}
 \newtheorem{teor}{Teoreema}[section]
-\newtheorem{lemma}[teor]{Lemma}
-    \end{Verbatim}
-    luodut Lemma- ja Teoreema-ympäristöt noudattavat samaa, laskurille \verb-section- alisteista numerointia.
+\newtheorem{lemma}[teor]{Lemma}<>
+    \end{lstlisting}
+    luodut Lemma- ja Teoreema-ympäristöt noudattavat samaa, laskurille \cns{section} alisteista numerointia.
     %\begin{framed}
     %\setcounter{laskuri}{0}
     %\begin{trma}
@@ -648,57 +687,64 @@ Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoil
     %\end{prop}
     %\end{framed}
 \end{frame}
+
 \begin{frame}[fragile]
-    Kokonaan numeroimattoman lauseympäristön voi luoda komennolla \verb-\newtheorem*{}{}-.
+    Kokonaan numeroimattoman lauseympäristön voi luoda komennolla \lstinline-\newtheorem*{}{}-.
     \input{harj2_21}
     \input{harj2_22}
 \end{frame}
+
+
 \subsection{Sisäiset viittaukset}
 \begin{frame}[fragile]
     \frametitle{Sisäiset viittaukset}
-    \LaTeX illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yhtälöihin. Viitattava kohde täytyy ensin nimetä komennolla \verb-\label{nimi}- (nimi ei tulostu työhön). Tämän jälkeen viittaaminen onnistuu komennoilla 
+    \LaTeX illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yhtälöihin. Viitattava kohde täytyy ensin nimetä komennolla \lstinline-\label{nimi}- (nimi ei tulostu työhön). Tämän jälkeen viittaaminen onnistuu komennoilla 
     \begin{itemize}
-        \item \verb-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
-        \item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sisällä)
-        \item \verb-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
+        \item \lstinline-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
+        \item \lstinline-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sisällä)
+        \item \lstinline-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
     \end{itemize}
     Sisäisten viittausten kanssa tulee aina käyttää komentoja. Tällöin viittaukset pysyvät kohdallaan vaikka numeroinnit muuttuisivat työn edetessä.
 \end{frame}
+
 \begin{frame}[fragile]
     Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
     \begin{extra}
-        Jos \LaTeX-tiedoston nimi on \verb-nimi.tex-, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \verb-nimi.aux-, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
+        Jos \LaTeX-tiedoston nimi on \cns{nimi.tex}, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \cns{nimi.aux}, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
     \end{extra}
     \input{harj2_23}
 \end{frame}
+
+
 \subsection{Listarakenteet}
 \begin{frame}[fragile]
     \frametitle{Listarakenteet}
-    \LaTeX illa voi luoda listoja mm. ympäristöjen \verb-itemize- ja \verb-enumerate- avulla. Ensimmäinen on ranskalaiset viivat-tyyppinen, jälkimmäinen numeroi listan jäsenet. Näitä käytetään seuraavasti:
+    \LaTeX illa voi luoda listoja mm. ympäristöjen \cns{itemize} ja \cns{enumerate} avulla. Ensimmäinen on ranskalaiset viivat-tyyppinen, jälkimmäinen numeroi listan jäsenet. Näitä käytetään seuraavasti:
     \vaihto
-    \begin{minipage}{4cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+    \begin{minipage}{5cm}
+        \begin{lstlisting}
 Tässä listani:
 \begin{itemize}
     \item asia
     \item toinen asia
     \item kolmas asia
-\end{itemize}
-            \end{Verbatim}
-        \end{scriptsize}
+\end{itemize}<>
+        \end{lstlisting}
     \end{minipage}
-    \begin{minipage}{4cm}
-        Tässä listani:
-        \begin{itemize}
-            \item asia
-            \item toinen asia
-            \item kolmas asia
-        \end{itemize}
+    \begin{minipage}{5cm}
+        \begin{serif}
+            Tässä listani:
+            \begin{itemize}
+                \item[\textcolor{black}{\textbullet}] asia
+                \item[\textcolor{black}{\textbullet}] toinen asia
+                \item[\textcolor{black}{\textbullet}] kolmas asia
+            \end{itemize}
+        \end{serif}
     \end{minipage}
     \vaihto
     Luettelointiin käytetyt symbolit voi tarvittaessa valita vapaasti. 
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Listat}
     Seuraavassa tehtävässä harjoitellaan sisäkkäisten listojen käyttöä.
@@ -706,45 +752,53 @@ Tässä listani:
     \input{harj2_25}
     %Listaukseen käytettäviin symboleihin voi itse vaikuttaa. Opetellaan myöhemmin laskareissa usein käytettävä aakkostettu lista.
 \end{frame}
+
+
 \subsection{Omat komennot}
 \begin{frame}[fragile]
     \frametitle{Omat komennot}
     %\LaTeX in käyttämistä helpottaa se, että kaikki on koodattavissa komennoiksi. 
     %Esimerkiksi olisi raskasta kirjoittaa jokainen ristitulon merkki pikseli pikseliltä, joten tälle kannattaa luoda oma komentonsa, jolla asia hoituu automaattisesti.
-    Omia komentoja luodaan esittelyosassa komennolla \verb-\newcommand{}{}-. Ensimmäinen argumentti on komennon nimi, toiseksi argumentiksi tulee komennon sisältö. Esimerkiksi
-    \begin{Verbatim}[frame=single]
-\newcommand{\R}{\mathbb{R}}
-    \end{Verbatim}
-    luo komennon \verb-\R-, joka tulostaa matematiikkatilassa symbolin \(\R\). Komennon luomisen jälkeen kyseisen symbolin tuottaminen onnistuu helposti.
+    Omia komentoja luodaan esittelyosassa komennolla \lstinline-\newcommand{}{}-. Ensimmäinen argumentti on komennon nimi, toiseksi argumentiksi tulee komennon sisältö. Esimerkiksi
+    \begin{lstlisting}
+\newcommand{\R}{\mathbb{R}}<>
+    \end{lstlisting}
+    luo komennon \lstinline-\R-, joka tulostaa matematiikkatilassa symbolin \(\R\). Komennon luomisen jälkeen kyseisen symbolin tuottaminen onnistuu helposti.
     \vaihto
     Omia komentoja luomalla voit yksinkertaistaa ja helpottaa omaa työtäsi. Jo parikin kertaa toistuva komentojen ketju kannattaa määritellä esittelyosassa yhdeksi yksinkertaiseksi komennoksi.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj2_26}
-    Osajoukkorelaation saat komennolla \verb-\subset-. Kokeile myös, mitä komennot \verb-\subseteq-, \verb-\subsetneq- ja  \verb-\supset- tuottavat. Miten saisit symbolit \(\supsetneq\) ja  \(\supseteq\)? Entä symbolin \(\not\subset\)? Kirjoita työhösi vielä seuraava: \(\Z\not\subset\N\).
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Omat komennot}
-    Komennolla \verb-\newcommand{}[]{}- on valinnaisena argumenttina luotavan komennon argumenttien lukumäärä. Esimerkiksi
-    \verb-\newcommand{\set}[1]{ \left\lbrace #1 \right\rbrace }- loisi komennon \verb-\set{}-, jolla voisi tuottaa joukkomerkinnän. 
+    Komennolla \lstinline-\newcommand{}[]{}- on valinnaisena argumenttina luotavan komennon argumenttien lukumäärä. Esimerkiksi
+    \begin{lstlisting}
+\newcommand{\set}[1]{ \left\lbrace #1 \right\rbrace }<>
+    \end{lstlisting}
+    loisi komennon \lstinline-\set{}-, jolla voisi tuottaa joukkomerkinnän. 
     \vaihto
-    \begin{minipage}{4.2cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
-Toisinaan 
+    \begin{minipage}{5.3cm}
+        \begin{lstlisting}
+Yleensä
 \(
-    \N=\set{0,1,2,3,\dots}
-\)
-            \end{Verbatim}
-        \end{scriptsize}
+ \N = \set{0,1,2,3,\dots}
+\)<>
+        \end{lstlisting}
     \end{minipage}
-    \begin{minipage}{6cm}\fontfamily{lmr}\selectfont
-        Toisinaan 
-        \(
-        \N=\set{0,1,2,3,\dots}
-        \)
+    \begin{minipage}{4.7cm}
+        \begin{serif}
+            Yleensä
+            \(
+                \N = \set{0,1,2,3,\dots}
+            \)
+        \end{serif}
     \end{minipage}
+    \pause
+    \vaihto
+    Komennon \lstinline-\newcommand{}{}- käyttäminen aiheuttaa konfliktin, jos samanniminen komento on jo käytössä. Tällöin kannattaa nimetä oma komentonsa toisin. 
     %
 %\verb-\newcommand{\komento}[2]{...}- loisi komennon, jota käytettäisiin muodossa \verb-\komento{}{}-. 
     %
@@ -759,68 +813,70 @@ Toisinaan
     %\end{scriptsize}
 %luo komennon \verb-\bino-, jolla on kolme argumenttia: komento \verb-\bino{n}{p}{k}- tuottaa binomitodennäköisyyden kaavan \[\bino{n}{p}{k}.\]
 \end{frame}
-\begin{frame}[fragile]
-    \frametitle{Omat komennot}
-    Komennon \verb-\newcommand{}{}- käyttäminen aiheuttaa konfliktin, jos samanniminen komento on jo käytössä. Tällöin kannattaa nimetä oma komentonsa toisin. 
-    \vaihto
-    \begin{extra}
-        Jos välttämättä haluaa korvata valmiin komennon omallaan, voi käyttää komentoa \verb-\renewcommand{}{}-. Tämä on joskus tarpeen, mutta saattaa sotkea pahasti asioita!
-    \end{extra}
-\end{frame}
+
+%\begin{frame}[fragile]
+%    \frametitle{Omat komennot}
+%    Komennon \lstinline-\newcommand{}{}- käyttäminen aiheuttaa konfliktin, jos samanniminen komento on jo käytössä. Tällöin kannattaa nimetä oma komentonsa toisin. 
+%    \vaihto
+%    \begin{extra}
+%        Jos välttämättä haluaa korvata valmiin komennon omallaan, voi käyttää komentoa \verb-\renewcommand{}{}-. Tämä on joskus tarpeen, mutta saattaa sotkea pahasti asioita!
+%    \end{extra}
+%\end{frame}
+
 \begin{frame}[fragile]
     \input{harj2_27}
 \end{frame}
 
+
+
 \section{3. kerta}
+
+
 \subsection{Kuvat}
+
 \subsubsection{Kuvien liittäminen}
 \begin{frame}[fragile]
     \frametitle{Kuvien liittäminen}
-    Kuvien liittämistä varten täytyy ottaa käyttöön \verb-graphicx--paketti. 
+    Kuvien liittämistä varten täytyy ottaa käyttöön \cns{graphicx}-paketti. 
     \vaihto
-    PDFLaTeXia käytettäessä sallitut kuvaformaatit ovat \verb-.pdf-, \verb-.jpg- ja \verb-.png-. 
+    PDFLaTeXia käytettäessä sallitut kuvaformaatit ovat \cns{.pdf}, \cns{.jpg} ja \cns{.png}. 
     \vaihto
     Jos liitettävä kuva on samassa kansiossa muiden tiedostojen kanssa, kuvan liittäminen tapahtuu komennolla
-    \begin{framed}
-        \centering
-        \verb-\includegraphics[asetukset]{kuvatiedoston_nimi}-. 
-    \end{framed}
+    \begin{lstlisting}
+\includegraphics[asetukset]{kuvatiedoston_nimi}<>
+    \end{lstlisting}
     Tiedostopäätettä ei ole tarpeen kirjoittaa, jos tiedoston nimi ei sisällä välejä.
     \vaihto
     Valinnaisella argumentilla voidaan skaalata, kiertää ja rajata liitettävää kuvaa. 
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kuvien liittäminen}
-    Työkansioon tallennetun kuvan \verb-smile.jpeg- saisi näkyviin koodilla
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
-\includegraphics{smile}
-        \end{Verbatim}
-    \end{scriptsize}
+    Työkansioon tallennetun kuvan \cns{smile.jpeg} saisi näkyviin koodilla
+    \begin{lstlisting}
+\includegraphics{smile}<>
+    \end{lstlisting}
     \includegraphics{smile}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kuvan skaalaus}
     Kuva on aivan liian suuri, joten sitä on syytä skaalata:
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
-\includegraphics[scale=0.4]{smile}
-        \end{Verbatim}
-    \end{scriptsize}
+    \begin{lstlisting}
+\includegraphics[scale=0.4]{smile}<>
+    \end{lstlisting}
     \includegraphics[scale=0.4]{smile}
-
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kuvan skaalaus}
     Skaalaus onnistuu myös määrittelemällä kuvan leveys tai korkeus:
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
-\includegraphics[width = 4cm]{smile}
-        \end{Verbatim}
-        \begin{Verbatim}[frame=single]
-\includegraphics[height=4cm]{smile}
-        \end{Verbatim}
-    \end{scriptsize}
+    \begin{lstlisting}
+\includegraphics[width = 4cm]{smile}<>
+    \end{lstlisting}
+    \begin{lstlisting}
+\includegraphics[height=4cm]{smile}<>
+    \end{lstlisting}
     \begin{minipage}{5cm}
         \includegraphics[width = 4cm]{smile}
     \end{minipage}
@@ -828,18 +884,17 @@ Toisinaan
         \includegraphics[height=4cm]{smile}
     \end{minipage}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kuvan kierto}
     Kuvaa voi kiertää antamalla valinnaiseksi argumentiksi kiertokulman asteina.
 
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
-\includegraphics[width=4cm,angle=90]{smile}
-        \end{Verbatim}
-        \begin{Verbatim}[frame=single]
-\includegraphics[height=4cm,angle=180]{smile}
-        \end{Verbatim}
-    \end{scriptsize}
+    \begin{lstlisting}
+\includegraphics[width=4cm,angle=90]{smile}<>
+    \end{lstlisting}
+    \begin{lstlisting}
+\includegraphics[height=4cm,angle=180]{smile}<>
+    \end{lstlisting}
     \begin{minipage}{3cm}
         \includegraphics[width = 4cm,angle=90]{smile}
     \end{minipage}
@@ -849,88 +904,98 @@ Toisinaan
 
     Huomaa, että useammat määritteet erotetaan toisistaan pilkuilla!
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj3_1}
 \end{frame}
+
 \subsubsection{Figure-ympäristö}
 \begin{frame}[fragile]
     \frametitle{Kelluva figure-ympäristö}
-    Käyttämällä pelkästään komentoa \verb-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
+    Käyttämällä pelkästään komentoa \lstinline-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
     \vaihto
-    On parempi antaa \LaTeX in päättää itse mihin kuva sijoitetaan eli tehdä kuvasta \emph{kelluva}. Tämä onnistuu käyttämällä \verb-figure--ympäristöä. 
+    On parempi antaa \LaTeX in päättää itse mihin kuva sijoitetaan eli tehdä kuvasta \newterm{kelluva}. Tämä onnistuu käyttämällä \cns{figure}-ympäristöä. 
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kelluva kuva}
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
-\begin{figure}[h!]
+    \begin{lstlisting}
+\begin{figure}[hb]
     \includegraphics[height=4cm]{smile}
     \caption{Helppo hymyillä}
-\end{figure}
-        \end{Verbatim}
-    \end{scriptsize}
-    \begin{figure}[h!]
+\end{figure}<>
+    \end{lstlisting}
+    \begin{figure}[hb]
         \includegraphics[height=4cm]{smile}
         \caption{Helppo hymyillä}
     \end{figure}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Figure-ympäristön argumentit}
 %    Kelluvalle ympäristölle (yllä \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
-    Oletuksena \LaTeX\ yrittää sijoittaa kelluvan ympäristön (yllä \verb-figure-) tekstisivun ylä- tai alareunaan tai sivulle, jolla on vain kelluvia olioita. Valinnaisella argumentilla voi kertoa tarkemmin, mihin kohtaan sijoittaminen sallitaan:
+    Oletuksena \LaTeX\ yrittää sijoittaa kelluvan ympäristön (yllä \cns{figure}) tekstisivun ylä- tai alareunaan tai sivulle, jolla on vain kelluvia olioita. Valinnaisella argumentilla voi kertoa tarkemmin, mihin kohtaan sijoittaminen \emph{sallitaan}:
+    \pause
     \begin{table}
         \begin{tabular}{lcl}
 
             %h! && tähän\\
             %\hline
-            h && salli sijoittaminen tähän (mahdollisesti keskelle sivua)\\
+            \cns{h} && salli sijoittaminen \emph{tähän} (mahdollisesti keskelle sivua)\\
             \hline
-            t && salli sijoittaminen sivun yläreunaan\\
+            \cns{t} && salli sijoittaminen (jonkin) sivun yläreunaan\\
             \hline
-            b && salli sijoittaminen sivun alareunaan\\
+            \cns{b} && salli sijoittaminen (jonkin) sivun alareunaan\\
             \hline
-            p && salli sijoittaminen omalle sivulleen
+            \cns{p} && salli sijoittaminen kelluvien otusten sivulle
 
         \end{tabular}
     \end{table}
-    Oletuksena on siis \verb-[tbp]-. Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. Esimerkiksi \verb-[!hb]- sallii sijoittamisen tähän tai tekstisivun alareunaan ja tuloksen ei tarvitse näyttää yhtä hyvältä kuin jos argumenttina olisi vain \verb-[hb]-. Sijoittamista yritetään \emph{aina} järjestyksessä \verb-htbp-. Tarkempi kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}
-
+    \begin{itemize}[<+->]
+        \item Oletuksena on siis \cns{[tbp]}. \pause Pelkkä \cns{[h]} ei ole mahdollinen, vaan korvataan automaattisesti \cns{[ht]}:llä.
+        \item Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. \pause Esimerkiksi \cns{[!hb]} sallii sijoittamisen tähän tai tekstisivun alareunaan ja lopputulos saa näyttää hieman rumalta.
+        \item {\footnotesize Tarkempi (tekninen) kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}}
+    \end{itemize}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Figure-ympäristön argumentit}
-    Usein haluttaisiin sijoittaa kelluva ympäristö \underline{tähän} kohtaan tekstiä \textit{no matter what}. Tämä \emph{ei} välttämättä onnistu argumentilla \verb-[h]- tai edes \verb-[!h]-. Itse asiassa \LaTeX{} korvaa argumentin \verb-h- automaattisesti argumentilla \verb-ht-, joten se siitä.
+    Usein haluttaisiin sijoittaa kelluva ympäristö \underline{tähän} kohtaan tekstiä \textit{no matter what}. 
     \pause
     \vaihto
-    \underline{Tähän} sijoittaminen onnistuu kuitenkin \verb-float--paketilla. Tällöin esittelyosaan on lisättävä rivi \verb-\usepackage{float}-, jonka jälkeen kelluvalle ympäristölle voi antaa argumentin \verb-[H]-, joka toteuttaa toiveesi, oli jälki miten rumaa tahansa\dots Argumentin \verb-H- kanssa ei voi käyttää muita; esim. \verb-[Hp]- on laiton yhdistelmä.
+    Se onnistuu \cns{float}-paketilla. Tällöin esittelyosaan on lisättävä rivi \lstinline-\usepackage{float}-, jonka jälkeen kelluvalle ympäristölle voi antaa argumentin \verb-[H]-, joka toteuttaa toiveesi, oli jälki miten rumaa tahansa. Argumentin \cns{H} kanssa ei voi käyttää muita; esim. \cns{[Hp]} on laiton yhdistelmä.
     \pause
     \vaihto
     \input{harj3_2}
 \end{frame}
+
 \subsubsection{Piirtäminen (TikZ)}
 \begin{frame}[fragile]
     \frametitle{Kuvien piirtäminen}
     Kuvien liittämisen lisäksi niitä voi myös piirtää suoraan \LaTeX illa. Yksinkertaisimmissa tapauksissa tämä onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
     \vaihto
     Kuvien piirtäminen vie aikaa, mutta jälki on sen mukaista eikä erillisiä kuvatiedostoja tarvitse säilyttää.
-    \vaihto Kuvien piirtämistä varten on tarjolla muutamia paketteja, joista erityisesti \verb-TikZ- on syytä mainita. 
-    \verb-TikZ-illä kuvien piirtäminen tapahtuu ikään kuin pikseli kerrallaan, joten tarkkuus on verraton. 
-    \vaihto Geogebra osaa kääntää sillä luodut kuvat \verb-tikz--koodiksi, mikä helpottaa työtä valtavasti.
+    \vaihto Kuvien piirtämistä varten on tarjolla muutamia paketteja, joista erityisesti \TikZ{} on syytä mainita. Runsaasti esimerkkejä (koodeineen) löytyy täältä: \url{http://www.texample.net/tikz/examples/all/}
+    \vaihto Geogebra osaa kääntää sillä luodut kuvat \TikZ-koodiksi, mikä helpottaa työtä valtavasti.
     \vaihto Muita kuvien tuottamiseen tarkoitettuja paketteja ovat picture, xy-Pic ja Asymptote.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj3_3}
     \input{harj3_4}
-
 \end{frame}
+
+
 \subsection{Taulukot}
 \begin{frame}[fragile]
     \frametitle{Taulukot}
     Taulukoiden rakentaminen \LaTeX issa on oma taiteenlajinsa. Mahdollisuudet ovat rajattomat, mutta perusteiden opettelu vaatii hieman energiaa. 
     \vaihto
-Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon sisältö kirjoitetaan komentojen \verb-\begin{tabular}[]{}- ja \verb-\end{tabular}- väliin.
+Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon sisältö kirjoitetaan komentojen \lstinline-\begin{tabular}[]{}- ja \lstinline-\end{tabular}- väliin.
     \vaihto
     Ympäristöllä on pakollinen argumentti, jolla määritellään taulukon asetukset, eli miten kunkin sarakkeen sisältö tasataan ja millaisia pystyviivoja käytetään.
 \end{frame}
+
 %\begin{frame}[fragile]
 
 %\frametitle{Taulukot}
@@ -952,74 +1017,72 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 %\end{framed}
 %Huomaa, ettei asetuksissa oteta kantaa rivien määrään.
 %\end{frame}
+
 \subsubsection{Tabular-ympäristö}
 \begin{frame}[fragile]
     \frametitle{Tabular-ympäristö}
     Tabular-ympäristön pakollinen argumentti on jono seuraavia merkkejä:
-    \begin{table}[h!]
-        \begin{scriptsize}
-            \begin{tabular}{ccp{5cm}}
+    \begin{table}
+        \begin{small}
+            \begin{tabular}{ccl}
                 Merkki && Toiminto\\
                 \hline
-                \verb-r- && sarakkeen sisällön tasaus oikealle\\
+                \cns{r} && sarakkeen sisällön tasaus oikealle\\
                 \hline
-                \verb-l- && sarakkeen sisällön tasaus vasemmalle\\
+                \cns{l} && sarakkeen sisällön tasaus vasemmalle\\
                 \hline
-                \verb-c- && sarakkeen sisällön keskitys\\
+                \cns{c} && sarakkeen sisällön keskitys\\
                 \hline
-                \verb-|- && pystyviivan paikka\\
+                \cns{|} && pystyviivan paikka\\
                 \hline
-                \verb-||- && kaksi pystyviivaa\\
+                \cns{||} && kaksi pystyviivaa\\
                 \hline
-                \verb-p{'pituus'}- && pituus, jonka jälkeen rivi katkaistaan\\
+                \cns{p\{pituus\}} && pituus, jonka jälkeen rivi katkaistaan\\
                 \hline
             \end{tabular}
-        \end{scriptsize}
+        \end{small}
     \end{table}
-    Esimerkiksi komento \verb-\begin{tabular}{r|cc}- aloittaisi 3-sarakkeisen taulukon, jolla olisi pystyviiva 1. ja 2. sarakkeen välillä. Sarakkeen 1 sisältö tasattaisiin oikealle, kahden muun sisältö keskitettäisiin.
+    Esimerkiksi komento \lstinline-\begin{tabular}{r|cc}- aloittaisi 3-sarakkeisen taulukon, jolla olisi pystyviiva 1. ja 2. sarakkeen välillä. Sarakkeen 1 sisältö tasattaisiin oikealle, kahden muun sisältö keskitettäisiin.
     %\vaihto
     %Lisätietoja ympäristön käytöstä saa kirjasta  \begin{scriptsize}\url{http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular.2A_environment}\end{scriptsize}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Tabular-ympäristö}
-    Taulukon sisältö kirjoitetaan rivi kerrallaan. Jokaisella rivillä merkki \verb-&- erottaa sarakkeet toisistaan, komennolla \verb-\\- siirrytään seuraavalle riville.  Nämä ja muut taulukon sisäiset komennot ovat seuraavassa:
+    Taulukon sisältö kirjoitetaan rivi kerrallaan. Jokaisella rivillä merkki \lstinline-&- erottaa sarakkeet toisistaan, komennolla \lstinline-\\- siirrytään seuraavalle riville.  Nämä ja muut taulukon sisäiset komennot ovat seuraavassa:
     \vaihto
-    \begin{table}[h!]
-        \begin{scriptsize}
-            \begin{tabular}{cp{4cm}}
+    \begin{table}
+        \begin{small}
+            \begin{tabular}{cl}
                 Komento & Toiminto\\
                 \hline
-                \verb-&- & sarakkeenvaihto\\
+                \lstinline-&- & sarakkeenvaihto\\
                 \hline
-                \verb-\\- & rivinvaihto\\
+                \lstinline-\\- & rivinvaihto\\
                 \hline
-                \verb-\hline- & vaakaviiva \\
+                \lstinline-\hline- & vaakaviiva \\
                 \hline
-                \verb-\newline- & rivinvaihto sarakkeen sisällä\\
+                \lstinline-\newline- & rivinvaihto sarakkeen sisällä\\
                 \hline
-                \verb+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j välillä\\
+                \lstinline+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j välillä\\
                 \hline
             \end{tabular}
-        \end{scriptsize}
+        \end{small}
     \end{table}
-
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Tabular-ympäristö}
-    Esimerkiksi rivi
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
+    Esimerkiksi koodi
+    \begin{lstlisting}
 \begin{tabular}{r|cc}
     & Tytöt & Pojat\\
     \hline
     Sinisilmäiset & 4 & 2 \\
     Ruskeasilmäiset & 3 & 5 \\
     Vihreäsilmäiset & 8 & 8\\
-\end{tabular}
-        \end{Verbatim}
-    \end{scriptsize}
+\end{tabular}<>
+    \end{lstlisting}
     luo seuraavan taulukon:
     \begin{sample} 
         \begin{tabular}{r|cc}
@@ -1033,84 +1096,80 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
         \end{tabular}
     \end{sample}
     Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
-
 \end{frame}
-
-
 
 \begin{frame}[fragile]
     \frametitle{Tabular-ympäristö}
     \input{harj3_5}
     \input{harj3_6}
 \end{frame}
+
 \subsubsection{Sarakkeiden yhdistäminen}
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden yhdistäminen}
-    Sarakkeiden yhdistäminen onnistuu komennolla \verb-\multicolumn{}{}{}-. Pakollisista argumenteista
+    Sarakkeiden yhdistäminen onnistuu komennolla \lstinline-\multicolumn{}{}{}-. Pakollisista argumenteista
     \begin{itemize}
         \item ensimmäinen on yhdistettävien solujen lukumäärä
         \item toinen on yhdistämällä saadun sarakkeen tasaus
         \item kolmas on yhdistämällä saadun sarakkeen sisältö
     \end{itemize}
-    Komento \verb-\multicolumn- toimii sellaisenaan eikä tarvitse lisäpaketteja.
+    Komento \lstinline-\multicolumn- toimii sellaisenaan eikä tarvitse lisäpaketteja.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden yhdistäminen}
     %\begin{minipage}{5cm}
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
+    \begin{lstlisting}
 \begin{tabular}{|c|c|c|}
     \hline
     \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
     \hline
-    Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
+    Sarake & \multicolumn{2}{c|}{2
+                        yhdistettyä saraketta}\\
     \hline
     Sarake1 & Sarake2 & Sarake3\\
     \hline
-\end{tabular}
-        \end{Verbatim}
-    \end{scriptsize}
+\end{tabular}<>
+    \end{lstlisting}
     %\end{minipage}
-    \begin{minipage}{5cm}
-        \begin{serif}
-            \begin{scriptsize}
-                \begin{tabular}{|c|c|c|}
-                    \hline
-                    \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
-                    \hline
-                    Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
-                    \hline
-                    Sarake1 & Sarake2 & Sarake3\\
-                    \hline
-                \end{tabular}
-            \end{scriptsize}
-        \end{serif}
-    \end{minipage}
+    \begin{serif}
+        \begin{small}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \multicolumn{3}{|c|}{3 yhdistettyä saraketta}\\
+                \hline
+                Sarake & \multicolumn{2}{c|}{2 yhdistettyä saraketta}\\
+                \hline
+                Sarake1 & Sarake2 & Sarake3\\
+                \hline
+            \end{tabular}
+        \end{small}
+    \end{serif}
 \end{frame}
 
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden yhdistäminen}
 
     \input{harj3_7}
-
 \end{frame}
+
 \subsubsection{Rivien yhdistäminen}
 \begin{frame}[fragile]
     \frametitle{Rivien yhdistäminen}
-    Rivien yhdistämistä varten tarvitaan paketti \verb-multirow-. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \verb-\multirow{}{}{}-. Pakollisista argumenteista
+    Rivien yhdistämistä varten tarvitaan paketti \cns{multirow}. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \lstinline-\multirow{}{}{}-. Pakollisista argumenteista
     \begin{itemize}
         \item ensimmäinen on yhdistettävien solujen lukumäärä
-        \item toinen on yhdistämällä saadun rivin leveys (\verb-*- jättää asian \LaTeX in huoleksi)
+        \item toinen on yhdistämällä saadun rivin leveys (\cns{*} jättää asian \LaTeX in huoleksi)
         \item kolmas on yhdistämällä saadun rivin sisältö
     \end{itemize}
     Rivin leveyttä ei useinkaan kannata itse valita, ellei ole varma siitä mitä haluaa tehdä. 
     \vaihto
-    Huomaa, että \verb-\multirow- toimii kuten \verb-\multicolumn-, mutta keskimmäinen argumentti on eri tarkoitusta varten.
+    Huomaa, että \lstinline-\multirow- toimii kuten \lstinline-\multicolumn-, mutta keskimmäinen argumentti on eri tarkoitusta varten.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Rivien yhdistäminen} 
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
+    \begin{lstlisting}
 \begin{tabular}{|c|c|c|}
     \hline
     \multirow{3}{*}{Kolme riviä} & Solu1 & Solu 2\\
@@ -1119,32 +1178,33 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
     \cline{3-3}
     & & Solu 4\\
     \hline
-\end{tabular}
-        \end{Verbatim}
-    \end{scriptsize}
+\end{tabular}<>
+    \end{lstlisting}
     \begin{serif}
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \multirow{3}{*}{Kolme riviä} & Solu1	& Solu 2\\\cline{2-3}
-                                          & \multirow{2}{*}{Kaksi riviä}	& Solu 3\\\cline{3-3}
-                                          & & Solu 4\\
-            \hline
-        \end{tabular}
+        \begin{small}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \multirow{3}{*}{Kolme riviä} & Solu1	& Solu 2\\\cline{2-3}
+                                              & \multirow{2}{*}{Kaksi riviä}	& Solu 3\\\cline{3-3}
+                                              & & Solu 4\\
+                \hline
+            \end{tabular}
+        \end{small}
     \end{serif}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Rivien yhdistäminen} 
     \input{harj3_8}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden ja rivien yhdistäminen} 
-    Sarakkeita ja rivejä voi yhdistää samassa taulukossa:\vaihto
-    \begin{minipage}{8cm}
-        \begin{scriptsize}
-            \begin{verbatim}
+    Sarakkeita ja rivejä voi yhdistää samassa taulukossa:
+    \begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
 \begin{tabular}{|l|l|l|l|}
     \hline
-    \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
+    \multicolumn{4}{|c|}{\textbf{Päiväpetolintuja}}\\
     \hline
     \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\
     \hline
@@ -1156,16 +1216,14 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
                                   \cline{2-4}
                                 & Nuolihaukka & Falco & subbuteo\\
     \hline
-\end{tabular}
-            \end{verbatim}
-        \end{scriptsize}
-    \end{minipage}
-    \begin{table}[h!]
+\end{tabular}<>
+    \end{lstlisting}
+    \begin{table}
         \begin{serif}
             \begin{scriptsize}
                 \begin{tabular}{|l|l|l|l|}
                     \hline
-                    \multicolumn{4}{|c|}{\Large Päiväpetolintuja}\\
+                    \multicolumn{4}{|c|}{\textbf{Päiväpetolintuja}}\\
                     \hline
                     \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\\hline
                     \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
@@ -1176,11 +1234,12 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
             \end{scriptsize}
         \end{serif}
     \end{table}
-
 \end{frame}
+
 \begin{frame}
     Taulukoiden rakentamisessa lähes mikä tahansa on mahdollista. Kirjasta \url{http://en.wikibooks.org/wiki/LaTeX/Tables} voi etsiä apua monimutkaisempia toteutuksia varten.
 \end{frame}
+
 %\begin{frame}[fragile]
 %\frametitle{Kelluvat taulukot}
 %Yleensä taulukot kannattaa esittää kelluvina ympäristöinä. Tämä tarkoittaa sitä, että \LaTeX\ päättää itse, mihin taulukko kannattaa ulkonäöllisesti sijoittaa. Tällöin \verb-tabular--ympäristö sijoitetaan \verb-table--ympäristöön:
@@ -1196,21 +1255,23 @@ Perinteisin tapa on käyttää \verb-tabular--ympäristöä. Tällöin taulukon 
 %p & sivun yläreunaan
 %\end{tabular}
 %\end{frame}
+
 \subsubsection{Kelluva table-ympäristö}
 \begin{frame}[fragile]
     \frametitle{Kelluva table-ympäristö}
-Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
+Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
     \vaihto
-    On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \verb-table--ympäristöön.
-    \begin{Verbatim}[frame=single]
-\begin{table}
+    On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \cns{table}-ympäristöön.
+    \begin{lstlisting}
+\begin{table}[H]
     \begin{tabular}{...}
         ...
     \end{tabular}
-\end{table}
-    \end{Verbatim}
-    Kuten \verb-figure--ympäristöllä, \verb-table- yritetään oletuksena sijoittaa tekstisivun ylä- ja alareunaan tai kelluvien olioiden sivulle. Sijoitteluun voi vaikuttaa antamalla \verb-table--ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \verb-!htbp-.
+\end{table}<>
+    \end{lstlisting}
+    Ympäristön \cns{table} sijoittelu noudattaa samoja sääntöjä kuin \cns{figure} ja sitä voi säätää antamalla ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \cns{!htbp} (tai \cns{float}-pakettia käyttämällä \cns{H}).
 \end{frame}
+
 %\begin{frame}[fragile]
 %    \frametitle{Table-ympäristön argumentit}
 %    Kelluvalle ympäristölle (yllä \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
@@ -1231,18 +1292,20 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
 %    \end{table}
 %    Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
 %\end{frame}
+
 \begin{frame}[fragile]
     \input{harj3_9}
-
 \end{frame}
+
+
 \subsection{Matriisit}
+
 \begin{frame}[fragile]
     \frametitle{Matematiikkatilan taulukot}
-    \LaTeX\ olettaa \verb-tabular--ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \verb-array-. Sitä käytetään kuten \verb-tabular--ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
+    \LaTeX\ olettaa \cns{tabular}-ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \cns{array}. Sitä käytetään kuten \cns{tabular}-ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
 
     \begin{minipage}{5cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+        \begin{lstlisting}
 \[
     \begin{array}{r|c}
         x & x^2+1\\
@@ -1251,11 +1314,10 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
         0 & 1\\
         1 & 2\\
     \end{array}
-\]
-            \end{Verbatim}
-        \end{scriptsize}
+\]<>
+        \end{lstlisting}
     \end{minipage}
-    \begin{minipage}{3cm}
+    \begin{minipage}{5cm}
         \[
         \begin{array}{r|c}
             x & x^2+1\\
@@ -1267,18 +1329,19 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
         \]
     \end{minipage}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Array-ympäristö}
-    Array-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \verb-cases-. 
-    \begin{Verbatim}[frame=single]
+    \cns{array}-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \cns{cases}. 
+    \begin{lstlisting}
 \[
     f(x) =
     \begin{cases}
         x,  & \text{kun } x>0,\\
         -x, & \text{kun } x\leq0.
     \end{cases}
-\]
-    \end{Verbatim}
+\]<>
+    \end{lstlisting}
     \begin{sample}
         \[
             f(x) =
@@ -1289,24 +1352,23 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
         \]
     \end{sample}
 \end{frame}
+
 \subsubsection{Matriisiympäristöt}
 \begin{frame}[fragile]
     \frametitle{Matriisit}
-    Matriisit voitaisiin luoda käsin käyttäen \verb-array--ympäristöä, mutta hieman helpompiakin tapoja on. Esimerkiksi ympäristöllä \verb-pmatrix- matriiseja luotaisiin seuraavasti:
+    Matriisit voitaisiin luoda käsin käyttäen \cns{array}-ympäristöä, mutta hieman helpompiakin tapoja on. Esimerkiksi ympäristöllä \cns{pmatrix} matriiseja luotaisiin seuraavasti:
 
-    \begin{minipage}{4cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+    \begin{minipage}{5cm}
+        \begin{lstlisting}
 \[
     \begin{pmatrix}
         a & b & c\\
         1 & 2 & 3\\
     \end{pmatrix}
-\]
-            \end{Verbatim}
-        \end{scriptsize}
+\]<>
+        \end{lstlisting}
     \end{minipage}
-    \begin{minipage}{4cm}
+    \begin{minipage}{5cm}
         \[
             \begin{pmatrix}
                 a & b & c\\
@@ -1315,10 +1377,10 @@ Komento \verb-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoitt
         \]
     \end{minipage}
 
-Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkeiden määrää ei tarvitse kertoa erikseen. Virheiden varalta muista, että
+    Syntaksi on siis samanhenkinen kuin ympäristöllä \cns{array}, mutta sarakkeiden määrää ei tarvitse kertoa erikseen. Virheiden varalta muista, että
     \begin{itemize}
-        \item sarakkeet erotetaan toisistaan komennolla \verb-&-
-        \item rivi vaihdetaan komennolla \verb-\\-
+        \item sarakkeet erotetaan toisistaan merkillä \lstinline-&-
+        \item rivi vaihdetaan komennolla \lstinline-\\-
     \end{itemize}
 
     %\end{frame}
@@ -1328,26 +1390,26 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     %loisi matriisin
 %Saman voi kuitenkin tehdä helpommin käyttämällä matriiseja varten luotuja ympäristöjä, kuten \verb-bmatrix*- tai \verb-pmatrix*-. Näitä varten tarvitset paketin \verb-mathtools-.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj3_10}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Matriisit}
-    Vaikka ympäristöt \verb-pmatrix- (\verb-matrix-, \verb-bmatrix-, \verb-vmatrix-) pohjautuvat \verb-array--ympäristöön, ei sarakkeiden tasaukseen voi lähtökohtaisesti vaikuttaa. \vaihto Paketti \verb-mathtools- tarjoaa vastaavat ympäristöt \verb-pmatrix*-, \verb-bmatrix*- jne., joilla on valinnaisena argumenttina sarakkeissa käytetty tasaus:\vaihto
+    Vaikka ympäristöt \cns{pmatrix} (\cns{matrix}, \cns{bmatrix}, \cns{vmatrix}) pohjautuvat \cns{array}-ympäristöön, ei sarakkeiden tasaukseen voi lähtökohtaisesti vaikuttaa. \vaihto Paketti \cns{mathtools} tarjoaa vastaavat ympäristöt \cns{pmatrix*}, \cns{bmatrix*} jne., joilla on valinnaisena argumenttina sarakkeissa käytetty tasaus:\vaihto
 
-    \begin{minipage}{4cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+    \begin{minipage}{5cm}
+        \begin{lstlisting}
 \[
     \begin{pmatrix*}[r]
         a & b & c\\
         -1 & -2 & -3\\
     \end{pmatrix*}
-\]
-            \end{Verbatim}
-        \end{scriptsize}
+\]<>
+        \end{lstlisting}
     \end{minipage}
-    \begin{minipage}{4cm}
+    \begin{minipage}{5cm}
         \[
             \begin{pmatrix*}[r]
                 a & b & c\\
@@ -1370,13 +1432,13 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     %\vaihto
     %Ympäristöllä on valinnainen argumentti, jolla valitaan tekstin tasaus (r, l tai c). Jos ympäristön nimestä jätetään * pois, sarakkeiden sisältö keskitetään (tällöin pakettia \verb-mathtools- ei tarvita). 
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Matriisit}
 
     Esimerkki:\vaihto
     \begin{minipage}{5cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+        \begin{lstlisting}
 \[
     \begin{bmatrix*}[r]
         -1 & 2\\
@@ -1387,9 +1449,8 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
         -1 & 0 & 1\\
         2 & 1 & -2
     \end{bmatrix*}
-\]
-            \end{Verbatim}
-        \end{scriptsize}
+\]<>
+        \end{lstlisting}
     \end{minipage}
     \begin{minipage}{5cm}
         \[
@@ -1405,43 +1466,44 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
         \]
     \end{minipage}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Matriisit}
     \input{harj3_11}
 \end{frame}
+
 \subsubsection{Lisätietoa}
 \begin{frame}[fragile]
     \frametitle{Lisätietoa matriiseista}
-    Tavalliset matriisiympäristöt \verb-pmatrix- jne. voidaan säätää noudattamaan paremmin \verb-array--ympäristön syntaksia.
+    Tavalliset matriisiympäristöt \cns{pmatrix} jne. voidaan säätää noudattamaan paremmin \cns{array}-ympäristön syntaksia.
     \vaihto
     Tämä on tarpeen, jos halutaan valita eri sarakkeisiin erilainen tasaus tai luoda pystyviiva matriisin sisälle. 
     \vaihto
     Syntaksin muuttaminen onnistuu kopioimalla esittelyosaan komennot\vaihto
-    \begin{Verbatim}[frame=single]
+    \begin{lstlisting}
 \makeatletter
 \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
     \hskip -\arraycolsep
     \let\@ifnextchar\new@ifnextchar
 \array{#1}}
-\makeatother
-    \end{Verbatim}
+\makeatother<>
+    \end{lstlisting}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Lisätietoa matriiseista}
-    Edellä tehtyjen muutosten jälkeen matriisiympäristöt toimivat kuten ennenkin, mutta lisäksi valinnainen argumentti on käytössä kuten \verb-array--ympäristöllä:
+    Edellä tehtyjen muutosten jälkeen matriisiympäristöt toimivat kuten ennenkin, mutta lisäksi valinnainen argumentti on käytössä kuten \cns{array}-ympäristöllä:
     \vaihto
-    \begin{minipage}{4.2cm}
-        \begin{scriptsize}
-            \begin{Verbatim}[frame=single]
+    \begin{minipage}{6cm}
+        \begin{lstlisting}
 \[
     \begin{bmatrix}[rrr|r]
         0 & 0 & 1 & -a_1\\
         0 & 1 & -1 & a_2\\
         1 & 1 & 1 & a_3
     \end{bmatrix}
-\]
-            \end{Verbatim}
-        \end{scriptsize}
+\]<>
+        \end{lstlisting}
     \end{minipage}
     \begin{minipage}{4cm}
         \[
@@ -1455,11 +1517,15 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
 \end{frame}
 
 
+
 \section{4.kerta}
+
+
 \subsection{Viittaaminen kuviin ja taulukoihin}
+
 \begin{frame}[fragile]
     \frametitle{Viittaaminen kuviin ja taulukoihin}
-    Kelluviksi kirjoitetut kuvat ja taulukot tulevat numeroiduiksi, jolloin niihin viittaaminen onnistuu helposti komennoilla \verb-\label{}- ja \verb-\ref{}-. 
+    Kelluviksi kirjoitetut kuvat ja taulukot tulevat numeroiduiksi, jolloin niihin viittaaminen onnistuu helposti komennoilla \lstinline-\label{}- ja \lstinline-\ref{}-. 
     %\begin{itemize}
     %\item \verb-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
     %\item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sisällä)
@@ -1472,37 +1538,42 @@ Syntaksi on siis samanhenkinen kuin ympäristöllä \verb-array-, mutta sarakkei
     \input{harj4_12}
     \input{harj4_13}
 \end{frame}
+
+
 \subsection{Kirjallisuusviitteet}
+
 \subsubsection{Lainaukset ja alaviitteet}
 \begin{frame}[fragile]
     \frametitle{Lainaukset ja alaviitteet}
-    Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \verb-'- merkillä:
-    \begin{Verbatim}[frame=single]
-Matti sanoi: ''Onpa outoa!''
-    \end{Verbatim}
+    Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \lstinline-'- merkillä:
+    \begin{lstlisting}
+Matti sanoi: ''Onpa outoa!''<>
+    \end{lstlisting}
     tulostaa
     \begin{sample}
         Matti sanoi: ''Onpa outoa!''
     \end{sample}
-    Lainauksia varten on olemassa myös omia ympäristöjään, kuten \verb-verse-, \verb-quote- ja \verb-quotation-.
+    Lainauksia varten on olemassa myös omia ympäristöjään, kuten \cns{verse}, \cns{quote} ja \cns{quotation}.
     \vaihto
-    Alaviitteen voi luoda komennolla \verb-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
+    Alaviitteen voi luoda komennolla \lstinline-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj4_14}
     \input{harj4_15}
 \end{frame}
+
 \subsubsection{\BibTeX-järjestelmä}
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusviitteet}
     \LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \BibTeX-järjestelmän avulla. 
     \vaihto
 %    Tällöin jokaista lähdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sisältää teoksen tiedot. 
-    Tällöin lähdeteokset kirjataan erilliseen \verb-.bib--tiedostoon (tai -tiedostoihin).
+    Tällöin lähdeteokset kirjataan erilliseen \cns{.bib}-tiedostoon (tai -tiedostoihin).
     \vaihto
-    Tiedostot on yksinkertaisinta tallentaa samaan kansioon \verb-.tex--tiedoston kanssa.
+    Tiedostot on yksinkertaisinta tallentaa samaan kansioon \cns{.tex}-tiedoston kanssa.
     \vaihto
-    Viittaaminen tapahtuu komennolla \verb-\cite{tunnus}-, jossa \verb-tunnus- on eräs \verb-.bib--tiedostosta löytyvä merkkijono.
+    Viittaaminen tapahtuu komennolla \lstinline-\cite{tunnus}-, jossa \cns{tunnus} on eräs \cns{.bib}-tiedostosta löytyvä merkkijono.
     %\vaihto
     %Aivan työn loppuun luodaan kirjallisuusluettelo komennoilla
     %\begin{Verbatim}[frame=single]
@@ -1511,13 +1582,13 @@ Matti sanoi: ''Onpa outoa!''
     %\end{Verbatim}
     %Edellytyksenä on, että tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot}
-    \verb-.bib--tiedoston voi luoda millä tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
+    \cns{.bib}-tiedoston voi luoda millä tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
     \vaihto
     Tiedoston sisältö voisi olla esimerkiksi seuraava:\vaihto
-    \begin{scriptsize}
-        \begin{Verbatim}[frame=single]
+    \begin{lstlisting}[language=BibTeX,basicstyle=\ttfamily\small]
 @book{kemper,
     title={A Course in Commutative Algebra},
     author={Kemper, G.},
@@ -1526,24 +1597,26 @@ Matti sanoi: ''Onpa outoa!''
     url={http://books.google.fi/books?id=8kxlj48DWM4C},
     year={2010},
     publisher={Springer Berlin Heidelberg}
-}
-        \end{Verbatim}
-    \end{scriptsize}
+}<>
+    \end{lstlisting}
     %Tiedosto tallennetaan muodossa \verb-jokinNimi.bib- samaan kansioon \verb-.tex--tiedoston kanssa (ei pakollista, mutta yksinkertaisinta).
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot}
     \input{harj4_16}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{.bib-tiedoston sisältö}
     \begin{itemize}
-        \item Ensimmäisellä komennolla (\verb-@book-, \verb-@article-, \verb-@unpublished- jne) kerrotaan, minkä tyyppisestä teoksesta on kyse. 
-        \item Aaltosulkeisiin ennen ensimmäistä pilkkua tuleva merkkijono on se tunnus, jolla teokseen viitataan komennolla \verb-\cite{tunnus}-. 
-        \item Tunnuksen voi valita vapaasti (ilman ääkkösiä ja erikoismerkkejä) eikä se tule näkyviin mihinkään.  Esimerkiksi yllä tunnus on \verb-kemper-, joten teokseen viitattaisiin komennolla \verb-\cite{kemper}-.
+        \item Ensimmäisellä komennolla (\lstinline[language=BibTeX]-@book-, \lstinline[language=BibTeX]-@article-, \lstinline[language=BibTeX]-@unpublished- jne.) kerrotaan, minkä tyyppisestä teoksesta on kyse. 
+        \item Aaltosulkeisiin ennen ensimmäistä pilkkua tuleva merkkijono on se tunnus, jolla teokseen viitataan komennolla \lstinline-\cite{tunnus}-. 
+        \item Tunnuksen voi valita vapaasti (ilman ääkkösiä ja erikoismerkkejä) eikä se tule näkyviin mihinkään.  Esimerkiksi yllä tunnus on \cns{kemper}, joten teokseen viitattaisiin komennolla \lstinline-\cite{kemper}-.
         \item Muut kentät (ja niiden pakollisuus/valinnaisuus) määräytyvät teoksen tyypin mukaan.
     \end{itemize}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Luokat ja .bib-tiedoston sisältö}
     Kun tiedostoja luodaan käsin, täytyy selvittää mitkä kentät ovat pakollisia ja mitkä valinnaisia. 
@@ -1552,7 +1625,7 @@ Matti sanoi: ''Onpa outoa!''
     \begin{scriptsize}
         \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Entry_and_field_types_in_.bib_files}
     \end{scriptsize}
-    selviää, että kirjalle (\verb-@book-) pakollisia kenttiä ovat \verb-title- ja \verb-author-, muut valinnaisia.
+    selviää, että kirjalle (\lstinline[language=BibTeX]-@book-) pakollisia kenttiä ovat \cns{title} ja \cns{author}, muut valinnaisia.
     \vaihto
     Lisätietoa käytettävistä teosluokista löytyy esimerkiksi sivulta
     \begin{scriptsize}
@@ -1561,9 +1634,11 @@ Matti sanoi: ''Onpa outoa!''
     \vaihto
     Käytännössä jokaista kuviteltavissa olevaa lähdeteosta varten löytyy jokin sopiva luokka (ja tarpeen tullen sellaisen voi luoda itsekin).
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj4_17}
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot Internetistä}
     Kirjojen teostietoja löytää \BibTeX -muodossa varsin suurella todennäköisyydellä Google Books-palvelusta. 
@@ -1574,24 +1649,26 @@ Matti sanoi: ''Onpa outoa!''
     \vaihto
     Käytännössä ainakin viittaustunnus on syytä vaihtaa helpommaksi.
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot Internetistä}
     \input{harj4_18}
-
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusluettelon luominen}
-    Kun tarvittavat \verb-.bib--tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran. Ei-viitatun teoksen saa lisättyä lähdeluetteloon \verb-\nocite{tunnus}--komennolla.
+    Kun tarvittavat \cns{.bib}-tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran. Ei-viitatun teoksen saa lisättyä lähdeluetteloon \lstinline-\nocite{tunnus}--komennolla.
     \vaihto
-    Luettelo luodaan työn loppuosaan komennolla
-    \begin{Verbatim}[frame=single]
+    Luettelo luodaan työn loppuosaan komennoilla
+    \begin{lstlisting}
 \bibliographystyle{luettelon tyyli}
-\bibliography{lista1,lista2,lista3,...}
-    \end{Verbatim}
-    Koodissa \verb-listax- ovat \verb-.bib--tiedostojen nimet ilman \verb-bib--päätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
+\bibliography{lista1,lista2,lista3,...}<>
+    \end{lstlisting}
+    Koodissa \cns{lista\textit{x}} ovat \cns{.bib}-tiedostojen nimet ilman \cns{.bib}-päätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
     \vaihto
-    Edellisen koodin toimimisen edellytyksenä on, että tiedostot \verb-lista1.bib- jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa. 
+    Edellisen koodin toimimisen edellytyksenä on, että tiedostot \cns{lista1.bib} jne. ovat samassa kansiossa \cns{.tex}-tiedoston kanssa. 
 \end{frame}
+
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusluettelon luominen}
     \input{harj4_19}
@@ -1610,17 +1687,18 @@ Matti sanoi: ''Onpa outoa!''
     \begin{itemize}
         \item oletko käyttänyt viitatessa oikeita tunnuksia?
         \item oletko tuonut tiedostot \LaTeX iin oikein ja oikeilla nimillä?
-        \item ovatko tiedostot todella muotoa \verb-.bib-?
+        \item ovatko tiedostot todella muotoa \cns{.bib}?
         \item ovatko tiedostot oikeassa kansiossa?
     \end{itemize}
 \end{frame}
+
 \begin{frame}[fragile]
     \begin{extra}
         \begin{itemize}
-            \item Viittauksen lisäämisen/poistamisen/muuttamisen jälkeen ensimmäinen \LaTeX-ajo merkitsee löytyneet viittaustunnukset \verb-.aux--tiedostoon.
-            \item Tämän jälkeen \BibTeX-ajo kirjoittaa \verb-.aux--tiedoston perusteella lähdeluettelon tuottavan \LaTeX-koodin \verb-.bbl--tiedostoon.
-            \item Seuraava \LaTeX-ajo lukee myös \verb-.bbl--tiedoston koodin, jolloin lähdeluettelo tulee näkyviin (jos sitä ei vielä ole) ja viittaustiedot lisätään/päivitetään \verb-.aux--tiedostoon.
-            \item Viimeinen \LaTeX-ajo osaa nyt \verb-.aux--tiedoston perusteella korvata kysymysmerkit oikeilla viittauksilla.
+            \item Viittauksen lisäämisen/poistamisen/muuttamisen jälkeen ensimmäinen \LaTeX-ajo merkitsee löytyneet viittaustunnukset \cns{.aux}-tiedostoon.
+            \item Tämän jälkeen \BibTeX-ajo kirjoittaa \cns{.aux}-tiedoston perusteella lähdeluettelon tuottavan \LaTeX-koodin \cns{.bbl}-tiedostoon.
+            \item Seuraava \LaTeX-ajo lukee myös \cns{.bbl}-tiedoston koodin, jolloin lähdeluettelo tulee näkyviin (jos sitä ei vielä ole) ja viittaustiedot lisätään/päivitetään \cns{.aux}-tiedostoon.
+            \item Viimeinen \LaTeX-ajo osaa nyt \cns{.aux}-tiedoston perusteella korvata kysymysmerkit oikeilla viittauksilla.
         \end{itemize}
     \end{extra}
 \end{frame}
@@ -1633,34 +1711,39 @@ Matti sanoi: ''Onpa outoa!''
     \frametitle{Viittaustyyli}
     Viittaukset tulevat näkyviin hakasuluissa olevina numeroina. Esimerkiksi lähdeteoksen kirjoittajaa varten lukija joutuu siis tarkistamaan lähdeluettelon. Tämä on tyypillistä varsinkin matemaattisessa kirjallisuudessa. 
     \vaihto
-    Toisenlaista viittaustekniikkaa varten voi käyttää esimerkiksi \verb-natbib--järjestelmää, jota ei kuitenkaan tällä kurssillä käsitellä. Lisätietoa saa vaikkapa osoitteesta
+    Toisenlaista viittaustekniikkaa varten voi käyttää esimerkiksi \cns{natbib}-järjestelmää, jota ei kuitenkaan tällä kurssillä käsitellä. Lisätietoa saa vaikkapa osoitteesta
     \begin{scriptsize}
         \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Natbib}
     \end{scriptsize}
 \end{frame}
+
+
 \subsection{Dokumentin viimeistely}
+
 \subsubsection{Sisällysluettelo ja kansilehti}
 \begin{frame}[fragile]
     \frametitle{Sisällysluettelo ja kansilehti}
-    Sisällysluettelon saa haluamaansa kohtaan työtä komennolla \verb-\tableofcontents-. Tiedoston joutuu yleensä ajamaan useaan kertaan, ennen kuin numeroinnit tulevat näkyviin oikein.
+    Sisällysluettelon saa haluamaansa kohtaan työtä komennolla \lstinline-\tableofcontents-. Tiedoston joutuu yleensä ajamaan useaan kertaan, ennen kuin numeroinnit tulevat näkyviin oikein.
     \vaihto
-    Kansilehti luodaan komennolla \verb-\maketitle-. Tätä varten esittelyosaan lisätään komennot \verb-\title{otsikko}-, \verb-\author{nimi}- ja \verb-\date{pvm}-. Päivämäärän saa pois komennolla \verb-\date{}-.
+    Kansilehti luodaan komennolla \lstinline-\maketitle-. Tätä varten esittelyosaan lisätään komennot \lstinline-\title{otsikko}-, \lstinline-\author{nimi}- ja haluttaessa \lstinline-\date{pvm}-. Päivämäärän saa pois komennolla \lstinline-\date{}-.
     \vaihto
-    Kansilehti tulostuu joissain luokissa (esim. \verb-book- ja \verb-report-) omaksi sivukseen, \verb-article--luokassa osaksi ensimmäistä sivua.
+    Kansilehti tulostuu joissain luokissa (esim. \cns{book} ja \cns{report}) omaksi sivukseen, \cns{article}-luokassa osaksi ensimmäistä sivua.
 \end{frame}
+
 \begin{frame}[fragile]
     \input{harj4_22}
     \input{harj4_23}
 \end{frame}
+
 \subsubsection{Dokumenttiluokan asetukset}
 \begin{frame}[fragile]
     \frametitle{Dokumenttiluokan asetukset}
-    Tiedoston aloittavalle komennolle \verb-\documentclass[]{}- voi antaa valinnaisena argumenttina eräitä dokumentin ulkoasua koskevia asetuksia:
+    Tiedoston aloittavalle komennolle \lstinline-\documentclass[]{}- voi antaa valinnaisena argumenttina eräitä dokumentin ulkoasua koskevia asetuksia:
     \begin{itemize}
-        \item Kirjainkoon vaihtoehdot ovat 10pt, 11pt ja 12pt. 
-        \item Luonnostilan saa valinnalla \verb-draft-. Tällöin kääntäminen on nopeaa ja liian pitkät rivit tulevat merkityiksi.
-        \item Tekstin saa jaettua kahteen kolumniin valinnalla \verb-twocolumn-. 
-        \item article-luokassa tulostus on oletusarvoisesti yksipuoleinen - tämän voi vaihtaa valinnalla \verb-twoside- (vast. \verb-oneside-).
+        \item Kirjainkoon vaihtoehdot ovat \cns{10pt}, \cns{11pt} ja \cns{12pt}. 
+        \item Luonnostilan saa valinnalla \cns{draft}. Tällöin kääntäminen on nopeaa ja liian pitkät rivit tulevat merkityiksi.
+        \item Tekstin saa jaettua kahteen kolumniin valinnalla \cns{twocolumn}. 
+        \item article-luokassa tulostus on oletusarvoisesti yksipuoleinen -- tämän voi vaihtaa valinnalla \cns{twoside} (vast. \cns{oneside}).
     \end{itemize}
     Useammat määritteet erotetaan toisistaan pilkuilla, kuten tavallista.
     \vaihto
