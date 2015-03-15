@@ -98,7 +98,22 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj1_1}
+    \begin{harj}
+        \begin{itemize}
+            \item Avaa Texmaker ja luo uusi tiedosto
+            \item Tallenna se muodossa \cns{nimi.tex} johonkin tätä kurssia varten luomaasi kansioon
+            \item Kirjoita tiedostoon seuraavat rivit:
+                \begin{lstlisting}
+\documentclass{article}
+\begin{document}
+Huhuu!
+\end{document}<>
+                \end{lstlisting}
+            \item Aja tiedosto PDFLaTeX:illa
+            \item Valitse View PDF
+        \end{itemize}
+        Lopputuloksena tulisi olla PDF-tiedosto, jonka yläreunassa lukee ''Huhuu!''.
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -118,7 +133,21 @@
 \begin{frame}[fragile]
     \frametitle{Dokumentin rakenne ja luominen}
     Esittelyosassa eli heti komennon \lstinline+\documentclass{}+  jälkeen valitaan käytettävät paketit ja asetukset. \pause Ääkkösiä ja suomalaista tavutusta varten otetaan käyttöön tietyt \cns{inputenc}-, \cns{fontenc}- ja \cns{babel}-paketit:\pause
-    \input{harj1_2}
+    \begin{harj}
+        Tee dokumenttiisi seuraavat muutokset (älä siis luo uutta tiedostoa):
+        %\usepackage[ansinew]{inputenc}
+        \begin{lstlisting}
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[finnish]{babel}
+\usepackage{geometry}
+\begin{document}
+Öö häh? Herätys!
+\end{document}<>
+        \end{lstlisting}
+    Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -132,14 +161,29 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj1_3}
+    \begin{harj}
+        Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (vältä erikoismerkkejä). Aja tiedosto. Varmista vielä ääkkösten ja tavutuksen toimiminen. Miten kappalejaon kanssa käy?
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
     Edellä mainitut paketit ovat esimerkkejä \newterm{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
     \pause
     Matemaattista tekstiä varten on vielä syytä ottaa käyttöön muutama lisäpaketti. 
-    \input{harj1_4}
+    \begin{harj}
+        Ota käyttöön paketit\footnote{ams tulee sanoista American Mathematical Society}
+        \begin{center}
+            \cns{amsmath},\quad \cns{amsthm}\quad ja\quad \cns{amssymb}
+        \end{center}
+        lisäämällä dokumenttisi esittelyosaan seuraavat komennot:
+        \begin{lstlisting}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}<>
+        \end{lstlisting}
+        \pause
+        Nämä sisältävät fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. Paketti \cns{amsmath} on ladattava ennen \cns{amsthm}-pakettia.
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -234,8 +278,21 @@
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj1_5}
-    \input{harj1_6}
+    \begin{harj}
+        Kolme peräkkäistä pistettä saa komennolla \lstinline-\dots-. Kokeile, miten lopputulokset eroavat, jos kirjoitat pisteet itse.  Kirjoita sitten seuraava:
+        \begin{sample}
+            Erikoismerkkejä ovat mm. \%, \$ ja \&. Merkkijonon \textbackslash textbackslash tuottaminen onnistuu näin\dots
+        \end{sample}
+    \end{harj}
+    \begin{harj}
+        Kommenttirivin avulla koodin sekaan voi kirjoittaa selkeyttäviä huomautuksia, jotka eivät tule näkyviin lopulliseen työhön. Kommenttirivi aloitetaan merkillä \lstinline-%- ja päätetään rivinvaihtoon. 
+        \vaihto
+        Kirjoita koodin sekaan esimerkiksi rivi
+        \begin{lstlisting}
+% Tämä rivi ei tule näkyviin lopullisessa työssä.<>
+        \end{lstlisting}
+        ja testaa, pitääkö väite paikkansa.
+    \end{harj}
 \end{frame}
 
 \begin{frame}
@@ -276,7 +333,15 @@
 \end{frame}
 
 \begin{frame}
-    \input{harj1_7}
+    \begin{harj}
+        \begin{itemize}
+            \item Jaa tekstisi neljään numeroituun osioon
+            \item Jaa ensimmäinen osio lisäksi muutamaksi ali- ja alialiosioksi
+            \item Jätä ainakin yksi alialiosio numeroimatta
+            \item Nimeä kaikki osiot
+        \end{itemize}
+        Tee ensimmäisen kerran harjoitukset ensimmäiseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -325,7 +390,14 @@
 
 \end{frame}
 \begin{frame}
-    \input{harj1_8}
+    \begin{harj}
+        Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
+        \begin{sample}
+            \begin{flushright}
+                Tämä teksti on normaalikokoista, \tiny mutta tämä pientä ja \huge tämä suurta \normalsize. Tähän laitan suuren välin: \qquad, tähän vähän pienemmän: \quad ja \emph{tätä tekstiä taas haluan korostaa!}
+            \end{flushright}
+        \end{sample}
+    \end{harj}
 \end{frame}
 
 
@@ -357,7 +429,13 @@ samanaikaisesti tasan kahdessa tason pisteessä.<>
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj1_9}
+    \begin{harj}
+        Tuota seuraava lause dokumenttiisi:
+        \begin{sample}
+            Vaihdannaisessa renkaassa pätee \((a+b)^2=a^2+2ab+b^2\). Jos siis \(2ab\neq0\), niin \((a+b)^2\neq a^2+b^2\). 
+        \end{sample}
+        Erisuuruuden saat komennolla \lstinline-\neq-. Eksponentti kirjoitetaan tyyliin \lstinline-x^2- (tulostaa \(x^2\)).
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -384,11 +462,35 @@ saadaan kaavasta
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj1_10}
+    \begin{harj}\label{rajaArvo}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Funktion \(f\colon \R\to \R\) derivaatta pisteessä \(x_0\in\R\) on
+            \[
+                f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0},
+            \]
+            mikäli raja-arvo on olemassa.
+        \end{sample}
+        \begin{itemize}
+            \item Kaksoispisteen paikalla kannattaa käyttää komentoa \lstinline-\colon-
+            \item Symbolit \(\mathbb{R}\), \(\to\), \(\in\) ja \(\lim\) saa komennoilla \lstinline-\mathbb{R}-, \lstinline-\to-, \lstinline-\in- ja \lstinline-\lim-.
+            \item Derivointipilkku tulee heittomerkillä \lstinline-'- .
+            \item Alaindeksin (symbolille tai operaattorille) saa kirjoittamalla \lstinline-symboli_{alaindeksi}-.
+        \end{itemize}
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj1_11}
+    \begin{harj}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Jos \(F\) on \(\sigma\)-algebra ja \(A_i\in F\) kaikilla \(i= 1,2,\dots\), niin 
+            \[
+                \bigcup_{i=1}^{\infty} A_i\in F.
+            \]
+        \end{sample}
+        Tarvitset mm. komentoja \lstinline-\sigma-, \lstinline-\in-, \lstinline-\bigcup- ja \lstinline-\infty-. Ala- ja yläindeksit kirjoitetaan merkkien \lstinline-_- ja \lstinline-^- avulla (jos indeksiin halutaan enemmän kuin yksi merkki, se täytyy laittaa aaltosulkeisiin kuten edellisessä tehtävässä). 
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -399,7 +501,12 @@ saadaan kaavasta
             \item \url{http://detexify.kirelabs.org/classify.html}
         \end{itemize}
     \end{scriptsize}
-    \input{harj1_12}
+    \begin{harj}
+        Selvitä, miten voit tuottaa vektorimerkinnät \(\bar{v}\), \(\bar{w}\) ja \(\overline{AB}\). Kirjoita seuraava:
+        \begin{sample}
+            Vektoreiden \(\bar{v}=\overline{AB}\) ja \(\bar{w}=\overline{CD}\) ristitulo \(\bar{v}\times\bar{w}\) on kohtisuorassa kumpaakin vektoria vastaan. Vektoreiden pistetulo \(\bar{v}\cdot\bar{w}\) on sen sijaan reaaliluku.
+        \end{sample}
+    \end{harj}
 
 \end{frame}
 
@@ -427,10 +534,27 @@ saadaan kaavasta
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj2_13}
+    \begin{harj}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Todista seuraava yhtälö:
+            \[
+                \left\lbrace 2^n \,\middle|\, n\in\Z\right\rbrace=\left\lbrace \left(\frac{1}{2}\right)^{-n}\,\middle|\, n\in\Z\right\rbrace
+            \]
+        \end{sample}
+        Komennolla \lstinline-\middle|- saat pystyviivan automaattisesti oikean kokoisena ja komennolla \lstinline-\,- hieman ylimääräistä väliä niiden ympärille. Tehtävästä \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
+    \end{harj}
 \end{frame}
 \begin{frame}[fragile]
-    \input{harj2_14}
+    \begin{harj}
+        Kirjoita seuraava:
+        \begin{sample}
+            Jos \(F\) on \(\sigma\)-algebra ja \(P\colon F\to\R\) todennäköisyys, niin tapahtumille \(A_1,A_2,\dotsc\in F\) pätee
+            \[
+                P\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty P(A_i).
+            \]
+        \end{sample}
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -551,8 +675,12 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
     %\end{Verbatim}
     %\end{scriptsize}
     %\end{minipage}
-    \input{harj2_15}
-    \input{harj2_16}
+    \begin{harj}
+        Kirjoita muutaman yhtälön ketju ja sijoita yhtälöt allekkain, tasaten haluamastasi kohdasta. Voit esimerkiksi derivoida vaiheittain funktion \(x^3\sin(\cos(x))\) tai keksiä jotkin muut yhtälöt. Yhtälöiden ei tarvitse olla tosia. Komennolla \lstinline-\sin- saa sinifunktion tulostettua pystyfontilla.
+    \end{harj}
+    \begin{harj}
+        Kopioi osa edellisen tehtävän yhtälöketjua ja kirjoita se numeroituun tai numeroimattomaan \cns{multline}-ympäristöön. 
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -579,7 +707,16 @@ viitataan myöhemmin.<>
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj2_17}
+    \begin{harj}\label{viittausTehtava}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Eksponenttifunktiolla \(e^x\) on sarjakehitelmä
+            \begin{equation*}
+                \hskip\textwidth minus \textwidth e^x=\sum_{n=1}^\infty\frac{x^n}{n!}.\hskip\textwidth minus \textwidth (1)
+            \end{equation*}
+        \end{sample}
+        Summamerkinnän saat komennolla \lstinline-\sum_{}^{}-, osamäärän komennolla \lstinline-\frac{}{}- ja äärettömän symbolin komennolla \lstinline-\infty-. 
+    \end{harj}
 \end{frame}
 
 
@@ -599,8 +736,13 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj2_18}
-    \input{harj2_19}
+    \begin{harj}\label{harjYmparistot}
+        Luo esittelyosassa ainakin ympäristöt Lause, Määritelmä ja Esimerkki. Käytä luomiasi ympäristöjä ainakin kerran. 
+    \end{harj}
+    Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoilla \lstinline-\begin{proof}...\end{proof}-.
+    \begin{harj}
+        Kirjoita edellisessä harjoituksessa luomallesi lauseelle jokin todistus. Todistukseksi kelpaa muutama rivi valitsemaasi tekstiä.
+    \end{harj}
     %Esimerkiksi rivi
     %\begin{Verbatim}[frame=single]
     %\begin{esim}
@@ -655,7 +797,9 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj2_20}
+    \begin{harj}
+        Valitse harjoituksessa \ref{harjYmparistot} luomillesi lauseympäristöille jotkin tyylit. Kokeile, miltä erilaiset tyylit näyttävät ja valitse mieleisesi!
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -690,8 +834,14 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
 
 \begin{frame}[fragile]
     Kokonaan numeroimattoman lauseympäristön voi luoda komennolla \lstinline-\newtheorem*{}{}-.
-    \input{harj2_21}
-    \input{harj2_22}
+    \begin{harj}
+        Aseta yksi lauseympäristöistäsi (esim. Lause) laskurille \cns{section} alisteiseksi.
+        %Anna yhdelle lauseympäristöistäisi numeroinniksi \verb-\section- tai \verb-\subsection-.
+        Anna sitten toisen lauseympäristön (esim. Lemma) laskuriksi edellinen lauseympäristö. 
+    \end{harj}
+    \begin{harj}
+        Luo jokin numeroimaton lauseympäristö ja käytä sitä työssäsi.
+    \end{harj}
 \end{frame}
 
 
@@ -712,7 +862,11 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
     \begin{extra}
         Jos \LaTeX-tiedoston nimi on \cns{nimi.tex}, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \cns{nimi.aux}, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
     \end{extra}
-    \input{harj2_23}
+    \begin{harj}
+        Viittaa harjoituksessa \ref{viittausTehtava} kirjoittamaasi numeroituun yhtälöön. Käytä komentoja \lstinline-\eqref{}- ja \lstinline-\pageref{}-.
+        \vaihto
+        Huomaa, että viitattavalle kohteelle on ensin annettava tunnus komennolla \lstinline-\label{valitsemasi tunnus}-. Tämä kirjoitetaan ympäristön aloittavan komennon \lstinline-\begin{}- jälkeen. 
+    \end{harj}
 \end{frame}
 
 
@@ -748,8 +902,20 @@ Tässä listani:
 \begin{frame}[fragile]
     \frametitle{Listat}
     Seuraavassa tehtävässä harjoitellaan sisäkkäisten listojen käyttöä.
-    \input{harj2_24}
-    \input{harj2_25}
+    \begin{harj}
+        Luo ainakin kolmen kohdan numeroitu lista haluamistasi asioista. Luo yhdeksi listan jäseneksi toinen lista ja yhdeksi tämän listan jäseneksi kolmas lista. Käytä (ainakin) viimeiseen listaan numeroimatonta \cns{itemize}-ympäristöä.
+    \end{harj}
+    \begin{harj}
+    Luo vielä yksi lista, mutta käytä tällä kertaa ympäristöä \cns{description}. Se toimii kuten \cns{itemize}, mutta pelkän komennon \lstinline-\item- sijaan käytetään komentoa \lstinline-\item[nimi]-, jossa \cns{nimi} on vapaasti valitsemasi merkkijono.
+        %\begin{scriptsize}
+        %\begin{Verbatim}[frame=single]
+        %\begin{description}
+        %  \item[T1] The first item
+        %  \item[T2] The second item
+        %  \item[T3] The third etc \ldots
+        %\end{description}
+        %\end{scriptsize}
+    \end{harj}
     %Listaukseen käytettäviin symboleihin voi itse vaikuttaa. Opetellaan myöhemmin laskareissa usein käytettävä aakkostettu lista.
 \end{frame}
 
@@ -769,7 +935,18 @@ Tässä listani:
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj2_26}
+    \begin{harj}
+        Luo komennot merkinnöille \(\N\), \(\Z\), \(\Q\), \(\R\) ja \(\C\). Kirjoita seuraava:
+        \begin{sample}
+            Lukujoukot muodostavat tornin
+            \[
+                \N\subset \Z\subset \Q\subset \R\subset \C.
+            \]
+        \end{sample}
+        Osajoukkorelaation saat komennolla \lstinline-\subset-. Kokeile myös, mitä komennot \lstinline-\subseteq-, \lstinline-\subsetneq- ja  \lstinline-\supset- tuottavat. Miten saisit symbolit \(\supsetneq\) ja  \(\supseteq\)? Entä symbolin \(\not\subset\)?
+        \vaihto
+        Kirjoita työhösi vielä seuraava: \(\Z\not\subset\N\).
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -824,7 +1001,19 @@ Yleensä
 %\end{frame}
 
 \begin{frame}[fragile]
-    \input{harj2_27}
+    \begin{harj}
+        \LaTeX issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \lstinline-\abs{}-, jonka argumentti on itseisarvomerkkien sisään tuleva lauseke. Tuota sen avulla seuraavat kolmioepäyhtälöt:
+        \begin{sample}
+            \[
+                \abs{\abs{x}-\abs{y}}\leq \abs{x+y}\leq\abs{x}+\abs{y}
+            \]
+            ja
+            \[
+                \abs{\int_a^b f(x)\,dx} \leq\int_a^b\abs{f(x)}\, dx.
+            \]
+        \end{sample}
+        Huomaa, että itseisarvomerkkien koon on syytä muuttua niiden sisältämän lausekkeen koon mukaan.\vaihto Määrätyn integraalin saat komennolla \lstinline-\int_{}^{}- ja pienen välin komennolla \lstinline-\,- (ennen merkkiä \(dx\)).
+    \end{harj}
 \end{frame}
 
 
@@ -906,7 +1095,9 @@ Yleensä
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj3_1}
+    \begin{harj}
+        Tallenna työkansioosi jokin kuva (tarkkana formaatin kanssa) ja tuo se työhösi sopivasti skaalattuna. Muista ottaa ensin käyttöön paketti \cns{graphicx}!
+    \end{harj}
 \end{frame}
 
 \subsubsection{Figure-ympäristö}
@@ -966,7 +1157,9 @@ Yleensä
     Se onnistuu \cns{float}-paketilla. Tällöin esittelyosaan on lisättävä rivi \lstinline-\usepackage{float}-, jonka jälkeen kelluvalle ympäristölle voi antaa argumentin \verb-[H]-, joka toteuttaa toiveesi, oli jälki miten rumaa tahansa. Argumentin \cns{H} kanssa ei voi käyttää muita; esim. \cns{[Hp]} on laiton yhdistelmä.
     \pause
     \vaihto
-    \input{harj3_2}
+    \begin{harj}
+        Tuo työhösi jokin kuva käyttäen \cns{figure}-ympäristöä ja anna valinnaisena argumenttina toiveesi kuvan sijoittamisesta. Lisää vielä kuvateksti.
+    \end{harj}
 \end{frame}
 
 \subsubsection{Piirtäminen (TikZ)}
@@ -981,8 +1174,12 @@ Yleensä
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj3_3}
-    \input{harj3_4}
+    \begin{harj}
+    Piirrä Geogebralla jokin yksinkertainen kuva (vältä funktioita). Rajaa kuva sopivasti ja valitse File > Export > Graphics View as PGF/TikZ. Luo koodi ja kopioi siitä tarvittavat osat tiedostoosi. Tarvittavia osia ovat esittelyosan komennot \lstinline-\usepackage...-, \lstinline-\usetikzlibrary...-, mahdolliset värien määrittelyt \lstinline-\definecolor...- ja varsinainen kuva, eli \lstinline-\begin{tikzpicture}...\end{tikzpicture}-. 
+    \end{harj}
+    \begin{harj}\label{kelluvaTikz}
+        Kopioi edellisessä harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muutoksia pelkästään koodia muuttamalla. Voit esimerkiksi vaihtaa jonkin pisteen paikkaa tai piirtää kokonaan uutta. Tee uudesta kuvasta kelluva ja keksi jokin kuvateksi. 
+    \end{harj}
 \end{frame}
 
 
@@ -1100,8 +1297,25 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
 
 \begin{frame}[fragile]
     \frametitle{Tabular-ympäristö}
-    \input{harj3_5}
-    \input{harj3_6}
+    \begin{harj}
+        Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi riviä.  
+        %ja joka sisältää
+        %\begin{itemize}
+        %\item pystyviivan
+        %\item kaksinkertaisen pystyviivan
+        %\item vaakaviivan
+        %\item osittaisen vaakaviivan sarakkeiden 1 ja 2 välillä
+        %\end{itemize}
+    \end{harj}
+    \begin{harj}
+        Luo toinen 3-sarakkeinen taulukko (esim. kopio edellisestä), joka sisältää 
+        \begin{itemize}
+            \item pystyviivan
+            \item kaksinkertaisen pystyviivan
+            \item vaakaviivan
+            \item osittaisen vaakaviivan kahden sarakkeen välillä
+        \end{itemize}
+    \end{harj}
 \end{frame}
 
 \subsubsection{Sarakkeiden yhdistäminen}
@@ -1150,7 +1364,24 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
 \begin{frame}[fragile]
     \frametitle{Sarakkeiden yhdistäminen}
 
-    \input{harj3_7}
+    \begin{harj}
+        Luo seuraava taulukko:
+        \begin{table}
+            \begin{serif}
+                \begin{tabular}{|l|l|l|}
+                    \hline
+                    \multicolumn{3}{|c|}{\textbf{Päiväpetolintuja}}\\
+                    \hline
+                    \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
+                    Kanahaukka & Accipiter &  gentilis\\ \hline
+                    Hiirihaukka & Buteo & buteo\\ \hline
+                    %\multicolumn{3}{|c|}{Jalohaukkoja}\\ \hline
+                    Tuulihaukka & Falco & columbarius\\\hline
+                    Nuolihaukka & Falco & subbuteo\\ \hline
+                \end{tabular}
+            \end{serif}
+        \end{table}
+    \end{harj}
 \end{frame}
 
 \subsubsection{Rivien yhdistäminen}
@@ -1195,7 +1426,26 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
 
 \begin{frame}[fragile]
     \frametitle{Rivien yhdistäminen} 
-    \input{harj3_8}
+    \begin{harj}\label{taulukko}
+        Luo seuraava taulukko: 
+        \begin{table}
+            \begin{serif}
+                \begin{tabular}{|c|c|c|c|}
+                    \hline
+                    \textit{Heimo} & \textit{Nimitys} & \textit{Suku} & \textit{Laji}\\ \hline
+                    \multirow{2}{*}{Haukat} & Kanahaukka & Accipiter &  gentilis\\ \cline{2-4}
+                                            & Hiirihaukka & Buteo & buteo\\ \hline
+                    %\hline
+                    %Analyysi I \& II & \multirow{3}{*}{Matikan perusopinnot}\\
+                    %\cline{1-1}
+                    %Linis I & \\
+                    %\cline{1-1}
+                    %JYM & \\
+                    %\hline
+                \end{tabular}
+            \end{serif}
+        \end{table}
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1294,7 +1544,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 %\end{frame}
 
 \begin{frame}[fragile]
-    \input{harj3_9}
+    \begin{harj}\label{kelluvaTaulukko}
+        Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
+    \end{harj}
 \end{frame}
 
 
@@ -1392,7 +1644,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj3_10}
+    \begin{harj}
+        Luo jokin vähintään \(2\times 3\)-matriisi käyttäen ympäristöä \cns{pmatrix}, kuten yllä. Tee sitten matriisistasi muutama kopio ja kokeile ympäristöjä \cns{matrix}, \cns{bmatrix} ja \cns{vmatrix}. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylistä.)
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1469,7 +1723,48 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 
 \begin{frame}[fragile]
     \frametitle{Matriisit}
-    \input{harj3_11}
+    \begin{harj}
+        Kirjoita seuraavanlainen matriisitoimitus: 
+        \begin{align*}
+            &
+            \begin{bmatrix*}[r]
+                0 & 0 & 1 & a_1\\
+                0 & 1 & 1 & a_2\\
+                1 & 1 & 1 & a_3
+            \end{bmatrix*}
+%        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
+        \xrightarrow{R_1\leftrightarrow R_3}
+            \begin{bmatrix*}[r]
+                1 & 1 & 1 & a_3\\
+                0 & 1 & 1 & a_2\\
+                0 & 0 & 1 & a_1
+            \end{bmatrix*}
+            %\\
+            %\stackrel{\begin{scriptsize} R_1-R_2 \end{scriptsize} }{\longrightarrow}
+            %&\begin{bmatrix*}[r]
+            %1 & 0 & 0 & a_3-a_2\\
+            %0 & 1 & 1 & a_2\\
+            %0 & 0 & 1 & a_1
+            %\end{bmatrix*}
+            %\stackrel{\begin{scriptsize} R_2-R_3 \end{scriptsize} }{\longrightarrow}
+            %\begin{bmatrix*}[r]
+            %1 & 0 & 0 & a_3-a_2\\
+            %0 & 1 & 0 & a_2-a_1\\
+            %0 & 0 & 1 & a_1
+            %\end{bmatrix*}
+        \end{align*}
+        Matriisien sisällön saat päättää vapaasti eikä rivitoimituksen tarvitse mennä oikein. % Matriisien välisen merkinnän saat rakennettua komennon \verb-\stackrel{}{}- avulla. Yllä on käytetty komentoa
+        Kaavan mukana automaattisesti venyvän nuolen saa komennolla \lstinline-\xrightarrow{kaava}-.
+%        \begin{verbatim}
+%        \stackrel{
+%            \begin{scriptsize} 
+%                R_1\leftrightarrow R_3 
+%            \end{scriptsize}
+%        }{\longrightarrow} 
+%        \end{verbatim}
+
+        % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
+    \end{harj}
 \end{frame}
 
 \subsubsection{Lisätietoa}
@@ -1535,8 +1830,14 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     %\end{frame}
     %\begin{frame}[fragile]
     %Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
-    \input{harj4_12}
-    \input{harj4_13}
+    \begin{harj}
+        Viittaa harjoituksessa \ref{kelluvaTaulukko} luomaasi kelluvaan taulukkoon. Käytä komentoja \lstinline-\ref{}- ja \lstinline-\pageref{}-. Komento \lstinline-\label{..}- tulee taulukkoon liittyvän \lstinline-\caption{..}--komennon jälkeen.
+        %\vaihto
+        %Muista, että viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. Komento sijoitetaan ympäristön aloittavan komennon \verb-\begin{}- perään.
+    \end{harj}
+    \begin{harj}
+        Sama kuin edellinen harjoitus, mutta viittaa harjoituksessa \ref{kelluvaTikz} luomaasi kelluvaan kuvaan.
+    \end{harj}
 \end{frame}
 
 
@@ -1559,8 +1860,12 @@ Matti sanoi: ''Onpa outoa!''<>
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj4_14}
-    \input{harj4_15}
+    \begin{harj}
+        Lisää dokumenttiisi jokin lainaus käyttäen \cns{quote}-, \cns{quotation}- tai \cns{verse}-ympäristöä. 
+    \end{harj}
+    \begin{harj}
+        Lisää työhösi alaviite komennolla \lstinline-\footnote{}-. 
+    \end{harj}
 \end{frame}
 
 \subsubsection{\BibTeX-järjestelmä}
@@ -1604,7 +1909,9 @@ Matti sanoi: ''Onpa outoa!''<>
 
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot}
-    \input{harj4_16}
+    \begin{harj}
+        Kopioi edellisen esimerkin sisältö uuteen tiedostoon ja tallenna se nimellä \cns{lahteet.bib} työkansioosi. 
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1636,7 +1943,9 @@ Matti sanoi: ''Onpa outoa!''<>
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj4_17}
+    \begin{harj}
+        Lisää tiedostoon \cns{lahteet.bib} kirja, jonka nimi on Topologia I, kirjoittaja Jussi Väisälä, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \cns{topo1}.
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1652,7 +1961,9 @@ Matti sanoi: ''Onpa outoa!''<>
 
 \begin{frame}[fragile]
     \frametitle{.bib-tiedostot Internetistä}
-    \input{harj4_18}
+    \begin{harj}
+        Etsi Google Books-palvelusta Walter Rudinin kirjan Complex Analysis (kirjan versiolla ei väliä) tiedot \BibTeX -muodossa. Avaa tiedosto Texmakerilla ja valitse viittaustunnus haluamaksesi. Tallenna tiedosto nimellä \cns{Rudin.bib} työkansioosi. (Huomaa, että palvelu tarjoaa tiedostot muodossa \cns{.bibtex}.)
+    \end{harj}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1671,8 +1982,17 @@ Matti sanoi: ''Onpa outoa!''<>
 
 \begin{frame}[fragile]
     \frametitle{Kirjallisuusluettelon luominen}
-    \input{harj4_19}
-    \input{harj4_20}
+    \begin{harj}
+        Edellä loit \BibTeX-tiedostot \cns{lahteet.bib} ja \cns{Rudin.bib}. Tuo teokset kirjallisuusluetteloon koodilla 
+        \begin{lstlisting}
+\bibliographystyle{plain}
+\bibliography{lahteet,Rudin}<>
+        \end{lstlisting}
+        Sijoita koodi työsi loppuosaan, esimerkiksi juuri ennen komentoa \lstinline-\end{document}-.
+    \end{harj}
+    \begin{harj}
+        Viittaa kuhunkin teokseen työssäsi komennolla \lstinline-\cite{viittaustunnus}-.
+    \end{harj}
 \end{frame}
 \begin{frame}[fragile]
     \frametitle{Käytäntö}
@@ -1731,8 +2051,12 @@ Matti sanoi: ''Onpa outoa!''<>
 \end{frame}
 
 \begin{frame}[fragile]
-    \input{harj4_22}
-    \input{harj4_23}
+    \begin{harj}
+        Luo työllesi kansilehti ja sisällysluettelo. Kokeile miltä työsi näyttää, jos vaihdat luokaksi \cns{report} tai \cns{book}. Millaisia eroja huomaat? 
+    \end{harj}
+    \begin{harj}
+        Dokumenttia on helpompi navigoida elektronisesti, kun viitteet toimivat linkkeinä. Ota tätä varten käyttöön paketti \cns{hyperref} (paketti kannattaa ladata kaikkien muiden pakettien jälkeen). Kokeile kääntää dokumentti -- linkkien ympärillä on nyt ruma laatikko. Paranna tilannetta antamalla \cns{hyperref}-paketille argumentti \cns{colorlinks=true} (ota mallia esim. \cns{inputenc}-paketin lataavasta rivistä).
+    \end{harj}
 \end{frame}
 
 \subsubsection{Dokumenttiluokan asetukset}
