@@ -22,10 +22,10 @@
 \begin{frame}
     \titlepage
 \end{frame}
-%\begin{frame}
+%\begin{fframe}
 %    \frametitle{Kurssisuunnitelma}
 %    \tableofcontents
-%\end{frame}
+%\end{fframe}
 
 \section{1. kerta}
 
@@ -68,7 +68,7 @@
 %\end{itemize}
 
 \subsection{Intro}
-\begin{frame}
+\begin{fframe}
     \frametitle{Mikä \LaTeX\  on?}
     \begin{itemize}[<+->]
         \item Tekstin ladontajärjestelmä
@@ -78,11 +78,11 @@
         \item Merkittävästi erilainen kuin WYSIWYG-järjestelmät
             %ESIMERKKINÄ LAITOKSEN TUTKIELMAPOHJA
     \end{itemize}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Dokumentin rakenne}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Dokumentin rakenne ja luominen}
     \LaTeX-dokumentit tuotetaan tällä kurssilla helppokäyttöisellä Texmaker-ohjelmalla.
     \pause
@@ -95,9 +95,9 @@
     \pause
     \vaihto
     Kaikkein helpoimmin kuitenkin pääsee alkuun käyttämällä jotain online-ympäristöä kuten esimerkiksi Overleaf (\url{https://www.overleaf.com/}). Tällöin mitään ohjelmia ei tarvitse asentaa eikä tiedostoja siirrellä koneiden välillä.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         \begin{itemize}
             \item Avaa Texmaker ja luo uusi tiedosto
@@ -114,9 +114,9 @@ Huhuu!
         \end{itemize}
         Lopputuloksena tulisi olla PDF-tiedosto, jonka yläreunassa lukee ''Huhuu!''.
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Dokumentin rakenne ja luominen}
     \LaTeX-dokumentti koostuu kahdesta osasta: \newterm{esittelyosasta}, joka sisältää tarpeellisia asetuksia ja \newterm{sisällöstä} eli varsinaisesta dokumentista.
     \pause
@@ -128,9 +128,9 @@ Huhuu!
         \item Varsinainen työn sisältö kirjoitetaan siis komentojen \lstinline+\begin{document}+  ja  \lstinline+\end{document}+  väliin.
     \end{itemize}
     (Vrt. edellinen harjoitus!)
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Dokumentin rakenne ja luominen}
     Esittelyosassa eli heti komennon \lstinline+\documentclass{}+  jälkeen valitaan käytettävät paketit ja asetukset. \pause Ääkkösiä ja suomalaista tavutusta varten otetaan käyttöön tietyt \cns{inputenc}-, \cns{fontenc}- ja \cns{babel}-paketit:\pause
     \begin{harj}
@@ -148,9 +148,9 @@ Huhuu!
         \end{lstlisting}
     Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{extra}
         \begin{itemize}
             \item Käyttämällä \cns{inputenc}-pakettia \LaTeX{} lukee \cns{.tex}-tiedoston \cns{utf8}-koodattuna, jolloin esim. ä voidaan kirjoittaa tiedostoon sellaisenaan eikä muodossa \lstinline-\"a-. Tämä vaatii, että käyttämäsi editori tallentaa tiedoston \cns{utf8}-koodattuna. Esim. Texmaker ja Overleaf tekevät niin oletuksena. Jos ääkköset eivät toimi oikein, niin ongelma on todennäköisesti siinä, että tiedosto on koodattu eri tavalla kuin sitä yritetään lukea. Jos ääkköset eivät toimi, voit yrittää kirjoittaa \cns{[utf8]} sijaan esim. \cns{[latin1]}, \cns{[ansinew]} tai \cns{[applemac]}. Paras olisi kuitenkin käyttää \cns{[utf8]}:aa ja yrittää saada editori tallentamaan tässä muodossa.
@@ -158,15 +158,15 @@ Huhuu!
             \item Lopuksi \cns{babel} asettaa dokumentin kielen suomeksi ottamalla käyttöön suomalaiset tavutussäännöt ym.
         \end{itemize}
     \end{extra}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (vältä erikoismerkkejä). Aja tiedosto. Varmista vielä ääkkösten ja tavutuksen toimiminen. Miten kappalejaon kanssa käy?
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     Edellä mainitut paketit ovat esimerkkejä \newterm{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
     \pause
     Matemaattista tekstiä varten on vielä syytä ottaa käyttöön muutama lisäpaketti. 
@@ -184,9 +184,9 @@ Huhuu!
         \pause
         Nämä sisältävät fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. Paketti \cns{amsmath} on ladattava ennen \cns{amsthm}-pakettia.
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Syntaksi eli ''kielioppi''}
     \LaTeX in toimintaa ohjataan komennoilla. \pause Niillä tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirretään kuvia, määritellään asetuksia jne.  \pause
     \begin{framed}
@@ -202,11 +202,11 @@ Huhuu!
     \begin{scriptsize}
         \url{http://www.rri.res.in/~sanjib/latex/ltx-2.html}
     \end{scriptsize}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Syntaksi}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Syntaksi}
     %Edellä on jo tutustuttu komentoihin \verb-\documentclass{}-, \verb-\begin{}...\end{}-, \verb-\usepackage[]{}- jne. Ne ovat esimerkkejä komennoista, jotka
     Komennot tarvitsevat usein \newterm{argumentin} (lisämääreen). \pause Se kirjoitetaan komennon perään
@@ -218,9 +218,9 @@ Huhuu!
     \end{itemize}
     \pause
     Komennolla voi olla yksi tai useampi pakollinen argumentti ja lisäksi yksi tai useampi valinnainen argumentti. \pause Toisilla komennoilla ei ole ainuttakaan argumenttia.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Syntaksi}
     Esimerkiksi 
     \begin{itemize}[<+->]
@@ -236,9 +236,9 @@ Huhuu!
     %PAREMPI LINKKI
     \pause
     Argumenttien järjestyksen ja määrän kanssa on oltava tarkka!
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Syntaksi}
     Muotoa 
     \begin{lstlisting}
@@ -250,9 +250,9 @@ Huhuu!
     \vaihto Ympäristölläkin voi olla nimen lisäksi muita pakollisia tai valinnaisia argumentteja, kuten tieto taulukon sarakkeiden lukumäärästä tai kuvan toivotusta sijainnista. \pause
     \vaihto
     Kurssin aikana opetellaan käyttämään muutamia tarpeellisia ympäristöjä ja luomaan omia komentoja.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Erikoismerkeistä}
     Jotkin erikoismerkit on varattu \LaTeX in käyttöön:
     \begin{itemize}[<+->]
@@ -275,9 +275,9 @@ Huhuu!
             \verb-\{\}- & & \{\}
         \end{tabular}
     \end{table}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Kolme peräkkäistä pistettä saa komennolla \lstinline-\dots-. Kokeile, miten lopputulokset eroavat, jos kirjoitat pisteet itse.  Kirjoita sitten seuraava:
         \begin{sample}
@@ -293,9 +293,9 @@ Huhuu!
         \end{lstlisting}
         ja testaa, pitääkö väite paikkansa.
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}
+\begin{fframe}
     \frametitle{Virheilmoitukset}
     Tiedoston ajamisen jälkeen Texmakerin alareunaan saattaa ilmestyä sinisiä ja punaisia viestejä.\pause
     \begin{itemize}[<+->]
@@ -309,11 +309,11 @@ Huhuu!
     \pause Yleensä kyseessä on jonkin komennon väärinkirjoitus, puuttuva aaltosulku tai muu pieni yksityiskohta.
     \vaihto
     \pause Virheilmoituksia saattaa tulla valtavasti vaikka kyse olisi yksittäisestä ongelmasta!
-\end{frame}
+\end{fframe}
 
 
 \subsection{Otsikot ja korostukset}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Otsikot}
     Teksti jäsennetään ja otsikoidaan komennoilla 
     \begin{itemize}[<+->]
@@ -330,9 +330,9 @@ Huhuu!
     \begin{lstlisting}
 \section*{numeroimaton otsikko}<>
     \end{lstlisting}
-\end{frame}
+\end{fframe}
 
-\begin{frame}
+\begin{fframe}
     \begin{harj}
         \begin{itemize}
             \item Jaa tekstisi neljään numeroituun osioon
@@ -342,9 +342,9 @@ Huhuu!
         \end{itemize}
         Tee ensimmäisen kerran harjoitukset ensimmäiseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tekstin muokkaaminen}
     Tekstieditorissa eli Texmaker-ohjelmassa käytetty fontti tai tekstin suuruus eivät vaikuta lopulliseen työhön, vaan kaikki ulkoasulliset muutokset on tehtävä komennoilla.% (Isot/pienet kirjaimet toimivat kuitenkin sellaisenaan.)
     \vaihto\pause
@@ -357,27 +357,27 @@ Huhuu!
     \pause
     Erikokoisia välilyöntejä varten on omia komentojaan, kuten esimerkiksi \lstinline-\,- , \lstinline-\quad- ja \lstinline-\qquad-.
     \vaihto\pause Pystysuunnassa tyhjää tilaa saa sanomalla esim. \lstinline-\vspace{2.5cm}-. Yhden tyhjän rivin saa komennolla \lstinline-\vspace{\baselineskip}-.
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 %\frametitle{Tekstin muokkaaminen}
 %Koodin sekaan voi kirjoittaa ns. kommenttirivejä, joita ei huomioida käännettäessä eikä siis näytetä lopullisessa työssä. Kommentti alkaa merkillä \verb-%- ja päättyy rivinvaihtoon. Kommentointi kannattaa!
 %\vaihto
 %Tekstin tasauksen voi valita komennoilla \verb-\centering-, \verb-\flushleft-, \verb-\flushright-. 
 %\vaihto
 %
-%\end{frame}
+%\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tekstin muokkaaminen}
     Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
     \vaihto\pause
     Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \lstinline-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \lstinline-\underline{alleviivattava teksti}-. Alleviivaus rikkoo tavutuksen ym., joten ahkeran alleviivaajan kannattaa tutustua esim. \cns{soul}-pakettiin.
     \vaihto\pause
     Sanojen korostamiseen kannattaa kuitenkin käyttää komentoa \verb-\emph{korostettava teksti}-, joka muuttaa fontin sopivaksi kontekstin perusteella!
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tekstin muokkaaminen}
     Tekstin keskittäminen onnistuu ympäristön \verb-center- avulla:
     \begin{lstlisting}
@@ -388,8 +388,8 @@ Huhuu!
     Tällä tavoin keskitetyn tekstin ylä- ja alapuolelle jää hieman tyhjää tilaa. \vaihto\pause
     Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \cns{flushright} ja \cns{flushleft}.
 
-\end{frame}
-\begin{frame}
+\end{fframe}
+\begin{fframe}
     \begin{harj}
         Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
         \begin{sample}
@@ -398,11 +398,11 @@ Huhuu!
             \end{flushright}
         \end{sample}
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Matemaattinen teksti}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Matematiikkatila}
     Matemaattisia ilmaisuja saa tekstin sekaan käyttämällä komentoja \lstinline+\(+  
     ja \lstinline+\)+. \pause Esimerkiksi rivi
@@ -426,9 +426,9 @@ samanaikaisesti tasan kahdessa tason pisteessä.<>
     %\verbö\(x^3+\sqrt{2}x^2+1=0\)ö
     %\]
     %yhtälön \(x^3+\sqrt{2}x^2+1=0\). \pause Tätä kutsutaan matematiikkatilaksi.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Tuota seuraava lause dokumenttiisi:
         \begin{sample}
@@ -436,9 +436,9 @@ samanaikaisesti tasan kahdessa tason pisteessä.<>
         \end{sample}
         Erisuuruuden saat komennolla \lstinline-\neq-. Eksponentti kirjoitetaan tyyliin \lstinline-x^2- (tulostaa \(x^2\)).
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kaavarivi}
     Kun matemaattinen ilmaisu halutaan yksinkertaisesti omalle kaavarivilleen, se kirjoitetaan komentojen \lstinline-\[- ja \lstinline-\]- väliin.
     \pause
@@ -459,10 +459,11 @@ saadaan kaavasta
             x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
         \]
     \end{sample}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
-    \begin{harj}\label{rajaArvo}
+\begin{fframe}
+    \begin{harj}
+        \label{rajaArvo}
         Tuota seuraava dokumenttiisi:
         \begin{sample}
             Funktion \(f\colon \R\to \R\) derivaatta pisteessä \(x_0\in\R\) on
@@ -478,9 +479,9 @@ saadaan kaavasta
             \item Alaindeksin (symbolille tai operaattorille) saa kirjoittamalla \lstinline-symboli_{alaindeksi}-.
         \end{itemize}
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Tuota seuraava dokumenttiisi:
         \begin{sample}
@@ -491,9 +492,9 @@ saadaan kaavasta
         \end{sample}
         Tarvitset mm. komentoja \lstinline-\sigma-, \lstinline-\in-, \lstinline-\bigcup- ja \lstinline-\infty-. Ala- ja yläindeksit kirjoitetaan merkkien \lstinline-_- ja \lstinline-^- avulla (jos indeksiin halutaan enemmän kuin yksi merkki, se täytyy laittaa aaltosulkeisiin kuten edellisessä tehtävässä). 
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     Yleisimpiä matemaattisia symboleita löytää Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niitä voi etsiä esim. seuraavista osoitteista:
     \begin{scriptsize}
         \begin{itemize}
@@ -508,7 +509,7 @@ saadaan kaavasta
         \end{sample}
     \end{harj}
 
-\end{frame}
+\end{fframe}
 
 
 
@@ -516,7 +517,7 @@ saadaan kaavasta
 
 
 \subsection{Matemaattinen teksti}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sulut}
     Varsinkin kaavariville kirjoitettaessa monet symbolit ovat huomattavan kookkaita. Sulut tulostuvat automaattisesti oikean kokoisina kun niille käytetään komentoja pelkkien merkkien \lstinline-(- ja \lstinline-)- sijaan. \vaihto
     \begin{tabular}{cc|cc}
@@ -531,9 +532,9 @@ saadaan kaavasta
     \end{tabular}
     \vaihto
     Jokaista \lstinline-\left--alkuista komentoa täytyy seurata \lstinline-\right--alkuinen komento, vähintään \lstinline-\right.- , joka ei tulosta mitään. Samoin \lstinline-\right--alkuista komentoa on edellettävä \lstinline-\left--alkuinen komento, vähintään \lstinline-\left.- . 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Tuota seuraava dokumenttiisi:
         \begin{sample}
@@ -544,8 +545,8 @@ saadaan kaavasta
         \end{sample}
         Komennolla \lstinline-\middle|- saat pystyviivan automaattisesti oikean kokoisena ja komennolla \lstinline-\,- hieman ylimääräistä väliä niiden ympärille. Tehtävästä \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
     \end{harj}
-\end{frame}
-\begin{frame}[fragile]
+\end{fframe}
+\begin{fframe}
     \begin{harj}
         Kirjoita seuraava:
         \begin{sample}
@@ -555,9 +556,9 @@ saadaan kaavasta
             \]
         \end{sample}
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Vanhoja tapoja}
 
     \begin{itemize}[<+->]
@@ -575,9 +576,9 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
         \item Korjaa virhe esim. lisäämällä puuttuva \verb-\)- -- älä lisää dollareita.
         \item \TeX-tapa kaavarivin tuottamiseen on \verb-$$kaava$$-. \alert{Sitä ei pitäisi \LaTeX{}issa käyttää ollenkaan}, vaikka jotkut niin tekevätkin\dots
     \end{itemize}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Pitkät kaavat}
     Toisinaan matemaattiset ilmaisut ovat niin pitkiä, etteivät ne mahdu yhdelle riville. Tällöin voidaan käyttää esimerkiksi ympäristöä \cns{align*}, jolla rivit saadaan allekkain seuraavasti:
 
@@ -601,9 +602,9 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
     \end{minipage}
 
     Huomaa, ettei \cns{align*}-ympäristöä tarvitse erikseen sijoittaa matematiikkatilaan.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Pitkät kaavat}
     Ympäristölle \cns{align*} rivin katkaisukohta kerrotaan komennolla \lstinline-\\- ja tasauskohta merkillä \lstinline-&-. Katkaisukohta täytyy löytyä kaikilta, paitsi viimeiseltä riviltä. Sen sijaan tasauskohdan täytyy löytyä jokaiselta riviltä!
     \vaihto
@@ -636,9 +637,9 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
     %x &= \frac{-b\pm\sqrt{b^2-4ac}}{2a}
     %\end{align*}
     %\end{minipage}
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 %Esimerkiksi komennolla
 %\begin{scriptsize}
 %\begin{Verbatim}[frame=single]
@@ -659,9 +660,9 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
 %&=3\cdot 2^2+2\cdot (-1)-3^2=1.
 %\end{align*}
 %
-%\end{frame}
+%\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     %Seuraavassa pohja \verb-align*--ympäristön käyttämistä varten:
     %\vaihto
     %\begin{minipage}{4cm}
@@ -681,9 +682,9 @@ Yhtälön $2x+1=0$ ratkaisu on $x=-1/2$.<>
     \begin{harj}
         Kopioi osa edellisen tehtävän yhtälöketjua ja kirjoita se numeroituun tai numeroimattomaan \cns{multline}-ympäristöön. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Numeroidut kaavat}
 Komennolla \lstinline-\begin{equation}...\end{equation}- saa luotua samanlaisen kaavarivin kuin komennolla \lstinline-\[...\]-, mutta numeroinnilla varustettuna. \pause Esimerkiksi
 
@@ -704,10 +705,11 @@ viitataan myöhemmin.<>
     \end{sample}
     \pause
     Numeroituihin kaavoihin viittaamiseen palataan tuonnempana.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
-    \begin{harj}\label{viittausTehtava}
+\begin{fframe}
+    \begin{harj}
+        \label{viittausTehtava}
         Tuota seuraava dokumenttiisi:
         \begin{sample}
             Eksponenttifunktiolla \(e^x\) on sarjakehitelmä
@@ -717,11 +719,11 @@ viitataan myöhemmin.<>
         \end{sample}
         Summamerkinnän saat komennolla \lstinline-\sum_{}^{}-, osamäärän komennolla \lstinline-\frac{}{}- ja äärettömän symbolin komennolla \lstinline-\infty-. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Lauseympäristö}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lauseympäristö}
     Paketti \cns{amsthm} tarjoaa mahdollisuuden esittää mm. lauseet, lemmat ja määritelmät tyylikkäästi. 
     \vaihto
@@ -733,10 +735,11 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
     %\newtheorem{lause}{Lause}
     %\newtheorem{maar}{Määritelmä}
     %\end{Verbatim}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
-    \begin{harj}\label{harjYmparistot}
+\begin{fframe}
+    \begin{harj}
+        \label{harjYmparistot}
         Luo esittelyosassa ainakin ympäristöt Lause, Määritelmä ja Esimerkki. Käytä luomiasi ympäristöjä ainakin kerran. 
     \end{harj}
     Lauseiden todistuksia varten on oma ympäristönsä, jota käytetään komennoilla \lstinline-\begin{proof}...\end{proof}-.
@@ -757,9 +760,9 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
     %\end{esim}
     %\end{framed}
     %Jos ympäristöä \verb-esim- ei ole määritelty esittelyosassa, tämä aiheuttaa virheen!
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 %\pause
 %Vastaavasti esimerkiksi komento
 %\begin{Verbatim}[frame=single]
@@ -776,9 +779,9 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
 %\end{framed}
 %\pause
 %Kokeile, miltä nämä näyttävät omassa työssäsi.
-%\end{frame}
+%\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lauseympäristön tyyli}
     Lauseympäristön tyyli valitaan esittelyosassa komennolla \lstinline-\theoremstyle{...}-. Valittavissa on tyylit \cns{plain}, \cns{definition} ja \cns{remark}. Tyylin valinta vaikuttaa sitä seuraaviin komennolla \lstinline-\newtheorem{}{}- luotuihin ympäristöihin.
     \vaihto
@@ -794,24 +797,24 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
     \end{lstlisting}
     \pause
     ympäristöt \cns{lemma} ja \cns{lause} tulostuvat \cns{plain}-tyylin mukaisesti ja ympäristö \cns{maar} \cns{definition}-tyylin mukaisesti.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Valitse harjoituksessa \ref{harjYmparistot} luomillesi lauseympäristöille jotkin tyylit. Kokeile, miltä erilaiset tyylit näyttävät ja valitse mieleisesi!
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lauseympäristöjen numerointi}
     Komennolla \lstinline-\newtheorem{}{}- luotu ympäristö luo samalla uuden \newterm{laskurin}, jonka mukaan ympäristön toteutumat numeroidaan. 
     \vaihto
     Laskuri voidaan myös asettaa toiselle laskurille \newterm{alisteiseksi} tai valita mielivaltaisesti. Erityisesti eri ympäristöt voivat käyttää samaa laskuria, jos niin halutaan.
     \vaihto
     Komennolla \lstinline-\newtheorem{}{}[]- on valinnaisena argumenttina laskuri, jolle ympäristön numerointi halutaan alisteiseksi. Tämä voisi olla esim. laskuri \cns{section}, jolloin ympäristö numeroitaisiin muodossa ''osionNumero.ympäristönNumero''.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lauseympäristöjen numerointi}
     Jos ympäristön halutaan käyttävän jotain tiettyä laskuria, käytetään komentoa \lstinline-\newtheorem{}[laskurin nimi]{}-. Huomaa, että tässä valinnainen argumentti sijoittuu pakollisten väliin. 
     \vaihto
@@ -830,9 +833,9 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
     %\ldots
     %\end{prop}
     %\end{framed}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     Kokonaan numeroimattoman lauseympäristön voi luoda komennolla \lstinline-\newtheorem*{}{}-.
     \begin{harj}
         Aseta yksi lauseympäristöistäsi (esim. Lause) laskurille \cns{section} alisteiseksi.
@@ -842,11 +845,11 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
     \begin{harj}
         Luo jokin numeroimaton lauseympäristö ja käytä sitä työssäsi.
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Sisäiset viittaukset}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sisäiset viittaukset}
     \LaTeX illa voi helposti viitata numeroituihin kohteisiin, kuten lauseisiin tai yhtälöihin. Viitattava kohde täytyy ensin nimetä komennolla \lstinline-\label{nimi}- (nimi ei tulostu työhön). Tämän jälkeen viittaaminen onnistuu komennoilla 
     \begin{itemize}
@@ -855,9 +858,9 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
         \item \lstinline-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
     \end{itemize}
     Sisäisten viittausten kanssa tulee aina käyttää komentoja. Tällöin viittaukset pysyvät kohdallaan vaikka numeroinnit muuttuisivat työn edetessä.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
     \begin{extra}
         Jos \LaTeX-tiedoston nimi on \cns{nimi.tex}, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \cns{nimi.aux}, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
@@ -867,11 +870,11 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
         \vaihto
         Huomaa, että viitattavalle kohteelle on ensin annettava tunnus komennolla \lstinline-\label{valitsemasi tunnus}-. Tämä kirjoitetaan ympäristön aloittavan komennon \lstinline-\begin{}- jälkeen. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Listarakenteet}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Listarakenteet}
     \LaTeX illa voi luoda listoja mm. ympäristöjen \cns{itemize} ja \cns{enumerate} avulla. Ensimmäinen on ranskalaiset viivat-tyyppinen, jälkimmäinen numeroi listan jäsenet. Näitä käytetään seuraavasti:
     \vaihto
@@ -897,9 +900,9 @@ Tässä listani:
     \end{minipage}
     \vaihto
     Luettelointiin käytetyt symbolit voi tarvittaessa valita vapaasti. 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Listat}
     Seuraavassa tehtävässä harjoitellaan sisäkkäisten listojen käyttöä.
     \begin{harj}
@@ -917,11 +920,11 @@ Tässä listani:
         %\end{scriptsize}
     \end{harj}
     %Listaukseen käytettäviin symboleihin voi itse vaikuttaa. Opetellaan myöhemmin laskareissa usein käytettävä aakkostettu lista.
-\end{frame}
+\end{fframe}
 
 
 \subsection{Omat komennot}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Omat komennot}
     %\LaTeX in käyttämistä helpottaa se, että kaikki on koodattavissa komennoiksi. 
     %Esimerkiksi olisi raskasta kirjoittaa jokainen ristitulon merkki pikseli pikseliltä, joten tälle kannattaa luoda oma komentonsa, jolla asia hoituu automaattisesti.
@@ -932,9 +935,9 @@ Tässä listani:
     luo komennon \lstinline-\R-, joka tulostaa matematiikkatilassa symbolin \(\R\). Komennon luomisen jälkeen kyseisen symbolin tuottaminen onnistuu helposti.
     \vaihto
     Omia komentoja luomalla voit yksinkertaistaa ja helpottaa omaa työtäsi. Jo parikin kertaa toistuva komentojen ketju kannattaa määritellä esittelyosassa yhdeksi yksinkertaiseksi komennoksi.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Luo komennot merkinnöille \(\N\), \(\Z\), \(\Q\), \(\R\) ja \(\C\). Kirjoita seuraava:
         \begin{sample}
@@ -947,9 +950,9 @@ Tässä listani:
         \vaihto
         Kirjoita työhösi vielä seuraava: \(\Z\not\subset\N\).
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Omat komennot}
     Komennolla \lstinline-\newcommand{}[]{}- on valinnaisena argumenttina luotavan komennon argumenttien lukumäärä. Esimerkiksi
     \begin{lstlisting}
@@ -989,18 +992,18 @@ Yleensä
     %
     %\end{scriptsize}
 %luo komennon \verb-\bino-, jolla on kolme argumenttia: komento \verb-\bino{n}{p}{k}- tuottaa binomitodennäköisyyden kaavan \[\bino{n}{p}{k}.\]
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 %    \frametitle{Omat komennot}
 %    Komennon \lstinline-\newcommand{}{}- käyttäminen aiheuttaa konfliktin, jos samanniminen komento on jo käytössä. Tällöin kannattaa nimetä oma komentonsa toisin. 
 %    \vaihto
 %    \begin{extra}
 %        Jos välttämättä haluaa korvata valmiin komennon omallaan, voi käyttää komentoa \verb-\renewcommand{}{}-. Tämä on joskus tarpeen, mutta saattaa sotkea pahasti asioita!
 %    \end{extra}
-%\end{frame}
+%\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         \LaTeX issa ei ole valmista komentoa itseisarvofunktiota varten. Korjaa puute luomalla komento \lstinline-\abs{}-, jonka argumentti on itseisarvomerkkien sisään tuleva lauseke. Tuota sen avulla seuraavat kolmioepäyhtälöt:
         \begin{sample}
@@ -1014,7 +1017,7 @@ Yleensä
         \end{sample}
         Huomaa, että itseisarvomerkkien koon on syytä muuttua niiden sisältämän lausekkeen koon mukaan.\vaihto Määrätyn integraalin saat komennolla \lstinline-\int_{}^{}- ja pienen välin komennolla \lstinline-\,- (ennen merkkiä \(dx\)).
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 
@@ -1024,7 +1027,7 @@ Yleensä
 \subsection{Kuvat}
 
 \subsubsection{Kuvien liittäminen}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kuvien liittäminen}
     Kuvien liittämistä varten täytyy ottaa käyttöön \cns{graphicx}-paketti. 
     \vaihto
@@ -1037,27 +1040,27 @@ Yleensä
     Tiedostopäätettä ei ole tarpeen kirjoittaa, jos tiedoston nimi ei sisällä välejä.
     \vaihto
     Valinnaisella argumentilla voidaan skaalata, kiertää ja rajata liitettävää kuvaa. 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kuvien liittäminen}
     Työkansioon tallennetun kuvan \cns{smile.jpeg} saisi näkyviin koodilla
     \begin{lstlisting}
 \includegraphics{smile}<>
     \end{lstlisting}
     \includegraphics{smile}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kuvan skaalaus}
     Kuva on aivan liian suuri, joten sitä on syytä skaalata:
     \begin{lstlisting}
 \includegraphics[scale=0.4]{smile}<>
     \end{lstlisting}
     \includegraphics[scale=0.4]{smile}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kuvan skaalaus}
     Skaalaus onnistuu myös määrittelemällä kuvan leveys tai korkeus:
     \begin{lstlisting}
@@ -1072,9 +1075,9 @@ Yleensä
     \begin{minipage}{5cm}
         \includegraphics[height=4cm]{smile}
     \end{minipage}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kuvan kierto}
     Kuvaa voi kiertää antamalla valinnaiseksi argumentiksi kiertokulman asteina.
 
@@ -1092,23 +1095,23 @@ Yleensä
     \end{minipage}
 
     Huomaa, että useammat määritteet erotetaan toisistaan pilkuilla!
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Tallenna työkansioosi jokin kuva (tarkkana formaatin kanssa) ja tuo se työhösi sopivasti skaalattuna. Muista ottaa ensin käyttöön paketti \cns{graphicx}!
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Figure-ympäristö}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kelluva figure-ympäristö}
     Käyttämällä pelkästään komentoa \lstinline-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
     \vaihto
     On parempi antaa \LaTeX in päättää itse mihin kuva sijoitetaan eli tehdä kuvasta \newterm{kelluva}. Tämä onnistuu käyttämällä \cns{figure}-ympäristöä. 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kelluva kuva}
     \begin{lstlisting}
 \begin{figure}[hb]
@@ -1120,9 +1123,9 @@ Yleensä
         \includegraphics[height=4cm]{smile}
         \caption{Helppo hymyillä}
     \end{figure}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Figure-ympäristön argumentit}
 %    Kelluvalle ympäristölle (yllä \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
     Oletuksena \LaTeX\ yrittää sijoittaa kelluvan ympäristön (yllä \cns{figure}) tekstisivun ylä- tai alareunaan tai sivulle, jolla on vain kelluvia olioita. Valinnaisella argumentilla voi kertoa tarkemmin, mihin kohtaan sijoittaminen \emph{sallitaan}:
@@ -1147,9 +1150,9 @@ Yleensä
         \item Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. \pause Esimerkiksi \cns{[!hb]} sallii sijoittamisen tähän tai tekstisivun alareunaan ja lopputulos saa näyttää hieman rumalta.
         \item {\footnotesize Tarkempi (tekninen) kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}}
     \end{itemize}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Figure-ympäristön argumentit}
     Usein haluttaisiin sijoittaa kelluva ympäristö \underline{tähän} kohtaan tekstiä \textit{no matter what}. 
     \pause
@@ -1160,10 +1163,10 @@ Yleensä
     \begin{harj}
         Tuo työhösi jokin kuva käyttäen \cns{figure}-ympäristöä ja anna valinnaisena argumenttina toiveesi kuvan sijoittamisesta. Lisää vielä kuvateksti.
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Piirtäminen (TikZ)}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kuvien piirtäminen}
     Kuvien liittämisen lisäksi niitä voi myös piirtää suoraan \LaTeX illa. Yksinkertaisimmissa tapauksissa tämä onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
     \vaihto
@@ -1171,29 +1174,30 @@ Yleensä
     \vaihto Kuvien piirtämistä varten on tarjolla muutamia paketteja, joista erityisesti \TikZ{} on syytä mainita. Runsaasti esimerkkejä (koodeineen) löytyy täältä: \url{http://www.texample.net/tikz/examples/all/}
     \vaihto Geogebra osaa kääntää sillä luodut kuvat \TikZ-koodiksi, mikä helpottaa työtä valtavasti.
     \vaihto Muita kuvien tuottamiseen tarkoitettuja paketteja ovat picture, xy-Pic ja Asymptote.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
     Piirrä Geogebralla jokin yksinkertainen kuva (vältä funktioita). Rajaa kuva sopivasti ja valitse File > Export > Graphics View as PGF/TikZ. Luo koodi ja kopioi siitä tarvittavat osat tiedostoosi. Tarvittavia osia ovat esittelyosan komennot \lstinline-\usepackage...-, \lstinline-\usetikzlibrary...-, mahdolliset värien määrittelyt \lstinline-\definecolor...- ja varsinainen kuva, eli \lstinline-\begin{tikzpicture}...\end{tikzpicture}-. 
     \end{harj}
-    \begin{harj}\label{kelluvaTikz}
+    \begin{harj}
+        \label{kelluvaTikz}
         Kopioi edellisessä harjoituksessa luomasi kuvan koodi ja tee kuvaan joitakin muutoksia pelkästään koodia muuttamalla. Voit esimerkiksi vaihtaa jonkin pisteen paikkaa tai piirtää kokonaan uutta. Tee uudesta kuvasta kelluva ja keksi jokin kuvateksi. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Taulukot}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Taulukot}
     Taulukoiden rakentaminen \LaTeX issa on oma taiteenlajinsa. Mahdollisuudet ovat rajattomat, mutta perusteiden opettelu vaatii hieman energiaa. 
     \vaihto
 Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon sisältö kirjoitetaan komentojen \lstinline-\begin{tabular}[]{}- ja \lstinline-\end{tabular}- väliin.
     \vaihto
     Ympäristöllä on pakollinen argumentti, jolla määritellään taulukon asetukset, eli miten kunkin sarakkeen sisältö tasataan ja millaisia pystyviivoja käytetään.
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 
 %\frametitle{Taulukot}
 %Komento 
@@ -1213,10 +1217,10 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
 %\end{tabular}
 %\end{framed}
 %Huomaa, ettei asetuksissa oteta kantaa rivien määrään.
-%\end{frame}
+%\end{fframe}
 
 \subsubsection{Tabular-ympäristö}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tabular-ympäristö}
     Tabular-ympäristön pakollinen argumentti on jono seuraavia merkkejä:
     \begin{table}
@@ -1242,9 +1246,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
     Esimerkiksi komento \lstinline-\begin{tabular}{r|cc}- aloittaisi 3-sarakkeisen taulukon, jolla olisi pystyviiva 1. ja 2. sarakkeen välillä. Sarakkeen 1 sisältö tasattaisiin oikealle, kahden muun sisältö keskitettäisiin.
     %\vaihto
     %Lisätietoja ympäristön käytöstä saa kirjasta  \begin{scriptsize}\url{http://en.wikibooks.org/wiki/LaTeX/Tables#The_tabular.2A_environment}\end{scriptsize}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tabular-ympäristö}
     Taulukon sisältö kirjoitetaan rivi kerrallaan. Jokaisella rivillä merkki \lstinline-&- erottaa sarakkeet toisistaan, komennolla \lstinline-\\- siirrytään seuraavalle riville.  Nämä ja muut taulukon sisäiset komennot ovat seuraavassa:
     \vaihto
@@ -1266,9 +1270,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \end{tabular}
         \end{small}
     \end{table}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tabular-ympäristö}
     Esimerkiksi koodi
     \begin{lstlisting}
@@ -1293,9 +1297,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
         \end{tabular}
     \end{sample}
     Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Tabular-ympäristö}
     \begin{harj}
         Laadi jokin 3-sarakkeinen taulukko, jossa on ainakin kaksi riviä.  
@@ -1316,10 +1320,10 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \item osittaisen vaakaviivan kahden sarakkeen välillä
         \end{itemize}
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Sarakkeiden yhdistäminen}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sarakkeiden yhdistäminen}
     Sarakkeiden yhdistäminen onnistuu komennolla \lstinline-\multicolumn{}{}{}-. Pakollisista argumenteista
     \begin{itemize}
@@ -1328,9 +1332,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
         \item kolmas on yhdistämällä saadun sarakkeen sisältö
     \end{itemize}
     Komento \lstinline-\multicolumn- toimii sellaisenaan eikä tarvitse lisäpaketteja.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sarakkeiden yhdistäminen}
     %\begin{minipage}{5cm}
     \begin{lstlisting}
@@ -1359,9 +1363,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \end{tabular}
         \end{small}
     \end{serif}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sarakkeiden yhdistäminen}
 
     \begin{harj}
@@ -1382,10 +1386,10 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \end{serif}
         \end{table}
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Rivien yhdistäminen}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Rivien yhdistäminen}
     Rivien yhdistämistä varten tarvitaan paketti \cns{multirow}. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \lstinline-\multirow{}{}{}-. Pakollisista argumenteista
     \begin{itemize}
@@ -1396,9 +1400,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
     Rivin leveyttä ei useinkaan kannata itse valita, ellei ole varma siitä mitä haluaa tehdä. 
     \vaihto
     Huomaa, että \lstinline-\multirow- toimii kuten \lstinline-\multicolumn-, mutta keskimmäinen argumentti on eri tarkoitusta varten.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Rivien yhdistäminen} 
     \begin{lstlisting}
 \begin{tabular}{|c|c|c|}
@@ -1422,11 +1426,12 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \end{tabular}
         \end{small}
     \end{serif}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Rivien yhdistäminen} 
-    \begin{harj}\label{taulukko}
+    \begin{harj}
+        \label{taulukko}
         Luo seuraava taulukko: 
         \begin{table}
             \begin{serif}
@@ -1446,9 +1451,9 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \end{serif}
         \end{table}
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sarakkeiden ja rivien yhdistäminen} 
     Sarakkeita ja rivejä voi yhdistää samassa taulukossa:
     \begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
@@ -1484,18 +1489,18 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
             \end{scriptsize}
         \end{serif}
     \end{table}
-\end{frame}
+\end{fframe}
 
-\begin{frame}
+\begin{fframe}
     Taulukoiden rakentamisessa lähes mikä tahansa on mahdollista. Kirjasta \url{http://en.wikibooks.org/wiki/LaTeX/Tables} voi etsiä apua monimutkaisempia toteutuksia varten.
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 %\frametitle{Kelluvat taulukot}
 %Yleensä taulukot kannattaa esittää kelluvina ympäristöinä. Tämä tarkoittaa sitä, että \LaTeX\ päättää itse, mihin taulukko kannattaa ulkonäöllisesti sijoittaa. Tällöin \verb-tabular--ympäristö sijoitetaan \verb-table--ympäristöön:
 %
-%\end{frame}
-%\begin{frame}[fragile]
+%\end{fframe}
+%\begin{fframe}
 %\frametitle{Kelluvat taulukot}
 %\verb-table--ympäristölle voidaan antaa valinnaisena argumenttina toive taulukon sijoittumisesta seuraavilla määritteillä:
 %\begin{tabular}{cc}
@@ -1504,10 +1509,10 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
 %b & sivun alareunaan\\
 %p & sivun yläreunaan
 %\end{tabular}
-%\end{frame}
+%\end{fframe}
 
 \subsubsection{Kelluva table-ympäristö}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kelluva table-ympäristö}
 Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
     \vaihto
@@ -1520,9 +1525,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \end{table}<>
     \end{lstlisting}
     Ympäristön \cns{table} sijoittelu noudattaa samoja sääntöjä kuin \cns{figure} ja sitä voi säätää antamalla ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \cns{!htbp} (tai \cns{float}-pakettia käyttämällä \cns{H}).
-\end{frame}
+\end{fframe}
 
-%\begin{frame}[fragile]
+%\begin{fframe}
 %    \frametitle{Table-ympäristön argumentit}
 %    Kelluvalle ympäristölle (yllä \verb-table-) annetaan valinnaisena argumenttina toive taulukon sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
 %    \begin{table}
@@ -1541,18 +1546,19 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 %        \end{tabular}
 %    \end{table}
 %    Toive ei ole \LaTeX in tärkeysjärjestyksessä korkeimmalla, joten se ei aina toteudu.
-%\end{frame}
+%\end{fframe}
 
-\begin{frame}[fragile]
-    \begin{harj}\label{kelluvaTaulukko}
+\begin{fframe}
+    \begin{harj}
+        \label{kelluvaTaulukko}
         Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Matriisit}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Matematiikkatilan taulukot}
     \LaTeX\ olettaa \cns{tabular}-ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \cns{array}. Sitä käytetään kuten \cns{tabular}-ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
 
@@ -1580,9 +1586,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \end{array}
         \]
     \end{minipage}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Array-ympäristö}
     \cns{array}-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \cns{cases}. 
     \begin{lstlisting}
@@ -1603,10 +1609,10 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
             \end{cases}
         \]
     \end{sample}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Matriisiympäristöt}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Matriisit}
     Matriisit voitaisiin luoda käsin käyttäen \cns{array}-ympäristöä, mutta hieman helpompiakin tapoja on. Esimerkiksi ympäristöllä \cns{pmatrix} matriiseja luotaisiin seuraavasti:
 
@@ -1635,21 +1641,21 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \item rivi vaihdetaan komennolla \lstinline-\\-
     \end{itemize}
 
-    %\end{frame}
-    %\begin{frame}[fragile]
+    %\end{fframe}
+    %\begin{fframe}
     %
-    %\end{frame}
+    %\end{fframe}
     %loisi matriisin
 %Saman voi kuitenkin tehdä helpommin käyttämällä matriiseja varten luotuja ympäristöjä, kuten \verb-bmatrix*- tai \verb-pmatrix*-. Näitä varten tarvitset paketin \verb-mathtools-.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Luo jokin vähintään \(2\times 3\)-matriisi käyttäen ympäristöä \cns{pmatrix}, kuten yllä. Tee sitten matriisistasi muutama kopio ja kokeile ympäristöjä \cns{matrix}, \cns{bmatrix} ja \cns{vmatrix}. (Kunkin kohdalle kannattaa kirjoittaa kommentti tulostuvan matriisin tyylistä.)
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Matriisit}
     Vaikka ympäristöt \cns{pmatrix} (\cns{matrix}, \cns{bmatrix}, \cns{vmatrix}) pohjautuvat \cns{array}-ympäristöön, ei sarakkeiden tasaukseen voi lähtökohtaisesti vaikuttaa. \vaihto Paketti \cns{mathtools} tarjoaa vastaavat ympäristöt \cns{pmatrix*}, \cns{bmatrix*} jne., joilla on valinnaisena argumenttina sarakkeissa käytetty tasaus:\vaihto
 
@@ -1685,9 +1691,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     %\end{tabular}
     %\vaihto
     %Ympäristöllä on valinnainen argumentti, jolla valitaan tekstin tasaus (r, l tai c). Jos ympäristön nimestä jätetään * pois, sarakkeiden sisältö keskitetään (tällöin pakettia \verb-mathtools- ei tarvita). 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Matriisit}
 
     Esimerkki:\vaihto
@@ -1719,9 +1725,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \end{bmatrix*}
         \]
     \end{minipage}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Matriisit}
     \begin{harj}
         Kirjoita seuraavanlainen matriisitoimitus: 
@@ -1765,10 +1771,10 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 
         % Kannattaa kopioida alkuperäisen matriisin koodi ja muokata sitä kunkin uuden matriisin kohdalla. Matriisit vievät paljon tilaa, joten ympäristö \verb-align*- on hyödyksi!
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Lisätietoa}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lisätietoa matriiseista}
     Tavalliset matriisiympäristöt \cns{pmatrix} jne. voidaan säätää noudattamaan paremmin \cns{array}-ympäristön syntaksia.
     \vaihto
@@ -1783,9 +1789,9 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \array{#1}}
 \makeatother<>
     \end{lstlisting}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lisätietoa matriiseista}
     Edellä tehtyjen muutosten jälkeen matriisiympäristöt toimivat kuten ennenkin, mutta lisäksi valinnainen argumentti on käytössä kuten \cns{array}-ympäristöllä:
     \vaihto
@@ -1809,7 +1815,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
             \end{bmatrix}
         \]
     \end{minipage}
-\end{frame}
+\end{fframe}
 
 
 
@@ -1818,7 +1824,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 
 \subsection{Viittaaminen kuviin ja taulukoihin}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Viittaaminen kuviin ja taulukoihin}
     Kelluviksi kirjoitetut kuvat ja taulukot tulevat numeroiduiksi, jolloin niihin viittaaminen onnistuu helposti komennoilla \lstinline-\label{}- ja \lstinline-\ref{}-. 
     %\begin{itemize}
@@ -1827,8 +1833,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     %\item \verb-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
     %\end{itemize}
     %Sisäisten viittausten kanssa tulee aina käyttää komentoja. Tällöin viittaukset pysyvät kohdallaan vaikka numeroinnit muuttuisivat työn edetessä.
-    %\end{frame}
-    %\begin{frame}[fragile]
+    %\end{fframe}
+    %\begin{fframe}
     %Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
     \begin{harj}
         Viittaa harjoituksessa \ref{kelluvaTaulukko} luomaasi kelluvaan taulukkoon. Käytä komentoja \lstinline-\ref{}- ja \lstinline-\pageref{}-. Komento \lstinline-\label{..}- tulee taulukkoon liittyvän \lstinline-\caption{..}--komennon jälkeen.
@@ -1838,13 +1844,13 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     \begin{harj}
         Sama kuin edellinen harjoitus, mutta viittaa harjoituksessa \ref{kelluvaTikz} luomaasi kelluvaan kuvaan.
     \end{harj}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Kirjallisuusviitteet}
 
 \subsubsection{Lainaukset ja alaviitteet}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Lainaukset ja alaviitteet}
     Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \lstinline-'- merkillä:
     \begin{lstlisting}
@@ -1857,19 +1863,19 @@ Matti sanoi: ''Onpa outoa!''<>
     Lainauksia varten on olemassa myös omia ympäristöjään, kuten \cns{verse}, \cns{quote} ja \cns{quotation}.
     \vaihto
     Alaviitteen voi luoda komennolla \lstinline-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Lisää dokumenttiisi jokin lainaus käyttäen \cns{quote}-, \cns{quotation}- tai \cns{verse}-ympäristöä. 
     \end{harj}
     \begin{harj}
         Lisää työhösi alaviite komennolla \lstinline-\footnote{}-. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{\BibTeX-järjestelmä}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kirjallisuusviitteet}
     \LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \BibTeX-järjestelmän avulla. 
     \vaihto
@@ -1886,9 +1892,9 @@ Matti sanoi: ''Onpa outoa!''<>
     %\bibliography{teos1.bib, teos2.bib, teos3.bib,...}
     %\end{Verbatim}
     %Edellytyksenä on, että tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{.bib-tiedostot}
     \cns{.bib}-tiedoston voi luoda millä tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
     \vaihto
@@ -1905,16 +1911,16 @@ Matti sanoi: ''Onpa outoa!''<>
 }<>
     \end{lstlisting}
     %Tiedosto tallennetaan muodossa \verb-jokinNimi.bib- samaan kansioon \verb-.tex--tiedoston kanssa (ei pakollista, mutta yksinkertaisinta).
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{.bib-tiedostot}
     \begin{harj}
         Kopioi edellisen esimerkin sisältö uuteen tiedostoon ja tallenna se nimellä \cns{lahteet.bib} työkansioosi. 
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{.bib-tiedoston sisältö}
     \begin{itemize}
         \item Ensimmäisellä komennolla (\lstinline[language=BibTeX]-@book-, \lstinline[language=BibTeX]-@article-, \lstinline[language=BibTeX]-@unpublished- jne.) kerrotaan, minkä tyyppisestä teoksesta on kyse. 
@@ -1922,9 +1928,9 @@ Matti sanoi: ''Onpa outoa!''<>
         \item Tunnuksen voi valita vapaasti (ilman ääkkösiä ja erikoismerkkejä) eikä se tule näkyviin mihinkään.  Esimerkiksi yllä tunnus on \cns{kemper}, joten teokseen viitattaisiin komennolla \lstinline-\cite{kemper}-.
         \item Muut kentät (ja niiden pakollisuus/valinnaisuus) määräytyvät teoksen tyypin mukaan.
     \end{itemize}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Luokat ja .bib-tiedoston sisältö}
     Kun tiedostoja luodaan käsin, täytyy selvittää mitkä kentät ovat pakollisia ja mitkä valinnaisia. 
     \vaihto
@@ -1940,15 +1946,15 @@ Matti sanoi: ''Onpa outoa!''<>
     \end{scriptsize}
     \vaihto
     Käytännössä jokaista kuviteltavissa olevaa lähdeteosta varten löytyy jokin sopiva luokka (ja tarpeen tullen sellaisen voi luoda itsekin).
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Lisää tiedostoon \cns{lahteet.bib} kirja, jonka nimi on Topologia I, kirjoittaja Jussi Väisälä, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \cns{topo1}.
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{.bib-tiedostot Internetistä}
     Kirjojen teostietoja löytää \BibTeX -muodossa varsin suurella todennäköisyydellä Google Books-palvelusta. 
     \vaihto
@@ -1957,16 +1963,16 @@ Matti sanoi: ''Onpa outoa!''<>
     Tiedosto kannattaa avata Texmakerillä, tehdä mahdolliset muutokset ja tallentaa haluttuun kansioon. 
     \vaihto
     Käytännössä ainakin viittaustunnus on syytä vaihtaa helpommaksi.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{.bib-tiedostot Internetistä}
     \begin{harj}
         Etsi Google Books-palvelusta Walter Rudinin kirjan Complex Analysis (kirjan versiolla ei väliä) tiedot \BibTeX -muodossa. Avaa tiedosto Texmakerilla ja valitse viittaustunnus haluamaksesi. Tallenna tiedosto nimellä \cns{Rudin.bib} työkansioosi. (Huomaa, että palvelu tarjoaa tiedostot muodossa \cns{.bibtex}.)
     \end{harj}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kirjallisuusluettelon luominen}
     Kun tarvittavat \cns{.bib}-tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran. Ei-viitatun teoksen saa lisättyä lähdeluetteloon \lstinline-\nocite{tunnus}--komennolla.
     \vaihto
@@ -1978,9 +1984,9 @@ Matti sanoi: ''Onpa outoa!''<>
     Koodissa \cns{lista\textit{x}} ovat \cns{.bib}-tiedostojen nimet ilman \cns{.bib}-päätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
     \vaihto
     Edellisen koodin toimimisen edellytyksenä on, että tiedostot \cns{lista1.bib} jne. ovat samassa kansiossa \cns{.tex}-tiedoston kanssa. 
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Kirjallisuusluettelon luominen}
     \begin{harj}
         Edellä loit \BibTeX-tiedostot \cns{lahteet.bib} ja \cns{Rudin.bib}. Tuo teokset kirjallisuusluetteloon koodilla 
@@ -1993,8 +1999,8 @@ Matti sanoi: ''Onpa outoa!''<>
     \begin{harj}
         Viittaa kuhunkin teokseen työssäsi komennolla \lstinline-\cite{viittaustunnus}-.
     \end{harj}
-\end{frame}
-\begin{frame}[fragile]
+\end{fframe}
+\begin{fframe}
     \frametitle{Käytäntö}
     %Kun tiedostot on luotu ja tallennettu, niihin voidaan viitata tuloksellisesti jo mainitulla komennolla \verb-\cite{tunnus}-. 
     Jotta viitteet tulisivat näkyviin, toimi seuraavasti:
@@ -2010,9 +2016,9 @@ Matti sanoi: ''Onpa outoa!''<>
         \item ovatko tiedostot todella muotoa \cns{.bib}?
         \item ovatko tiedostot oikeassa kansiossa?
     \end{itemize}
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{extra}
         \begin{itemize}
             \item Viittauksen lisäämisen/poistamisen/muuttamisen jälkeen ensimmäinen \LaTeX-ajo merkitsee löytyneet viittaustunnukset \cns{.aux}-tiedostoon.
@@ -2021,13 +2027,13 @@ Matti sanoi: ''Onpa outoa!''<>
             \item Viimeinen \LaTeX-ajo osaa nyt \cns{.aux}-tiedoston perusteella korvata kysymysmerkit oikeilla viittauksilla.
         \end{itemize}
     \end{extra}
-\end{frame}
-%\begin{frame}[fragile]
+\end{fframe}
+%\begin{fframe}
 %\frametitle{Viittaustyyli}
 %\input{harj4_21}
-%\end{frame}
+%\end{fframe}
 \subsubsection{Viittaustyyli}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Viittaustyyli}
     Viittaukset tulevat näkyviin hakasuluissa olevina numeroina. Esimerkiksi lähdeteoksen kirjoittajaa varten lukija joutuu siis tarkistamaan lähdeluettelon. Tämä on tyypillistä varsinkin matemaattisessa kirjallisuudessa. 
     \vaihto
@@ -2035,32 +2041,32 @@ Matti sanoi: ''Onpa outoa!''<>
     \begin{scriptsize}
         \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Natbib}
     \end{scriptsize}
-\end{frame}
+\end{fframe}
 
 
 \subsection{Dokumentin viimeistely}
 
 \subsubsection{Sisällysluettelo ja kansilehti}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Sisällysluettelo ja kansilehti}
     Sisällysluettelon saa haluamaansa kohtaan työtä komennolla \lstinline-\tableofcontents-. Tiedoston joutuu yleensä ajamaan useaan kertaan, ennen kuin numeroinnit tulevat näkyviin oikein.
     \vaihto
     Kansilehti luodaan komennolla \lstinline-\maketitle-. Tätä varten esittelyosaan lisätään komennot \lstinline-\title{otsikko}-, \lstinline-\author{nimi}- ja haluttaessa \lstinline-\date{pvm}-. Päivämäärän saa pois komennolla \lstinline-\date{}-.
     \vaihto
     Kansilehti tulostuu joissain luokissa (esim. \cns{book} ja \cns{report}) omaksi sivukseen, \cns{article}-luokassa osaksi ensimmäistä sivua.
-\end{frame}
+\end{fframe}
 
-\begin{frame}[fragile]
+\begin{fframe}
     \begin{harj}
         Luo työllesi kansilehti ja sisällysluettelo. Kokeile miltä työsi näyttää, jos vaihdat luokaksi \cns{report} tai \cns{book}. Millaisia eroja huomaat? 
     \end{harj}
     \begin{harj}
         Dokumenttia on helpompi navigoida elektronisesti, kun viitteet toimivat linkkeinä. Ota tätä varten käyttöön paketti \cns{hyperref} (paketti kannattaa ladata kaikkien muiden pakettien jälkeen). Kokeile kääntää dokumentti -- linkkien ympärillä on nyt ruma laatikko. Paranna tilannetta antamalla \cns{hyperref}-paketille argumentti \cns{colorlinks=true} (ota mallia esim. \cns{inputenc}-paketin lataavasta rivistä).
     \end{harj}
-\end{frame}
+\end{fframe}
 
 \subsubsection{Dokumenttiluokan asetukset}
-\begin{frame}[fragile]
+\begin{fframe}
     \frametitle{Dokumenttiluokan asetukset}
     Tiedoston aloittavalle komennolle \lstinline-\documentclass[]{}- voi antaa valinnaisena argumenttina eräitä dokumentin ulkoasua koskevia asetuksia:
     \begin{itemize}
@@ -2074,7 +2080,7 @@ Matti sanoi: ''Onpa outoa!''<>
     Hieman lisätietoa löytyy esimerkiksi osoitteesta \begin{scriptsize}
         \url{http://texblog.org/2013/02/13/latex-documentclass-options-illustrated}.
     \end{scriptsize}
-\end{frame}
+\end{fframe}
 %
 \end{document}
 

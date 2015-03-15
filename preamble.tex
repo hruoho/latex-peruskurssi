@@ -64,7 +64,20 @@ hyperref={colorlinks=true}]{beamer}
 \newtheorem{trma}{Teoreema}[laskuri]
 \newtheorem{prop}[trma]{Propositio}
 \theoremstyle{remark}
-\newtheorem{harj}{Harjoitus}[section]
+\newtheorem{harjoitus}{Harjoitus}[section]
+\newenvironment{harj}
+    {\VerbatimEnvironment
+     \stepcounter{harjoitus}
+     \begin{VerbatimOut}{harj\theharjoitus.tex}}
+    {\end{VerbatimOut}
+     \addtocounter{harjoitus}{-1}
+     \begin{harjoitus}
+         \input{harj\theharjoitus.tex}
+     \end{harjoitus}}
+\newenvironment{fframe}
+    {\begin{frame}[fragile,environment=fframe]}
+    {\end{frame}}
+
 \newtheorem*{esim}{Esimerkki}
 \newtheorem*{ratk}{Ratkaisuehdotus}
 \newtheorem*{thmextra}{Lisätieto}
