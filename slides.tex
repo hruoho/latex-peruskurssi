@@ -1030,14 +1030,17 @@ Yleensä
 \begin{fframe}
     \frametitle{Kuvien liittäminen}
     Kuvien liittämistä varten täytyy ottaa käyttöön \cns{graphicx}-paketti. 
+    \pause
     \vaihto
     PDFLaTeXia käytettäessä sallitut kuvaformaatit ovat \cns{.pdf}, \cns{.jpg} ja \cns{.png}. 
+    \pause
     \vaihto
     Jos liitettävä kuva on samassa kansiossa muiden tiedostojen kanssa, kuvan liittäminen tapahtuu komennolla
     \begin{lstlisting}
 \includegraphics[asetukset]{kuvatiedoston_nimi}<>
     \end{lstlisting}
     Tiedostopäätettä ei ole tarpeen kirjoittaa, jos tiedoston nimi ei sisällä välejä.
+    \pause
     \vaihto
     Valinnaisella argumentilla voidaan skaalata, kiertää ja rajata liitettävää kuvaa. 
 \end{fframe}
@@ -1107,6 +1110,7 @@ Yleensä
 \begin{fframe}
     \frametitle{Kelluva figure-ympäristö}
     Käyttämällä pelkästään komentoa \lstinline-\includegraphics[]{}- kuva tuodaan komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
+    \pause
     \vaihto
     On parempi antaa \LaTeX in päättää itse mihin kuva sijoitetaan eli tehdä kuvasta \newterm{kelluva}. Tämä onnistuu käyttämällä \cns{figure}-ympäristöä. 
 \end{fframe}
@@ -1145,9 +1149,11 @@ Yleensä
 
         \end{tabular}
     \end{table}
-    \begin{itemize}[<+->]
+    \begin{itemize}
         \item Oletuksena on siis \cns{[tbp]}. \pause Pelkkä \cns{[h]} ei ole mahdollinen, vaan korvataan automaattisesti \cns{[ht]}:llä.
+        \pause
         \item Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. \pause Esimerkiksi \cns{[!hb]} sallii sijoittamisen tähän tai tekstisivun alareunaan ja lopputulos saa näyttää hieman rumalta.
+        \pause
         \item {\footnotesize Tarkempi (tekninen) kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}}
     \end{itemize}
 \end{fframe}
