@@ -8,17 +8,6 @@
 4kerta,
 }
 
-\AtBeginSection{
-    \begin{frame}
-        \frametitle{Suunnitelma}
-        \begin{columns}[t]
-            \column{5cm}
-            \tableofcontents[sections={1-2},sectionstyle=show/shaded,subsectionstyle=show/show/shaded,subsubsectionstyle=show/show/hide]
-            \column{5cm}
-            \tableofcontents[sections={3-4},sectionstyle=show/shaded,subsectionstyle=show/show/shaded,subsubsectionstyle=show/show/hide]
-        \end{columns}
-    \end{frame}
-}
 \AtBeginSubsection{
     \begin{frame}
         \frametitle{Suunnitelma}
@@ -30,10 +19,16 @@
 \begin{frame}
     \titlepage
 \end{frame}
-%\begin{fframe}
-%    \frametitle{Kurssisuunnitelma}
-%    \tableofcontents
-%\end{fframe}
+
+\begin{frame}
+    \frametitle{Suunnitelma}
+    \begin{columns}[t]
+        \column{5cm}
+        \tableofcontents[sections={1-2},subsubsectionstyle=hide]
+        \column{5cm}
+        \tableofcontents[sections={3-4},subsubsectionstyle=hide]
+    \end{columns}
+\end{frame}
 
 \include{1kerta}
 \include{2kerta}
