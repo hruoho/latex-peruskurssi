@@ -39,7 +39,9 @@ Matti sanoi: ''Onpa outoa!''<>
     \begin{sample}
         Matti sanoi: ''Onpa outoa!''
     \end{sample}
+    \pause
     Lainauksia varten on olemassa myös omia ympäristöjään, kuten \cns{verse}, \cns{quote} ja \cns{quotation}.
+    \pause
     \vaihto
     Alaviitteen voi luoda komennolla \lstinline-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
 \end{fframe}
@@ -57,11 +59,14 @@ Matti sanoi: ''Onpa outoa!''<>
 \begin{fframe}
     \frametitle{Kirjallisuusviitteet}
     \LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \BibTeX-järjestelmän avulla. 
+    \pause
     \vaihto
 %    Tällöin jokaista lähdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sisältää teoksen tiedot. 
     Tällöin lähdeteokset kirjataan erilliseen \cns{.bib}-tiedostoon (tai -tiedostoihin).
+    \pause
     \vaihto
     Tiedostot on yksinkertaisinta tallentaa samaan kansioon \cns{.tex}-tiedoston kanssa.
+    \pause
     \vaihto
     Viittaaminen tapahtuu komennolla \lstinline-\cite{tunnus}-, jossa \cns{tunnus} on eräs \cns{.bib}-tiedostosta löytyvä merkkijono.
     %\vaihto
@@ -76,6 +81,7 @@ Matti sanoi: ''Onpa outoa!''<>
 \begin{fframe}
     \frametitle{.bib-tiedostot}
     \cns{.bib}-tiedoston voi luoda millä tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
+    \pause
     \vaihto
     Tiedoston sisältö voisi olla esimerkiksi seuraava:\vaihto
     \begin{lstlisting}[language=BibTeX,basicstyle=\ttfamily\small]
@@ -101,7 +107,7 @@ Matti sanoi: ''Onpa outoa!''<>
 
 \begin{fframe}
     \frametitle{.bib-tiedoston sisältö}
-    \begin{itemize}
+    \begin{itemize}[<+->]
         \item Ensimmäisellä komennolla (\lstinline[language=BibTeX]-@book-, \lstinline[language=BibTeX]-@article-, \lstinline[language=BibTeX]-@unpublished- jne.) kerrotaan, minkä tyyppisestä teoksesta on kyse. 
         \item Aaltosulkeisiin ennen ensimmäistä pilkkua tuleva merkkijono on se tunnus, jolla teokseen viitataan komennolla \lstinline-\cite{tunnus}-. 
         \item Tunnuksen voi valita vapaasti (ilman ääkkösiä ja erikoismerkkejä) eikä se tule näkyviin mihinkään.  Esimerkiksi yllä tunnus on \cns{kemper}, joten teokseen viitattaisiin komennolla \lstinline-\cite{kemper}-.
@@ -118,6 +124,7 @@ Matti sanoi: ''Onpa outoa!''<>
         \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Entry_and_field_types_in_.bib_files}
     \end{scriptsize}
     selviää, että kirjalle (\lstinline[language=BibTeX]-@book-) pakollisia kenttiä ovat \cns{title} ja \cns{author}, muut valinnaisia.
+    \pause
     \vaihto
     Lisätietoa käytettävistä teosluokista löytyy esimerkiksi sivulta
     \begin{scriptsize}
@@ -136,8 +143,10 @@ Matti sanoi: ''Onpa outoa!''<>
 \begin{fframe}
     \frametitle{.bib-tiedostot Internetistä}
     Kirjojen teostietoja löytää \BibTeX -muodossa varsin suurella todennäköisyydellä Google Books-palvelusta. 
+    \pause
     \vaihto
     Kuhunkin teokseen liittyvän Tietoja teoksesta-sivun alalaidassa on kohta Vie sitaatti ja sen vieressä painike \BibTeX, josta tiedoston voi ladata.
+    \pause
     \vaihto
     Tiedosto kannattaa avata Texmakerillä, tehdä mahdolliset muutokset ja tallentaa haluttuun kansioon. 
     \vaihto
@@ -154,6 +163,7 @@ Matti sanoi: ''Onpa outoa!''<>
 \begin{fframe}
     \frametitle{Kirjallisuusluettelon luominen}
     Kun tarvittavat \cns{.bib}-tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran. Ei-viitatun teoksen saa lisättyä lähdeluetteloon \lstinline-\nocite{tunnus}--komennolla.
+    \pause
     \vaihto
     Luettelo luodaan työn loppuosaan komennoilla
     \begin{lstlisting}
@@ -183,11 +193,12 @@ Matti sanoi: ''Onpa outoa!''<>
     \frametitle{Käytäntö}
     %Kun tiedostot on luotu ja tallennettu, niihin voidaan viitata tuloksellisesti jo mainitulla komennolla \verb-\cite{tunnus}-. 
     Jotta viitteet tulisivat näkyviin, toimi seuraavasti:
-    \begin{itemize}
+    \begin{itemize}[<+->]
         \item aja tiedosto PDFLaTeXilla
         \item aja tiedosto \BibTeX{}illa (ja tarkista alapalkkiin ilmestyvät viestit!)
         \item aja tiedosto PDFLaTeXilla kahdesti
     \end{itemize} 
+    \pause
     Jos viittaukset eivät tule näkyviin etkä tiedä mistä se johtuu, tarkista seuraavat kohdat:
     \begin{itemize}
         \item oletko käyttänyt viitatessa oikeita tunnuksia?
@@ -229,6 +240,7 @@ Matti sanoi: ''Onpa outoa!''<>
 \begin{fframe}
     \frametitle{Sisällysluettelo ja kansilehti}
     Sisällysluettelon saa haluamaansa kohtaan työtä komennolla \lstinline-\tableofcontents-. Tiedoston joutuu yleensä ajamaan useaan kertaan, ennen kuin numeroinnit tulevat näkyviin oikein.
+    \pause
     \vaihto
     Kansilehti luodaan komennolla \lstinline-\maketitle-. Tätä varten esittelyosaan lisätään komennot \lstinline-\title{otsikko}-, \lstinline-\author{nimi}- ja haluttaessa \lstinline-\date{pvm}-. Päivämäärän saa pois komennolla \lstinline-\date{}-.
     \vaihto
@@ -248,12 +260,13 @@ Matti sanoi: ''Onpa outoa!''<>
 \begin{fframe}
     \frametitle{Dokumenttiluokan asetukset}
     Tiedoston aloittavalle komennolle \lstinline-\documentclass[]{}- voi antaa valinnaisena argumenttina eräitä dokumentin ulkoasua koskevia asetuksia:
-    \begin{itemize}
+    \begin{itemize}[<+->]
         \item Kirjainkoon vaihtoehdot ovat \cns{10pt}, \cns{11pt} ja \cns{12pt}. 
         \item Luonnostilan saa valinnalla \cns{draft}. Tällöin kääntäminen on nopeaa ja liian pitkät rivit tulevat merkityiksi.
         \item Tekstin saa jaettua kahteen kolumniin valinnalla \cns{twocolumn}. 
         \item article-luokassa tulostus on oletusarvoisesti yksipuoleinen -- tämän voi vaihtaa valinnalla \cns{twoside} (vast. \cns{oneside}).
     \end{itemize}
+    \pause
     Useammat määritteet erotetaan toisistaan pilkuilla, kuten tavallista.
     \vaihto
     Hieman lisätietoa löytyy esimerkiksi osoitteesta \begin{scriptsize}
