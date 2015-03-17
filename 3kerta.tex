@@ -28,6 +28,7 @@
     \begin{lstlisting}
 \includegraphics{smile}<>
     \end{lstlisting}
+    \pause
     \includegraphics{smile}
 \end{fframe}
 
@@ -37,6 +38,7 @@
     \begin{lstlisting}
 \includegraphics[scale=0.4]{smile}<>
     \end{lstlisting}
+    \pause
     \includegraphics[scale=0.4]{smile}
 \end{fframe}
 
@@ -49,6 +51,7 @@
     \begin{lstlisting}
 \includegraphics[height=4cm]{smile}<>
     \end{lstlisting}
+    \pause
     \begin{minipage}{5cm}
         \includegraphics[width = 4cm]{smile}
     \end{minipage}
@@ -67,13 +70,15 @@
     \begin{lstlisting}
 \includegraphics[height=4cm,angle=180]{smile}<>
     \end{lstlisting}
+    \pause
     \begin{minipage}{3cm}
         \includegraphics[width = 4cm,angle=90]{smile}
     \end{minipage}
     \begin{minipage}{5cm}
         \includegraphics[height=4cm,angle=180]{smile}
     \end{minipage}
-
+    \pause
+    \par\smallskip
     Huomaa, että useammat määritteet erotetaan toisistaan pilkuilla!
 \end{fframe}
 
@@ -100,6 +105,7 @@
     \caption{Helppo hymyillä}
 \end{figure}<>
     \end{lstlisting}
+    \pause
     \begin{figure}[hb]
         \includegraphics[height=4cm]{smile}
         \caption{Helppo hymyillä}
@@ -126,6 +132,7 @@
 
         \end{tabular}
     \end{table}
+    \pause
     \begin{itemize}
         \item Oletuksena on siis \cns{[tbp]}. \pause Pelkkä \cns{[h]} ei ole mahdollinen, vaan korvataan automaattisesti \cns{[ht]}:llä.
         \pause
@@ -154,8 +161,11 @@
     Kuvien liittämisen lisäksi niitä voi myös piirtää suoraan \LaTeX illa. Yksinkertaisimmissa tapauksissa tämä onnistuu helposti, monimutkaisempien kuvien tuottaminen vaatii harjaantumista.
     \vaihto
     Kuvien piirtäminen vie aikaa, mutta jälki on sen mukaista eikä erillisiä kuvatiedostoja tarvitse säilyttää.
+    \pause
     \vaihto Kuvien piirtämistä varten on tarjolla muutamia paketteja, joista erityisesti \TikZ{} on syytä mainita. Runsaasti esimerkkejä (koodeineen) löytyy täältä: \url{http://www.texample.net/tikz/examples/all/}
+    \pause
     \vaihto Geogebra osaa kääntää sillä luodut kuvat \TikZ-koodiksi, mikä helpottaa työtä valtavasti.
+    \pause
     \vaihto Muita kuvien tuottamiseen tarkoitettuja paketteja ovat picture, xy-Pic ja Asymptote.
 \end{fframe}
 
@@ -174,8 +184,10 @@
 \begin{fframe}
     \frametitle{Taulukot}
     Taulukoiden rakentaminen \LaTeX issa on oma taiteenlajinsa. Mahdollisuudet ovat rajattomat, mutta perusteiden opettelu vaatii hieman energiaa. 
+    \pause
     \vaihto
 Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon sisältö kirjoitetaan komentojen \lstinline-\begin{tabular}[]{}- ja \lstinline-\end{tabular}- väliin.
+    \pause
     \vaihto
     Ympäristöllä on pakollinen argumentti, jolla määritellään taulukon asetukset, eli miten kunkin sarakkeen sisältö tasataan ja millaisia pystyviivoja käytetään.
 \end{fframe}
@@ -267,17 +279,20 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
     Vihreäsilmäiset & 8 & 8\\
 \end{tabular}<>
     \end{lstlisting}
+    \pause
     luo seuraavan taulukon:
     \begin{sample} 
-        \begin{tabular}{r|cc}
-            & Tytöt & Pojat\\
-            \hline
-            Sinisilmäiset & 4 & 2 \\
-            Ruskeasilmäiset & 3 & 5 \\
-            Vihreäsilmäiset & 8 & 8\\
-            %\hline
-            %Yhteensä: & 15 & 15\\
-        \end{tabular}
+        \begin{small}
+            \begin{tabular}{r|cc}
+                & Tytöt & Pojat\\
+                \hline
+                Sinisilmäiset & 4 & 2 \\
+                Ruskeasilmäiset & 3 & 5 \\
+                Vihreäsilmäiset & 8 & 8\\
+                %\hline
+                %Yhteensä: & 15 & 15\\
+            \end{tabular}
+        \end{small}
     \end{sample}
     Huomaa, ettei rivien lukumäärää tarvitse erikseen kertoa \LaTeX ille.
 \end{fframe}
@@ -311,9 +326,12 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
     Sarakkeiden yhdistäminen onnistuu komennolla \lstinline-\multicolumn{}{}{}-. Pakollisista argumenteista
     \begin{itemize}
         \item ensimmäinen on yhdistettävien solujen lukumäärä
+        \pause
         \item toinen on yhdistämällä saadun sarakkeen tasaus
+        \pause
         \item kolmas on yhdistämällä saadun sarakkeen sisältö
     \end{itemize}
+    \pause
     Komento \lstinline-\multicolumn- toimii sellaisenaan eikä tarvitse lisäpaketteja.
 \end{fframe}
 
@@ -377,10 +395,14 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
     Rivien yhdistämistä varten tarvitaan paketti \cns{multirow}. Tämän käyttöönottamisen jälkeen rivien yhdistäminen (sarakkeen sisällä) onnistuu komennolla \lstinline-\multirow{}{}{}-. Pakollisista argumenteista
     \begin{itemize}
         \item ensimmäinen on yhdistettävien solujen lukumäärä
+        \pause
         \item toinen on yhdistämällä saadun rivin leveys (\cns{*} jättää asian \LaTeX in huoleksi)
+        \pause
         \item kolmas on yhdistämällä saadun rivin sisältö
     \end{itemize}
+    \pause
     Rivin leveyttä ei useinkaan kannata itse valita, ellei ole varma siitä mitä haluaa tehdä. 
+    \pause
     \vaihto
     Huomaa, että \lstinline-\multirow- toimii kuten \lstinline-\multicolumn-, mutta keskimmäinen argumentti on eri tarkoitusta varten.
 \end{fframe}
@@ -498,6 +520,7 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
 \begin{fframe}
     \frametitle{Kelluva table-ympäristö}
 Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon osoittamaan paikkaan, kuin osaksi tekstiä. Tämä näyttää käytännössä aina pahalta. 
+    \pause
     \vaihto
     On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \cns{table}-ympäristöön.
     \begin{lstlisting}
@@ -507,6 +530,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     \end{tabular}
 \end{table}<>
     \end{lstlisting}
+    \pause
     Ympäristön \cns{table} sijoittelu noudattaa samoja sääntöjä kuin \cns{figure} ja sitä voi säätää antamalla ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \cns{!htbp} (tai \cns{float}-pakettia käyttämällä \cns{H}).
 \end{fframe}
 
@@ -544,6 +568,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \begin{fframe}
     \frametitle{Matematiikkatilan taulukot}
     \LaTeX\ olettaa \cns{tabular}-ympäristön sisältävän tavallista tekstiä. Taulukoituja matemaattisia ilmaisuja varten on oma ympäristönsä \cns{array}. Sitä käytetään kuten \cns{tabular}-ympäristöä, mutta se täytyy sijoittaa matematiikkatilaan.\vaihto
+    \pause
 
     \begin{minipage}{5cm}
         \begin{lstlisting}
@@ -574,6 +599,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \begin{fframe}
     \frametitle{Array-ympäristö}
     \cns{array}-ympäristöllä voi kirjoittaa esimerkiksi paloittain määritellyn funktion lausekkeen. Tämän voi toteuttaa lyhyemminkin käyttäen ympäristöä \cns{cases}. 
+    \pause
     \begin{lstlisting}
 \[
     f(x) =
@@ -618,6 +644,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \]
     \end{minipage}
 
+    \pause
     Syntaksi on siis samanhenkinen kuin ympäristöllä \cns{array}, mutta sarakkeiden määrää ei tarvitse kertoa erikseen. Virheiden varalta muista, että
     \begin{itemize}
         \item sarakkeet erotetaan toisistaan merkillä \lstinline-&-
@@ -641,6 +668,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \begin{fframe}
     \frametitle{Matriisit}
     Vaikka ympäristöt \cns{pmatrix} (\cns{matrix}, \cns{bmatrix}, \cns{vmatrix}) pohjautuvat \cns{array}-ympäristöön, ei sarakkeiden tasaukseen voi lähtökohtaisesti vaikuttaa. \vaihto Paketti \cns{mathtools} tarjoaa vastaavat ympäristöt \cns{pmatrix*}, \cns{bmatrix*} jne., joilla on valinnaisena argumenttina sarakkeissa käytetty tasaus:\vaihto
+    \pause
 
     \begin{minipage}{5cm}
         \begin{lstlisting}
@@ -762,6 +790,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     Tavalliset matriisiympäristöt \cns{pmatrix} jne. voidaan säätää noudattamaan paremmin \cns{array}-ympäristön syntaksia.
     \vaihto
     Tämä on tarpeen, jos halutaan valita eri sarakkeisiin erilainen tasaus tai luoda pystyviiva matriisin sisälle. 
+    \pause
     \vaihto
     Syntaksin muuttaminen onnistuu kopioimalla esittelyosaan komennot\vaihto
     \begin{lstlisting}
