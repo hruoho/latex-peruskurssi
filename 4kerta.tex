@@ -1,0 +1,263 @@
+\section{4.kerta}
+
+
+\subsection{Viittaaminen kuviin ja taulukoihin}
+
+\begin{fframe}
+    \frametitle{Viittaaminen kuviin ja taulukoihin}
+    Kelluviksi kirjoitetut kuvat ja taulukot tulevat numeroiduiksi, jolloin niihin viittaaminen onnistuu helposti komennoilla \lstinline-\label{}- ja \lstinline-\ref{}-. 
+    %\begin{itemize}
+    %\item \verb-\ref{nimi}- (tulostaa viitattavan kohteen numeron)
+    %\item \verb-\eqref{nimi}- (tulostaa kohteen numeron sulkujen sisällä)
+    %\item \verb-\pageref{nimi}- (tulostaa sen sivun numeron, jolla kohde on)  
+    %\end{itemize}
+    %Sisäisten viittausten kanssa tulee aina käyttää komentoja. Tällöin viittaukset pysyvät kohdallaan vaikka numeroinnit muuttuisivat työn edetessä.
+    %\end{fframe}
+    %\begin{fframe}
+    %Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
+    \begin{harj}
+        Viittaa harjoituksessa \ref{kelluvaTaulukko} luomaasi kelluvaan taulukkoon. Käytä komentoja \lstinline-\ref{}- ja \lstinline-\pageref{}-. Komento \lstinline-\label{..}- tulee taulukkoon liittyvän \lstinline-\caption{..}--komennon jälkeen.
+        %\vaihto
+        %Muista, että viitattavalle kohteelle on ensin annettava tunnus komennolla \verb-\label{valitsemasi tunnus}-. Komento sijoitetaan ympäristön aloittavan komennon \verb-\begin{}- perään.
+    \end{harj}
+    \begin{harj}
+        Sama kuin edellinen harjoitus, mutta viittaa harjoituksessa \ref{kelluvaTikz} luomaasi kelluvaan kuvaan.
+    \end{harj}
+\end{fframe}
+
+
+\subsection{Kirjallisuusviitteet}
+
+\subsubsection{Lainaukset ja alaviitteet}
+\begin{fframe}
+    \frametitle{Lainaukset ja alaviitteet}
+    Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \lstinline-'- merkillä:
+    \begin{lstlisting}
+Matti sanoi: ''Onpa outoa!''<>
+    \end{lstlisting}
+    tulostaa
+    \begin{sample}
+        Matti sanoi: ''Onpa outoa!''
+    \end{sample}
+    Lainauksia varten on olemassa myös omia ympäristöjään, kuten \cns{verse}, \cns{quote} ja \cns{quotation}.
+    \vaihto
+    Alaviitteen voi luoda komennolla \lstinline-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Lisää dokumenttiisi jokin lainaus käyttäen \cns{quote}-, \cns{quotation}- tai \cns{verse}-ympäristöä. 
+    \end{harj}
+    \begin{harj}
+        Lisää työhösi alaviite komennolla \lstinline-\footnote{}-. 
+    \end{harj}
+\end{fframe}
+
+\subsubsection{\BibTeX-järjestelmä}
+\begin{fframe}
+    \frametitle{Kirjallisuusviitteet}
+    \LaTeX issa kirjallisuusviittaukset kannattaa hoitaa \BibTeX-järjestelmän avulla. 
+    \vaihto
+%    Tällöin jokaista lähdeteosta kohden luodaan erillinen \verb-.bib--tiedosto, joka sisältää teoksen tiedot. 
+    Tällöin lähdeteokset kirjataan erilliseen \cns{.bib}-tiedostoon (tai -tiedostoihin).
+    \vaihto
+    Tiedostot on yksinkertaisinta tallentaa samaan kansioon \cns{.tex}-tiedoston kanssa.
+    \vaihto
+    Viittaaminen tapahtuu komennolla \lstinline-\cite{tunnus}-, jossa \cns{tunnus} on eräs \cns{.bib}-tiedostosta löytyvä merkkijono.
+    %\vaihto
+    %Aivan työn loppuun luodaan kirjallisuusluettelo komennoilla
+    %\begin{Verbatim}[frame=single]
+    %\bibliographystyle{luettelon tyyli}
+    %\bibliography{teos1.bib, teos2.bib, teos3.bib,...}
+    %\end{Verbatim}
+    %Edellytyksenä on, että tiedostot teos1.bib jne. ovat samassa kansiossa \verb-.tex--tiedoston kanssa.
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{.bib-tiedostot}
+    \cns{.bib}-tiedoston voi luoda millä tahansa tekstieditorilla, erityisen hyvin Texmakerilla. 
+    \vaihto
+    Tiedoston sisältö voisi olla esimerkiksi seuraava:\vaihto
+    \begin{lstlisting}[language=BibTeX,basicstyle=\ttfamily\small]
+@book{kemper,
+    title={A Course in Commutative Algebra},
+    author={Kemper, G.},
+    isbn={9783642035456},
+    series={Graduate Texts in Mathematics},
+    url={http://books.google.fi/books?id=8kxlj48DWM4C},
+    year={2010},
+    publisher={Springer Berlin Heidelberg}
+}<>
+    \end{lstlisting}
+    %Tiedosto tallennetaan muodossa \verb-jokinNimi.bib- samaan kansioon \verb-.tex--tiedoston kanssa (ei pakollista, mutta yksinkertaisinta).
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{.bib-tiedostot}
+    \begin{harj}
+        Kopioi edellisen esimerkin sisältö uuteen tiedostoon ja tallenna se nimellä \cns{lahteet.bib} työkansioosi. 
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{.bib-tiedoston sisältö}
+    \begin{itemize}
+        \item Ensimmäisellä komennolla (\lstinline[language=BibTeX]-@book-, \lstinline[language=BibTeX]-@article-, \lstinline[language=BibTeX]-@unpublished- jne.) kerrotaan, minkä tyyppisestä teoksesta on kyse. 
+        \item Aaltosulkeisiin ennen ensimmäistä pilkkua tuleva merkkijono on se tunnus, jolla teokseen viitataan komennolla \lstinline-\cite{tunnus}-. 
+        \item Tunnuksen voi valita vapaasti (ilman ääkkösiä ja erikoismerkkejä) eikä se tule näkyviin mihinkään.  Esimerkiksi yllä tunnus on \cns{kemper}, joten teokseen viitattaisiin komennolla \lstinline-\cite{kemper}-.
+        \item Muut kentät (ja niiden pakollisuus/valinnaisuus) määräytyvät teoksen tyypin mukaan.
+    \end{itemize}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Luokat ja .bib-tiedoston sisältö}
+    Kun tiedostoja luodaan käsin, täytyy selvittää mitkä kentät ovat pakollisia ja mitkä valinnaisia. 
+    \vaihto
+    Esimerkiksi taulukosta 
+    \begin{scriptsize}
+        \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Entry_and_field_types_in_.bib_files}
+    \end{scriptsize}
+    selviää, että kirjalle (\lstinline[language=BibTeX]-@book-) pakollisia kenttiä ovat \cns{title} ja \cns{author}, muut valinnaisia.
+    \vaihto
+    Lisätietoa käytettävistä teosluokista löytyy esimerkiksi sivulta
+    \begin{scriptsize}
+        \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Standard_templates}.
+    \end{scriptsize}
+    \vaihto
+    Käytännössä jokaista kuviteltavissa olevaa lähdeteosta varten löytyy jokin sopiva luokka (ja tarpeen tullen sellaisen voi luoda itsekin).
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Lisää tiedostoon \cns{lahteet.bib} kirja, jonka nimi on Topologia I, kirjoittaja Jussi Väisälä, julkaisija Limes ry ja painovuosi 2000. Valitse viittaustunnukseksi \cns{topo1}.
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{.bib-tiedostot Internetistä}
+    Kirjojen teostietoja löytää \BibTeX -muodossa varsin suurella todennäköisyydellä Google Books-palvelusta. 
+    \vaihto
+    Kuhunkin teokseen liittyvän Tietoja teoksesta-sivun alalaidassa on kohta Vie sitaatti ja sen vieressä painike \BibTeX, josta tiedoston voi ladata.
+    \vaihto
+    Tiedosto kannattaa avata Texmakerillä, tehdä mahdolliset muutokset ja tallentaa haluttuun kansioon. 
+    \vaihto
+    Käytännössä ainakin viittaustunnus on syytä vaihtaa helpommaksi.
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{.bib-tiedostot Internetistä}
+    \begin{harj}
+        Etsi Google Books-palvelusta Walter Rudinin kirjan Complex Analysis (kirjan versiolla ei väliä) tiedot \BibTeX -muodossa. Avaa tiedosto Texmakerilla ja valitse viittaustunnus haluamaksesi. Tallenna tiedosto nimellä \cns{Rudin.bib} työkansioosi. (Huomaa, että palvelu tarjoaa tiedostot muodossa \cns{.bibtex}.)
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Kirjallisuusluettelon luominen}
+    Kun tarvittavat \cns{.bib}-tiedostot on tallennettu koneelle, on syytä luoda kirjallisuusluettelo. Kirjallisuusluetteloon tulee näkyviin ne teokset, joiden tiedot ovat olemassa ja joihin on viitattu ainakin kerran. Ei-viitatun teoksen saa lisättyä lähdeluetteloon \lstinline-\nocite{tunnus}--komennolla.
+    \vaihto
+    Luettelo luodaan työn loppuosaan komennoilla
+    \begin{lstlisting}
+\bibliographystyle{luettelon tyyli}
+\bibliography{lista1,lista2,lista3,...}<>
+    \end{lstlisting}
+    Koodissa \cns{lista\textit{x}} ovat \cns{.bib}-tiedostojen nimet ilman \cns{.bib}-päätettä. Huomaa myös, ettei pilkun jälkeen sallita välilyöntiä.
+    \vaihto
+    Edellisen koodin toimimisen edellytyksenä on, että tiedostot \cns{lista1.bib} jne. ovat samassa kansiossa \cns{.tex}-tiedoston kanssa. 
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Kirjallisuusluettelon luominen}
+    \begin{harj}
+        Edellä loit \BibTeX-tiedostot \cns{lahteet.bib} ja \cns{Rudin.bib}. Tuo teokset kirjallisuusluetteloon koodilla 
+        \begin{lstlisting}
+\bibliographystyle{plain}
+\bibliography{lahteet,Rudin}<>
+        \end{lstlisting}
+        Sijoita koodi työsi loppuosaan, esimerkiksi juuri ennen komentoa \lstinline-\end{document}-.
+    \end{harj}
+    \begin{harj}
+        Viittaa kuhunkin teokseen työssäsi komennolla \lstinline-\cite{viittaustunnus}-.
+    \end{harj}
+\end{fframe}
+\begin{fframe}
+    \frametitle{Käytäntö}
+    %Kun tiedostot on luotu ja tallennettu, niihin voidaan viitata tuloksellisesti jo mainitulla komennolla \verb-\cite{tunnus}-. 
+    Jotta viitteet tulisivat näkyviin, toimi seuraavasti:
+    \begin{itemize}
+        \item aja tiedosto PDFLaTeXilla
+        \item aja tiedosto \BibTeX{}illa (ja tarkista alapalkkiin ilmestyvät viestit!)
+        \item aja tiedosto PDFLaTeXilla kahdesti
+    \end{itemize} 
+    Jos viittaukset eivät tule näkyviin etkä tiedä mistä se johtuu, tarkista seuraavat kohdat:
+    \begin{itemize}
+        \item oletko käyttänyt viitatessa oikeita tunnuksia?
+        \item oletko tuonut tiedostot \LaTeX iin oikein ja oikeilla nimillä?
+        \item ovatko tiedostot todella muotoa \cns{.bib}?
+        \item ovatko tiedostot oikeassa kansiossa?
+    \end{itemize}
+\end{fframe}
+
+\begin{fframe}
+    \begin{extra}
+        \begin{itemize}
+            \item Viittauksen lisäämisen/poistamisen/muuttamisen jälkeen ensimmäinen \LaTeX-ajo merkitsee löytyneet viittaustunnukset \cns{.aux}-tiedostoon.
+            \item Tämän jälkeen \BibTeX-ajo kirjoittaa \cns{.aux}-tiedoston perusteella lähdeluettelon tuottavan \LaTeX-koodin \cns{.bbl}-tiedostoon.
+            \item Seuraava \LaTeX-ajo lukee myös \cns{.bbl}-tiedoston koodin, jolloin lähdeluettelo tulee näkyviin (jos sitä ei vielä ole) ja viittaustiedot lisätään/päivitetään \cns{.aux}-tiedostoon.
+            \item Viimeinen \LaTeX-ajo osaa nyt \cns{.aux}-tiedoston perusteella korvata kysymysmerkit oikeilla viittauksilla.
+        \end{itemize}
+    \end{extra}
+\end{fframe}
+%\begin{fframe}
+%\frametitle{Viittaustyyli}
+%\input{harj4_21}
+%\end{fframe}
+\subsubsection{Viittaustyyli}
+\begin{fframe}
+    \frametitle{Viittaustyyli}
+    Viittaukset tulevat näkyviin hakasuluissa olevina numeroina. Esimerkiksi lähdeteoksen kirjoittajaa varten lukija joutuu siis tarkistamaan lähdeluettelon. Tämä on tyypillistä varsinkin matemaattisessa kirjallisuudessa. 
+    \vaihto
+    Toisenlaista viittaustekniikkaa varten voi käyttää esimerkiksi \cns{natbib}-järjestelmää, jota ei kuitenkaan tällä kurssillä käsitellä. Lisätietoa saa vaikkapa osoitteesta
+    \begin{scriptsize}
+        \url{http://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Natbib}
+    \end{scriptsize}
+\end{fframe}
+
+
+\subsection{Dokumentin viimeistely}
+
+\subsubsection{Sisällysluettelo ja kansilehti}
+\begin{fframe}
+    \frametitle{Sisällysluettelo ja kansilehti}
+    Sisällysluettelon saa haluamaansa kohtaan työtä komennolla \lstinline-\tableofcontents-. Tiedoston joutuu yleensä ajamaan useaan kertaan, ennen kuin numeroinnit tulevat näkyviin oikein.
+    \vaihto
+    Kansilehti luodaan komennolla \lstinline-\maketitle-. Tätä varten esittelyosaan lisätään komennot \lstinline-\title{otsikko}-, \lstinline-\author{nimi}- ja haluttaessa \lstinline-\date{pvm}-. Päivämäärän saa pois komennolla \lstinline-\date{}-.
+    \vaihto
+    Kansilehti tulostuu joissain luokissa (esim. \cns{book} ja \cns{report}) omaksi sivukseen, \cns{article}-luokassa osaksi ensimmäistä sivua.
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Luo työllesi kansilehti ja sisällysluettelo. Kokeile miltä työsi näyttää, jos vaihdat luokaksi \cns{report} tai \cns{book}. Millaisia eroja huomaat? 
+    \end{harj}
+    \begin{harj}
+        Dokumenttia on helpompi navigoida elektronisesti, kun viitteet toimivat linkkeinä. Ota tätä varten käyttöön paketti \cns{hyperref} (paketti kannattaa ladata kaikkien muiden pakettien jälkeen). Kokeile kääntää dokumentti -- linkkien ympärillä on nyt ruma laatikko. Paranna tilannetta antamalla \cns{hyperref}-paketille argumentti \cns{colorlinks=true} (ota mallia esim. \cns{inputenc}-paketin lataavasta rivistä).
+    \end{harj}
+\end{fframe}
+
+\subsubsection{Dokumenttiluokan asetukset}
+\begin{fframe}
+    \frametitle{Dokumenttiluokan asetukset}
+    Tiedoston aloittavalle komennolle \lstinline-\documentclass[]{}- voi antaa valinnaisena argumenttina eräitä dokumentin ulkoasua koskevia asetuksia:
+    \begin{itemize}
+        \item Kirjainkoon vaihtoehdot ovat \cns{10pt}, \cns{11pt} ja \cns{12pt}. 
+        \item Luonnostilan saa valinnalla \cns{draft}. Tällöin kääntäminen on nopeaa ja liian pitkät rivit tulevat merkityiksi.
+        \item Tekstin saa jaettua kahteen kolumniin valinnalla \cns{twocolumn}. 
+        \item article-luokassa tulostus on oletusarvoisesti yksipuoleinen -- tämän voi vaihtaa valinnalla \cns{twoside} (vast. \cns{oneside}).
+    \end{itemize}
+    Useammat määritteet erotetaan toisistaan pilkuilla, kuten tavallista.
+    \vaihto
+    Hieman lisätietoa löytyy esimerkiksi osoitteesta \begin{scriptsize}
+        \url{http://texblog.org/2013/02/13/latex-documentclass-options-illustrated}.
+    \end{scriptsize}
+\end{fframe}
+

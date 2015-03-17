@@ -1,0 +1,484 @@
+\section{1. kerta}
+
+
+
+%\begin{itemize}
+%\item 1. kerta
+%\begin{itemize}
+%\item Mikä \LaTeX\ on?
+%\item Dokumentin rakenne ja luominen
+%\item Syntaksi eli ''kielioppi''
+%\item Virheilmoitukset
+%\item Tekstin muokkaaminen
+%\item Matematiikkatila
+%\item Numeroidut kaavat
+%\end{itemize}
+%\item 2. kerta
+%\begin{itemize}
+%\item Lauseympäristöt
+%\item Otsikot
+%\item Lauseympäristöjen numerointi
+%\item Listat
+%\item Omat komennot
+%\end{itemize}
+%\item 3. kerta
+%\begin{itemize}
+%\item Taulukot
+%\item Kuvien liittäminen
+%\item Kuvien piirtäminen
+%\item Pakettien hakeminen
+%\end{itemize}
+%\item 4. kerta
+%\begin{itemize}
+%\item Sisäiset viittaukset
+%\item Lähdeluettelo
+%\item Sisällysluettelo ja hakemisto
+%\item Kansilehti
+%\item Tyylittely
+%\end{itemize}
+%\end{itemize}
+
+\subsection{Intro}
+\begin{fframe}
+    \frametitle{Mikä \LaTeX\  on?}
+    \begin{itemize}[<+->]
+        \item Tekstin ladontajärjestelmä
+        \item Matemaattisen tekstin tuottamista varten
+        \item Kehitetty \TeX -kielen päälle (Leslie Lamport)
+        \item Laajalti käytössä ympäri maailman
+        \item Merkittävästi erilainen kuin WYSIWYG-järjestelmät
+            %ESIMERKKINÄ LAITOKSEN TUTKIELMAPOHJA
+    \end{itemize}
+\end{fframe}
+
+
+\subsection{Dokumentin rakenne}
+\begin{fframe}
+    \frametitle{Dokumentin rakenne ja luominen}
+    \LaTeX-dokumentit tuotetaan tällä kurssilla helppokäyttöisellä Texmaker-ohjelmalla.
+    \pause
+    \vaihto
+    Texmakeriin kirjoitetaan dokumentin koodi ja lopuksi tiedosto \newterm{käännetään} eli \newterm{ajetaan} varsinaiseksi (PDF- tai DVI-) tiedostoksi. Kääntämisen hoitaa \LaTeX\ käyttäjältä piilossa.
+    \pause
+    \vaihto
+    Tarvittavat ohjelmat omalle koneelleen löytää esimerkiksi Matematiikan laitoksen sivujen kautta osoitteesta
+    \url{http://wiki.helsinki.fi/pages/viewpage.action?pageId=62428926}
+    \pause
+    \vaihto
+    Kaikkein helpoimmin kuitenkin pääsee alkuun käyttämällä jotain online-ympäristöä kuten esimerkiksi Overleaf (\url{https://www.overleaf.com/}). Tällöin mitään ohjelmia ei tarvitse asentaa eikä tiedostoja siirrellä koneiden välillä.
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        \begin{itemize}
+            \item Avaa Texmaker ja luo uusi tiedosto
+            \item Tallenna se muodossa \cns{nimi.tex} johonkin tätä kurssia varten luomaasi kansioon
+            \item Kirjoita tiedostoon seuraavat rivit:
+                \begin{lstlisting}
+\documentclass{article}
+\begin{document}
+Huhuu!
+\end{document}<>
+                \end{lstlisting}
+            \item Aja tiedosto PDFLaTeX:illa
+            \item Valitse View PDF
+        \end{itemize}
+        Lopputuloksena tulisi olla PDF-tiedosto, jonka yläreunassa lukee ''Huhuu!''.
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Dokumentin rakenne ja luominen}
+    \LaTeX-dokumentti koostuu kahdesta osasta: \newterm{esittelyosasta}, joka sisältää tarpeellisia asetuksia ja \newterm{sisällöstä} eli varsinaisesta dokumentista.
+    \pause
+    \begin{itemize}[<+->]
+        \item Tiedosto ja samalla esittelyosa aloitetaan komennolla \lstinline+\documentclass{...}+, jolla valitaan dokumenttiluokka (\cns{article})
+        \item Esittelyosaan lisätään komentoja tarpeen mukaan
+        \item Komento \lstinline+\begin{document}+ aloittaa itse dokumentin ja lopettaa esittelyosan
+        \item Komento \lstinline+\end{document}+  lopettaa dokumentin eikä sen perään kirjoitettuja rivejä käännetä.
+        \item Varsinainen työn sisältö kirjoitetaan siis komentojen \lstinline+\begin{document}+  ja  \lstinline+\end{document}+  väliin.
+    \end{itemize}
+    (Vrt. edellinen harjoitus!)
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Dokumentin rakenne ja luominen}
+    Esittelyosassa eli heti komennon \lstinline+\documentclass{}+  jälkeen valitaan käytettävät paketit ja asetukset. \pause Ääkkösiä ja suomalaista tavutusta varten otetaan käyttöön tietyt \cns{inputenc}-, \cns{fontenc}- ja \cns{babel}-paketit:\pause
+    \begin{harj}
+        Tee dokumenttiisi seuraavat muutokset (älä siis luo uutta tiedostoa):
+        %\usepackage[ansinew]{inputenc}
+        \begin{lstlisting}
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[finnish]{babel}
+\usepackage{geometry}
+\begin{document}
+Öö häh? Herätys!
+\end{document}<>
+        \end{lstlisting}
+    Onnistuuko tiedoston ajaminen? Toimivatko ääkköset?
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \begin{extra}
+        \begin{itemize}
+            \item Käyttämällä \cns{inputenc}-pakettia \LaTeX{} lukee \cns{.tex}-tiedoston \cns{utf8}-koodattuna, jolloin esim. ä voidaan kirjoittaa tiedostoon sellaisenaan eikä muodossa \lstinline-\"a-. Tämä vaatii, että käyttämäsi editori tallentaa tiedoston \cns{utf8}-koodattuna. Esim. Texmaker ja Overleaf tekevät niin oletuksena. Jos ääkköset eivät toimi oikein, niin ongelma on todennäköisesti siinä, että tiedosto on koodattu eri tavalla kuin sitä yritetään lukea. Jos ääkköset eivät toimi, voit yrittää kirjoittaa \cns{[utf8]} sijaan esim. \cns{[latin1]}, \cns{[ansinew]} tai \cns{[applemac]}. Paras olisi kuitenkin käyttää \cns{[utf8]}:aa ja yrittää saada editori tallentamaan tässä muodossa.
+            \item Paketti \cns{fontenc} ottaa käyttöön laajemmat fontit, jolloin esim. ä tulostetaan yhtenä merkkinä eikä niin, että merkit a ja \"{} kirjoitetaan päällekkäin. Tällöin vaikkapa tavutus ja pdf-haku saadaan toimimaan oikein.
+            \item Lopuksi \cns{babel} asettaa dokumentin kielen suomeksi ottamalla käyttöön suomalaiset tavutussäännöt ym.
+        \end{itemize}
+    \end{extra}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (vältä erikoismerkkejä). Aja tiedosto. Varmista vielä ääkkösten ja tavutuksen toimiminen. Miten kappalejaon kanssa käy?
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    Edellä mainitut paketit ovat esimerkkejä \newterm{makropaketeista}, joilla \LaTeX in eli latojan toimintaan voi vaikuttaa. 
+    \pause
+    Matemaattista tekstiä varten on vielä syytä ottaa käyttöön muutama lisäpaketti. 
+    \begin{harj}
+        Ota käyttöön paketit\footnote{ams tulee sanoista American Mathematical Society}
+        \begin{center}
+            \cns{amsmath},\quad \cns{amsthm}\quad ja\quad \cns{amssymb}
+        \end{center}
+        lisäämällä dokumenttisi esittelyosaan seuraavat komennot:
+        \begin{lstlisting}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}<>
+        \end{lstlisting}
+        \pause
+        Nämä sisältävät fontteja, symboleita ja muuta matemaattisen tekstin kirjoittamiselle tarpeellista. Paketti \cns{amsmath} on ladattava ennen \cns{amsthm}-pakettia.
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Syntaksi eli ''kielioppi''}
+    \LaTeX in toimintaa ohjataan komennoilla. \pause Niillä tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirretään kuvia, määritellään asetuksia jne.  \pause
+    \begin{framed}
+        Komennot alkavat aina kenoviivalla \lstinline-\-
+    \end{framed}
+    \pause
+    Komentoja voi tarvittaessa etsiä esimerkiksi oppaista \begin{scriptsize}
+        \url{http://www.ntg.nl/doc/hellgren/lyhyt2e.pdf}
+    \end{scriptsize},
+    \begin{scriptsize}
+        \url{http://en.wikibooks.org/wiki/LaTeX}
+    \end{scriptsize} ja
+    \begin{scriptsize}
+        \url{http://www.rri.res.in/~sanjib/latex/ltx-2.html}
+    \end{scriptsize}
+\end{fframe}
+
+
+\subsection{Syntaksi}
+\begin{fframe}
+    \frametitle{Syntaksi}
+    %Edellä on jo tutustuttu komentoihin \verb-\documentclass{}-, \verb-\begin{}...\end{}-, \verb-\usepackage[]{}- jne. Ne ovat esimerkkejä komennoista, jotka
+    Komennot tarvitsevat usein \newterm{argumentin} (lisämääreen). \pause Se kirjoitetaan komennon perään
+    \begin{itemize}[<+->]
+        \item aaltosulkuihin \lstinline-{}-, kun argumentti on pakollinen
+        \item hakasulkuihin \lstinline-[]-, kun argumentti on valinnainen
+            %\item Pakollinen argumentti on komennon perässä aaltosuluissa \verb-{}-
+            %\item Valinnainen argumentti on komennon perässä hakasuluissa \verb-[]-
+    \end{itemize}
+    \pause
+    Komennolla voi olla yksi tai useampi pakollinen argumentti ja lisäksi yksi tai useampi valinnainen argumentti. \pause Toisilla komennoilla ei ole ainuttakaan argumenttia.
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Syntaksi}
+    Esimerkiksi 
+    \begin{itemize}[<+->]
+        \item Komennoilla \lstinline-\cup- ja \lstinline-\cap- ei ole yhtään argumenttia (joukkojen yhdiste ja leikkaus)
+        \item Komennolla \lstinline-\sqrt[]{}- on yksi valinnainen ja yksi pakollinen argumentti (valinnainen on juuren kertaluku, pakollinen juurrettava luku. Jos valinnainen argumentti puuttuu, \LaTeX\ tulkitsee neliöjuureksi)
+        \item Komennolla \lstinline-\documentclass[]{}- on myös valinnainen argumentti, jolla voi valita mm. kirjain- ja paperikoon
+        \item Komennolla \lstinline-\frac{}{}- on kaksi pakollista argumenttia (murtoluvun osoittaja ja nimittäjä)
+    \end{itemize}
+    %Komentoja ja niiden selityksiä voi etsiä esimerkiksi osoitteista
+    %\begin{itemize}
+    %\item \url{http://www.rri.res.in/~sanjib/latex/ltx-2.html}
+    %\end{itemize}
+    %PAREMPI LINKKI
+    \pause
+    Argumenttien järjestyksen ja määrän kanssa on oltava tarkka!
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Syntaksi}
+    Muotoa 
+    \begin{lstlisting}
+\begin{ympäristön nimi}
+    ...
+\end{ympäristön nimi}<>
+    \end{lstlisting}
+    olevilla komentopareilla käytetään ns. \newterm{ympäristöjä}. \pause Näitä voivat olla esimerkiksi lauseet, määritelmät, listat ja taulukot. \pause
+    \vaihto Ympäristölläkin voi olla nimen lisäksi muita pakollisia tai valinnaisia argumentteja, kuten tieto taulukon sarakkeiden lukumäärästä tai kuvan toivotusta sijainnista. \pause
+    \vaihto
+    Kurssin aikana opetellaan käyttämään muutamia tarpeellisia ympäristöjä ja luomaan omia komentoja.
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Erikoismerkeistä}
+    Jotkin erikoismerkit on varattu \LaTeX in käyttöön:
+    \begin{itemize}[<+->]
+        \item \lstinline-%- aloittaa kommenttirivin
+        \item \lstinline-$- aloittaa ja lopettaa tavallisen matematiikkatilan
+        \item \lstinline-\- aloittaa komennon (komento \lstinline-\\- katkaisee rivin)
+        \item \lstinline-&- on käytössä kun rivejä järjestetään kohdakkain
+        \item \lstinline-{- ja \lstinline-}- ovat komennon argumentin ympärille tulevat merkit
+    \end{itemize}\pause
+    Jotta erikoismerkin saisi näkyviin lopullisessa työssä, on käytettävä komentoa:
+    \begin{table}[H]
+        \begin{tabular}{ccc}
+            Komento & & Tulostus\\
+            \hline
+            \verb-\%- & & \%\\
+            \verb-\$- & & \$\\
+%            \verb-\backslash- & & \(\backslash\)\\
+            \verb-\textbackslash- & & \textbackslash\\
+            \verb-\&- & & \&\\
+            \verb-\{\}- & & \{\}
+        \end{tabular}
+    \end{table}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Kolme peräkkäistä pistettä saa komennolla \lstinline-\dots-. Kokeile, miten lopputulokset eroavat, jos kirjoitat pisteet itse.  Kirjoita sitten seuraava:
+        \begin{sample}
+            Erikoismerkkejä ovat mm. \%, \$ ja \&. Merkkijonon \textbackslash textbackslash tuottaminen onnistuu näin\dots
+        \end{sample}
+    \end{harj}
+    \begin{harj}
+        Kommenttirivin avulla koodin sekaan voi kirjoittaa selkeyttäviä huomautuksia, jotka eivät tule näkyviin lopulliseen työhön. Kommenttirivi aloitetaan merkillä \lstinline-%- ja päätetään rivinvaihtoon. 
+        \vaihto
+        Kirjoita koodin sekaan esimerkiksi rivi
+        \begin{lstlisting}
+% Tämä rivi ei tule näkyviin lopullisessa työssä.<>
+        \end{lstlisting}
+        ja testaa, pitääkö väite paikkansa.
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Virheilmoitukset}
+    Tiedoston ajamisen jälkeen Texmakerin alareunaan saattaa ilmestyä sinisiä ja punaisia viestejä.\pause
+    \begin{itemize}[<+->]
+        \item \textcolor{blue}{Siniset} viestit ovat varoituksia ulkonäöllisista seikoista
+        \item \textcolor{red}{Punaiset} viestit ovat kääntämisen estäviä virheitä
+    \end{itemize}\pause
+    Punaisten virheilmoitusten kanssa on pakko olla tarkka -- virheet tulee korjata heti!
+    \vaihto
+    \pause
+    Virheilmoituksesta on pääteltävissä jotain sattuneesta virheestä, mutta tämä vaatii totuttelua. 
+    \pause Yleensä kyseessä on jonkin komennon väärinkirjoitus, puuttuva aaltosulku tai muu pieni yksityiskohta.
+    \vaihto
+    \pause Virheilmoituksia saattaa tulla valtavasti vaikka kyse olisi yksittäisestä ongelmasta!
+\end{fframe}
+
+
+\subsection{Otsikot ja korostukset}
+\begin{fframe}
+    \frametitle{Otsikot}
+    Teksti jäsennetään ja otsikoidaan komennoilla 
+    \begin{itemize}[<+->]
+        \item \lstinline-\part{Osan otsikko}-
+        \item \lstinline-\chapter{Luvun otsikko}- (vain luokissa \cns{book} ja \cns{report})
+        \item \lstinline-\section{Osion otsikko}-
+        \item \lstinline-\subsection{Aliosion otsikko}-
+        \item \lstinline-\subsubsection{Alialiosion otsikko}-
+        \item \lstinline-\paragraph{Kappaleen otsikko}-
+        \item \lstinline-\subparagraph{Alikappaleen otsikko}-
+    \end{itemize} \pause
+    %Dokumenttiluokissa \verb-report- ja \verb-book- on käytössä myös \verb-\chapter-, alilukunaan \verb-\section- jne.
+    Neljän karkeimman tason otsikot numeroidaan automaattisesti. \pause Numeroinnin saa pois lisäämällä merkin \lstinline-*- komennon perään, siis esimerkiksi 
+    \begin{lstlisting}
+\section*{numeroimaton otsikko}<>
+    \end{lstlisting}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        \begin{itemize}
+            \item Jaa tekstisi neljään numeroituun osioon
+            \item Jaa ensimmäinen osio lisäksi muutamaksi ali- ja alialiosioksi
+            \item Jätä ainakin yksi alialiosio numeroimatta
+            \item Nimeä kaikki osiot
+        \end{itemize}
+        Tee ensimmäisen kerran harjoitukset ensimmäiseen osioon, toisen kerran harjoitukset toiseen osioon jne. 
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Tekstin muokkaaminen}
+    Tekstieditorissa eli Texmaker-ohjelmassa käytetty fontti tai tekstin suuruus eivät vaikuta lopulliseen työhön, vaan kaikki ulkoasulliset muutokset on tehtävä komennoilla.% (Isot/pienet kirjaimet toimivat kuitenkin sellaisenaan.)
+    \vaihto\pause
+    Erityisesti kannattaa huomata, että tekstiä kirjoittaessa
+    \begin{itemize}[<+->]
+        \item peräkkäiset välilyönnit tulostuvat yhdeksi välilyönniksi
+        \item myös yksittäinen rivinvaihto tulkitaan välilyönniksi
+        \item tyhjä rivi (yksi tai useampi) aloittaa uuden kappaleen
+    \end{itemize}
+    \pause
+    Erikokoisia välilyöntejä varten on omia komentojaan, kuten esimerkiksi \lstinline-\,- , \lstinline-\quad- ja \lstinline-\qquad-.
+    \vaihto\pause Pystysuunnassa tyhjää tilaa saa sanomalla esim. \lstinline-\vspace{2.5cm}-. Yhden tyhjän rivin saa komennolla \lstinline-\vspace{\baselineskip}-.
+\end{fframe}
+
+%\begin{fframe}
+%\frametitle{Tekstin muokkaaminen}
+%Koodin sekaan voi kirjoittaa ns. kommenttirivejä, joita ei huomioida käännettäessä eikä siis näytetä lopullisessa työssä. Kommentti alkaa merkillä \verb-%- ja päättyy rivinvaihtoon. Kommentointi kannattaa!
+%\vaihto
+%Tekstin tasauksen voi valita komennoilla \verb-\centering-, \verb-\flushleft-, \verb-\flushright-. 
+%\vaihto
+%
+%\end{fframe}
+
+\begin{fframe}
+    \frametitle{Tekstin muokkaaminen}
+    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
+    \vaihto\pause
+    Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \lstinline-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \lstinline-\underline{alleviivattava teksti}-. Alleviivaus rikkoo tavutuksen ym., joten ahkeran alleviivaajan kannattaa tutustua esim. \cns{soul}-pakettiin.
+    \vaihto\pause
+    Sanojen korostamiseen kannattaa kuitenkin käyttää komentoa \verb-\emph{korostettava teksti}-, joka muuttaa fontin sopivaksi kontekstin perusteella!
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Tekstin muokkaaminen}
+    Tekstin keskittäminen onnistuu ympäristön \verb-center- avulla:
+    \begin{lstlisting}
+\begin{center}
+    ...keskitetty teksti...
+\end{center}<>
+    \end{lstlisting}
+    Tällä tavoin keskitetyn tekstin ylä- ja alapuolelle jää hieman tyhjää tilaa. \vaihto\pause
+    Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \cns{flushright} ja \cns{flushleft}.
+
+\end{fframe}
+\begin{fframe}
+    \begin{harj}
+        Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
+        \begin{sample}
+            \begin{flushright}
+                Tämä teksti on normaalikokoista, \tiny mutta tämä pientä ja \huge tämä suurta \normalsize. Tähän laitan suuren välin: \qquad, tähän vähän pienemmän: \quad ja \emph{tätä tekstiä taas haluan korostaa!}
+            \end{flushright}
+        \end{sample}
+    \end{harj}
+\end{fframe}
+
+
+\subsection{Matemaattinen teksti}
+\begin{fframe}
+    \frametitle{Matematiikkatila}
+    Matemaattisia ilmaisuja saa tekstin sekaan käyttämällä komentoja \lstinline+\(+  
+    ja \lstinline+\)+. \pause Esimerkiksi rivi
+    \begin{lstlisting}
+Yhtälöt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat 
+samanaikaisesti tasan kahdessa tason pisteessä.<>
+    \end{lstlisting}
+    \pause
+    tulostuu riviksi 
+    \begin{sample}
+        Yhtälöt \(x^2+y^2-2=0\) ja \(y=2x+1\) toteutuvat samanaikaisesti tasan kahdessa tason pisteessä.
+    \end{sample} 
+    \pause
+    Huomaa, että matematiikkatilassa kirjaimet tulostuvat erilailla, kuin muussa tekstissä. 
+    %Huomaa myös, että 
+    %\[
+    %\verbö\(2x+3=4\)ö
+    %\]
+    %tuottaa yhtälön \(2x+3=4\) \pause ja komento 
+    %\[
+    %\verbö\(x^3+\sqrt{2}x^2+1=0\)ö
+    %\]
+    %yhtälön \(x^3+\sqrt{2}x^2+1=0\). \pause Tätä kutsutaan matematiikkatilaksi.
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Tuota seuraava lause dokumenttiisi:
+        \begin{sample}
+            Vaihdannaisessa renkaassa pätee \((a+b)^2=a^2+2ab+b^2\). Jos siis \(2ab\neq0\), niin \((a+b)^2\neq a^2+b^2\). 
+        \end{sample}
+        Erisuuruuden saat komennolla \lstinline-\neq-. Eksponentti kirjoitetaan tyyliin \lstinline-x^2- (tulostaa \(x^2\)).
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Kaavarivi}
+    Kun matemaattinen ilmaisu halutaan yksinkertaisesti omalle kaavarivilleen, se kirjoitetaan komentojen \lstinline-\[- ja \lstinline-\]- väliin.
+    \pause
+    Esimerkiksi 
+    \begin{lstlisting}
+Toisen asteen yhtälön \(ax^2 + bx + c = 0\) ratkaisu
+saadaan kaavasta
+\[
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+\]<>
+    \end{lstlisting}
+    tuottaa seuraavanlaisen esityksen:
+    \pause
+    \begin{sample}
+        Toisen asteen yhtälön \(ax^2 + bx + c = 0\)
+        ratkaisu saadaan kaavasta
+        \[
+            x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+        \]
+    \end{sample}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        \label{rajaArvo}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Funktion \(f\colon \R\to \R\) derivaatta pisteessä \(x_0\in\R\) on
+            \[
+                f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0},
+            \]
+            mikäli raja-arvo on olemassa.
+        \end{sample}
+        \begin{itemize}
+            \item Kaksoispisteen paikalla kannattaa käyttää komentoa \lstinline-\colon-
+            \item Symbolit \(\mathbb{R}\), \(\to\), \(\in\) ja \(\lim\) saa komennoilla \lstinline-\mathbb{R}-, \lstinline-\to-, \lstinline-\in- ja \lstinline-\lim-.
+            \item Derivointipilkku tulee heittomerkillä \lstinline-'- .
+            \item Alaindeksin (symbolille tai operaattorille) saa kirjoittamalla \lstinline-symboli_{alaindeksi}-.
+        \end{itemize}
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Jos \(F\) on \(\sigma\)-algebra ja \(A_i\in F\) kaikilla \(i= 1,2,\dots\), niin 
+            \[
+                \bigcup_{i=1}^{\infty} A_i\in F.
+            \]
+        \end{sample}
+        Tarvitset mm. komentoja \lstinline-\sigma-, \lstinline-\in-, \lstinline-\bigcup- ja \lstinline-\infty-. Ala- ja yläindeksit kirjoitetaan merkkien \lstinline-_- ja \lstinline-^- avulla (jos indeksiin halutaan enemmän kuin yksi merkki, se täytyy laittaa aaltosulkeisiin kuten edellisessä tehtävässä). 
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    Yleisimpiä matemaattisia symboleita löytää Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niitä voi etsiä esim. seuraavista osoitteista:
+    \begin{scriptsize}
+        \begin{itemize}
+            \item \url{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}
+            \item \url{http://detexify.kirelabs.org/classify.html}
+        \end{itemize}
+    \end{scriptsize}
+    \begin{harj}
+        Selvitä, miten voit tuottaa vektorimerkinnät \(\bar{v}\), \(\bar{w}\) ja \(\overline{AB}\). Kirjoita seuraava:
+        \begin{sample}
+            Vektoreiden \(\bar{v}=\overline{AB}\) ja \(\bar{w}=\overline{CD}\) ristitulo \(\bar{v}\times\bar{w}\) on kohtisuorassa kumpaakin vektoria vastaan. Vektoreiden pistetulo \(\bar{v}\cdot\bar{w}\) on sen sijaan reaaliluku.
+        \end{sample}
+    \end{harj}
+
+\end{fframe}
+
