@@ -64,30 +64,8 @@ hyperref={unicode,colorlinks=true}]{beamer}
 \newtheorem{trma}{Teoreema}[laskuri]
 \newtheorem{prop}[trma]{Propositio}
 \theoremstyle{remark}
-\newtheorem{harjoitus}{Harjoitus}[section]
+\newtheorem{harj}{Harjoitus}[section]
 
-% Encoding magic (http://tex.stackexchange.com/a/145361/23378)
-\makeatletter
-\newcommand{\deactivateeightbit}{%
-  \count@=127
-  \loop
-    \catcode\count@=12
-    \ifnum\count@<255
-    \advance\count@\@ne
-  \repeat
-}
-\makeatother
-
-\newenvironment{harj}
-    {\VerbatimEnvironment
-     \stepcounter{harjoitus}
-     \deactivateeightbit\begin{VerbatimOut}{harj\theharjoitus.tex}}
-    {\end{VerbatimOut}
-     \inputencoding{utf8}   % "\reactivateeightbit"
-     \addtocounter{harjoitus}{-1}
-     \begin{harjoitus}
-         \input{harj\theharjoitus.tex}
-     \end{harjoitus}}
 \newenvironment{fframe}
     {\begin{frame}[fragile,environment=fframe]}
     {\end{frame}}
