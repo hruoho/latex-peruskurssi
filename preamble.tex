@@ -82,10 +82,10 @@ hyperref={unicode,colorlinks=true}]{beamer}
     {\VerbatimEnvironment
      \stepcounter{harjoitus}
      \deactivateeightbit\begin{VerbatimOut}{harj\theharjoitus.tex}}
-     {\end{VerbatimOut}
+    {\end{VerbatimOut}
+     \inputencoding{utf8}   % "\reactivateeightbit"
      \addtocounter{harjoitus}{-1}
      \begin{harjoitus}
-         \inputencoding{utf8}   % "\reactivateeightbit"
          \input{harj\theharjoitus.tex}
      \end{harjoitus}}
 \newenvironment{fframe}
