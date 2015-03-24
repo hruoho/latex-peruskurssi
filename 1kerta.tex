@@ -133,7 +133,7 @@ Huhuu!
 
 \begin{fframe}
     \begin{harj}
-        Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (vältä erikoismerkkejä). Aja tiedosto. Varmista vielä ääkkösten ja tavutuksen toimiminen. Miten kappalejaon kanssa käy?
+        Kopioi työhösi pari sivullista suomenkielistä tekstiä esimerkiksi Wikipediasta (vältä erikoismerkkejä) täytetekstiksi. Aja tiedosto. Varmista vielä ääkkösten ja tavutuksen toimiminen. 
     \end{harj}
 \end{fframe}
 
@@ -327,7 +327,9 @@ Huhuu!
     \end{itemize}
     \pause
     Erikokoisia välilyöntejä varten on omia komentojaan, kuten esimerkiksi \lstinline-\,- , \lstinline-\quad- ja \lstinline-\qquad-.
-    \vaihto\pause Pystysuunnassa tyhjää tilaa saa sanomalla esim. \lstinline-\vspace{2.5cm}-. Yhden tyhjän rivin saa komennolla \lstinline-\vspace{\baselineskip}-.
+    \vaihto\pause 
+%Pystysuunnassa tyhjää tilaa saa sanomalla esim. \lstinline-\vspace{2.5cm}-. 
+	Yhden tyhjän rivin saa komennolla \lstinline-\vspace{\baselineskip}-.
 \end{fframe}
 
 %\begin{fframe}
@@ -341,36 +343,36 @@ Huhuu!
 
 \begin{fframe}
     \frametitle{Tekstin muokkaaminen}
-    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
-    \vaihto\pause
+%    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
+    \pause
     Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \lstinline-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \lstinline-\underline{alleviivattava teksti}-. Alleviivaus rikkoo tavutuksen ym., joten ahkeran alleviivaajan kannattaa tutustua esim. \cns{soul}-pakettiin.
     \vaihto\pause
     Sanojen korostamiseen kannattaa kuitenkin käyttää komentoa \verb-\emph{korostettava teksti}-, joka muuttaa fontin sopivaksi kontekstin perusteella!
 \end{fframe}
 
-\begin{fframe}
-    \frametitle{Tekstin muokkaaminen}
-    Tekstin keskittäminen onnistuu ympäristön \verb-center- avulla:
-    \begin{lstlisting}
-\begin{center}
-    ...keskitetty teksti...
-\end{center}<>
-    \end{lstlisting}
-    Tällä tavoin keskitetyn tekstin ylä- ja alapuolelle jää hieman tyhjää tilaa. \vaihto\pause
-    Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \cns{flushright} ja \cns{flushleft}.
-
-\end{fframe}
-\begin{fframe}
-    \begin{harj}
-        Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
-        \begin{sample}
-            \begin{flushright}
-                Tämä teksti on normaalikokoista, \tiny mutta tämä pientä ja \huge tämä suurta \normalsize. Tähän laitan suuren välin: \qquad, tähän vähän pienemmän: \quad ja \emph{tätä tekstiä taas haluan korostaa!}
-            \end{flushright}
-        \end{sample}
-    \end{harj}
-\end{fframe}
-
+%\begin{fframe}
+%    \frametitle{Tekstin muokkaaminen}
+%    Tekstin keskittäminen onnistuu ympäristön \verb-center- avulla:
+%    \begin{lstlisting}
+%\begin{center}
+%    ...keskitetty teksti...
+%\end{center}<>
+%    \end{lstlisting}
+%    Tällä tavoin keskitetyn tekstin ylä- ja alapuolelle jää hieman tyhjää tilaa. \vaihto\pause
+%    Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \cns{flushright} ja \cns{flushleft}.
+%
+%\end{fframe}
+%\begin{fframe}
+%    \begin{harj}
+%        Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
+%        \begin{sample}
+%            \begin{flushright}
+%                Tämä teksti on normaalikokoista, \tiny mutta tämä pientä ja \huge tämä suurta \normalsize. Tähän laitan suuren välin: \qquad, tähän vähän pienemmän: \quad ja \emph{tätä tekstiä taas haluan korostaa!}
+%            \end{flushright}
+%        \end{sample}
+%    \end{harj}
+%\end{fframe}
+%
 
 \subsection{Matemaattinen teksti}
 \begin{fframe}
