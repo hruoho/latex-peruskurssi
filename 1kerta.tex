@@ -157,6 +157,7 @@ Huhuu!
     \end{harj}
 \end{fframe}
 
+\subsection{Syntaksi}
 \begin{fframe}
     \frametitle{Syntaksi eli ''kielioppi''}
     \LaTeX in toimintaa ohjataan komennoilla. \pause Niillä tuotetaan esimerkiksi matemaattisia symboleita, korostetaan tekstin osia, luodaan otsikoita, piirretään kuvia, määritellään asetuksia jne.  \pause
@@ -176,7 +177,6 @@ Huhuu!
 \end{fframe}
 
 
-\subsection{Syntaksi}
 \begin{fframe}
     \frametitle{Syntaksi}
     %Edellä on jo tutustuttu komentoihin \verb-\documentclass{}-, \verb-\begin{}...\end{}-, \verb-\usepackage[]{}- jne. Ne ovat esimerkkejä komennoista, jotka
@@ -229,7 +229,7 @@ Huhuu!
     \begin{itemize}[<+->]
         \item \lstinline-%- aloittaa kommenttirivin
         \item \lstinline-$- aloittaa ja lopettaa tavallisen matematiikkatilan
-        \item \lstinline-\- aloittaa komennon (komento \lstinline-\\- katkaisee rivin)
+        \item \lstinline-\- aloittaa komennon %(komento \lstinline-\\- katkaisee rivin)
         \item \lstinline-&- on käytössä kun rivejä järjestetään kohdakkain
         \item \lstinline-{- ja \lstinline-}- ovat komennon argumentin ympärille tulevat merkit
     \end{itemize}\pause
@@ -343,11 +343,13 @@ Huhuu!
 
 \begin{fframe}
     \frametitle{Tekstin muokkaaminen}
-%    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
-    \pause
-    Tekstin \textbf{lihavointi} onnistuu manuaalisesti komennolla \lstinline-\textbf{lihavoitava teksti}-, \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}- ja \underline{alleviivaus} komennolla \lstinline-\underline{alleviivattava teksti}-. Alleviivaus rikkoo tavutuksen ym., joten ahkeran alleviivaajan kannattaa tutustua esim. \cns{soul}-pakettiin.
+    Tekstä voi \emph{korostaa} komennolla \verb-\emph{korostettava teksti}-, joka muuttaa fontin sopivaksi (kursiiviksi, pystyfontiksi tms.) kontekstin perusteella.
     \vaihto\pause
-    Sanojen korostamiseen kannattaa kuitenkin käyttää komentoa \verb-\emph{korostettava teksti}-, joka muuttaa fontin sopivaksi kontekstin perusteella!
+    Tekstin \textbf{lihavointi} onnistuu komennolla \lstinline-\textbf{lihavoitava teksti}- ja \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}-.
+    \vaihto\pause
+    Myös alleviivaus on mahdollista. Siihen kannattaa käyttää esim. \cns{soul}-paketin \lstinline-\ul--komentoa, joka sallii alleviivattujen sanojen tavutuksen.
+%    \vaihto\pause
+%    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
 \end{fframe}
 
 %\begin{fframe}
@@ -360,19 +362,18 @@ Huhuu!
 %    \end{lstlisting}
 %    Tällä tavoin keskitetyn tekstin ylä- ja alapuolelle jää hieman tyhjää tilaa. \vaihto\pause
 %    Oikeaan tai vasempaan laitaan tasattua tekstiä saa halutessaan ympäristöillä \cns{flushright} ja \cns{flushleft}.
-%
 %\end{fframe}
-%\begin{fframe}
-%    \begin{harj}
-%        Valitse dokumentistasi muutama rivi tekstiä ja keskitä se tai tasaa oikeaan laitaan. Muokkaa sitten tasattua tekstiä käyttämällä erilaisia kirjainkokoja ja korostuksia. Esimerkiksi siis jotain seuraavanlaista:
-%        \begin{sample}
-%            \begin{flushright}
-%                Tämä teksti on normaalikokoista, \tiny mutta tämä pientä ja \huge tämä suurta \normalsize. Tähän laitan suuren välin: \qquad, tähän vähän pienemmän: \quad ja \emph{tätä tekstiä taas haluan korostaa!}
-%            \end{flushright}
-%        \end{sample}
-%    \end{harj}
-%\end{fframe}
-%
+
+\begin{fframe}
+    \begin{harj}
+        Valitse dokumentistasi muutama rivi tekstiä ja muokkaa sitä käyttämällä korostuksia, kursivointia ja vahvennusta. Esimerkiksi siis jotain seuraavanlaista:
+        \begin{sample}
+            % \textit{\emph{...}} ei toimi oikein beamerilla
+        Kokeillaan \emph{tekstin korostamista}. Sitten kursiivia: \textit{kursivoitu teksti korostetaan {\em palauttamalla} fontti takaisin pystyyn.} Kuinkahan \textbf{vahvennettu teksti} korostuu?
+        \end{sample}
+    \end{harj}
+\end{fframe}
+
 
 \subsection{Matemaattinen teksti}
 \begin{fframe}
