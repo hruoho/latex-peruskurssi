@@ -345,14 +345,33 @@ Komento \lstinline-\newtheorem{esim}{Esimerkki}- loisi ympäristön, jota käyte
 \end{fframe}
 
 \begin{fframe}
+    \frametitle{Esimerkki}
+    Seuraavassa on osiolle ''Asiaa'' annettu tunnus \cns{sec:asiaa}. Osioon viitataan muualla tekstissä komennolla \lstinline-\ref-.
+    \begin{lstlisting}
+\section{Asiaa}\label{sec:asiaa}
+Jotain asiaa\dots
+
+% Muualla koodissa
+Osiossa \ref{sec:asiaa} puhuttiin asiaa.<>
+    \end{lstlisting}
+    \pause
+    Numeroidulle yhtälölle tai vaikkapa lauseelle tunnus annetaan ympäristön aloittavan komennon jälkeen:
+    \begin{lstlisting}
+\begin{equation}\label{eq:tunnus}
+    ...
+\end{equation}<>
+    \end{lstlisting}
+\end{fframe}
+
+\begin{fframe}
     Huom! Uuden viittauksen jälkeen työn joutuu ajamaan kahdesti, jotta numeroinnit tulevat näkyviin (kahden kysymysmerkin sijaan).
     \begin{extra}
         Jos \LaTeX-tiedoston nimi on \cns{nimi.tex}, niin ensimmäisellä ajokerralla \LaTeX\ luo (tai päivittää) tiedoston \cns{nimi.aux}, joka sisältää viittaustiedot (kokeile avata tiedosto). Toisella ajokerralla viittaustiedot luetaan tästä ja päivitetään lopulliseen tiedostoon. Tätä ei voi yhdellä ajokerralla tehdä, koska viittaukset voivat viitata myös tekstissä eteenpäin.
     \end{extra}
     \begin{harj}
         Viittaa harjoituksessa \ref{viittausTehtava} kirjoittamaasi numeroituun yhtälöön. Käytä komentoja \lstinline-\eqref{}- ja \lstinline-\pageref{}-.
-        \vaihto
-        Huomaa, että viitattavalle kohteelle on ensin annettava tunnus komennolla \lstinline-\label{valitsemasi tunnus}-. Tämä kirjoitetaan ympäristön aloittavan komennon \lstinline-\begin{}- jälkeen. 
+        %\vaihto
+        %Huomaa, että viitattavalle kohteelle on ensin annettava tunnus komennolla \lstinline-\label{valitsemasi tunnus}-. Tämä kirjoitetaan ympäristön aloittavan komennon \lstinline-\begin{}- jälkeen. 
     \end{harj}
 \end{fframe}
 
