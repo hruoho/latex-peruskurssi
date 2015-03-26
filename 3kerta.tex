@@ -24,7 +24,7 @@
 
 \begin{fframe}
     \frametitle{Kuvien liittäminen}
-    Työkansioon tallennetun kuvan \cns{smile.jpeg} saisi näkyviin koodilla
+    Työkansioon tallennetun kuvan \cns{smile.jpg} saisi näkyviin koodilla
     \begin{lstlisting}
 \includegraphics{smile}<>
     \end{lstlisting}
@@ -46,14 +46,14 @@
     \frametitle{Kuvan skaalaus}
     Skaalaus onnistuu myös määrittelemällä kuvan leveys tai korkeus:
     \begin{lstlisting}
-\includegraphics[width = 4cm]{smile}<>
+\includegraphics[width=4cm]{smile}<>
     \end{lstlisting}
     \begin{lstlisting}
 \includegraphics[height=4cm]{smile}<>
     \end{lstlisting}
     \pause
     \begin{minipage}{5cm}
-        \includegraphics[width = 4cm]{smile}
+        \includegraphics[width=4cm]{smile}
     \end{minipage}
     \begin{minipage}{5cm}
         \includegraphics[height=4cm]{smile}
@@ -65,17 +65,19 @@
     Kuvaa voi kiertää antamalla valinnaiseksi argumentiksi kiertokulman asteina.
 
     \begin{lstlisting}
-\includegraphics[width=4cm,angle=90]{smile}<>
+\includegraphics[width=3.5cm,angle=90]{smile}<>
     \end{lstlisting}
     \begin{lstlisting}
-\includegraphics[height=4cm,angle=180]{smile}<>
+\includegraphics[height=35mm,angle=180]{smile}<>
     \end{lstlisting}
     \pause
-    \begin{minipage}{3cm}
-        \includegraphics[width = 4cm,angle=90]{smile}
+    \begin{minipage}{5cm}
+        \centering
+        \includegraphics[width=3.5cm,angle=90]{smile}
     \end{minipage}
     \begin{minipage}{5cm}
-        \includegraphics[height=4cm,angle=180]{smile}
+        \centering
+        \includegraphics[height=35mm,angle=180]{smile}
     \end{minipage}
     \pause
     \par\smallskip
@@ -100,59 +102,45 @@
 \begin{fframe}
     \frametitle{Kelluva kuva}
     \begin{lstlisting}
-\begin{figure}[hb]
+\begin{figure}
+    \centering      % kuvan keskittämistä varten
     \includegraphics[height=4cm]{smile}
     \caption{Helppo hymyillä}
 \end{figure}<>
     \end{lstlisting}
     \pause
-    \begin{figure}[hb]
+    \begin{figure}
+        \centering
         \includegraphics[height=4cm]{smile}
         \caption{Helppo hymyillä}
     \end{figure}
 \end{fframe}
 
 \begin{fframe}
-    \frametitle{Figure-ympäristön argumentit}
-%    Kelluvalle ympäristölle (yllä \verb-figure-) voidaan antaa valinnaisena argumenttina toive kuvan sijoittamisesta. Toiveen voi esittää seuraavilla määritteillä:
-    Oletuksena \LaTeX\ yrittää sijoittaa kelluvan ympäristön (yllä \cns{figure}) tekstisivun ylä- tai alareunaan tai sivulle, jolla on vain kelluvia olioita. Valinnaisella argumentilla voi kertoa tarkemmin, mihin kohtaan sijoittaminen \emph{sallitaan}:
+    \frametitle{Figure-ympäristön sijainti}
+    Kelluvien ympäristöjen sijoittaminen johonkin tiettyyn paikkaan voi olla haastavaa. Yleensä kannattaa antaa \LaTeX{}in sijoittaa ympäristö haluamaansa paikkaan ja viitata siihen tekstistä \lstinline-\ref- ja \lstinline-\pageref- komennoilla.
     \pause
-    \begin{table}
-        \begin{tabular}{lcl}
-
-            %h! && tähän\\
-            %\hline
-            \cns{h} && salli sijoittaminen \emph{tähän} (mahdollisesti keskelle sivua)\\
-            \hline
-            \cns{t} && salli sijoittaminen (jonkin) sivun yläreunaan\\
-            \hline
-            \cns{b} && salli sijoittaminen (jonkin) sivun alareunaan\\
-            \hline
-            \cns{p} && salli sijoittaminen kelluvien otusten sivulle
-
-        \end{tabular}
-    \end{table}
+    \vaihto
+    Kelluvan ympäristön sijoittaminen ''tähän'' (siihen, mihin sen koodin perusteella kuvittelisi tulevan) on kuitenkin mahdollista käyttämällä \cns{float}-pakettia. 
     \pause
-    \begin{itemize}
-        \item Oletuksena on siis \cns{[tbp]}. \pause Pelkkä \cns{[h]} ei ole mahdollinen, vaan korvataan automaattisesti \cns{[ht]}:llä.
-        \pause
-        \item Argumenttina voi myös antaa huutomerkin, jolloin \LaTeX\ sallii rumempia lopputuloksia. \pause Esimerkiksi \cns{[!hb]} sallii sijoittamisen tähän tai tekstisivun alareunaan ja lopputulos saa näyttää hieman rumalta.
-        \pause
-        \item {\footnotesize Tarkempi (tekninen) kuvaus sijoittelualgoritmista: \url{http://tex.stackexchange.com/a/39020/23378}}
-    \end{itemize}
+    Kun paketti on käytössä, \cns{figure}-ympäristölle voi antaa valinnaisen argumentin \cns{H}, joka toteuttaa toiveesi:
+    \begin{lstlisting}
+\begin{figure}[H]
+    ...
+\end{figure}<>
+    \end{lstlisting}
 \end{fframe}
 
 \begin{fframe}
     \frametitle{Figure-ympäristön argumentit}
-    Usein haluttaisiin sijoittaa kelluva ympäristö \underline{tähän} kohtaan tekstiä \textit{no matter what}. 
-    \pause
-    \vaihto
-    Se onnistuu \cns{float}-paketilla. Tällöin esittelyosaan on lisättävä rivi \lstinline-\usepackage{float}-, jonka jälkeen kelluvalle ympäristölle voi antaa argumentin \verb-[H]-, joka toteuttaa toiveesi, oli jälki miten rumaa tahansa. Argumentin \cns{H} kanssa ei voi käyttää muita; esim. \cns{[Hp]} on laiton yhdistelmä.
-    \pause
-    \vaihto
     \begin{harj}
-        Tuo työhösi jokin kuva käyttäen \cns{figure}-ympäristöä ja anna valinnaisena argumenttina toiveesi kuvan sijoittamisesta. Lisää vielä kuvateksti.
+        Tuo työhösi pari kuvaa käyttäen \cns{figure}-ympäristöä. Anna \LaTeX{}in päättää toisen sijoittamisesta ja sijoita toinen ''tähän''. Lisää vielä kuvateksti ainakin sille, jonka sijainnista ei ole tietoa.
     \end{harj}
+    \begin{extra}
+        Kuvan sijoitteluun voi vaikuttaa myös ilman \cns{float}-pakettia antamalla valinnaiseksi argumentiksi osan tai kaikki merkeistä \cns{!htbp}. Nämä kertovat, mihin sijoittaminen \emph{sallitaan}. Merkillä \cns{h} sijoittaminen sallitaan ''tähän'', merkillä \cns{t} (jonkin) sivun yläreunaan, merkillä \cns{b} sivun alareunaan ja merkillä \cns{p} omalle sivulleen. Merkki \cns{!} tarkoittaa, että kauneudesta voi tarvittaessa tinkiä (mutta ei kovin paljoa).
+        \vaihto
+        Esimerkiksi \cns{!hb} tarkoittaa, että kuvan voi sijoittaa ''tähän'' tai sivun alareunaan ja että rumuuttakin sallitaan. Argumentti \cns{h} (tai \cns{!h}) \emph{ei} toimi samalla tavalla kuin \cns{float}-paketin \cns{H} syistä, jotka jätetään uteliaitten itse selvitettäviksi.
+    \end{extra}
 \end{fframe}
 
 \subsubsection{Piirtäminen (TikZ)}
@@ -258,8 +246,8 @@ Perinteisin tapa on käyttää \cns{tabular}-ympäristöä. Tällöin taulukon s
                 \hline
                 \lstinline-\hline- & vaakaviiva \\
                 \hline
-                \lstinline-\newline- & rivinvaihto sarakkeen sisällä\\
-                \hline
+%                \lstinline-\newline- & rivinvaihto sarakkeen sisällä\\
+%                \hline
                 \lstinline+\cline{i-j}+ & vaakaviiva sarakkeiden i ja j välillä\\
                 \hline
             \end{tabular}
@@ -525,13 +513,15 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     On parempi antaa \LaTeX in päättää itse mihin taulukko sijoitetaan eli tehdä siitä \emph{kelluva}. Tämä onnistuu sijoittamalla taulukko \cns{table}-ympäristöön.
     \begin{lstlisting}
 \begin{table}[H]
+    \centering
     \begin{tabular}{...}
         ...
     \end{tabular}
+    \caption{Taulukkoteksti}
 \end{table}<>
     \end{lstlisting}
     \pause
-    Ympäristön \cns{table} sijoittelu noudattaa samoja sääntöjä kuin \cns{figure} ja sitä voi säätää antamalla ympäristölle valinnaisena argumenttina osan tai kaikki merkeistä \cns{!htbp} (tai \cns{float}-pakettia käyttämällä \cns{H}).
+    Ympäristön \cns{table} sijoittelu noudattaa samoja sääntöjä kuin \cns{figure}. Erityisesti \cns{float}-paketin kanssa sille voi antaa valinnaisena argumenttina \cns{H}:n, jolloin taulukko tulee ''tähän''.
 \end{fframe}
 
 %\begin{fframe}
@@ -558,7 +548,7 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
 \begin{fframe}
     \begin{harj}
         \label{kelluvaTaulukko}
-        Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin nimi. Kokeile erilaisia sijoitteluvaihtoehtoja. Lisää koodiisi kommenttirivi, jossa kerrot valintasi. 
+        Tee tehtävässä \ref{taulukko} luomastasi taulukosta kelluva ja anna sille jokin kuvaus (''taulukkoteksti'').
     \end{harj}
 \end{fframe}
 
@@ -629,8 +619,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \begin{lstlisting}
 \[
     \begin{pmatrix}
-        a & b & c\\
-        1 & 2 & 3\\
+        a & b & c \\
+        1 & 2 & 3
     \end{pmatrix}
 \]<>
         \end{lstlisting}
@@ -638,8 +628,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     \begin{minipage}{5cm}
         \[
             \begin{pmatrix}
-                a & b & c\\
-                1 & 2 & 3\\
+                a & b & c \\
+                1 & 2 & 3
             \end{pmatrix}
         \]
     \end{minipage}
@@ -674,8 +664,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \begin{lstlisting}
 \[
     \begin{pmatrix*}[r]
-        a & b & c\\
-        -1 & -2 & -3\\
+        a & b & c    \\
+        -1 & -2 & -3
     \end{pmatrix*}
 \]<>
         \end{lstlisting}
@@ -683,8 +673,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     \begin{minipage}{5cm}
         \[
             \begin{pmatrix*}[r]
-                a & b & c\\
-                -1 & -2 & -3\\
+                a & b & c    \\
+                -1 & -2 & -3
             \end{pmatrix*}
         \]
     \end{minipage}
@@ -712,12 +702,12 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \begin{lstlisting}
 \[
     \begin{bmatrix*}[r]
-        -1 & 2\\
-        0 & 1\\
-        1 & -2\\
+        -1 & 2 \\
+        0 & 1  \\
+        1 & -2
     \end{bmatrix*}^T = 
     \begin{bmatrix*}[r]
-        -1 & 0 & 1\\
+        -1 & 0 & 1 \\
         2 & 1 & -2
     \end{bmatrix*}
 \]<>
@@ -726,12 +716,12 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     \begin{minipage}{5cm}
         \[
         \begin{bmatrix*}[r]
-            -1 & 2\\
-            0 & 1\\
-            1 & -2\\
+            -1 & 2 \\
+            0 & 1  \\
+            1 & -2
         \end{bmatrix*}^T = 
         \begin{bmatrix*}[r]
-            -1 & 0 & 1\\
+            -1 & 0 & 1 \\
             2 & 1 & -2
         \end{bmatrix*}
         \]
@@ -745,15 +735,15 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \begin{align*}
             &
             \begin{bmatrix*}[r]
-                0 & 0 & 1 & a_1\\
-                0 & 1 & 1 & a_2\\
+                0 & 0 & 1 & a_1 \\
+                0 & 1 & 1 & a_2 \\
                 1 & 1 & 1 & a_3
             \end{bmatrix*}
 %        \stackrel{\begin{scriptsize} R_1\leftrightarrow R_3 \end{scriptsize} }{\longrightarrow}
         \xrightarrow{R_1\leftrightarrow R_3}
             \begin{bmatrix*}[r]
-                1 & 1 & 1 & a_3\\
-                0 & 1 & 1 & a_2\\
+                1 & 1 & 1 & a_3 \\
+                0 & 1 & 1 & a_2 \\
                 0 & 0 & 1 & a_1
             \end{bmatrix*}
             %\\
@@ -811,8 +801,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
         \begin{lstlisting}
 \[
     \begin{bmatrix}[rrr|r]
-        0 & 0 & 1 & -a_1\\
-        0 & 1 & -1 & a_2\\
+        0 & 0 & 1 & -a_1 \\
+        0 & 1 & -1 & a_2 \\
         1 & 1 & 1 & a_3
     \end{bmatrix}
 \]<>
@@ -821,8 +811,8 @@ Komento \lstinline-\begin{tabular}{...}...\end{tabular}- luo taulukon komennon o
     \begin{minipage}{4cm}
         \[
             \begin{bmatrix}[rrr|r]
-                0 & 0 & 1 & -a_1\\
-                0 & 1 & -1 & a_2\\
+                0 & 0 & 1 & -a_1 \\
+                0 & 1 & -1 & a_2 \\
                 1 & 1 & 1 & a_3
             \end{bmatrix}
         \]

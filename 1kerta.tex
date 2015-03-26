@@ -347,7 +347,7 @@ Huhuu!
     \vaihto\pause
     Tekstin \textbf{lihavointi} onnistuu komennolla \lstinline-\textbf{lihavoitava teksti}- ja \textit{kursivointi} komennolla \lstinline-\textit{kursivoitava teksti}-.
     \vaihto\pause
-    Myös alleviivaus on mahdollista. Siihen kannattaa käyttää esim. \cns{soul}-paketin \lstinline-\ul--komentoa, joka sallii alleviivattujen sanojen tavutuksen.
+    Myös alleviivaus on mahdollista. Siihen kannattaa käyttää esim. \cns{soulutf8}-paketin \lstinline-\ul--komentoa, joka sallii alleviivattujen sanojen tavutuksen.
 %    \vaihto\pause
 %    Kirjainkokoa voi kesken tekstin muuttaa lukuisilla komennoilla kuten \lstinline-\huge-, \lstinline-\tiny-, ja \lstinline-\normalsize-, jotka vaikuttavat kunnes kokoa taas muutetaan. 
 \end{fframe}
@@ -369,8 +369,12 @@ Huhuu!
         Valitse dokumentistasi muutama rivi tekstiä ja muokkaa sitä käyttämällä korostuksia, kursivointia ja vahvennusta. Esimerkiksi siis jotain seuraavanlaista:
         \begin{sample}
             % \textit{\emph{...}} ei toimi oikein beamerilla
-        Kokeillaan \emph{tekstin korostamista}. Sitten kursiivia: \textit{kursivoitu teksti korostetaan {\em palauttamalla} fontti takaisin pystyyn.} Kuinkahan \textbf{vahvennettu teksti} korostuu?
+        Kokeillaan \emph{tekstin korostamista}. Sitten kursiivia: \textit{kursivoitu teksti korostetaan {\em palauttamalla} fontti takaisin pystyyn.} Kuinkahan \textbf{lihavoitu teksti} korostuu?
         \end{sample}
+        Tässä sana ''palauttamalla'' on korostettu komennolla \lstinline-\emph-, joka on komennon \lstinline-\textit- argumentin sisällä:
+        \begin{lstlisting}
+\textit{... \emph{...} ...}<>
+        \end{lstlisting}
     \end{harj}
 \end{fframe}
 

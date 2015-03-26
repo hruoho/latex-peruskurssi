@@ -37,8 +37,7 @@ hyperref={unicode,colorlinks=true}]{beamer}
     keepspaces=true,
     backgroundcolor=\color{gray!20},
     escapechar=<>,
-    morekeywords={\part,\chapter,\subsection,\subsubsection,\paragraph,\subparagraph,%
-                  \middle,\theoremstyle,\eqref},
+    morekeywords={\part,\chapter,\subsection,\subsubsection,\paragraph,\subparagraph,\middle,\theoremstyle,\eqref,\subsetneq,\usetikzlibrary,\definecolor},
     literate={ä}{{\"a}}1
              {Ä}{{\"A}}1
              {ö}{{\"o}}1
@@ -74,9 +73,9 @@ hyperref={unicode,colorlinks=true}]{beamer}
 \newtheorem*{esim}{Esimerkki}
 \newtheorem*{ratk}{Ratkaisuehdotus}
 \newtheorem*{thmextra}{Lisätieto}
-\newenvironment{extra}{\begin{thmextra}\footnotesize}{\end{thmextra}}
-\newenvironment{serif}{\fontfamily{lmr}\selectfont}{}
 \usepackage{ragged2e}   % \justifying
+\newenvironment{extra}{\begin{thmextra}\footnotesize\RaggedRight}{\end{thmextra}}
+\newenvironment{serif}{\fontfamily{lmr}\selectfont}{}
 \newenvironment{sample}{\begin{framed}\justifying\begin{serif}}{\end{serif}\end{framed}}
 
 
