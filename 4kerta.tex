@@ -31,24 +31,47 @@
 \subsubsection{Lainaukset ja alaviitteet}
 \begin{fframe}
     \frametitle{Lainaukset ja alaviitteet}
-    Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \lstinline-'- merkillä:
-    \begin{lstlisting}
+    \begin{itemize}[<+->]
+        \item Suomalaisittain käytettävät lainausmerkit saa kahdella peräkkäisellä \lstinline-'- merkillä:
+            \begin{lstlisting}
 Matti sanoi: ''Onpa outoa!''<>
-    \end{lstlisting}
-    tulostaa
-    \begin{sample}
-        Matti sanoi: ''Onpa outoa!''
-    \end{sample}
-    \pause
-    Lainauksia varten on olemassa myös omia ympäristöjään, kuten \cns{verse}, \cns{quote} ja \cns{quotation}.
-    \pause
-    \vaihto
-    Alaviitteen voi luoda komennolla \lstinline-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
+            \end{lstlisting}
+            tulostaa
+            \begin{sample}
+                Matti sanoi: ''Onpa outoa!''
+            \end{sample}
+        \item Lainauksia varten on olemassa myös omia ympäristöjään, kuten \cns{quote} ja \cns{quotation}.
+        \item Alaviitteen voi luoda komennolla \lstinline-\footnote{teksti}-. Komento kirjoitetaan siihen kohtaan, johon alaviitteen merkki halutaan. 
+    \end{itemize}
+\end{fframe}
+
+\begin{fframe}
+    \frametitle{Lukuvälit ja ajatusviiva}
+    \begin{itemize}[<+->]
+        \item Lukuväleissä oleva viiva kirjoitetaan \lstinline|--|, esim.
+            \begin{lstlisting}
+Vertaa s.~39--42 ja s.~39-42.<>
+            \end{lstlisting}
+            tulostaa
+            \begin{sample}
+                Vertaa s.~39--42 ja s.~39-42.
+            \end{sample}
+        \item Tällaista viivaa käytetään suomen kielessä myös ajatusviivana:
+            \begin{lstlisting}
+\LaTeX{}ia ei opi ymmärtämään -- siihen
+vain tottuu.<>
+            \end{lstlisting}
+            tulostaa
+            \begin{sample}
+                \LaTeX{}ia ei opi ymmärtämään -- siihen
+                vain tottuu.
+            \end{sample}
+    \end{itemize}
 \end{fframe}
 
 \begin{fframe}
     \begin{harj}
-        Lisää dokumenttiisi jokin lainaus käyttäen \cns{quote}-, \cns{quotation}- tai \cns{verse}-ympäristöä. 
+        Lisää dokumenttiisi jokin lainaus käyttäen \cns{quote}- tai \cns{quotation}--ympäristöä. 
     \end{harj}
     \begin{harj}
         Lisää työhösi alaviite komennolla \lstinline-\footnote{}-. 
