@@ -1,0 +1,167 @@
+% Dokumenttiluokka. Voi olla esim.
+%  - article            (lyhyitä tekstejä varten; ei \chapter-komentoa)
+%  - report             (pidempiä tekstejä, kuten tutkielmia, varten)
+% Lisäargumentteja:
+%  - a4paper            (paperin koko)
+%  - 10pt, 11pt, 12pt   (fontin koko)
+%  - draft              (esim. näyttää ylipitkät rivit (overfull
+%                        hbox-varoitukset); älä käytä lopullisessa työssä!)
+%  - twoside            (kaksipuoliseen tulostukseen)
+%  - finnish            (ei dokumenttiluokan argumentti, mutta menee tätä
+%                        kautta esim. babelille)
+\documentclass[a4paper,12pt,finnish]{article}
+
+%%%%%%%  "PERUSPAKETIT"  %%%%%%%
+
+% Seuraavat kolme riviä tarvitaan suomenkieliseen dokumenttiin.
+% Jos ääkköset eivät toimi, kokeile vaihtaa utf8:n tilalle esim.
+% ansinew, applemac tai latin1.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}              % oikean kielinen tavutus yms.
+
+% Marginaalien säätö. Oletus on yleensä hyvä, mutta alla on esimerkkejä
+% monimutkaisemmista kustomoinneista.
+\usepackage{geometry}
+%\usepackage[margin=2cm]{geometry}
+%\usepackage[left=1.5cm,right=3cm,top=2cm,bottom=3cm]{geometry}
+
+% Usein käytettyjä matematiikkaympäristöjä, lauseympäristöt, symboleja, ...
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+
+% Listojen kustomointi. Numeroidun listan numeroinnin voi vaihtaa
+% aloittamalla listan komennolla
+%   \begin{enumerate}[label=...]
+% Pisteiden paikalle tulee "numerointikaava", jossa voi käyttää
+% esim. komentoja \arabic* (tavalliset numerot), \alph* (pienaakkoset)
+% tai \roman* (pienet roomalaiset numerot). Esimerkiksi
+%  [label=\alph*)] tuottaisi numeroinnin
+% a) ...
+% b) ...
+% jne. 
+\usepackage{enumitem}
+
+\usepackage{lmodern}            % paranneltu fontti
+%\usepackage{newpxtext,newpxmath} % erilainen fontti
+\usepackage{microtype}          % typografian mikrosäätämistä
+
+
+%%%%%%%  MUUT PAKETIT  %%%%%%%
+
+\usepackage{graphicx}           % kuvien lisääminen (\includegraphics)
+\usepackage{float}              % kelluva ympäristö "tähän" argumentilla [H]
+
+
+
+
+
+% Viitteet ja linkit eläviksi. Hyperref kannattaa ladata muiden pakettien jälkeen.
+\usepackage[unicode=true,colorlinks=true]{hyperref}
+%\hypersetup{hidelinks}      % linkit mustiksi
+
+
+%%%%%%%  LAUSEYMPÄRISTÖT  %%%%%%%
+
+% Lauseympäristöjen tyyli. Voi olla plain (oletus), definition tai remark.
+\theoremstyle{plain}
+\newtheorem{lause}{Lause}[section]      % numerointi alisteinen osiolle
+\newtheorem{lemma}[lause]{Lemma}        % 'lause'-ympäristön kanssa jaettu numerointi
+\newtheorem{prop}[lause]{Propositio}
+\newtheorem{kor}[lause]{Korollaari}
+
+\theoremstyle{definition}
+\newtheorem{maar}[lause]{Määritelmä}
+\newtheorem{esim}[lause]{Esimerkki}
+
+\theoremstyle{remark}
+\newtheorem{huom}[lause]{Huomautus}
+
+
+%%%%%%%  OMAT KOMENNOT  %%%%%%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}    % komento \C on usein jo varattu
+
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\vek}[1]{\bar{#1}}
+
+% differentiaalioperaattori
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+%\newcommand{\dif}{\mathop{}\!d}        % ei-pysty-d
+
+% integraalisijoitusnotaatio
+\newcommand{\sij}[2]{\operatorname{\Bigg/}\displaylimits_{\hspace*{-5pt}{#1}}^{\hspace*{5pt}{#2}}}
+
+
+% Seuraavat sallivat esim. "laajennetun matriisin"
+% kirjoittamisen tyyliin
+% \[
+%   \begin{pmatrix}{rrr|r}
+%     1 & 0 & 0 & a \\
+%     0 & 1 & 0 & b \\
+%     0 & 0 & 1 & c
+%   \end{pmatrix}
+% \]
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+    \hskip -\arraycolsep
+    \let\@ifnextchar\new@ifnextchar
+\array{#1}}
+\makeatother
+ 
+
+%%%%%%%  OTSIKKOTIEDOT  %%%%%%%
+
+\title{\LaTeX-kurssin miniharjoitustyö}
+\author{Nimi (opiskelijanumero)}
+\date{}             % ei päivämäärää
+%\date{\today}      % oletus, jos \date:n jättää pois
+%\date{Vuodelta \the\year}
+
+
+%%%%%%%  DOKUMENTTI ALKAA  %%%%%%%
+\begin{document}
+
+% Luodaan otsikko ja sisällysluettelo
+\maketitle
+\tableofcontents
+
+
+
+
+
+
+
+%%%%%%%  LÄHDELUETTELO  %%%%%%%
+
+% Lähdeluettelon voi tehdä myös suoraan dokumenttiin (ilman BibTeXiä).
+% Luettelo kirjoitetaan thebibliography-ympäristöön. Luettelon jäsen
+% aloitetaan komennolla \bibitem{tunnus}, jonka jälkeen tuleva teksti
+% tulee lähdeluetteloon -- muotoilu on tehtävä itse. Lähteeseen viitataan
+% tekstissä komennolla \cite{tunnus}.
+%
+% Esimerkki:
+%
+% \begin{thebibliography}{9}  % jos lähteitä on >= 10, laita tähän 99
+%    \bibitem{lamport94}
+%        Leslie Lamport,
+%        \textit{\LaTeX: a document preparation system},
+%        Addison Wesley, Massachusetts,
+%        2nd edition,
+%        1994.
+%
+%   \bibitem{toinen_tunnus}
+%       Kirjoittaja, \textit{Kirjan nimi}, Kustantaja ym.
+% \end{thebibliography}
+
+
+\end{document}
+%%%%%%%  DOKUMENTTI PÄÄTTYY  %%%%%%%
+
+Tämän alapuolelle voi kirjoittaa mitä vain eikä LaTeX huomioi sitä mitenkään.
+
