@@ -1,0 +1,109 @@
+\input{preamble}
+
+% Mitä sisällytetään
+\includeonly{
+1kerta
+}
+
+\begin{document}
+
+\begin{fframe}
+    \begin{harj}
+        Tuota seuraava lause dokumenttiisi:
+        \begin{sample}
+            Vaihdannaisessa renkaassa pätee \((a+b)^2=a^2+2ab+b^2\). Jos siis \(2ab\neq0\), niin \((a+b)^2\neq a^2+b^2\). 
+        \end{sample}
+        Erisuuruuden saat komennolla \lstinline-\neq-. Eksponentti kirjoitetaan tyyliin \lstinline-x^2- (tulostaa \(x^2\)).
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        \label{rajaArvo}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Funktion \(f\colon \R\to \R\) derivaatta pisteessä \(x_0\in\R\) on
+            \[
+                f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0},
+            \]
+            mikäli raja-arvo on olemassa.
+        \end{sample}
+        \begin{itemize}
+            \item Kaksoispisteen paikalla kannattaa käyttää komentoa \lstinline-\colon-
+            \item Symbolit \(\mathbb{R}\), \(\to\), \(\in\) ja \(\lim\) saa komennoilla \lstinline-\mathbb{R}-, \lstinline-\to-, \lstinline-\in- ja \lstinline-\lim-.
+            \item Derivointipilkku tulee heittomerkillä \lstinline-'- .
+            \item Alaindeksin (symbolille tai operaattorille) saa kirjoittamalla \lstinline-symboli_{alaindeksi}-.
+        \end{itemize}
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Jos \(F\) on \(\sigma\)-algebra ja \(A_i\in F\) kaikilla \(i= 1,2,\dots\), niin 
+            \[
+                \bigcup_{i=1}^{\infty} A_i\in F.
+            \]
+        \end{sample}
+        Tarvitset mm. komentoja \lstinline-\sigma-, \lstinline-\in-, \lstinline-\bigcup- ja \lstinline-\infty-. Ala- ja yläindeksit kirjoitetaan merkkien \lstinline-_- ja \lstinline-^- avulla (jos indeksiin halutaan enemmän kuin yksi merkki, se täytyy laittaa aaltosulkeisiin kuten edellisessä tehtävässä). 
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    Yleisimpiä matemaattisia symboleita löytää Texmakerin vasempaan laitaan avautuvista valikoista. Muuten niitä voi etsiä esim. seuraavista osoitteista:
+    \begin{scriptsize}
+        \begin{itemize}
+            \item \url{http://www.tex.ac.uk/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}
+            \item \url{http://detexify.kirelabs.org/classify.html}
+        \end{itemize}
+    \end{scriptsize}
+    \begin{harj}
+        Selvitä, miten voit tuottaa vektorimerkinnät \(\bar{v}\), \(\bar{w}\) ja \(\overline{AB}\). Kirjoita seuraava:
+        \begin{sample}
+            Vektoreiden \(\bar{v}=\overline{AB}\) ja \(\bar{w}=\overline{CD}\) ristitulo \(\bar{v}\times\bar{w}\) on kohtisuorassa kumpaakin vektoria vastaan. Vektoreiden pistetulo \(\bar{v}\cdot\bar{w}\) on sen sijaan reaaliluku.
+        \end{sample}
+    \end{harj}
+
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Todista seuraava yhtälö:
+            \[
+                \left\lbrace 2^n \,\middle|\, n\in\Z\right\rbrace=\left\lbrace \left(\frac{1}{2}\right)^{-n}\,\middle|\, n\in\Z\right\rbrace
+            \]
+        \end{sample}
+        Komennolla \lstinline-\middle|- saat pystyviivan automaattisesti oikean kokoisena ja komennolla \lstinline-\,- hieman ylimääräistä väliä niiden ympärille. Tehtävästä \ref{rajaArvo} saat apua symboleiden \(\in\) ja \(\Z\) luomiseen.
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        Kirjoita seuraava:
+        \begin{sample}
+            Jos \(F\) on \(\sigma\)-algebra ja \(P\colon F\to\R\) todennäköisyys, niin tapahtumille \(A_1,A_2,\dotsc\in F\) pätee
+            \[
+                P\left(\bigcup_{i=1}^\infty A_i\right) \leq \sum_{i=1}^\infty P(A_i).
+            \]
+        \end{sample}
+    \end{harj}
+\end{fframe}
+
+\begin{fframe}
+    \begin{harj}
+        \label{viittausTehtava}
+        Tuota seuraava dokumenttiisi:
+        \begin{sample}
+            Eksponenttifunktiolla \(e^x\) on sarjakehitelmä
+            \begin{equation*}
+                \hskip\textwidth minus \textwidth e^x=\sum_{n=1}^\infty\frac{x^n}{n!}.\hskip\textwidth minus \textwidth (1)
+            \end{equation*}
+        \end{sample}
+        Summamerkinnän saat komennolla \lstinline-\sum_{}^{}-, osamäärän komennolla \lstinline-\frac{}{}- ja äärettömän symbolin komennolla \lstinline-\infty-. 
+    \end{harj}
+\end{fframe}
+
+\end{document}
